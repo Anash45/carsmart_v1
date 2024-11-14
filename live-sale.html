@@ -7,6 +7,7 @@
         <title>Carsmart</title>
         <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link rel="stylesheet" href="./assets/css/custom.css">
     </head>
 
@@ -215,12 +216,184 @@
             <section class="search-sec">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-xxl-3 col-lg-4 pb-lg-0 pb-4">
                             <div class="search-filters-box">
-                                
+                                <form action="" method="post">
+                                    <div class="sfb-flex-1">
+                                        <div class="sfb-top">
+                                            <div class="sfb-saved-select sfb-field">
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Saved search</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-sfb-save">
+                                                <span>Save</span>
+                                                <img src="./assets/img/floppy-white.svg" alt="Floppy">
+                                            </button>
+                                        </div>
+                                        <div class="sfb-bottom">
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Seller Type</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Auction length</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="1" max="3">
+                                                <div class="sfb-min-max">
+                                                    <span>1 Day</span>
+                                                    <span>3 Day</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Vehicle Type</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Make</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="All Makes">All Makes</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Model</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="All Models">All Models</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Price</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="00" max="1000000">
+                                                <div class="sfb-min-max">
+                                                    <span>&pound; 00</span>
+                                                    <span>&pound; 1000000</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Mileage</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="00" max="125000">
+                                                <div class="sfb-min-max">
+                                                    <span>0</span>
+                                                    <span>125,000+</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Age</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="00" max="20">
+                                                <div class="sfb-min-max">
+                                                    <span>0</span>
+                                                    <span>20+</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Previous Owners</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="00" max="6">
+                                                <div class="sfb-min-max">
+                                                    <span>0</span>
+                                                    <span>6+</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Distance from {000000}</label>
+                                                <input type="range" class="form-range sfb-range"
+                                                    data-slider-class="sfb-custom-slider" min="00" max="500">
+                                                <div class="sfb-min-max">
+                                                    <span>0</span>
+                                                    <span>500+</span>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Service records</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Recods</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Exterior status</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Fuel</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Transmission</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Collection</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Finance vehicles</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="sfb-field">
+                                                <label class="sfb-label">Smoking</label>
+                                                <select class="form-select sfb-select">
+                                                    <option value="">Select Type</option>
+                                                    <option value="Option 1">Option 1</option>
+                                                    <option value="Option 2">Option 2</option>
+                                                    <option value="Option 3">Option 3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="col-lg-9">
+                        <div class="col-xxl-9 col-lg-8">
                             <div class="row product-list-row">
                                 <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
                                     <a href="#" class="product-list-card pb-3">
@@ -232,7 +405,8 @@
                                             <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -269,7 +443,8 @@
                                             <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -279,10 +454,13 @@
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
                                                 <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
+                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <span>Panama City</span>
                                                 </div>
                                             </div>
                                             <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
@@ -312,7 +490,8 @@
                                             <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -349,7 +528,8 @@
                                             <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -359,10 +539,13 @@
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
                                                 <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
+                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <span>Panama City</span>
                                                 </div>
                                             </div>
                                             <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
@@ -392,7 +575,8 @@
                                             <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -429,7 +613,8 @@
                                             <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -439,10 +624,13 @@
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
                                                 <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
+                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <span>Panama City</span>
                                                 </div>
                                             </div>
                                             <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
@@ -472,7 +660,8 @@
                                             <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -509,7 +698,8 @@
                                             <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -519,10 +709,13 @@
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
                                                 <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
+                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                            fill="white" />
+                                                    </svg>
+                                                    <span>Panama City</span>
                                                 </div>
                                             </div>
                                             <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
@@ -552,7 +745,8 @@
                                             <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
                                             <div class="grade-badge-cont">
                                                 <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
+                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                    class="grade-badge-img">
                                             </div>
                                         </div>
                                         <div class="plc-bottom">
@@ -579,289 +773,47 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-black">
-                                                <span>Private</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
-                                                </div>
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-white">
-                                                <span>SmartConnect</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-black">
-                                                <span>Private</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
-                                                </div>
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-white">
-                                                <span>SmartConnect</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-black">
-                                                <span>Private</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
-                                                </div>
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-white">
-                                                <span>SmartConnect</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-white.svg" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xxl-4 col-lg-6 col-md-6 col-12 pb-4">
-                                    <a href="#" class="product-list-card pb-3">
-                                        <div class="plc-top">
-                                            <div class="plc-pill plc-pill-black">
-                                                <span>Private</span>
-                                            </div>
-                                            <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
-                                            <img src="./assets/img/c-green.png" alt="C" class="csmart-logo">
-                                            <div class="grade-badge-cont">
-                                                <span class="gb-text">Grade A</span>
-                                                <img src="./assets/img/grade-badge.svg" alt="Grade Badge" class="grade-badge-img">
-                                            </div>
-                                        </div>
-                                        <div class="plc-bottom">
-                                            <div class="plcb-plate-cont">
-                                                <div class="plc-num-plate">
-                                                    <span class="plcb-blue"></span>
-                                                    <span class="plc-plate-number">KY58CSM</span>
-                                                </div>
-                                                <div class="plcb-location">
-                                                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z" fill="white"/>
-                                                        </svg>
-                                                    <span>Panama City</span>     
-                                                </div>
-                                            </div>
-                                            <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
-                                            <div class="plcb-details">
-                                                <span>2023</span><span class="plcb-circle"></span>
-                                                <span>2500 miles</span><span class="plcb-circle"></span>
-                                                <span>Electric</span><span class="plcb-circle"></span>
-                                                <span>Auto</span>
-                                            </div>
-                                            <div class="plcb-price-cont">
-                                                <div class="text-white">
-                                                    <span class="plc-price-title">Reserve price</span>
-                                                    <span class="plc-price-amount">£ 7,656.00</span>
-                                                </div>
-                                                <img src="./assets/img/make-logo.png" alt="Make" class="make-logo">
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination products-pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg width="9" height="13" viewBox="0 0 9 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M8.16016 1.89242L3.58016 6.48242L8.16016 11.0724L6.75016 12.4824L0.750156 6.48242L6.75016 0.482422L8.16016 1.89242Z"
+                                                        fill="#7F80A2" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link active" href="#"><span>1</span></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><span>2</span></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><span>...</span></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><span>9</span></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#"><span>10</span></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg width="9" height="13" viewBox="0 0 9 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.839844 1.89242L5.41984 6.48242L0.839844 11.0724L2.24984 12.4824L8.24984 6.48242L2.24984 0.482422L0.839844 1.89242Z"
+                                                        fill="#7F80A2" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
@@ -1019,6 +971,7 @@
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
         <script src="./assets/js/custom.js"></script>
     </body>
 
