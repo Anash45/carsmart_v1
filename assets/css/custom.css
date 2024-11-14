@@ -1,0 +1,277 @@
+@import url(./fonts.css);
+
+:root {
+    --midnight: #0C0D45;
+    --parrot: #99F22B;
+}
+
+body {
+    font-family: "Alexandria", sans-serif;
+    background-color: var(--midnight);
+    font-weight: 300;
+}
+main{
+    min-height: calc(100vh - (91px + 491px));
+}
+header .navbar {
+    background-color: var(--midnight) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url(../img/bars.svg);
+}
+
+.navbar-brand img {
+    height: 65px !important;
+    width: auto;
+}
+
+header .navbar-nav {
+    gap: 40px;
+}
+
+header .nav-link {
+    font-size: 15px;
+    color: #ffffff !important;
+    font-weight: 500;
+    position: relative;
+    padding: 0 !important;
+}
+
+header .nav-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+header .nav-link.dropdown-toggle::after {
+    background-image: url(../img/chevron-down-parrot.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 8px;
+    width: 15px;
+    margin-left: 7.5px;
+    border: 0 !important;
+}
+
+.nav-right {
+    gap: 10px;
+}
+
+.nr-chat-link svg,
+.nr-profile-link img {
+    height: 48px;
+    border-radius: 100px;
+    width: 48px;
+}
+
+header .nr-profile-link.nav-link.dropdown-toggle::after {
+    display: none !important;
+}
+
+header .dropdown-menu {
+    min-width: 174px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #040536;
+}
+
+header .dropdown-menu .dropdown-item {
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+    padding: 7px 0 !important;
+}
+
+header .dropdown-menu .dropdown-item:hover,
+header .dropdown-menu .dropdown-item.active {
+    background-color: transparent !important;
+    border-bottom: 1px solid #675DF4;
+
+}
+
+.navbar-toggler {
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+footer {
+    background-color: #695DFD;
+    border-radius: 40px 40px 0 0;
+}
+
+.footer-top {
+    padding: 75px 0;
+}
+
+.footer-bottom {
+    padding: 17px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ft-link,
+.fb-link,
+.footer-bottom p {
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.ft-link{
+    line-height: 30px;
+}
+
+
+.ft-link:hover,
+.fb-link:hover {
+    color: #99F22B;
+}
+
+.ft-logo-link img {
+    height: 42px;
+    width: auto;
+}
+
+.ft-flex-1{
+    gap: 80px;
+}
+
+.ft-title{
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 500;
+}
+.ft-download-links{
+    gap: 12px;
+}
+.ft-download-links img{
+    height: 49px;
+    width: auto;
+}
+
+.ft-social-links svg{
+    width: 44px;
+    border-radius: 100px;
+    height: 44px;
+    transition: 0.3s ease-in-out;
+}
+.ft-social-links svg rect{
+    transition: 0.3s ease-in-out;
+}
+
+.ft-social-links svg:hover rect{
+    stroke: #99F22B;
+    stroke-opacity: 1;
+}
+.ftm-links{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ftm-links a{
+    color: #ffffff;
+    font-size: 13px;
+}
+.ft-middle{
+    gap: 80px;
+}
+.ft-right{
+    width: 215px;
+}
+
+.ftr-title{
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+.btn-ftr{
+    padding: 7px 18px;
+    width: fit-content;
+    background-color: #99F22B;
+    border-color: #99F22B !important;
+    font-weight: 600;
+    line-height: 33px;
+    font-size: 18px;
+}
+.btn-ftr svg{
+    height: 24px;
+}
+@media (min-width: 1400px) {
+
+    .footer-cont {
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1384px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--midnight);
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .ft-flex-1{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px) {
+    .ft-middle{
+        flex-grow: 1;
+        justify-content: space-between;
+        order: 3;
+    }
+
+    .ft-right{
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 40px !important;
+    }
+
+    .nr-chat-link svg,
+    .nr-profile-link img {
+        height: 36px;
+        width: 36px;
+    }
+
+    .ft-logo-link img {
+        height: 36px;
+    }
+    .ft-middle{
+        gap: 30px;
+    }
+    .ft-right{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .ft-middle{
+        gap: 30px;flex-wrap: wrap;
+    }
+    .ft-flex-1{
+        gap: 50px;
+    }
+}
