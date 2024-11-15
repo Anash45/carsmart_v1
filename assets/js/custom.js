@@ -29,6 +29,20 @@ $(document).ready(function () {
         $slider.css('--value', value + '%');
     }
 
+    $('.fpf-show-icon').each(function () {
+        const $icon = $(this);
+        const $input = $(this).closest('.fpf-inp-cont').find('.fpf-inp');
+        const $input_cont = $(this).closest('.fpf-inp-cont');
+        $icon.on('click', function () {
+            if($input.attr('type') === 'password') {
+                $input.attr('type', 'text');
+                $icon.addClass('shown');
+            }else {
+                $input.attr('type', 'password');
+                $icon.removeClass('shown');
+            }
+        });
+    });
     // // Select 2 elements
     // $('.sfb-select').each(function () {
     //     $(this).select2({

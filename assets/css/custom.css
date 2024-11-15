@@ -1,5 +1,13 @@
 @import url(./fonts.css);
 
+.inter {
+    font-family: "Inter", sans-serif;
+}
+
+.rubik {
+    font-family: "Rubik", sans-serif;
+}
+
 :root {
     --midnight: #0C0D45;
     --parrot: #99F22B;
@@ -207,6 +215,7 @@ footer {
     line-height: 33px;
     font-size: 18px;
     color: #101044;
+    border-radius: 6px;
 }
 
 
@@ -215,17 +224,19 @@ footer {
     transition: 0.3s ease-in-out;
 }
 
-.btn-ftr:hover{
+.btn-ftr:hover {
     background-color: #101044;
     color: #99F22B;
 }
-.btn-ftr svg path{
+
+.btn-ftr svg path {
     transition: 0.3s ease-in-out;
 }
 
-.btn-ftr:hover svg path{
+.btn-ftr:hover svg path {
     fill: #99F22B;
 }
+
 .sb-notice {
     font-size: 20px;
     font-weight: 300;
@@ -467,7 +478,8 @@ footer {
     font-weight: 500;
     color: #ffffff;
 }
-.sfb-bottom{
+
+.sfb-bottom {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -478,7 +490,8 @@ footer {
     background-color: #695DFD;
     /* Blue color for filled part */
 }
-.sfb-field .rangeslider{
+
+.sfb-field .rangeslider {
     height: 8px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.2);
@@ -496,7 +509,7 @@ footer {
     transform: translateY(-50%);
 }
 
-.sfb-min-max{
+.sfb-min-max {
     margin-top: 2px;
     color: rgba(255, 255, 255, 0.6);
     font-size: 12px;
@@ -505,7 +518,7 @@ footer {
     align-items: center;
 }
 
-.sfb-select{
+.sfb-select {
     background-color: rgba(255, 255, 255, 0.2) !important;
     font-size: 14px;
     font-weight: 400;
@@ -517,24 +530,29 @@ footer {
     background-size: 24px;
 }
 
-.sfb-select:focus{
+.sfb-select:focus {
     box-shadow: none !important;
 }
-.sfb-select option{
+
+.sfb-select option {
     color: #fff;
     background-color: var(--midnight);
 }
-.sfb-top{
+
+.sfb-top {
     display: flex;
     gap: 10px;
 }
-.sfb-saved-select{
+
+.sfb-saved-select {
     flex-grow: 1;
 }
-.sfb-saved-select .sfb-select{
+
+.sfb-saved-select .sfb-select {
     border-radius: 100px;
 }
-.btn-sfb-save{
+
+.btn-sfb-save {
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -546,25 +564,27 @@ footer {
     border-color: transparent !important;
 }
 
-.btn-sfb-save img{
+.btn-sfb-save img {
     height: 21px;
     width: 21px;
     object-fit: contain;
 }
-.sfb-flex-1{
+
+.sfb-flex-1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.sfb-flex-1>div{
+.sfb-flex-1>div {
     width: 100%;
 }
-.products-pagination{
+
+.products-pagination {
     gap: 8px;
 }
 
-.products-pagination .page-link{
+.products-pagination .page-link {
     height: 32px;
     width: 32px;
     font-weight: 600;
@@ -582,9 +602,280 @@ footer {
 }
 
 .products-pagination .page-link:hover,
-.products-pagination .page-link.active{
+.products-pagination .page-link.active {
     border-color: #fff;
 }
+
+/* Forms Pages */
+
+.form-page {
+    background-color: #000000;
+    background-image: url(../img/Stars-bg.svg), url(../img/form-page-bg.png);
+    background-position: top center, center;
+    background-size: 70% auto, 100% 100%;
+    background-repeat: no-repeat, no-repeat;
+    min-height: 100vh;
+}
+.signin-car-float{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 380px;
+}
+.form-page main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fp-logo {
+    height: 58px;
+    margin: 35px auto;
+}
+
+.fp-form-cont {
+    width: 405px;
+}
+
+.fp-form-box {
+    position: relative;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(100px);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    box-shadow:
+        inset 2px 4px 16px rgba(248, 248, 248, 0.06),
+        /* Inside shadow */
+        0 24px 24px -16px rgba(5, 5, 5, 0.09),
+        /* Outer shadow 1 */
+        0 6px 13px rgba(5, 5, 5, 0.1),
+        /* Outer shadow 2 */
+        0 6px 4px -4px rgba(5, 5, 5, 0.1),
+        /* Outer shadow 2 */
+        0 5px 1.5px -4px rgba(5, 5, 5, 0.25);
+    /* Outer shadow 3 */
+}
+
+.fp-form-box-outer {
+    position: relative;
+    padding: 1.5px;
+    background-image: linear-gradient(150deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 32px;
+}
+
+.fp-form-box-outer::before {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    background: #04042A;
+    border-radius: 32px;
+    z-index: 0;
+}
+
+.fp-form-title {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.fp-form .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fp-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.fp-form .form-label {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.fpf-inp {
+    font-size: 14px;
+    color: #ffffff !important;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(238, 238, 238, 0.2);
+}
+.fpf-inp-cont {
+    position: relative;
+}
+
+.fpf-alert{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+    background-color: rgba(242, 35, 35, 0.3);
+    border: 1px solid rgba(242, 35, 35, 1);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+.fpf-alert img{
+    height: 24px;
+}
+
+.fpf-error .fpf-inp{
+    border-color: rgba(242, 35, 35, 0.6);
+    background-color: rgba(242, 35, 35, 0.2) !important;
+    background-image: url(../img/error-circle.svg);
+    background-size: 24px;
+    background-position: calc(100% - 12px) center;
+    background-repeat: no-repeat;
+}
+
+.fpf-valid .fpf-inp{
+    background-image: url(../img/valid-check.svg);
+    background-size: 24px;
+    background-position: calc(100% - 12px) center;
+    background-repeat: no-repeat;
+}
+
+.fpf-valid .fpf-show-icon,
+.fpf-error .fpf-show-icon{
+    right: 40px;
+}
+
+.fpf-inp::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fpf-show-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.remember-and-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.remember-and-link a {
+    color: #ffffff;
+}
+
+.remember-and-link .form-check {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.remember-and-link .form-check-input {
+    height: 20px;
+    width: 20px;
+    float: unset !important;
+    margin: 0 !important;
+    border-radius: 100px;
+    border: 1.5px solid #ffffff;
+    background-color: transparent !important;
+}
+
+.fpf-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fpf-bottom-text {
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.fpf-bottom-text a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.fp-footer p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.fp-footer p span {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.fp-flex-1 {
+    gap: 16px;
+}
+
+.form-lines {
+    margin-top: 40px;
+    flex-shrink: 1;
+    width: calc((100% - 410px)/2);
+}
+
+.form-lines img {
+    height: 256px;
+    width: auto;
+    max-width: 100% !important;
+}
+
+.form-lines:first-child{
+    text-align: right;
+}
+.form-lines:last-child{
+    text-align: left;
+}
+
+.fpf-show-icon.shown::after{
+    content: "";
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    left: 11%;
+    transform: rotate(45deg) translate(-100%, -58%);
+    transform-origin: center;
+    background-color: #ffffff;
+}
+.signin-3-page main{
+    position: relative;
+}
+.signin-3-page .fp-flex-1{
+    position: relative;
+}
+.signin-3-page main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: calc(50%);
+    background-position: center;
+    background-color: red;
+    background-image: url(../img/signin-3-bg.png);
+    background-size: cover;
+    z-index: 0;
+    border-radius: 0 0 40px 40px;
+}
+/* Forms Pages End */
 @media (min-width: 1400px) {
 
     .footer-cont {
@@ -600,6 +891,9 @@ footer {
     .container-xxl {
         max-width: 1384px;
     }
+}
+
+@media (max-width: 1400px) {
 }
 
 @media (max-width: 1200px) {
@@ -628,6 +922,9 @@ footer {
     .ft-right {
         order: 2;
     }
+    .form-lines{
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -652,6 +949,12 @@ footer {
     .ft-right {
         width: 100%;
     }
+    .form-page{
+        background-size: 100% auto, 100% 100%;
+    }
+    .signin-car-float{
+        height: 180px;
+    }
 }
 
 
@@ -664,7 +967,8 @@ footer {
     .ft-flex-1 {
         gap: 50px;
     }
-    .search-filters{
+
+    .search-filters {
         gap: 12px;
     }
 }
