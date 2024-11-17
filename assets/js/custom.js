@@ -50,4 +50,41 @@ $(document).ready(function () {
     //         dropdownCssClass: "select2-container--sfb" // Adds custom class to dropdown
     //     });
     // });
+
+    $(document).ready(function () {
+        // Function to add a class to the active tab's parent .nav-item
+        function updateActiveSignupTab() {
+            // Remove the custom class from all nav-items
+            $('.sfs-nav .nav-item').removeClass('active-tab');
+
+            // Find the active tab
+            const activeTab = $('.sfs-nav .nav-link.active');
+
+            if (activeTab.length) {
+                // Add the class to the parent .nav-item of the active tab
+                activeTab.closest('.nav-item').addClass('active-tab');
+            }
+        }
+
+        // Call the function on page load
+        updateActiveSignupTab();
+
+        // Call the function on tab change
+        $('.sfs-nav .nav-link').on('shown.bs.tab', function () {
+            updateActiveSignupTab();
+        });
+    });
+
 });
+
+function switchTab(tabId) {
+    // Use Bootstrap's tab method to show the specified tab
+    var tab = new bootstrap.Tab(document.getElementById(tabId+'-tab'));
+    tab.show(); // This will activate the tab
+}
+
+function openModal(modalId) {
+    // Use Bootstrap's tab method to show the specified tab
+    var modal = new bootstrap.Modal(document.getElementById(modalId));
+    modal.show(); // This will activate the tab
+}

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carsmart</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=2">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="signup-header">
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+                <div class="container gap-3 position-relative">
+                    <!-- Left: Logo -->
+                    <a class="navbar-brand me-0" href="./index.html">
+                        <img src="./assets/img/carsmart-logo-full-color-rgb 1.svg" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> SmartHub </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item active" href="./live-sale.html">Live sale</a></li>
+                                    <li><a class="dropdown-item" href="#">Buy it now</a></li>
+                                    <li><a class="dropdown-item" href="#">Smart Connect</a></li>
+                                    <li><a class="dropdown-item" href="#">Collection</a></li>
+                                    <li><a class="dropdown-item" href="#">Favourites</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Next Sale</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Favorites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Bids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Smart Data</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Right: Chat and Profile Icon with Dropdown -->
+                    <div class="d-flex align-items-center nav-right ms-xl-0 ms-auto">
+                        <a href="#" class="nav-link nr-chat-link">
+                            <svg width="48" height="49" viewBox="0 0 48 49" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.56" cx="24" cy="24.2402" r="23.3" stroke="white"
+                                    stroke-width="1.4" />
+                                <g clip-path="url(#clip0_38_477)">
+                                    <path d="M20 21.2402H28" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20 25.2402H26" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M30 16.2402C30.7956 16.2402 31.5587 16.5563 32.1213 17.1189C32.6839 17.6815 33 18.4446 33 19.2402V27.2402C33 28.0359 32.6839 28.7989 32.1213 29.3616C31.5587 29.9242 30.7956 30.2402 30 30.2402H25L20 33.2402V30.2402H18C17.2044 30.2402 16.4413 29.9242 15.8787 29.3616C15.3161 28.7989 15 28.0359 15 27.2402V19.2402C15 18.4446 15.3161 17.6815 15.8787 17.1189C16.4413 16.5563 17.2044 16.2402 18 16.2402H30Z"
+                                        stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_38_477">
+                                        <rect width="24" height="24" fill="white" transform="translate(12 12.2402)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link nr-profile-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./assets/img/nav-profile.png" alt="Profile" class="rounded-circle" width="30"
+                                    height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">My Bids</a></li>
+                                <li><a class="dropdown-item" href="#">My Vehicles</a></li>
+                                <li><a class="dropdown-item" href="#">Add Vehicle</a></li>
+                                <li><a class="dropdown-item" href="#">Help</a></li>
+                                <li><a class="dropdown-item" href="#">SmartHub Fees</a></li>
+                                <li><a class="dropdown-item" href="#">Billing & Invoices</a></li>
+                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Centered Menu with Dropdown -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="container flex-grow-1 d-flex flex-column justify-content-center">
+                <div class="d-flex signup-hero-content flex-column gap-xl-5 gap-lg-4 gap-3 mb-md-0 mb-5">
+                    <div class="d-flex gap-2 shc-title">
+                        <img src="./assets/img/Rays-purple-left.svg" alt="Rays">
+                        <h2 class="mb-0 fw-medium ms-1">SmartHub <span class="purple-underline">Sign up</span></h2>
+                    </div>
+                    <div class="ps-xl-5">
+                        <a href="#signup-sec"
+                            class="btn btn-main d-flex align-items-center justify-content-center"><span>Sign
+                                up</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                    fill="#101044" />
+                                <path
+                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                    fill="#101044" />
+                                <path
+                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                    fill="#101044" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Main -->
+        <main>
+            <section class="signup-sec">
+                <div class="container">
+                    <div class="signup-page-cont">
+                        <div class="signup-flex-main">
+                            <form class="signup-form-box" action="signup-confirmation.html" method="post">
+                                <div class="signup-form-steps">
+                                    <ul class="nav sfs-nav" id="stepTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="step-1-tab" data-bs-toggle="tab"
+                                                data-bs-target="#step-1" type="button" role="tab" aria-controls="step-1"
+                                                aria-selected="true"><span class="sfs-number">01</span><img
+                                                    src="./assets/img/signup-nav-check.svg" alt="Icon"
+                                                    class="sfs-check"></button>
+                                            <span class="sfs-nav-text"> Smarthub Profile </span>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="step-2-tab" data-bs-toggle="tab"
+                                                data-bs-target="#step-2" type="button" role="tab" aria-controls="step-2"
+                                                aria-selected="false"><span class="sfs-number">02</span><img
+                                                    src="./assets/img/signup-nav-check.svg" alt="Icon"
+                                                    class="sfs-check"></button>
+                                            <span class="sfs-nav-text"> Dealer, Trader & Online Buyer Details </span>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="step-3-tab" data-bs-toggle="tab"
+                                                data-bs-target="#step-3" type="button" role="tab" aria-controls="step-3"
+                                                aria-selected="false"><span class="sfs-number">03</span><img
+                                                    src="./assets/img/signup-nav-check.svg" alt="Icon"
+                                                    class="sfs-check"></button>
+                                            <span class="sfs-nav-text"> Buying Criteria </span>
+                                        </li>
+                                    </ul>
+                                    <div class="sfb-border"></div>
+                                    <!-- Tab Content -->
+                                    <div class="tab-content" id="stepTabsContent">
+                                        <div class="tab-pane fade show active" id="step-1" role="tabpanel"
+                                            aria-labelledby="step-1-tab">
+                                            <div class="signup-form-content">
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Full Name</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12 ">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Please select the option that best
+                                                            describes your business</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <div class="dropdown dropdown-checks">
+                                                                <button class="form-control fpf-inp sfc-inp show"
+                                                                    type="button">
+                                                                    <span>Select type</span>
+                                                                    <svg width="16" height="10" viewBox="0 0 16 10"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M1.25391 1.4834L7.62696 7.48157L14 1.4834"
+                                                                            stroke="white" stroke-width="2.24931"
+                                                                            stroke-linecap="round" />
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class="dropdown-menu show"
+                                                                    aria-labelledby="dropdownCheckboxes">
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-dealership">
+                                                                            <label class="form-check-label"
+                                                                                for="option-dealership">Dealership</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-used-car-dealership">
+                                                                            <label class="form-check-label"
+                                                                                for="option-used-car-dealership">Used
+                                                                                Car Dealership</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-trader">
+                                                                            <label class="form-check-label"
+                                                                                for="option-trader">Trader (Company,
+                                                                                Representative or Individual)</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-online-buyer">
+                                                                            <label class="form-check-label"
+                                                                                for="option-online-buyer">Online
+                                                                                Buyer</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Company name/ Trade name</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Company Telephone Number</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Enter number">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Website</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Enter website">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Do you trade from social media
+                                                                    only? <br> If yes, please list all your handles or
+                                                                    links in the box below.</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_5" id="check_5_1">
+                                                                    <label class="form-check-label" for="check_5_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_5" id="check_5_2">
+                                                                    <label class="form-check-label" for="check_5_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <textarea name="" id="" rows="4"
+                                                                class="form-control fpf-inp sfc-inp"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Your position</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Enter position">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Mobile number</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Enter number">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Email</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Enter email">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-btn">
+                                                <button type="button" onclick="switchTab('step-2')"
+                                                    class="btn btn-main d-flex align-items-center justify-content-center w-100"><span>Save
+                                                        & Next</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                            fill="#101044" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="step-2" role="tabpanel"
+                                            aria-labelledby="step-2-tab">
+                                            <div class="signup-form-content">
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Please provide your Dealership
+                                                            address</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6 ">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Line 1">
+                                                        </div>
+                                                        <div class="col-md-6 ">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Line 2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="City">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Postal code">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Registration type</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <div class="dropdown dropdown-checks">
+                                                                <button class="form-control fpf-inp sfc-inp show"
+                                                                    type="button">
+                                                                    <span>Select type</span>
+                                                                    <svg width="16" height="10" viewBox="0 0 16 10"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M1.25391 1.4834L7.62696 7.48157L14 1.4834"
+                                                                            stroke="white" stroke-width="2.24931"
+                                                                            stroke-linecap="round" />
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class="dropdown-menu show"
+                                                                    aria-labelledby="dropdownCheckboxes">
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-vehicle-maker">
+                                                                            <label class="form-check-label"
+                                                                                for="option-vehicle-maker">Vehicle
+                                                                                Maker</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-broker">
+                                                                            <label class="form-check-label"
+                                                                                for="option-broker">Broker</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-car-supermarket">
+                                                                            <label class="form-check-label"
+                                                                                for="option-car-supermarket">Car
+                                                                                Supermarket</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-independent">
+                                                                            <label class="form-check-label"
+                                                                                for="option-independent">Independent</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-leasing-company">
+                                                                            <label class="form-check-label"
+                                                                                for="option-leasing-company">Leasing
+                                                                                Company</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-franchised-dealership">
+                                                                            <label class="form-check-label"
+                                                                                for="option-franchised-dealership">Franchised
+                                                                                Dealership</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-dealership">
+                                                                            <label class="form-check-label"
+                                                                                for="option-dealership">Dealership</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox"
+                                                                                id="option-online-car-buyer">
+                                                                            <label class="form-check-label"
+                                                                                for="option-online-car-buyer">Online Car
+                                                                                Buyer</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-new-buyer">
+                                                                            <label class="form-check-label"
+                                                                                for="option-new-buyer">New Buyer</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">How long have you been trading for in
+                                                            the car industry?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Ex: 2 Years">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="row sfc-row gap-sm-0 gap-2">
+                                                        <div class="col-12 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Can you provide trade
+                                                                    references from previous trade transaction on
+                                                                    request if needed?</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_0" id="check_0_1">
+                                                                    <label class="form-check-label" for="check_0_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_0" id="check_0_2">
+                                                                    <label class="form-check-label" for="check_0_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <p class="sfc-help-text mb-0">Please select the information you can
+                                                        provide (we may request for specific applicants only)</p>
+                                                    <div class="row sfc-row gap-sm-0 gap-2">
+                                                        <div class="col-sm-6 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Trade plate license</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_1" id="check_1_1">
+                                                                    <label class="form-check-label" for="check_1_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_1" id="check_1_2">
+                                                                    <label class="form-check-label" for="check_1_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Motor insurance</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_2" id="check_2_1">
+                                                                    <label class="form-check-label" for="check_2_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_2" id="check_2_2">
+                                                                    <label class="form-check-label" for="check_2_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row sfc-row gap-sm-0 gap-2">
+                                                        <div class="col-sm-6 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Certificate</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_3" id="check_3_1">
+                                                                    <label class="form-check-label" for="check_3_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_3" id="check_3_2">
+                                                                    <label class="form-check-label" for="check_3_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6 d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <label class="sfc-label">Something to prove that you are
+                                                                    working at motor trade</label>
+                                                            </div>
+                                                            <div class="sfc-checks">
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="Yes" name="check_4" id="check4_1">
+                                                                    <label class="form-check-label" for="check4_1"> Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check check-type-1">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        value="No" name="check_4" id="check4_2">
+                                                                    <label class="form-check-label" for="check4_2"> No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Are you a member of any trade
+                                                            associations or trade groups?</label>
+                                                        <img src="./assets/img/signup-info-icon.svg" onclick="openModal('infoModal')" alt="Info"
+                                                            class="sfc-info">
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Ex: 2 Years">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-btn">
+                                                <button type="button" onclick="switchTab('step-3')"
+                                                    class="btn btn-main d-flex align-items-center justify-content-center w-100"><span>Save
+                                                        & Next</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                            fill="#101044" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="step-3" role="tabpanel"
+                                            aria-labelledby="step-3-tab">
+                                            <div class="signup-form-content">
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Brands you purchase</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-12">
+                                                            <div class="dropdown dropdown-checks">
+                                                                <button class="form-control fpf-inp sfc-inp show"
+                                                                    type="button">
+                                                                    <span>Select brand</span>
+                                                                    <svg width="16" height="10" viewBox="0 0 16 10"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M1.25391 1.4834L7.62696 7.48157L14 1.4834"
+                                                                            stroke="white" stroke-width="2.24931"
+                                                                            stroke-linecap="round" />
+                                                                    </svg>
+                                                                </button>
+                                                                <ul class="dropdown-menu show"
+                                                                    aria-labelledby="dropdownCheckboxes">
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-bmw">
+                                                                            <label class="form-check-label"
+                                                                                for="option-bmw">BMW</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-hyundai">
+                                                                            <label class="form-check-label"
+                                                                                for="option-hyundai">Hyundai</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                type="checkbox" id="option-nissan">
+                                                                            <label class="form-check-label"
+                                                                                for="option-nissan">Nissan</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Preferred mileages?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Min">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Max">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">What’s your purchase cost
+                                                            range?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Min">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Max">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Preferred age?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Min years">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Max years">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Preferred distance?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Miles min">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Miles max">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sfc-form-group">
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <label class="sfc-label">Preferred volume?</label>
+                                                    </div>
+                                                    <div class="row sfc-row gap-md-0 gap-2">
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Cars monthly min">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" class="form-control fpf-inp sfc-inp"
+                                                                placeholder="Cars monthly max">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sfb-btn">
+                                                <button type="submit"
+                                                    class="btn btn-main d-flex align-items-center justify-content-center w-100"><span>Submit</span><svg
+                                                        width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                            fill="#101044" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="signup-help-box">
+                                <div class="shb-img-cont">
+                                    <img src="./assets/img/signup-help-girl.png" alt="Person">
+                                </div>
+                                <div class="shb-content">
+                                    <div class="d-flex gap-2">
+                                        <img src="./assets/img/Rays-purple-left.svg" alt="Rays">
+                                        <div class="d-flex flex-column gap-sm-3 gap-2">
+                                            <h3 class="shb-title mb-0 text-white fw-normal">Dont worry if you cant
+                                                answer some of the questions, speak to our tean who will help you
+                                                through and get you onboarded'</h3>
+                                            <a href="#" class="shb-link">Chat now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="signup-cta">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex flex-column gap-lg-5 gap-4 text-center align-items-center">
+                            <div class="d-flex flex-column gap-lg-4 gap-3 align-items-center">
+                                <h2 class="mb-2 signup-cta-title text-white">Join SmartHub for access to <span
+                                        class="text-parrot">Smart Connect!</span></h2>
+                                <p class="mb-0 text-white">Join our growing community of verified traders, dealers and
+                                    online buyers to start making efficient, profitable trades today. Smart Connect is
+                                    here to simplify your trading experience and help your business thrive.</p>
+                            </div>
+                            <a href="#signup-sec"
+                                class="btn btn-main d-flex align-items-center justify-content-center"><span>Sign up
+                                    now</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                        fill="#101044" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Main End -->
+        <!-- Footer -->
+        <footer>
+            <div class="pre-footer">
+                <div class="container pf-cont">
+                    <div class="footer-cont">
+                        <div class="pf-content d-flex flex-column gap-lg-4 gap-3">
+                            <h3 class="pf-title mb-0 d-flex gap-2 fw-medium">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays">
+                                <span>The smarter way to trade.</span>
+                            </h3>
+                            <p class="mb-0 pf-subtitle"><span class="text-parrot">85%</span> of traders earn more with
+                                SmartConnect.</p>
+                        </div>
+                        <img src="./assets/img/pre-footer-img.png" alt="Car"
+                            class="w-100 img-fluid d-lg-none d-block mt-5">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex ft-flex-1">
+                            <div class="ft-left">
+                                <a href="./index.html" class="ft-logo-link d-block mb-4 pb-1">
+                                    <img src="./assets/img/footer-logo-white.svg" alt="Footer Logo">
+                                </a>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Stalk our socials</h4>
+                                    <div class="ft-social-links d-flex align-items-center gap-lg-4 gap-3 pb-1">
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.842282" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M23.4774 32.3906V23.1782H26.5833L27.0308 19.5721H23.4774V17.2822C23.4774 16.7558 23.587 16.3302 23.8064 16.0056C24.0257 15.681 24.5039 15.5187 25.2409 15.5187H27.136V12.3075C26.7324 12.2724 26.3025 12.2417 25.8463 12.2153C25.3901 12.189 24.9338 12.1759 24.4776 12.1759C24.46 12.1759 24.4425 12.1759 24.4249 12.1759C24.4074 12.1759 24.3898 12.1759 24.3723 12.1759C23.0036 12.1759 21.8893 12.5838 21.0295 13.3998C20.1697 14.2158 19.7397 15.3958 19.7397 16.94V19.5721H16.6602V23.1782H19.7397V32.3906H23.4774Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.908688" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M30.5465 17.7813C30.5465 17.8866 30.5465 17.9875 30.5465 18.084C30.5465 18.1805 30.5465 18.2814 30.5465 18.3867C30.5465 19.8782 30.2657 21.3873 29.7042 22.914C29.1427 24.4406 28.318 25.8225 27.23 27.0596C26.1421 28.2967 24.7997 29.3013 23.2029 30.0734C21.606 30.863 19.7635 31.2578 17.6754 31.2578C16.3944 31.2578 15.1661 31.078 13.9904 30.7182C12.8147 30.3585 11.7268 29.854 10.7266 29.2048C10.9196 29.2398 11.1038 29.2574 11.2793 29.2574C11.4548 29.2574 11.639 29.2574 11.8321 29.2574C11.8321 29.2574 11.8408 29.2574 11.8584 29.2574C12.9112 29.2574 13.9158 29.0863 14.8722 28.7441C15.8285 28.402 16.6927 27.9238 17.4648 27.3096L17.4385 27.3359C16.4558 27.3184 15.5828 27.0201 14.8195 26.441C14.0562 25.8619 13.5254 25.1249 13.2271 24.23V24.2037C13.3499 24.2212 13.4859 24.2388 13.6351 24.2563C13.7842 24.2739 13.929 24.2827 14.0694 24.2827C14.2799 24.2827 14.4817 24.2651 14.6748 24.23C14.8678 24.1949 15.0608 24.1598 15.2538 24.1247C14.2185 23.8966 13.3543 23.3702 12.6612 22.5455C11.9681 21.7207 11.6215 20.7644 11.6215 19.6764V19.6238C11.9373 19.7817 12.2664 19.9133 12.6085 20.0186C12.9507 20.1239 13.3061 20.1853 13.6745 20.2029C13.0604 19.7817 12.5691 19.2421 12.2006 18.5841C11.8321 17.9261 11.6478 17.211 11.6478 16.4389C11.6478 16.0178 11.7048 15.6142 11.8189 15.2281C11.933 14.8421 12.0865 14.4824 12.2795 14.149C12.841 14.8333 13.464 15.4563 14.1483 16.0178C14.8327 16.5793 15.5697 17.0619 16.3593 17.4654C17.149 17.869 17.9825 18.1937 18.8598 18.4393C19.7372 18.685 20.6409 18.8342 21.5709 18.8868H21.5973C21.5622 18.7113 21.5358 18.5358 21.5183 18.3604C21.5008 18.1849 21.492 18.0094 21.492 17.8339C21.492 16.5881 21.9351 15.5221 22.8212 14.6359C23.7074 13.7498 24.7734 13.3067 26.0192 13.3067C26.6685 13.3067 27.2783 13.4383 27.8486 13.7015C28.4189 13.9647 28.9058 14.3157 29.3094 14.7544C29.8534 14.6491 30.3666 14.4999 30.8492 14.3069C31.3318 14.1139 31.7924 13.8857 32.2311 13.6225L32.1784 13.6489C32.003 14.1928 31.7485 14.6754 31.4151 15.0965C31.0817 15.5177 30.6869 15.8686 30.2307 16.1494H30.2043C30.6781 16.0967 31.1387 16.009 31.5862 15.8862C32.0337 15.7633 32.4592 15.6054 32.8628 15.4124L32.8101 15.4387C32.4943 15.8949 32.1477 16.3161 31.7704 16.7021C31.3932 17.0882 30.994 17.4391 30.5728 17.755L30.5465 17.7813Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.975094" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M16.6096 14.4395C16.6096 15.1063 16.3683 15.681 15.8857 16.1635C15.4032 16.6461 14.8285 16.8874 14.1617 16.8874C13.4773 16.8874 12.8939 16.6461 12.4113 16.1635C11.9288 15.681 11.6875 15.1063 11.6875 14.4395C11.6875 13.7551 11.9288 13.1717 12.4113 12.6891C12.8939 12.2066 13.4773 11.9653 14.1617 11.9653C14.8285 11.9653 15.4032 12.2066 15.8857 12.6891C16.3683 13.1717 16.6096 13.7551 16.6096 14.4395ZM18.9259 18.7562V32.3906H23.1636V25.6524C23.1636 24.7574 23.3127 23.9503 23.6111 23.2308C23.9094 22.5114 24.6025 22.1516 25.6904 22.1516C26.7784 22.1516 27.4189 22.5552 27.6119 23.3624C27.8049 24.1696 27.9014 24.968 27.9014 25.7577V32.3906H32.1392V24.9154C32.1392 23.0729 31.8277 21.5287 31.2048 20.2828C30.5818 19.0369 29.1999 18.414 27.0591 18.414C26.0238 18.414 25.1684 18.6465 24.4928 19.1115C23.8172 19.5765 23.3391 20.081 23.0583 20.625H22.9793V18.7562H18.9259ZM12.0297 18.7562H16.2674V32.3906H12.0297V18.7562Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1.04541" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M32.1582 18.1235C32.1407 17.6849 32.0924 17.2506 32.0134 16.8206C31.9345 16.3907 31.816 15.9827 31.6581 15.5967L31.6844 15.6493C31.4212 14.965 31.0352 14.3684 30.5263 13.8595C30.0174 13.3506 29.4296 12.9646 28.7628 12.7014L28.7364 12.675C28.3679 12.5347 27.9775 12.425 27.5651 12.346C27.1528 12.2671 26.7273 12.2276 26.2886 12.2276H26.2622C25.7183 12.1925 25.2313 12.1705 24.8014 12.1618C24.3715 12.153 23.4722 12.1486 22.1035 12.1486C20.7348 12.1486 19.8311 12.153 19.3924 12.1618C18.9537 12.1705 18.4711 12.1925 17.9447 12.2276C17.4885 12.2276 17.0542 12.2714 16.6418 12.3592C16.2294 12.4469 15.8302 12.561 15.4442 12.7014L15.4705 12.675C14.8037 12.9558 14.2159 13.3506 13.707 13.8595C13.1981 14.3684 12.8121 14.9474 12.5488 15.5967L12.5225 15.6493C12.3821 16.0178 12.2725 16.4083 12.1935 16.8206C12.1145 17.233 12.0663 17.6585 12.0487 18.0972C12.0312 18.6412 12.018 19.1281 12.0093 19.5581C12.0005 19.988 11.9961 20.8873 11.9961 22.256C11.9961 23.6247 11.9961 24.5284 11.9961 24.9671C11.9961 25.4058 12.0136 25.8971 12.0487 26.4411C12.0663 26.8622 12.1145 27.2746 12.1935 27.6782C12.2725 28.0818 12.3821 28.4854 12.5225 28.889C12.7857 29.5733 13.1718 30.1699 13.6807 30.6788C14.1895 31.1877 14.7774 31.5737 15.4442 31.8369H15.4968C15.8478 31.9949 16.2294 32.1177 16.6418 32.2054C17.0542 32.2932 17.4797 32.3371 17.9184 32.3371H17.9447C18.4887 32.3721 18.9756 32.3941 19.4055 32.4029C19.8355 32.4116 20.7348 32.416 22.1035 32.416C23.4722 32.416 24.3759 32.4116 24.8146 32.4029C25.2533 32.3941 25.7358 32.3721 26.2622 32.3371C26.7185 32.3371 27.1528 32.2932 27.5651 32.2054C27.9775 32.1177 28.3855 32.0036 28.7891 31.8633L28.7364 31.8896C29.4033 31.6088 29.9911 31.214 30.5 30.7051C31.0089 30.1963 31.3949 29.6172 31.6581 28.9679L31.6844 28.9153C31.8248 28.5292 31.9345 28.13 32.0134 27.7177C32.0924 27.3053 32.1407 26.8885 32.1582 26.4674C32.1758 25.9234 32.1889 25.4365 32.1977 25.0066C32.2065 24.5767 32.2109 23.6773 32.2109 22.3086C32.2109 20.9224 32.2109 20.0143 32.2109 19.5844C32.2109 19.1545 32.1933 18.6675 32.1582 18.1235ZM22.1035 27.4413C21.384 27.4413 20.7084 27.3097 20.0767 27.0465C19.445 26.7657 18.8923 26.3928 18.4185 25.9278C17.9447 25.4628 17.5762 24.9144 17.313 24.2827C17.0322 23.651 16.8919 22.9754 16.8919 22.256C16.8919 21.5365 17.0322 20.861 17.313 20.2292C17.5762 19.5975 17.9447 19.0492 18.4185 18.5842C18.8923 18.1192 19.445 17.7463 20.0767 17.4655C20.7084 17.2023 21.384 17.0707 22.1035 17.0707C22.8229 17.0707 23.4985 17.2023 24.1302 17.4655C24.7444 17.7463 25.2884 18.1192 25.7621 18.5842C26.2359 19.0492 26.6044 19.5975 26.8676 20.2292C27.1484 20.861 27.2888 21.5365 27.2888 22.256C27.2888 22.9754 27.1484 23.651 26.8676 24.2827C26.6044 24.9144 26.2359 25.4628 25.7621 25.9278C25.2884 26.3928 24.7444 26.7657 24.1302 27.0465C23.4985 27.3097 22.8229 27.4413 22.1035 27.4413ZM27.4993 18.0972C27.1659 18.0972 26.8808 17.9788 26.6439 17.7419C26.407 17.505 26.2886 17.2198 26.2886 16.8864C26.2886 16.553 26.407 16.2679 26.6439 16.031C26.8808 15.7941 27.1659 15.6757 27.4993 15.6757C27.8327 15.6757 28.1179 15.7941 28.3548 16.031C28.5917 16.2679 28.7101 16.553 28.7101 16.8864C28.7101 17.2198 28.5917 17.505 28.3548 17.7419C28.1179 17.9788 27.8327 18.0972 27.4993 18.0972ZM25.4726 22.256C25.4726 23.186 25.1436 23.98 24.4856 24.6381C23.8275 25.2961 23.0335 25.6251 22.1035 25.6251C21.1735 25.6251 20.3794 25.2961 19.7214 24.6381C19.0634 23.98 18.7343 23.186 18.7343 22.256C18.7343 21.326 19.0634 20.5319 19.7214 19.8739C20.3794 19.2159 21.1735 18.8869 22.1035 18.8869C23.0335 18.8869 23.8275 19.2159 24.4856 19.8739C25.1436 20.5319 25.4726 21.326 25.4726 22.256Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-middle d-flex">
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Services</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">SmartHub</a></li>
+                                        <li><a href="#" class="ft-link">SmartDrop</a></li>
+                                        <li><a href="#" class="ft-link">SmartConnect</a></li>
+                                        <li><a href="#" class="ft-link">SmartMatch</a></li>
+                                        <li><a href="#" class="ft-link">SmartWallet</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Resources</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">Guides</a></li>
+                                        <li><a href="#" class="ft-link">Advertise with us</a></li>
+                                        <li><a href="#" class="ft-link">How we do it</a></li>
+                                        <li><a href="#" class="ft-link">SmartData</a></li>
+                                        <li><a href="#" class="ft-link">Become a trader</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Download App</h4>
+                                    <div class="ft-download-links d-flex flex-column">
+                                        <a href="#">
+                                            <img src="./assets/img/apple-app.svg.svg" alt="Apple Btn">
+                                        </a>
+                                        <a href="#">
+                                            <img src="./assets/img/google-app.svg.svg" alt="Google Btn">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-right d-flex flex-column gap-3">
+                                <h3 class="ftr-title">Want to sell your car? Head over to:</h3>
+                                <div class="mt-1">
+                                    <a href="#" class="btn btn-main d-flex align-items-center"><span>SMARTHUB</span><svg
+                                            width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#101044" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex justify-content-between align-items-center flex-lg-row flex-column gap-2">
+                            <p class="mb-0">&copy; Carsmart Limited 2001 - 2024</p>
+                            <div class="d-flex align-items-center gap-lg-5 gap-3 flex-wrap justify-content-center">
+                                <a href="#" class="fb-link">Help</a>
+                                <a href="#" class="fb-link">SmartGuidelines</a>
+                                <a href="#" class="fb-link">Terms</a>
+                                <a href="#" class="fb-link">Privacy policy</a>
+                                <a href="#" class="fb-link">Cookies</a>
+                                <a href="#" class="fb-link">Sitemap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        <!-- Modal -->
+        <div class="modal fade signupInfoModal" id="infoModal" tabindex="-1"
+            aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="infoModalLabel">More Information</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <p class="mb-0 sim-desc sim-desc-1">Certainly! Here is a comprehensive list of official UK car
+                            trade association and organizations:</p>
+                        <div class="sim-content">
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">National franchised dealers association (NFDA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://nfda.co.uk"
+                                        target="_blank">nfda.co.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Society of motor manufacturers and traders (SMMT)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://smmt.co.uk"
+                                        target="_blank">smmt.co.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Independent motor dealers association (IMDA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://independentmotordealers.co.uk"
+                                        target="_blank">independentmotordealers.co.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">British vehicle rental and leasing association (BVRLA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://bvrla.co.uk"
+                                        target="_blank">bvrla.co.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Automotive technical accreditation (ATA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://theata.org.uk"
+                                        target="_blank">theata.org.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Retail motor industry federation (RMIF)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://nfda.co.uk" target="_blank">The RMID
+                                        was integrated into the NFDA, so it is now part of the NFDA</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Motor ombudsman</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://motorombudsman.org"
+                                        target="_blank">motorombudsman.org</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">National association of motor auctions (NAMA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://name-uk.com"
+                                        target="_blank">name-uk.com</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Automotive management (AMM)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://automotive-management.co.uk"
+                                        target="_blank">automotive-management.co.uk</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">British car auctions (BCA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://bcauk.com"
+                                        target="_blank">bcauk.com</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Association of vehicle recovery operators (AVRO)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://avrouk.com"
+                                        target="_blank">avrouk.com</a></p>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h5 class="sim-title mb-0">Vehicle remarketing association (VRA)</h5>
+                                <p class="mb-0 sim-desc">Website: <a href="https://vrauk.org"
+                                        target="_blank">vrauk.org</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Ends -->
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+        <script src="./assets/js/custom.js?v=2"></script>
+    </body>
+
+</html>
