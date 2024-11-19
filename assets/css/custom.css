@@ -257,6 +257,7 @@ footer {
     font-size: 18px;
     color: #101044;
     border-radius: 6px;
+    gap: 2px;
 }
 
 
@@ -1380,27 +1381,27 @@ footer {
     font-weight: 400;
 }
 
-.signupInfoModal .modal-dialog {
+.primary-modal .modal-dialog {
     max-width: 773px !important;
 }
 
-.signupInfoModal .modal-content {
+.primary-modal .modal-content {
     background-color: #1F204F;
     border-radius: 40px;
     padding: 40px;
 }
 
-.signupInfoModal .modal-header {
+.primary-modal .modal-header {
     padding-bottom: 20px !important;
 }
 
-.signupInfoModal .modal-title {
+.primary-modal .modal-title {
     font-size: 24px;
     font-weight: 500;
     color: #FFFFFF;
 }
 
-.signupInfoModal .btn-close {
+.primary-modal .btn-close {
     box-shadow: none !important;
     padding: 0 !important;
     height: auto;
@@ -1408,13 +1409,13 @@ footer {
     background-image: unset;
 }
 
-.signupInfoModal .sim-desc {
+.primary-modal .sim-desc {
     font-size: 13px;
     font-weight: 200;
     color: #fff;
 }
 
-.signupInfoModal .sim-desc-1 {
+.primary-modal .sim-desc-1 {
     margin-bottom: 10px !important;
 }
 
@@ -1917,6 +1918,319 @@ footer {
 .container-relative {
     position: relative;
 }
+/* Homepage End */
+
+/* Profile Page */
+
+.ps-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.psi-title{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.psi-desc{
+    font-size: 18px;
+}
+
+.ps-card{
+    background-color: #1F204F;
+    padding: 40px;
+    border-radius: 40px;
+}
+.ps-title{
+    font-size: 24px;
+}
+.psp-desc{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.psp-desc-2{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.psp-desc{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pscp-desc{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.psc-preferences{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.psc-payment{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.psp-table td, .psp-table th{
+    color: #ffffff;
+    background-color: transparent !important;
+    text-align: right;
+}
+.psp-table th{
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+.psp-table td{
+    font-weight: 400;
+    padding: 10px 0 !important;
+}
+
+.psp-table thead{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.psp-table tbody tr:first-child td{
+    padding-top: 15px !important;
+}
+
+.psp-table .form-check-input{
+    height: 18px;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.psp-table tr th:first-child{
+    text-align: left;
+}
+.psp-table tr td:first-child{
+    text-align: left;
+}
+
+.psp-table .form-switch{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    justify-content: flex-end;
+}
+
+.psp-table .form-check-input:checked{
+    background-color: #675DF4;
+    border-color: #675DF4;
+}
+
+.ps-payment-method{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.ps-pm-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: #ffffff;
+}
+
+.ps-pm-title{
+    font-size: 14px;
+    font-weight: 500;
+}
+.ps-pm-desc{
+    font-weight: 300;
+    font-size: 12px;
+}
+.ps-pm-action{
+    display: flex;
+    gap: 20px;
+}
+.ps-payment-method{
+    padding: 12px 18px;
+    background-color: #4B4D73;
+    border-radius: 7.5px;
+}
+.ps-pm-action a{
+    text-decoration: none;
+}
+.ps-pm-action svg{
+    height: 24px;
+}
+.pscp-flex-1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.ps-pm-add{
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0 0;
+    font-weight: 500;
+}
+
+.ps-pm-add svg{
+    height: 16px;
+}
+
+.psc-profile-info,.psc-notifications,.psc-products{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.ps-profile-form .form-fields{
+    gap: 40px;
+    flex-direction: column;
+    display: flex;
+}
+
+.add-payment-form .form-fields{
+    gap: 20px;
+    flex-direction: column;
+    display: flex;
+}
+.ps-profile-form .form-group,
+.add-payment-form .form-group{
+    gap: 6px;
+    flex-direction: column;
+    display: flex;
+}
+.ps-profile-form .form-label,
+.add-payment-form .form-label{
+    font-size: 16px;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+.add-payment-form .form-label{
+    font-weight: 500;
+}
+.ps-profile-form .fpf-inp,
+.add-payment-form .fpf-inp{
+    font-size: 16px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.ps-profile-form .btn-main{
+    padding: 10px 18px !important;
+}
+.ps-noti{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.psn-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    color: #ffffff;
+}
+
+.psn-action{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.ps-noti-flex-1{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.psn-check{
+    font-size: 12px;
+    color: #99F22B;
+    text-decoration: underline;
+    font-weight: 300;
+    padding: 5px 14px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.psn-action svg{
+    height: 24px;
+}
+
+.psn-title{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.psn-desc{
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.psn-read-more{
+    font-size: 12px;
+    font-weight: 300;
+    color: #99F22B;
+    display: flex;
+    align-items: center;
+}
+.ps-products-flex{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.ps-product{
+    display: flex;
+    gap: 5px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #4B4D73;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 140px;
+    flex-shrink: 1;
+}
+.ps-product-title{
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #ffffff;
+}
+
+.ps-product .psn-read-more{
+    text-decoration: none;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.card-type-icon{
+    height: 15.5px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.apf-row{
+    margin: 0 -10px;
+}
+
+.apf-row>div{
+    padding: 0 10px;
+}
+
+.fpf-inp.form-select{
+    background-image: url(../img/white-chev-down.svg);
+    background-size: 24px;
+}
+.fpf-inp.form-select option{
+    background-color: rgba(171, 171, 188, 1);
+    color: #ffffff;
+}
+
+.add-payment-form .fpf-inp{
+    font-weight: 300 !important;
+}
+/* Profile Page End */
+
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -1926,7 +2240,6 @@ footer {
     }
 }
 
-/* Homepage Ends */
 @media (min-width: 1400px) {
 
     .hs-5-img {
@@ -2131,6 +2444,16 @@ footer {
     .home-sec-2-imgs{
         transform: translateX(-25%) translateY(15%);
     }
+
+    .ps-card,.psc-payment,.psc-preferences{
+        padding: 30px;
+    }
+    .psc-profile-info,.psc-notifications,.psc-products{
+        gap: 24px;
+    }
+    .ps-profile-form .form-fields{
+        gap: 24px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2237,16 +2560,16 @@ footer {
         background-size: 120% auto;
     }
 
-    .signupInfoModal .modal-content {
+    .primary-modal .modal-content {
         border-radius: 20px;
         padding: 20px;
     }
 
-    .signupInfoModal .btn-close svg {
+    .primary-modal .btn-close svg {
         height: 30px;
     }
 
-    .signupInfoModal .modal-header {
+    .primary-modal .modal-header {
         padding-bottom: 10px !important;
     }
 
