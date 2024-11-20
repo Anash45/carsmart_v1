@@ -98,7 +98,7 @@ $(document).ready(function () {
 </svg>
 
     </button>`,
-    appendArrows: '.ts-slider-arrows',
+            appendArrows: '.ts-slider-arrows',
             dots: false, // Hide navigation dots
             draggable: true, // Enable dragging
             infinite: true, // Infinite looping
@@ -123,6 +123,98 @@ $(document).ready(function () {
     }
 
     AOS.init();
+    // On page load, check for any expanded accordion item and mark it as active
+    $('#dc-sidebar-accordion .accordion-collapse.show').each(function () {
+        const $currentItem = $(this).closest('.accordion-item');
+        $currentItem.addClass('active');
+        $currentItem.prev('.accordion-item').addClass('before-active');
+    });
+
+    // Listen for the show event
+    $('#dc-sidebar-accordion').on('show.bs.collapse', function (e) {
+        const $accordion = $(this);
+        const $currentItem = $(e.target).closest('.accordion-item');
+
+        // Remove .active and .before-active classes from all accordion-items
+        $accordion.find('.accordion-item').removeClass('active before-active');
+
+        // Add .active to the currently opened accordion-item
+        $currentItem.addClass('active');
+
+        // Add .before-active to the previous accordion-item
+        $currentItem.prev('.accordion-item').addClass('before-active');
+    });
+
+    // Listen for the hide event
+    $('#dc-sidebar-accordion').on('hide.bs.collapse', function (e) {
+        // Remove .active and .before-active classes from the closing accordion-item
+        const $currentItem = $(e.target).closest('.accordion-item');
+        $currentItem.prev('.accordion-item').removeClass('before-active');
+        $currentItem.removeClass('active');
+    });
+
+    $('.dcm-table').each(function () {
+        const $table = $(this); // Scope to the current table
+        const $theadCheck = $table.find('thead .dcmt-check');
+        const $rowChecks = $table.find('tbody .dcmt-check');
+
+        // Function to update thead checkbox state
+        function updateTheadCheckState() {
+            const totalRows = $rowChecks.length;
+            const checkedRows = $rowChecks.filter(':checked').length;
+
+            // Remove all existing classes
+            $theadCheck.removeClass('all-checked partial-checked no-checked');
+
+            if (checkedRows === totalRows) {
+                $theadCheck.addClass('all-checked').prop('checked', true);
+            } else if (checkedRows === 0) {
+                $theadCheck.addClass('no-checked').prop('checked', false);
+            } else {
+                $theadCheck.addClass('partial-checked').prop('checked', false);
+            }
+        }
+
+        // Event listener for thead checkbox
+        $theadCheck.on('change', function () {
+            const isChecked = $(this).is(':checked');
+            $rowChecks.prop('checked', isChecked);
+            updateTheadCheckState();
+        });
+
+        // Event listener for tbody checkboxes
+        $rowChecks.on('change', function () {
+            updateTheadCheckState();
+        });
+
+        // Initialize the state on page load
+        updateTheadCheckState();
+    });
+
+    $('.dcm-filter-btns').each(function () {
+        const $btns = $(this);
+        const $btn = $btns.find('.dcm-filter-btn'); // Correctly select the buttons inside the container
+        $btn.on('click', function () {
+            $btn.removeClass('active'); // Remove the active class from all buttons
+            $(this).addClass('active'); // Add the active class to the clicked button
+
+            const filterValue = $(this).data('target'); // Get the filter target value
+            const $targetTable = $btns.closest('.dashboard-card').find('.dcm-table'); // Find the target table
+
+            if(filterValue === 'all') {
+                $targetTable.find('tbody tr').show(); // Show all rows if the filter value is 'all'
+                return;
+            }
+            // Hide all rows initially
+            $targetTable.find('tbody tr').hide();
+
+            // Show rows that match the filter value
+            $targetTable.find('tbody tr').filter(function () {
+                return $(this).data('filter') === filterValue; // Check if the row's data-filter matches the target
+            }).show();
+        });
+    });
+
 });
 
 function switchTab(tabId) {
@@ -136,3 +228,4 @@ function openModal(modalId) {
     var modal = new bootstrap.Modal(document.getElementById(modalId));
     modal.show(); // This will activate the tab
 }
+
