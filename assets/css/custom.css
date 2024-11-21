@@ -423,15 +423,16 @@ footer {
     width: 126px;
 }
 
+
 .gb-text {
     font-size: 14px;
     color: #101044;
+    font-weight: 400;
     position: absolute;
     z-index: 1;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
-    font-weight: 400;
 }
 
 .plc-bottom {
@@ -2742,6 +2743,470 @@ ol.policy-desc{
 }
 /* Dashboard Ends */
 
+/* Car Details Start */
+.details-flex-1{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.dsf{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dsf .slick-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100px;
+    z-index: 2;
+    height: unset;
+    width: unset;
+}
+.dsf .slick-next{
+    right: 10px;
+}
+
+.dsf .slick-slide>div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dsf .slick-prev{
+    left: 10px;
+}
+.dsf img,.dsf video{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+.dsn img{
+    cursor: pointer;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    height: 90px;
+}
+
+.dsn .slick-list{
+    padding: 0 !important;
+    margin: 0 -5px !important
+}
+
+.dsn .slick-track{
+    margin: 0 !important;
+}
+
+.dsn-img-cont{
+    padding: 0 5px;
+}
+
+.details-flex-2{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.cd-flex-3{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.cd-title{
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.cd-location-iframe{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.cdf-flex{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cdf-feature{
+    flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.cdf-feature img{
+    height: 47px;
+}
+
+.cd-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cd-card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 20px;
+    width: calc(100% / 3 - ((20px * 2)/3));
+}
+
+.cdc-label{
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 120%;
+}
+
+.cdr-img-outline{
+    mix-blend-mode: exclusion;
+}
+.cdc-info{
+    cursor: pointer;
+    height: 30px;
+}
+.cdc-value{
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: 5px;
+    justify-content: center;
+}
+.cd-rows{
+    display: flex;
+    flex-direction: column;
+}
+
+.cd-border{
+    margin: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cd-row{
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.cdr-img{
+    height: 130px;
+    max-width: 100%;
+}
+.cd-col{
+    width: calc(50% - 8px);
+    font-size: 18px;
+}
+
+.cdr-label{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cd-row .cd-col:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+.cdr-value{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+}
+.cd-right-card{
+    border-radius: 16px;
+    background-color: rgba(31, 32, 79, 1);
+    overflow: hidden;
+}
+
+.cd-rc-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+}
+.cd-rf-div{
+    padding: 0 20px;
+    position: relative;
+}
+.cd-rc-top-banner{
+    border-radius: 16px 16px 0 0;
+    border: 1px inset rgba(255, 255, 255, 0.1);
+    padding: 18px 30px;
+    text-align: center;
+}
+
+.cdr-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cd-rc-top-banner .sb-notice{
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 100%;
+    color: rgba(238, 240, 255, 1);
+}
+
+.cdr-info-top .grade-badge-cont{
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    width: fit-content;
+    top: 0;
+    bottom: unset;
+    transform: unset;
+}
+.cdr-info-bottom{
+    color: #FFFFFF;
+}
+.cdr-info .plc-plate-number{
+    font-size: 20px;
+}
+.cdr-info-bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.crdi-make{
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.cdr-info .plcb-blue{
+    height: 33px;
+    width: 20px;
+}
+.cdr-mini-border{
+    width: 1px;
+    height: 16px;
+    background-color: rgba(196, 197, 252, 1);
+}
+.cdri-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cdri-title{
+    margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 110%;
+}
+.cdr-mini-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 300;
+}
+.cdri-price{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.cdri-price-desc{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+.cdri-price-title{
+    font-size: 44px;
+    margin-bottom: 0;
+    font-weight: 500;
+    position: relative;
+    color: rgba(255, 255, 255, 1);
+}
+
+.cdri-price-title::after{
+    position: absolute;
+    content: '';
+    background-image: url(../img/green-underline.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 100%;
+    left: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 6px;
+}
+.cdrc-label-value{
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.cdrc-label{
+    font-weight: 400;
+}
+
+.cdrc-value{
+    text-align: right;
+    font-weight: 500;
+}
+
+.cdr-accordion .accordion-item{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 0 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cdr-accordion .accordion-button, .cdr-accordion .accordion-body{
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.cdr-accordion .accordion-button{
+    padding: 20px 0 20px !important;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    color: #ffffff !important;
+}
+
+
+.cdr-accordion .accordion-button:not(.collapsed)::before{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    left: 0;
+}
+
+.cdr-accordion .accordion-button::after{
+    background-image: url(../img/chevron-white-down.svg);
+    background-position: center;
+    background-size: 18px;
+}
+
+.cdr-accordion .accordion-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 0 20px;
+}
+.cd-rf-div .fpf-inp{
+    font-size: 16px;
+}
+.cd-rf-div .cdc-info{
+    height: 24px;
+}
+.tooltip-inner{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 300;
+    padding: 20px;
+    background-color: transparent;
+    min-width: 300px;
+}
+.tooltip-arrow::before{
+    border: 0 !important;
+    content: 0 !important;
+}
+.tooltip.show{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(16, 16, 68, 1);
+    opacity: 1;
+    border-radius: 10px;
+}
+.cd-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cdr-card-bottom{
+    background-color: rgba(31, 32, 79, 1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 30px;
+}
+.cdrb-rows{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cdrb-rows .cdrc-label{
+    line-height: 120%;
+    max-width: 55%;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+.cdf-form{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.border-white{
+    border-color: #fff !important;
+}
+.cd-rc-top-quick{
+    background-color: #064E3B;
+}
+.cd-rc-top-smartconnect{
+    background-color: rgba(105, 93, 253, 1);
+}
+.cd-rc-top-wholesale{
+    background-color: rgba(175, 128, 14, 1);
+}
+.cd-rc-top-smartexchange{
+    background-color: #000000;
+}
+.cd-rc-top-smartexchange .sb-notice{
+    font-size: 32px;
+    font-weight: 300;
+}
+.btn-decline{
+    background-color: #E83427;
+    border-color: #E83427 !important;
+}
+
+.cd-right-card .btn-main{
+    padding: 10px 20px !important;
+}
+
+.dsf-img-cont{
+    position: relative;
+}
+/* Car Details End */
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -2824,6 +3289,14 @@ ol.policy-desc{
 
     .hs-2-img {
         width: 315px;
+    }
+
+    .cd-card{
+        width: calc(100% / 2 - ((20px * 1)/2));
+    }
+    .cdf-feature{
+        flex-basis: 240px;
+        flex-shrink: 1;
     }
 }
 
@@ -3223,6 +3696,20 @@ ol.policy-desc{
 
     .hcb-title img {
         height: 44px;
+    }
+    .cd-card{
+        width: 100%;
+    }
+    .cd-row{
+        flex-direction: column;
+    }
+
+    .cd-col{
+        width: 100%;
+        justify-content: flex-start !important;
+    }
+    .cdf-feature{
+        flex-basis: 200px;
     }
 }
 
