@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=7">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=8">
     </head>
 
     <body class="car-details">
@@ -155,7 +155,7 @@
                                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                                 <div class="cd-flex-3 cdf-form-part">
-                                    <h4 class="cd-title">Trade Declaration  - Whats the seller shared</h4>
+                                    <h4 class="cd-title">Trade Declaration - Whats the seller shared</h4>
                                     <div class="cdf-form">
                                         <div class="sfc-form-group">
                                             <div class="d-flex align-items-center gap-2">
@@ -277,9 +277,12 @@
                                     <div class="cd-cards">
                                         <div class="cd-card">
                                             <span class="cdc-label">HPI History</span>
-                                            <span class="cdc-value"><span>All clear</span><img
+                                            <span class="cdc-value">
+                                                <span>All clear</span>
+                                                <img
                                                     src="./assets/img/info-icon.svg" alt="Info" class="cdc-info"
-                                                    onclick="openModal('vehicle-details-modal')"></span>
+                                                    onclick="openModal('hpiModal')">
+                                            </span>
                                         </div>
                                         <div class="cd-card">
                                             <span class="cdc-label">Registration</span>
@@ -299,7 +302,9 @@
                                         </div>
                                         <div class="cd-card">
                                             <span class="cdc-label">Previous Owners</span>
-                                            <span class="cdc-value"><span>3</span></span>
+                                            <span class="cdc-value"><span>3</span><img
+                                            src="./assets/img/info-icon.svg" alt="Info" class="cdc-info"
+                                            onclick="openModal('previousOwnersModal')"></span>
                                         </div>
                                         <div class="cd-card">
                                             <span class="cdc-label">No. of Keys</span>
@@ -338,7 +343,7 @@
                                             <span class="cdc-label">Advisories</span>
                                             <span class="cdc-value"><span>All clear</span><img
                                                     src="./assets/img/info-icon.svg" alt="Info" class="cdc-info"
-                                                    onclick="openModal('vehicle-details-modal')"></span>
+                                                    onclick="openModal('motAdvisoriesModal')"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -572,7 +577,7 @@
                                                     <span class="plcb-blue"></span>
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
-                                                <div class="grade-badge-cont">
+                                                <div class="grade-badge-cont" onclick="openModal('exteriorGradingModal')">
                                                     <span class="gb-text">Grade A</span>
                                                     <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
                                                         class="grade-badge-img">
@@ -663,7 +668,7 @@
                                     </div>
                                     <div class="cd-rf-div">
                                         <div class="form-group d-flex flex-column gap-2">
-                                            <button
+                                            <button onclick="openModal('buyItNowModal')"
                                                 class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Buy
                                                     it now</span><svg width="11" height="26" viewBox="0 0 11 26"
                                                     fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -678,7 +683,7 @@
                                                         fill="#101044" />
                                                 </svg>
                                             </button>
-                                            <button
+                                            <button onclick="openModal('submitOfferModal')"
                                                 class="btn btn-main text-white bg-transparent border-white w-100 justify-content-center d-flex align-items-center"><span>Submit
                                                     offer</span>
                                             </button>
@@ -884,13 +889,497 @@
             </div>
         </footer>
         <!-- Footer End -->
+        <!-- Vehicle Details Modals -->
+        <div class="modal fade primary-modal mot-modal" id="motAdvisoriesModal" tabindex="-1"
+            aria-labelledby="motAdvisoriesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="motAdvisoriesModalLabel">MOT advisories</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                    <div class="cdrit-text"> 1 advisories </div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="pm-alert mb-0"> lorem isomtext here lorem isomtext here lorem isomtext here </p>
+                            <p class="pm-text mb-0">lorem isomtext here lorem isomtext here lorem isomtext here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade primary-modal hpi-modal" id="hpiModal" tabindex="-1"
+            aria-labelledby="hpiModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="hpiModalLabel">HPI history check</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pm-alert mb-0 d-flex flex-column">
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not imported from outside of the EU</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not been salvaged.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not been used as a taxi.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Has valid MOT certificate</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not been stolen.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not on finance.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not on a security watch register.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not a write-off for damage</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>Not a write-off for theft.</span>
+                                </div>
+                                <div class="pma-flex">
+                                    <img src="./assets/img/check-circle-green.svg" alt="Check" class="pma-check"
+                                        height="24">
+                                    <span>No plate changes.</span>
+                                </div>
+                            </div>
+                            <p class="pm-text-small mb-0">Vehicle history check completed on 17/10/2024 using data from
+                                Experian & Total Car Check. Please note that all warranties are disclaimed. We recommend
+                                carrying out your own checks to ensure you're fully informed. We're here to support you
+                                every step of the way!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade primary-modal po-modal" id="previousOwnersModal" tabindex="-1"
+            aria-labelledby="previousOwnersModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="previousOwnersModalLabel">HPI history check</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive pm-table">
+                                <table class="table table-borderless mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Owner</th>
+                                            <th>Length of ownership</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>3 Years, 4 months and 24 days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Current</td>
+                                            <td>3 Years, 4 months and 24 days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade primary-modal pn-modal" id="buyItNowModal" tabindex="-1"
+            aria-labelledby="buyItNowModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="buyItNowModalLabel">Buy it now</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-confirm-box">
+                                <h3 class="mb-0 mcb-price">$2500</h3>
+                                <div class="d-flex justify-content-center gap-2 text-center align-items-center">
+                                    <p class="mb-0 mcb-desc">maximum fees: $249 + VAT</p>
+                                </div>
+                            </div>
+                            <p class="mb-0 pm-text">By bidding, you agree to our term & conditions</p>
+                            <button class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Confirm</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                        fill="#101044" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade primary-modal pn-modal " id="submitOfferModal" tabindex="-1"
+            aria-labelledby="submitOfferModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="submitOfferModalLabel">Make an offer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cdr-mini-info text-white">
+                                <span class="cdr-mini-text">Buy it now: $23,400</span>
+                                <span class="cdr-mini-border"></span>
+                                <span class="cdr-mini-text">Highest offer: $23,400</span>
+                            </div>
+                            <div class="fpf-inp-cont pmm-inp-cont">
+                                <input type="text" class="fpf-inp form-control" value="£ ">
+                                <div class="d-flex align-items-center gap-2 text-white pmm-float">
+                                    <span>Carsmart fees: $0 + VAT</span>
+                                    <img src="./assets/img/info-icon.svg" alt="Info" class="cdc-info" height="24" width="24">
+                                </div>
+                            </div>
+                            <p class="mb-0 pm-text">By bidding, you agree to our term & conditions</p>
+                            <button class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Send offer</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                        fill="#101044" />
+                                    <path
+                                        d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                        fill="#101044" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade primary-modal po-modal " id="exteriorGradingModal" tabindex="-1"
+            aria-labelledby="exteriorGradingModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-0 border-0">
+                        <h5 class="modal-title" id="exteriorGradingModalLabel">Exterior grading</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_58484)">
+                                    <path
+                                        d="M4.99609 20C4.99609 21.9698 5.38408 23.9204 6.1379 25.7403C6.89172 27.5601 7.99661 29.2137 9.38949 30.6066C10.7824 31.9995 12.436 33.1044 14.2558 33.8582C16.0757 34.612 18.0263 35 19.9961 35C21.9659 35 23.9165 34.612 25.7363 33.8582C27.5562 33.1044 29.2098 31.9995 30.6027 30.6066C31.9956 29.2137 33.1005 27.5601 33.8543 25.7403C34.6081 23.9204 34.9961 21.9698 34.9961 20C34.9961 18.0302 34.6081 16.0796 33.8543 14.2597C33.1005 12.4399 31.9956 10.7863 30.6027 9.3934C29.2098 8.00052 27.5562 6.89563 25.7363 6.14181C23.9165 5.38799 21.9659 5 19.9961 5C18.0263 5 16.0757 5.38799 14.2558 6.14181C12.436 6.89563 10.7824 8.00052 9.38949 9.3934C7.99661 10.7863 6.89172 12.4399 6.1379 14.2597C5.38408 16.0796 4.99609 18.0302 4.99609 20Z"
+                                        fill="white" fill-opacity="0.3" />
+                                    <path d="M16.6641 16.6641L23.3307 23.3307M23.3307 16.6641L16.6641 23.3307"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_4_58484">
+                                        <rect width="40" height="40" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="d-flex flex-column pm-flex">
+                            <div class="cdr-info">
+                                <div class="cdr-info-top d-flex align-items-center gap-3">
+                                    <div class="plc-num-plate">
+                                        <span class="plcb-blue"></span>
+                                        <span class="plc-plate-number">KY58CSM</span>
+                                    </div>
+                                    <div class="cdrit-text">A Grade</div>
+                                </div>
+                                <div class="cdr-info-bottom">
+                                    <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                    <div class="cdri-content">
+                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                        <div class="cdr-mini-info">
+                                            <span class="cdr-mini-text">2009</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Blue</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Hatchback</span>
+                                            <span class="cdr-mini-border"></span>
+                                            <span class="cdr-mini-text">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive pm-table pm-eg-table">
+                                <table class="table table-borderless mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Grade </th>
+                                            <th>A</th>
+                                            <th>B</th>
+                                            <th>C</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                            <td>Text</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Vehicle Details Modals End -->
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
         <script src="./assets/js/select2.min.js"></script>
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=7"></script>
+        <script src="./assets/js/custom.js?v=8"></script>
     </body>
 
 </html>

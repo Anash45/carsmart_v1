@@ -201,7 +201,7 @@ $(document).ready(function () {
             const filterValue = $(this).data('target'); // Get the filter target value
             const $targetTable = $btns.closest('.dashboard-card').find('.dcm-table'); // Find the target table
 
-            if(filterValue === 'all') {
+            if (filterValue === 'all') {
                 $targetTable.find('tbody tr').show(); // Show all rows if the filter value is 'all'
                 return;
             }
@@ -258,6 +258,22 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true,
         variableWidth: true
+    });
+
+    // Increment quantity
+    $('.pmm-swap-increment').click(function () {
+        const quantityInput = $(this).siblings('div').find('.pmm-swap-quantity');
+        let currentValue = parseInt(quantityInput.val());
+        quantityInput.val(currentValue + 1);
+    });
+
+    // Decrement quantity
+    $('.pmm-swap-decrement').click(function () {
+        const quantityInput = $(this).siblings('div').find('.pmm-swap-quantity');
+        let currentValue = parseInt(quantityInput.val());
+        if (currentValue > 1) {
+            quantityInput.val(currentValue - 1);
+        }
     });
 });
 
