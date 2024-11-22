@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=6">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=7">
     </head>
 
     <body>
@@ -32,8 +32,6 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="./live-sale.html">Live sale</a></li>
-                                    <li><a class="dropdown-item" href="#">SmartHub</a></li>
                                     <li><a class="dropdown-item" href="#">SmartDrop</a></li>
                                     <li><a class="dropdown-item" href="#">SmartConnect</a></li>
                                     <li><a class="dropdown-item" href="#">SmartMatch</a></li>
@@ -62,10 +60,11 @@
                 </div>
             </nav>
             <div class="container flex-grow-1 d-flex flex-column justify-content-center">
-                <div class="d-flex signup-hero-content flex-column gap-xl-5 gap-lg-4 gap-4 mb-md-0 mb-5">
-                    <div class="d-flex gap-2 shc-title">
+                <div class="d-flex signup-hero-content flex-column gap-3 mb-md-0 mb-5">
+                    <div class="d-flex gap-2 shc-title mb-1">
                         <img src="./assets/img/Rays-purple-left.svg" alt="Rays">
-                        <h2 class="mb-0 fw-medium ms-1">SmartHub <span class="purple-underline">Sign up</span></h2>
+                        <h2 class="mb-0 fw-medium ms-1"><span class="purple-underline">SmartHub</span> <span
+                                class="d-block">Sign up</span> <span class="d-block">form</span></h2>
                     </div>
                     <div class="ps-xl-5">
                         <a href="#signup-sec"
@@ -147,7 +146,9 @@
                                                     <div class="row sfc-row gap-md-0 gap-2">
                                                         <div class="col-12">
                                                             <div class="dropdown dropdown-checks">
-                                                                <button class="form-control fpf-inp sfc-inp show"
+                                                                <button class="form-control fpf-inp sfc-inp"
+                                                                    data-bs-auto-close="outside" id="dropdownMenuButton"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false"
                                                                     type="button">
                                                                     <span>Select type</span>
                                                                     <svg width="16" height="10" viewBox="0 0 16 10"
@@ -158,8 +159,8 @@
                                                                             stroke-linecap="round" />
                                                                     </svg>
                                                                 </button>
-                                                                <ul class="dropdown-menu show"
-                                                                    aria-labelledby="dropdownCheckboxes">
+                                                                <ul class="dropdown-menu"
+                                                                    aria-labelledby="dropdownMenuButton">
                                                                     <li>
                                                                         <div class="form-check">
                                                                             <input class="form-check-input"
@@ -350,8 +351,10 @@
                                                     <div class="row sfc-row gap-md-0 gap-2">
                                                         <div class="col-12">
                                                             <div class="dropdown dropdown-checks">
-                                                                <button class="form-control fpf-inp sfc-inp show"
-                                                                    type="button">
+                                                                <button class="form-control fpf-inp sfc-inp"
+                                                                    data-bs-auto-close="outside"
+                                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false" type="button">
                                                                     <span>Select type</span>
                                                                     <svg width="16" height="10" viewBox="0 0 16 10"
                                                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -361,7 +364,7 @@
                                                                             stroke-linecap="round" />
                                                                     </svg>
                                                                 </button>
-                                                                <ul class="dropdown-menu show"
+                                                                <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownCheckboxes">
                                                                     <li>
                                                                         <div class="form-check">
@@ -576,7 +579,8 @@
                                                     <div class="d-flex align-items-center gap-2">
                                                         <label class="sfc-label">Are you a member of any trade
                                                             associations or trade groups?</label>
-                                                        <img src="./assets/img/signup-info-icon.svg" onclick="openModal('infoModal')" alt="Info"
+                                                        <img src="./assets/img/signup-info-icon.svg"
+                                                            onclick="openModal('infoModal')" alt="Info"
                                                             class="sfc-info">
                                                     </div>
                                                     <div class="row sfc-row gap-md-0 gap-2">
@@ -615,7 +619,9 @@
                                                     <div class="row sfc-row gap-md-0 gap-2">
                                                         <div class="col-12">
                                                             <div class="dropdown dropdown-checks">
-                                                                <button class="form-control fpf-inp sfc-inp show"
+                                                                <button class="form-control fpf-inp sfc-inp"
+                                                                    data-bs-auto-close="outside" id="dropdownMenuButton2"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false"
                                                                     type="button">
                                                                     <span>Select brand</span>
                                                                     <svg width="16" height="10" viewBox="0 0 16 10"
@@ -626,7 +632,7 @@
                                                                             stroke-linecap="round" />
                                                                     </svg>
                                                                 </button>
-                                                                <ul class="dropdown-menu show"
+                                                                <ul class="dropdown-menu"
                                                                     aria-labelledby="dropdownCheckboxes">
                                                                     <li>
                                                                         <div class="form-check">
@@ -780,8 +786,8 @@
                     <div class="footer-cont">
                         <div class="d-flex flex-column gap-lg-5 gap-4 text-center align-items-center">
                             <div class="d-flex flex-column gap-lg-4 gap-3 align-items-center">
-                                <h2 class="mb-2 signup-cta-title text-white">Join SmartHub for access to <span
-                                        class="text-parrot">Smart Connect!</span></h2>
+                                <h2 class="mb-2 signup-cta-title text-white">Join SmartHub for <span
+                                        class="purple-underline">access</span> to Smart Connect!</h2>
                                 <p class="mb-0 text-white">Join our growing community of verified traders, dealers and
                                     online buyers to start making efficient, profitable trades today. Smart Connect is
                                     here to simplify your trading experience and help your business thrive.</p>
@@ -1056,7 +1062,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=6"></script>
+        <script src="./assets/js/custom.js?v=7"></script>
     </body>
 
 </html>

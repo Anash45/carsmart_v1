@@ -400,13 +400,18 @@ footer {
     aspect-ratio: 4/3;
 }
 
-.csmart-logo {
+.like-unlike-icon {
     height: 35px;
     width: 35px;
     border-radius: 100px;
     position: absolute;
     left: 10px;
     bottom: 10px;
+    display: none;
+}
+
+.product-list-card:hover .like-unlike-icon {
+    display: block;
 }
 
 .grade-badge-cont {
@@ -732,7 +737,7 @@ footer {
 }
 
 .fp-form-cont {
-    width: 405px;
+    width: 430px;
 }
 
 .fp-form-box {
@@ -985,9 +990,9 @@ footer {
 .signup-header {
     display: flex;
     flex-direction: column;
-    background-color: #05041A;
-    background-image: url(../img/signun-hero-car.png), url(../img/Modern-2.svg);
-    background-size: contain, cover;
+    background-color: #101044;
+    background-image: url(../img/signun-hero-laptop.png), url(../img/signup-pattern.svg);
+    background-size: auto 540px, cover;
     background-position: bottom right, center;
     background-repeat: no-repeat, no-repeat;
     height: 650px;
@@ -1000,8 +1005,7 @@ footer {
 .signup-cta {
     border-radius: 40px 40px 0 0;
     padding: 150px 0;
-    background-color: #05041A;
-    background-image: url(../img/Modern-2.svg);
+    background-color: #04042A;
     background-size: cover;
     background-position: center;
 }
@@ -1013,6 +1017,10 @@ footer {
 
 .shc-title img {
     height: 80px;
+}
+
+.shc-title .purple-underline::after{
+    top: 86%;
 }
 
 .shc-title h2 {
@@ -1710,7 +1718,7 @@ footer {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%) rotate(75deg);
-    width: calc(100% / 12);
+    width: calc(100% / 10);
     z-index: 1;
 }
 
@@ -2965,14 +2973,18 @@ ol.policy-desc{
     color: rgba(238, 240, 255, 1);
 }
 
+
+.cdr-info-top{
+    position: relative;
+}
 .cdr-info-top .grade-badge-cont{
     position: absolute;
     z-index: 1;
     right: 0px;
     width: fit-content;
-    top: 0;
+    top: 50%;
     bottom: unset;
-    transform: unset;
+    transform: translateY(-50%);
 }
 .cdr-info-bottom{
     color: #FFFFFF;
@@ -3175,6 +3187,15 @@ ol.policy-desc{
     flex-direction: column;
     gap: 35px;
 }
+
+.cdf-form .fpf-inp{
+    box-shadow: none !important;
+}
+.cdf-form .fpf-inp:focus{
+    border-color: rgb(255 255 255 / 20%) !important;
+}
+
+
 .border-white{
     border-color: #fff !important;
 }
@@ -3188,6 +3209,7 @@ ol.policy-desc{
     background-color: rgba(175, 128, 14, 1);
 }
 .cd-rc-top-smartexchange{
+    padding: 13px 30px;
     background-color: #000000;
 }
 .cd-rc-top-smartexchange .sb-notice{
@@ -3451,6 +3473,11 @@ ol.policy-desc{
 }
 
 @media (max-width: 768px) {
+    .home-hero-content .btn-main, .signup-hero-content .btn-main {
+        padding: 6px 28px;
+        line-height: 100%;
+        font-size: 16px;
+    }
     .navbar-brand img {
         height: 40px !important;
     }
