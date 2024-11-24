@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=8">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=9">
     </head>
 
     <body class="car-details">
@@ -591,9 +591,15 @@
                                         <div class="form-group">
                                             <label
                                                 class="form-label text-white fw-semibold d-flex align-items-center gap-2 justify-content-between"><span>Enter
-                                                    maximum bid</span><img src="./assets/img/info-icon.svg" alt="Info"
-                                                    class="cdc-info" data-bs-toggle="tooltip" data-bs-placement="left"
-                                                    title="Take the stress out of bidding! Just set your max bid, and smart proxy bidding will handle the rest. We'll raise your bid in £50 steps to keep you in the race. If no one else bids, you'll win at the reserve price or less—whichever works in your favour. Smart, simple, and stress-free!"></label>
+                                                    maximum bid</span><svg width="31" data-bs-toggle="tooltip" data-bs-placement="left" class="cdc-info"
+                                                    title="Take the stress out of bidding! Just set your max bid, and smart proxy bidding will handle the rest. We'll raise your bid in £50 steps to keep you in the race. If no one else bids, you'll win at the reserve price or less—whichever works in your favour. Smart, simple, and stress-free!"
+                                                    height="31" viewBox="0 0 31 31" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="15.5" cy="15.4824" r="15" fill="#695DFD" />
+                                                    <path
+                                                        d="M20.1875 7.35575C21.6127 8.17858 22.7962 9.36206 23.619 10.7872C24.4418 12.2124 24.875 13.8291 24.875 15.4747C24.875 17.1204 24.4418 18.7371 23.6189 20.1622C22.7961 21.5874 21.6126 22.7709 20.1874 23.5937C18.7622 24.4165 17.1455 24.8496 15.4999 24.8496C13.8542 24.8496 12.2375 24.4164 10.8123 23.5935C9.38717 22.7707 8.20371 21.5872 7.38091 20.162C6.55811 18.7368 6.12496 17.1201 6.125 15.4744L6.12969 15.1707C6.18219 13.5516 6.65333 11.9738 7.49716 10.591C8.341 9.20826 9.52874 8.06773 10.9446 7.28064C12.3604 6.49355 13.9561 6.08676 15.5759 6.09992C17.1958 6.11308 18.7846 6.54575 20.1875 7.35575ZM15.5 18.2869C15.2514 18.2869 15.0129 18.3857 14.8371 18.5615C14.6613 18.7373 14.5625 18.9758 14.5625 19.2244V19.2338C14.5625 19.4824 14.6613 19.7209 14.8371 19.8967C15.0129 20.0725 15.2514 20.1713 15.5 20.1713C15.7486 20.1713 15.9871 20.0725 16.1629 19.8967C16.3387 19.7209 16.4375 19.4824 16.4375 19.2338V19.2244C16.4375 18.9758 16.3387 18.7373 16.1629 18.5615C15.9871 18.3857 15.7486 18.2869 15.5 18.2869ZM15.5 11.7245C15.2514 11.7245 15.0129 11.8232 14.8371 11.9991C14.6613 12.1749 14.5625 12.4133 14.5625 12.662V16.4119C14.5625 16.6606 14.6613 16.899 14.8371 17.0748C15.0129 17.2507 15.2514 17.3494 15.5 17.3494C15.7486 17.3494 15.9871 17.2507 16.1629 17.0748C16.3387 16.899 16.4375 16.6606 16.4375 16.4119V12.662C16.4375 12.4133 16.3387 12.1749 16.1629 11.9991C15.9871 11.8232 15.7486 11.7245 15.5 11.7245Z"
+                                                        fill="white" />
+                                                </svg></label>
                                             <div class="fpf-inp-cont">
                                                 <input type="text" name="bid" class="form-control fpf-inp" value="0"
                                                     placeholder="eg: 10">
@@ -1189,6 +1195,64 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade gallery-modal" id="gallerySliderModal" tabindex="-1"
+            aria-labelledby="gallerySliderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-xl-0 p-3">
+                        <div class="cd-sliders">
+                            <div class="details-slider-for-2 dsf">
+                                <div class="dsf-img-cont">
+                                    <video src="./assets/vid/sample.mp4" controls preload="meta"></video>
+                                    <div class="dsf-content d-flex flex-column align-items-center text-white">
+                                        <span class="dsf-label">Interior</span>
+                                        <span class="dsf-title">Front seat</span>
+                                    </div>
+                                </div>
+                                <div class="dsf-img-cont">
+                                    <img src="./assets/img/slider-2.png" alt="Image 2">
+                                    <div class="dsf-content d-flex flex-column align-items-center text-white">
+                                        <span class="dsf-label">Exterior</span>
+                                        <span class="dsf-title">Trunk</span>
+                                    </div>
+                                </div>
+                                <div class="dsf-img-cont">
+                                    <img src="./assets/img/slider-3.png" alt="Image 3">
+                                    <div class="dsf-content d-flex flex-column align-items-center text-white">
+                                        <span class="dsf-label">Engine</span>
+                                        <span class="dsf-title">Bonet</span>
+                                    </div>
+                                </div>
+                                <div class="dsf-img-cont">
+                                    <img src="./assets/img/car-details-thumb.png" alt="Image 4">
+                                    <div class="dsf-content d-flex flex-column align-items-center text-white">
+                                        <span class="dsf-label">Roof</span>
+                                        <span class="dsf-title">Car Roof</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="details-slider-nav-2 dsn mb-3 pb-1">
+                                <div class="dsn-img-cont"><img src="./assets/img/slider-1.png" alt="Thumbnail 1">
+                                </div>
+                                <div class="dsn-img-cont"><img src="./assets/img/slider-2.png" alt="Thumbnail 2">
+                                </div>
+                                <div class="dsn-img-cont"><img src="./assets/img/slider-3.png" alt="Thumbnail 3">
+                                </div>
+                                <div class="dsn-img-cont"><img src="./assets/img/car-details-thumb.png"
+                                        alt="Thumbnail 4"></div>
+                            </div>
+                            <div id="custom-arrows-container" class="gallery-arrows">
+                                <div class="ga-prev"></div>
+                                <p class="mb-0">
+                                    <span class="ga-current">01 </span><span class="ga-total">/ 05</span>
+                                </p>
+                                <div class="ga-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Vehicle Details Modals End -->
         <script src="./assets/js/jquery-3.7.1.min.js"></script>
         <script src="./assets/js/bootstrap.bundle.min.js"></script>
@@ -1196,7 +1260,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=8"></script>
+        <script src="./assets/js/custom.js?v=9"></script>
     </body>
 
 </html>

@@ -214,6 +214,11 @@ $(document).ready(function () {
             }).show();
         });
     });
+
+
+    var currentSlideNumber = '';
+
+
     $('.details-slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -250,6 +255,7 @@ $(document).ready(function () {
 `
     });
 
+
     $('.details-slider-nav').slick({
         slidesToScroll: 1,
         asNavFor: '.details-slider-for',
@@ -258,6 +264,61 @@ $(document).ready(function () {
         centerMode: false,
         focusOnSelect: true,
         variableWidth: true
+    });
+
+    // Function to update current slide index
+    function updateCurrentSlide(currentSlide) {
+        console.log(currentSlide);
+        // Assuming you have an element with the ID 'current-slide' to display the current slide number
+        var totalSlides = $('.details-slider-for .slick-slide').not('.slick-cloned').length; // Total non-cloned slides
+        currentSlideNumber = currentSlide; // Slick is zero-based, so add 1 to make it human-readable
+        $('.ga-current').text(currentSlide + 1);
+        $('.ga-total').text(" / " + totalSlides);
+        console.log(currentSlideNumber);
+    }
+
+    // Add event listener for 'afterChange' event
+    $('.details-slider-for,.details-slider-for-2').on('afterChange', function (event, slick, currentSlide) {
+        updateCurrentSlide(currentSlide);
+    });
+
+    $('.details-slider-for video,.details-slider-for img').on("click", function () {
+        console.log('clicked');
+        openModal('gallerySliderModal');
+    });
+
+
+    let alreadyInit = false;
+    $('#gallerySliderModal').on('shown.bs.modal', function () {
+        if (!alreadyInit) {
+            // Initialize the sliders when the modal is opened
+            $('.details-slider-for-2').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                asNavFor: '.details-slider-nav-2',
+                prevArrow: `<span class="slick-arrow slick-next slick-next-2"><svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_547_16017)"><path d="M25 44.2754C22.5377 44.2754 20.0995 43.7904 17.8247 42.8481C15.5498 41.9059 13.4828 40.5247 11.7417 38.7836C10.0007 37.0425 8.61953 34.9756 7.67726 32.7007C6.73498 30.4258 6.25 27.9877 6.25 25.5254C6.25 23.0631 6.73498 20.6249 7.67726 18.3501C8.61953 16.0752 10.0007 14.0082 11.7417 12.2671C13.4828 10.526 15.5498 9.14492 17.8247 8.20265C20.0995 7.26037 22.5377 6.77539 25 6.77539C29.9728 6.77539 34.7419 8.75083 38.2583 12.2671C41.7746 15.7834 43.75 20.5526 43.75 25.5254C43.75 30.4982 41.7746 35.2673 38.2583 38.7836C34.7419 42.2999 29.9728 44.2754 25 44.2754Z" fill="white" fill-opacity="0.3" stroke="white" stroke-opacity="0.3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.3447 25.5254L25.0114 33.8587" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.3447 25.5254H16.6781" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.0114 17.1758L33.3447 25.5091" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_547_16017"><rect width="50" height="50" fill="white" transform="matrix(-1 0 0 1 50 0.525391)"/></clipPath></defs></svg></span>`,
+                nextArrow: `<span class="slick-arrow slick-prev slick-prev-2"><svg width="50" height="51" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_547_16010)"><path d="M25 44.2754C27.4623 44.2754 29.9005 43.7904 32.1753 42.8481C34.4502 41.9059 36.5172 40.5247 38.2583 38.7836C39.9993 37.0425 41.3805 34.9756 42.3227 32.7007C43.265 30.4258 43.75 27.9877 43.75 25.5254C43.75 23.0631 43.265 20.6249 42.3227 18.3501C41.3805 16.0752 39.9993 14.0082 38.2583 12.2671C36.5172 10.526 34.4502 9.14492 32.1753 8.20265C29.9005 7.26037 27.4623 6.77539 25 6.77539C20.0272 6.77539 15.2581 8.75083 11.7417 12.2671C8.22544 15.7834 6.25 20.5526 6.25 25.5254C6.25 30.4982 8.22544 35.2673 11.7417 38.7836C15.2581 42.2999 20.0272 44.2754 25 44.2754Z" fill="white" fill-opacity="0.3" stroke="white" stroke-opacity="0.3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.6553 25.5254L24.9886 33.8587" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.6553 25.5254H33.3219" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.9886 17.1758L16.6553 25.5091" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_547_16010"><rect width="50" height="50" fill="white" transform="translate(0 0.525391)"/></clipPath></defs></svg></span>`
+            });
+            $('.ga-prev').append($('.slick-prev-2'));
+            $('.ga-next').append($('.slick-next-2'));
+            $('.details-slider-nav-2').slick({
+                slidesToScroll: 1,
+                asNavFor: '.details-slider-for-2',
+                dots: false,
+                arrows: false,
+                centerMode: false,
+                focusOnSelect: true,
+                variableWidth: true
+            });
+
+            alreadyInit = true;
+        };
+
+
+        // After initialization, move to the current slide
+        $('.details-slider-for-2').slick('slickGoTo', currentSlideNumber);
     });
 
     // Increment quantity
@@ -306,4 +367,39 @@ $(document).ready(function () {
             $('[data-bs-toggle="tooltip"]').tooltip('hide');
         }
     });
+
+    // Dropzone.autoDiscover = false;
+
+    // // Initialize Dropzone for a custom container
+    // const customDropzone = new Dropzone("#customDropzone", {
+    //     url: "/fake-upload", // Placeholder URL for testing
+    //     paramName: "file", // The parameter name for the files
+    //     maxFilesize: 10, // Maximum file size in MB
+    //     maxFiles: 15, // Maximum number of files
+    //     acceptedFiles: "image/*,application/pdf", // Limit accepted file types
+    //     autoProcessQueue: false, // Prevent files from being auto-uploaded
+    //     clickable: true, // Enable click to open file browser
+    //     init: function () {
+    //         this.on("addedfile", function (file) {
+    //             console.log("File added:", file.name);
+    //         });
+
+    //         this.on("error", function (file, errorMessage) {
+    //             console.error("Error uploading file:", errorMessage);
+    //         });
+    //     },
+    // });
+
 });
+
+function likeVehicle(event) {
+    event.stopPropagation();
+    let likeIcon = event.currentTarget;
+    console.log(likeIcon);
+    if ($(likeIcon).hasClass('liked')) {
+        likeIcon.setAttribute('src', './assets/img/not-favourite.svg');
+    } else {
+        likeIcon.setAttribute('src', './assets/img/favourite.svg');
+    }
+    $(likeIcon).toggleClass('liked');
+}

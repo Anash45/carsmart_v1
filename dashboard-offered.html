@@ -30,7 +30,7 @@
                                     data-bs-toggle="dropdown" aria-expanded="false"> SmartHub </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="./live-sale.html">Live sale</a></li>
-                                    <li><a class="dropdown-item active" href="./buy-it-now.html">Buy it now</a></li>
+                                    <li><a class="dropdown-item active" href="./buy-it-now.html">£34567.00</a></li>
                                     <li><a class="dropdown-item" href="./smart-connect.html">Smart Connect</a></li>
                                     <li><a class="dropdown-item" href="./favourites.html">Favourites</a></li>
                                     <li><a class="dropdown-item" href="./editions.html">Editions</a></li>
@@ -124,9 +124,9 @@
                                 <div class="accordion" id="dc-sidebar-accordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading-1">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse-1" aria-expanded="true"
-                                                aria-controls="collapse-1"> Billing </button>
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse-1"
+                                                aria-expanded="true" aria-controls="collapse-1"> Billing </button>
                                         </h2>
                                         <div id="collapse-1" class="accordion-collapse collapse"
                                             aria-labelledby="heading-1" data-bs-parent="#dc-sidebar-accordion">
@@ -148,11 +148,11 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading-2">
-                                            <button class="accordion-button" type="button"
+                                            <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-2"
                                                 aria-expanded="false" aria-controls="collapse-2"> Bids </button>
                                         </h2>
-                                        <div id="collapse-2" class="accordion-collapse collapse show"
+                                        <div id="collapse-2" class="accordion-collapse collapse"
                                             aria-labelledby="heading-2" data-bs-parent="#dc-sidebar-accordion">
                                             <div class="accordion-body">
                                                 <a href="./dashboard-live-bids.html" class="dcs-link">
@@ -196,9 +196,9 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading-4">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse-4"
-                                                aria-expanded="false" aria-controls="collapse-4"> Smart drop </button>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse-4" aria-expanded="false"
+                                                aria-controls="collapse-4"> Smart drop </button>
                                         </h2>
                                         <div id="collapse-4" class="accordion-collapse collapse"
                                             aria-labelledby="heading-4" data-bs-parent="#dc-sidebar-accordion">
@@ -216,12 +216,12 @@
                                     </div>
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="heading-5">
-                                            <button class="accordion-button collapsed" type="button"
+                                            <button class="accordion-button" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse-5"
                                                 aria-expanded="false" aria-controls="collapse-5"> Smart exchange
                                             </button>
                                         </h2>
-                                        <div id="collapse-5" class="accordion-collapse collapse"
+                                        <div id="collapse-5" class="accordion-collapse collapse show"
                                             aria-labelledby="heading-5" data-bs-parent="#dc-sidebar-accordion">
                                             <div class="accordion-body">
                                                 <a href="./dashboard-offered.html" class="dcs-link">
@@ -242,8 +242,8 @@
                             <div class="dashboard-card dc-main">
                                 <div class="dcm-flex-1 flex-md-nowrap flex-wrap">
                                     <div class="dcm-info">
-                                        <p class="mb-0 dcm-subtitle">Billing</p>
-                                        <h4 class="dcm-title mb-0">Invoices</h4>
+                                        <p class="mb-0 dcm-subtitle">Smart drop</p>
+                                        <h4 class="dcm-title mb-0">Offered</h4>
                                     </div>
                                     <div class="dcm-btns flex-md-grow-0 flex-grow-1 flex-sm-nowrap flex-wrap">
                                         <a href="#" class="btn dcm-btn flex-md-grow-0 flex-grow-1 dcm-btn-green">
@@ -262,7 +262,8 @@
                                     </div>
                                 </div>
                                 <div class="dcm-flex-2 flex-md-nowrap flex-wrap">
-                                    <input type="text" placeholder="Search by...." class="dcm-search-inp flex-lg-grow-0 flex-grow-1">
+                                    <input type="text" placeholder="Search by...."
+                                        class="dcm-search-inp flex-lg-grow-0 flex-grow-1">
                                     <div class="dcm-btns flex-md-grow-0 flex-grow-1 flex-sm-nowrap flex-wrap">
                                         <a href="#" class="btn dcm-btn flex-md-grow-0 flex-grow-1 dcm-btn-green">
                                             <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
@@ -278,10 +279,13 @@
                                 </div>
                                 <div class="dcm-flex-3 dcm-filter-btns">
                                     <button class="btn dcm-filter-btn active" data-target="all">All</button>
-                                    <button class="btn dcm-filter-btn" data-target="waiting-for-approval">Waiting for approval</button>
-                                    <button class="btn dcm-filter-btn" data-target="assessing-paperwork">Assessing paperwork</button>
+                                    <button class="btn dcm-filter-btn" data-target="waiting-for-approval">Waiting for
+                                        approval</button>
+                                    <button class="btn dcm-filter-btn" data-target="assessing-paperwork">Assessing
+                                        paperwork</button>
                                     <button class="btn dcm-filter-btn" data-target="approved">Appoved</button>
-                                    <button class="btn dcm-filter-btn" data-target="smart-drop-request">SmartDrop request</button>
+                                    <button class="btn dcm-filter-btn" data-target="smart-drop-request">SmartDrop
+                                        request</button>
                                 </div>
                                 <div class="dcm-table-card table-responsive">
                                     <table class="table dcm-table manrope dcm-table-2">
@@ -289,330 +293,380 @@
                                             <tr>
                                                 <th>
                                                     <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
                                                         <span>Vehicle </span>
                                                     </div>
                                                 </th>
                                                 <th>
-                                                    Status
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <span>Vehicle offered</span>
+                                                    </div>
                                                 </th>
-                                                <th>
-                                                    Sale type
-                                                </th>
-                                                <th>
-                                                    Max Bid /Offer
-                                                </th>
-                                                <th>
-                                                    Reserve met
-                                                </th>
-                                                <th>
-                                                    Reserve price
-                                                </th>
-                                                <th class="text-start">
-                                                    Live Ends
-                                                </th>
-                                                <th>
-                                                    Action
-                                                </th>
+                                                <th class="text-start"> +/- Bal Adj   </th>
+                                                <th class="text-center"> Status </th>
+                                                <th class="text-start"> Date offered </th>
+                                                <th class="text-start"> Sale type </th>
+                                                <th class="text-start"> Action </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr data-filter="assessing-paperwork">
-                                                <td>
+                                                <td class="text-start">
                                                     <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
                                                         <span class="ms-1">BMW X5</span>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-orange">Offer</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">Buy it now</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
                                                 </td>
                                                 <td class="text-start">
-                                                    <span class="text-decoration-underline">N/A</span>
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-orange">Pending</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Wholesale</span>
                                                 </td>
                                                 <td>
                                                     <div class="dropdown dcmt-dropdown dropstart">
                                                         <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
                                                         </button>
-                                                
                                                         <!-- Dropdown menu -->
                                                         <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
                                                             <li><a class="dropdown-item" href="#">Cancel bid</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-filter="smart-drop-request">
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-lightred">Declined</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Daily sale</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown dcmt-dropdown dropstart">
+                                                        <!-- Trigger button with three dots -->
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
+                                                        </button>
+                                                        <!-- Dropdown menu -->
+                                                        <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
+                                                            <li><a class="dropdown-item" href="#">Cancel bid</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr data-filter="waiting-for-approval">
-                                                <td>
+                                                <td class="text-start">
                                                     <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
                                                         <span class="ms-1">BMW X5</span>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-orange">Offer</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">SmartConnect</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
                                                 </td>
                                                 <td class="text-start">
-                                                    <span class="text-decoration-underline">23h 32m 17sec</span>
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-green">Agreed</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Daily sale</span>
                                                 </td>
                                                 <td>
                                                     <div class="dropdown dcmt-dropdown dropstart">
                                                         <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
                                                         </button>
-                                                
                                                         <!-- Dropdown menu -->
                                                         <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
                                                             <li><a class="dropdown-item" href="#">Cancel bid</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-filter="waiting-for-approval">
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-green">Agreed</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Buy it now</span>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown dcmt-dropdown dropstart">
+                                                        <!-- Trigger button with three dots -->
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
+                                                        </button>
+                                                        <!-- Dropdown menu -->
+                                                        <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
+                                                            <li><a class="dropdown-item" href="#">Cancel bid</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
+                                                            <li class="dcmt-dropdown-border"></li>
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr data-filter="approved">
-                                                <td>
+                                                <td class="text-start">
                                                     <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
                                                         <span class="ms-1">BMW X5</span>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-orange">Offer</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">Buy it now</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
                                                 </td>
                                                 <td class="text-start">
-                                                    <span class="text-decoration-underline">23h 32m 17sec</span>
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-green">Agreed</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Daily sale</span>
                                                 </td>
                                                 <td>
                                                     <div class="dropdown dcmt-dropdown dropstart">
                                                         <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
                                                         </button>
-                                                
                                                         <!-- Dropdown menu -->
                                                         <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
                                                             <li><a class="dropdown-item" href="#">Cancel bid</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
                                                         </ul>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr data-filter="waiting-for-approval">
-                                                <td>
+                                            <tr data-filter="approved">
+                                                <td class="text-start">
                                                     <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
+                                                        <input class="form-check-input dcmt-check" type="checkbox"
+                                                            value="" id="flexCheckDefault">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
                                                         <span class="ms-1">BMW X5</span>
                                                     </div>
                                                 </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-green">Bid</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">SmartConnect</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
+                                                <td class="text-start">
+                                                    <div class="d-flex gap-2 align-items-center">
+                                                        <img src="./assets/img/bmw-x.png" alt="Car img"
+                                                            class="dcmt-car-img">
+                                                        <span class="ms-1">BMW X5</span>
+                                                    </div>
                                                 </td>
                                                 <td class="text-start">
-                                                    <span class="text-decoration-underline">23h 32m 17sec</span>
+                                                    <span class="text-nowrap">+ £500.00</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="dcmt-pill dcmt-pill-green">Agreed</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span>13.10.2024</span>
+                                                </td>
+                                                <td class="text-start">
+                                                    <span class="text-parrot text-decoration-underline fw-semibold">Quick  sale </span>
                                                 </td>
                                                 <td>
                                                     <div class="dropdown dcmt-dropdown dropstart">
                                                         <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
+                                                        <button class="btn bg-transparent p-0 border-0" type="button"
+                                                            id="dcmt-dropdown-btn" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis"
+                                                                height="24">
                                                         </button>
-                                                
                                                         <!-- Dropdown menu -->
                                                         <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
                                                             <li><a class="dropdown-item" href="#">Cancel bid</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
+                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Sellers
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Buyers information</a>
+                                                            </li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delivery
+                                                                    information</a></li>
                                                             <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr data-filter="waiting-for-approval">
-                                                <td>
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
-                                                        <span class="ms-1">BMW X5</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-green">Bid</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">SmartConnect</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td class="text-start">
-                                                    <span class="text-decoration-underline">23h 32m 17sec</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown dcmt-dropdown dropstart">
-                                                        <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
-                                                        </button>
-                                                
-                                                        <!-- Dropdown menu -->
-                                                        <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
-                                                            <li><a class="dropdown-item" href="#">Cancel bid</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr data-filter="waiting-for-approval">
-                                                <td>
-                                                    <div class="d-flex gap-2 align-items-center">
-                                                        <input class="form-check-input dcmt-check" type="checkbox" value="" id="flexCheckDefault">
-                                                        <img src="./assets/img/bmw-x.png" alt="Car img" class="dcmt-car-img">
-                                                        <span class="ms-1">BMW X5</span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <span class="dcmt-pill dcmt-pill-green">Bid</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-decoration-underline">Private</span>
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td>
-                                                    £3456.00
-                                                </td>
-                                                <td class="text-start">
-                                                    <span class="text-decoration-underline">23h 32m 17sec</span>
-                                                </td>
-                                                <td>
-                                                    <div class="dropdown dcmt-dropdown dropstart">
-                                                        <!-- Trigger button with three dots -->
-                                                        <button class="btn bg-transparent p-0 border-0" type="button" id="dcmt-dropdown-btn" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <img src="./assets/img/elipsis-white.svg" alt="Elipsis" height="24">
-                                                        </button>
-                                                
-                                                        <!-- Dropdown menu -->
-                                                        <ul class="dropdown-menu" aria-labelledby="dcmt-dropdown-btn">
-                                                            <li><a class="dropdown-item" href="#">Cancel bid</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Remove vehicle</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Sellers information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Buyers information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Delivery information</a></li>
-                                                            <li class="dcmt-dropdown-border"></li>
-                                                            <li><a class="dropdown-item" href="#">Changes & Voided sales</a></li>    
+                                                            <li><a class="dropdown-item" href="#">Changes & Voided
+                                                                    sales</a></li>
                                                         </ul>
                                                     </div>
                                                 </td>

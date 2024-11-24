@@ -410,7 +410,7 @@ footer {
     display: none;
 }
 
-.product-list-card:hover .like-unlike-icon {
+.plc-top:hover .like-unlike-icon {
     display: block;
 }
 
@@ -2718,8 +2718,9 @@ footer {
     border-radius: 4px;
     font-weight: 600;
     font-size: 13px;
-    white-space: nowrap;
+    max-width: 105px;
     text-align: center;
+    line-height: 140%;
 }
 
 .dcmt-pill-orange {
@@ -2833,6 +2834,70 @@ ol.policy-desc {
     padding-left: 20px;
 }
 
+.site-box{
+    padding: 40px;
+    background-color: #1F204F;
+    border-radius: 40px;
+}
+
+.shfb-flex{
+    gap: 30px;
+}
+
+.shfb-title{
+    font-size: 30px;
+}
+
+
+.shfb-desc{
+    font-size: 18px;
+}
+.light-text{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.shfb-ins-flex{
+    gap: 10px;
+}
+.shfb-circle{
+    height: 6px !important;
+    width: 6px !important;
+    min-width: 6px !important;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.drop-flex{
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.attachment-title{
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+
+.attachment-desc{
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 300 !important;
+}
+
+.attachment-icon{
+    height: 48px !important;
+    margin-bottom: 10px !important;
+}
+.shfb-subtitle{
+    font-size: 24px;
+    font-weight: 600;
+}
 /* Dashboard Ends */
 
 /* Car Details Start */
@@ -2882,6 +2947,35 @@ ol.policy-desc {
     border-radius: 10px;
 }
 
+.details-slider-for-2.dsf img, 
+.details-slider-for-2.dsf video{
+    border-radius: 7.5px !important;
+    aspect-ratio: 16/8 !important;
+}
+.gallery-arrows .slick-arrow{
+    height: auto;
+    width: auto;
+    transform: unset;
+    position: unset !important;
+}
+.gallery-arrows{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: #ffffff;
+}
+.ga-current{
+    font-size: 19px;
+    color: #fff;
+}
+
+.ga-total{
+    font-size: 12px;
+}
+.dsf-title{
+    font-size: 30px;
+}
 .dsn img {
     cursor: pointer;
     height: auto;
@@ -2891,7 +2985,15 @@ ol.policy-desc {
     border-radius: 6px;
     height: 90px;
 }
-
+.gallery-modal{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery-modal .modal-dialog{
+    max-width: 1100px;
+}
+.gallery-modal .modal-content{
+    background-color: transparent !important;
+}
 .dsn .slick-list {
     padding: 0 !important;
     margin: 0 -5px !important
@@ -2909,6 +3011,14 @@ ol.policy-desc {
     display: flex;
     gap: 40px;
     flex-direction: column;
+}
+
+.details-slider-for-2{
+    margin-bottom: 20px !important;
+}
+
+.dsf-content{
+    margin-top: 20px;
 }
 
 .cd-flex-3 {
@@ -3052,6 +3162,12 @@ ol.policy-desc {
 .cd-rf-div {
     padding: 0 20px;
     position: relative;
+}
+
+.cd-rf-div .fpf-inp:hover{
+    border-color: rgb(200, 255, 133) !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 .25rem rgba(152, 242, 43, 0.25) !important;
 }
 
 .cd-rc-top-banner {
@@ -3254,6 +3370,12 @@ ol.policy-desc {
 
 .cd-rf-div .cdc-info {
     height: 24px;
+    border-radius: 100px;
+    width: 24px;
+}
+
+.cd-rf-div .cdc-info:hover path {
+    fill: #99F22B;
 }
 
 .tooltip-inner {
@@ -3384,11 +3506,15 @@ ol.policy-desc {
 }
 
 .pm-table .table td,
+.shfb-table .table td,
+.shfb-table .table th,
 .pm-table .table th {
     background-color: transparent !important;
     font-size: 18px !important;
 }
 
+.shfb-table .table th,
+.shfb-table .table th,
 .pm-table .table th {
     color: #fff;
     font-weight: 600;
@@ -3396,13 +3522,19 @@ ol.policy-desc {
     padding: 0 0 10px !important;
 }
 
+.shfb-table .table td,
 .pm-table .table td {
     color: rgba(255, 255, 255, 0.8);
     padding: 5px 0 !important;
 }
 
+.shfb-table .table td{
+    color: #fff !important;
+}
 .pm-table .table tbody tr td:last-child,
-.pm-table .table thead tr th:last-child {
+.pm-table .table thead tr th:last-child,
+.shfb-table .table tbody tr td:last-child,
+.shfb-table .table thead tr th:last-child {
     text-align: right;
 }
 
@@ -3411,7 +3543,8 @@ ol.policy-desc {
     text-align: left;
 }
 
-.pm-table .table tbody tr:first-child td {
+.pm-table .table tbody tr:first-child td,
+.shfb-table .table tbody tr:first-child td {
     padding-top: 10px !important;
 }
 
@@ -3475,7 +3608,40 @@ ol.policy-desc {
     font-size: 22px;
     color: rgba(255, 255, 255, 0.8);
 }
+
+.live-sale-box{
+    padding: 100px 50px;
+    border-radius: 10px;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    background-image: url(../img/live-sale-bg.svg);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.lsb-content{
+    max-width: 935px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.lsb-title{
+    font-size: 32px;
+}
+
+.lsb-content .btn-main{
+    width: 420px;
+    max-width: 100% !important;
+}
 /* Car Details End */
+
+
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -3722,7 +3888,9 @@ ol.policy-desc {
 }
 
 @media (max-width: 768px) {
-
+    .site-box{
+        padding: 24px;
+    }
     .home-hero-content .btn-main,
     .signup-hero-content .btn-main {
         padding: 6px 28px;
@@ -3885,6 +4053,11 @@ ol.policy-desc {
         font-size: 12px !important;
         padding: 8px !important;
     }
+
+    .dsf .slick-arrow svg,.gallery-arrows .slick-arrow svg {
+        height: 30px;
+        width: 30px;
+    }
 }
 
 
@@ -3992,6 +4165,22 @@ ol.policy-desc {
 
     .cdf-feature {
         flex-basis: 200px;
+    }
+    .lsb-content .btn-main{
+        width: 320px;
+    }
+    .live-sale-box{
+        padding: 30px;
+    }
+
+    .lsb-title{
+        font-size: 24px;
+    }
+    .lsb-icon{
+        height: 40px;
+    }
+    .dsn img {
+        height: 60px;
     }
 }
 
