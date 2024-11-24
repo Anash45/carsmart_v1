@@ -3639,6 +3639,10 @@ ol.policy-desc {
     width: 420px;
     max-width: 100% !important;
 }
+.cd-right-2{
+    position: sticky;
+    top: 10px;
+}
 /* Car Details End */
 
 
@@ -3697,6 +3701,9 @@ ol.policy-desc {
 }
 
 @media (max-width: 1200px) {
+    .cd-right-2{
+        position: unset;
+    }
     .navbar-collapse {
         position: absolute;
         top: 100%;
