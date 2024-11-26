@@ -84,14 +84,14 @@ $(document).ready(function () {
             focusOnSelect: true,
             autoplay: true, // Autoplay enabled
             autoplaySpeed: 2000, // Autoplay speed in milliseconds
-            prevArrow: `<button type="button" class="slick-arrows slick-prev">
+            prevArrow: `<button type="button" class="slick-arrows circle-arrow slick-prev">
     <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="1" y="0.5" width="47" height="47" rx="23.5" stroke="#101044"/>
 <path d="M32.5 23H20.33L25.92 17.41L24.5 16L16.5 24L24.5 32L25.91 30.59L20.33 25H32.5V23Z" fill="#101044"/>
 </svg>
 
     </button>`,
-            nextArrow: `<button type="button" class="slick-arrows slick-next">
+            nextArrow: `<button type="button" class="slick-arrows circle-arrow slick-next">
     <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="1" y="0.5" width="47" height="47" rx="23.5" stroke="#101044"/>
 <path d="M24.5 16L23.09 17.41L28.67 23H16.5V25H28.67L23.09 30.59L24.5 32L32.5 24L24.5 16Z" fill="#101044"/>
@@ -116,6 +116,46 @@ $(document).ready(function () {
                         slidesToShow: 1,
                         centerMode: false,
                         centerPadding: '0px',
+                    }
+                }
+            ]
+        });
+    }
+    if ($('.recently-slider').length > 0) {
+        $('.recently-slider').slick({
+            slidesToShow: 3,
+            autoplay: true, // Autoplay enabled
+            autoplaySpeed: 2000, // Autoplay speed in milliseconds
+            prevArrow: `<button type="button" class="slick-arrows circle-arrow slick-prev">
+    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="0.5" width="47" height="47" rx="23.5" stroke="#101044"/>
+<path d="M32.5 23H20.33L25.92 17.41L24.5 16L16.5 24L24.5 32L25.91 30.59L20.33 25H32.5V23Z" fill="#101044"/>
+</svg>
+
+    </button>`,
+            nextArrow: `<button type="button" class="slick-arrows circle-arrow slick-next">
+    <svg width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="0.5" width="47" height="47" rx="23.5" stroke="#101044"/>
+<path d="M24.5 16L23.09 17.41L28.67 23H16.5V25H28.67L23.09 30.59L24.5 32L32.5 24L24.5 16Z" fill="#101044"/>
+</svg>
+
+    </button>`,
+            appendArrows: '.rlc-slider-arrows',
+            dots: false, // Hide navigation dots
+            draggable: true, // Enable dragging
+            infinite: true, // Infinite looping
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
                     }
                 }
             ]
@@ -402,4 +442,8 @@ function likeVehicle(event) {
         likeIcon.setAttribute('src', './assets/img/favourite.svg');
     }
     $(likeIcon).toggleClass('liked');
+}
+function startKYC() {
+    $('.kyc-info-box').hide();
+    $('.kyc-form-box').show();
 }

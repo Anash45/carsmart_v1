@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carsmart</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
+        <link href="./assets/css/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=10">
+    </head>
+
+    <body class="light-page">
+        <!-- Header -->
+        <header class="smch-header">
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+                <div class="container gap-3 position-relative">
+                    <!-- Left: Logo -->
+                    <a class="navbar-brand me-0" href="./index.html">
+                        <img src="./assets/img/Purple-Logo.svg" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">How we do it</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> Services </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">SmartDrop</a></li>
+                                    <li><a class="dropdown-item" href="#">SmartConnect</a></li>
+                                    <li><a class="dropdown-item" href="#">SmartMatch</a></li>
+                                    <li><a class="dropdown-item" href="#">SmartWallet</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-lg-none d-flex align-items-center nav-right ms-xl-0 ms-auto">
+                                    <a href="./signup.html" class="btn btn-outline-main">Sign up</a>
+                                    <a href="./signin-1.html" class="btn btn-main">Sign in</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Right: Chat and Profile Icon with Dropdown -->
+                    <div class="d-lg-flex d-none align-items-center nav-right ms-xl-0 ms-auto">
+                        <a href="./signin-1.html" class="btn btn-outline-blue">
+                            <img src="./assets/img/signin-icon.png" alt="Icon" height="19">
+                            <span>Sign in</span>
+                        </a>
+                    </div>
+                    <!-- Centered Menu with Dropdown -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="container flex-grow-1 d-flex flex-column justify-content-center">
+                <div class="d-flex smc-hero-content flex-column gap-4 mb-md-0 mb-sm-5 py-5">
+                    <div class="ps-4 ms-3">
+                        <img src="/assets/img/bmw-icon.png" alt="BMW" height="84">
+                    </div>
+                    <div class="d-flex gap-2 smc-title">
+                        <img src="./assets/img/Rays-purple-left.svg" alt="Rays">
+                        <h2 class="mb-0 fw-medium ms-1">Sell your BMW the <span class="parrot-underline">Carsmart</span>
+                            way </h2>
+                    </div>
+                    <div class="d-flex flex-column gap-4 ps-4 ms-3">
+                        <p class="mb-0 smc-text fw-medium mb-lg-3"> Sell your car the more money way. It's free and 84%
+                            of customers get more money* </p>
+                        <div class="smch-crf mb-lg-3">
+                            <form action="" class="car-reg-form" method="post">
+                                <input type="text" class="crf-inp" placeholder="Enter REG">
+                                <button type="button"
+                                    class="btn btn-main crf-btn d-flex align-items-center justify-content-center"><span>Get
+                                        my car valuation</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                            fill="#101044" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2">
+                            <img src="./assets/img/trust-pilot.svg" height="42" alt="Reviews">
+                            <img src="./assets/img/google-reviews.svg" height="42" alt="Reviews">
+                        </div>
+                    </div>
+                </div>
+                <div class="smch-cont">
+                    <div class="smch-img">
+                        <div class="smch-rays">
+                            <img src="./assets/img/smch-Rays.svg" alt="Rays" class="w-100" data-aos="fade-up"
+                                data-aos-duration="1000" data-aos-delay="1000">
+                        </div>
+                        <img src="./assets/img/smch-car.png" alt="Car" class="w-100" data-aos="fade-left"
+                            data-aos-duration="1000" data-aos-delay="500">
+                    </div>
+                    <div class="smchv-img">
+                        <img src="./assets/img/sell-my-car-vector.svg" alt="Vector" data-aos="fade-up"
+                            data-aos-duration="600" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+        <!-- Main -->
+        <main>
+            <section class="smc-steps py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 smcs-div-cont smcs-d1 col-lg-4 col-md-6">
+                            <div class="smc-step-cont">
+                                <div class="smc-step">
+                                    <div class="smc-flex">
+                                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M27.4773 27.1395L27.4773 27.1395C27.8691 26.7167 28.2375 26.2729 28.5807 25.8099L28.4603 25.7206L28.5808 25.8099C30.5094 23.2082 31.65 19.9871 31.65 16.5C31.65 7.85668 24.6431 0.85 16 0.85C7.35668 0.85 0.35 7.85668 0.35 16.5C0.35 25.1431 7.35668 32.15 16 32.15C20.5348 32.15 24.619 30.2211 27.4773 27.1395ZM29.7998 16.5C29.7998 19.2572 28.9914 21.8252 27.5986 23.9803C25.7636 21.3313 23.0442 19.3412 19.8672 18.4369C21.3767 17.2762 22.35 15.4517 22.35 13.3999C22.35 9.89294 19.507 7.04986 16 7.04986C12.493 7.04986 9.64996 9.89294 9.64996 13.3999C9.64996 15.4519 10.6232 17.2763 12.1328 18.437C8.95561 19.3412 6.23628 21.3315 4.40128 23.9804C3.0084 21.8252 2.19997 19.2573 2.19997 16.5C2.19997 8.87847 8.37847 2.69997 15.9998 2.69997C23.6214 2.69997 29.7998 8.87847 29.7998 16.5ZM16.0002 19.7499C20.3992 19.7499 24.2567 22.0687 26.4172 25.5512C23.887 28.4609 20.1584 30.3 16 30.3C11.8416 30.3 8.11302 28.4609 5.58275 25.5514C7.74326 22.0687 11.601 19.7499 16.0002 19.7499ZM20.5 13.3999C20.5 15.8854 18.4853 17.9 16 17.9C13.5147 17.9 11.4999 15.8854 11.4999 13.4001C11.4999 10.9147 13.5145 8.89984 16 8.89984C18.4855 8.89984 20.5 10.9146 20.5 13.3999Z"
+                                                fill="#695DFD" stroke="#695DFD" stroke-width="0.3" />
+                                        </svg>
+                                        <h4 class="smc-title mb-0">Sell Your Audi Car</h4>
+                                        <p class="mb-0 smc-desc">Sell Your Audi Car for Top Value – Fast and Easy
+                                            Process Guaranteed!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 smcs-div-cont smcs-d2 col-lg-4 col-md-6">
+                            <div class="smc-step-cont">
+                                <div class="smc-step">
+                                    <div class="smc-flex">
+                                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M27.4773 27.1395L27.4773 27.1395C27.8691 26.7167 28.2375 26.2729 28.5807 25.8099L28.4603 25.7206L28.5808 25.8099C30.5094 23.2082 31.65 19.9871 31.65 16.5C31.65 7.85668 24.6431 0.85 16 0.85C7.35668 0.85 0.35 7.85668 0.35 16.5C0.35 25.1431 7.35668 32.15 16 32.15C20.5348 32.15 24.619 30.2211 27.4773 27.1395ZM29.7998 16.5C29.7998 19.2572 28.9914 21.8252 27.5986 23.9803C25.7636 21.3313 23.0442 19.3412 19.8672 18.4369C21.3767 17.2762 22.35 15.4517 22.35 13.3999C22.35 9.89294 19.507 7.04986 16 7.04986C12.493 7.04986 9.64996 9.89294 9.64996 13.3999C9.64996 15.4519 10.6232 17.2763 12.1328 18.437C8.95561 19.3412 6.23628 21.3315 4.40128 23.9804C3.0084 21.8252 2.19997 19.2573 2.19997 16.5C2.19997 8.87847 8.37847 2.69997 15.9998 2.69997C23.6214 2.69997 29.7998 8.87847 29.7998 16.5ZM16.0002 19.7499C20.3992 19.7499 24.2567 22.0687 26.4172 25.5512C23.887 28.4609 20.1584 30.3 16 30.3C11.8416 30.3 8.11302 28.4609 5.58275 25.5514C7.74326 22.0687 11.601 19.7499 16.0002 19.7499ZM20.5 13.3999C20.5 15.8854 18.4853 17.9 16 17.9C13.5147 17.9 11.4999 15.8854 11.4999 13.4001C11.4999 10.9147 13.5145 8.89984 16 8.89984C18.4855 8.89984 20.5 10.9146 20.5 13.3999Z"
+                                                fill="#695DFD" stroke="#695DFD" stroke-width="0.3" />
+                                        </svg>
+                                        <h4 class="smc-title mb-0">Get Your Audi Car Valuation</h4>
+                                        <p class="mb-0 smc-desc">Instant Online Valuation for Your Audi Car – Get the
+                                            Best Price Today.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 smcs-div-cont smcs-d3 col-lg-4 col-md-6">
+                            <div class="smc-step-cont">
+                                <div class="smc-step">
+                                    <div class="smc-flex">
+                                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M27.4773 27.1395L27.4773 27.1395C27.8691 26.7167 28.2375 26.2729 28.5807 25.8099L28.4603 25.7206L28.5808 25.8099C30.5094 23.2082 31.65 19.9871 31.65 16.5C31.65 7.85668 24.6431 0.85 16 0.85C7.35668 0.85 0.35 7.85668 0.35 16.5C0.35 25.1431 7.35668 32.15 16 32.15C20.5348 32.15 24.619 30.2211 27.4773 27.1395ZM29.7998 16.5C29.7998 19.2572 28.9914 21.8252 27.5986 23.9803C25.7636 21.3313 23.0442 19.3412 19.8672 18.4369C21.3767 17.2762 22.35 15.4517 22.35 13.3999C22.35 9.89294 19.507 7.04986 16 7.04986C12.493 7.04986 9.64996 9.89294 9.64996 13.3999C9.64996 15.4519 10.6232 17.2763 12.1328 18.437C8.95561 19.3412 6.23628 21.3315 4.40128 23.9804C3.0084 21.8252 2.19997 19.2573 2.19997 16.5C2.19997 8.87847 8.37847 2.69997 15.9998 2.69997C23.6214 2.69997 29.7998 8.87847 29.7998 16.5ZM16.0002 19.7499C20.3992 19.7499 24.2567 22.0687 26.4172 25.5512C23.887 28.4609 20.1584 30.3 16 30.3C11.8416 30.3 8.11302 28.4609 5.58275 25.5514C7.74326 22.0687 11.601 19.7499 16.0002 19.7499ZM20.5 13.3999C20.5 15.8854 18.4853 17.9 16 17.9C13.5147 17.9 11.4999 15.8854 11.4999 13.4001C11.4999 10.9147 13.5145 8.89984 16 8.89984C18.4855 8.89984 20.5 10.9146 20.5 13.3999Z"
+                                                fill="#695DFD" stroke="#695DFD" stroke-width="0.3" />
+                                        </svg>
+                                        <h4 class="smc-title mb-0">Easy Audi Sale</h4>
+                                        <p class="mb-0 smc-desc">Hassle-Free Audi Car Selling – No Hidden Fees, Quick
+                                            Payment!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 smcs-div-cont smcs-d4 col-lg-4 col-md-6">
+                            <div class="smc-step-cont">
+                                <div class="smc-step">
+                                    <div class="smc-flex">
+                                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M27.4773 27.1395L27.4773 27.1395C27.8691 26.7167 28.2375 26.2729 28.5807 25.8099L28.4603 25.7206L28.5808 25.8099C30.5094 23.2082 31.65 19.9871 31.65 16.5C31.65 7.85668 24.6431 0.85 16 0.85C7.35668 0.85 0.35 7.85668 0.35 16.5C0.35 25.1431 7.35668 32.15 16 32.15C20.5348 32.15 24.619 30.2211 27.4773 27.1395ZM29.7998 16.5C29.7998 19.2572 28.9914 21.8252 27.5986 23.9803C25.7636 21.3313 23.0442 19.3412 19.8672 18.4369C21.3767 17.2762 22.35 15.4517 22.35 13.3999C22.35 9.89294 19.507 7.04986 16 7.04986C12.493 7.04986 9.64996 9.89294 9.64996 13.3999C9.64996 15.4519 10.6232 17.2763 12.1328 18.437C8.95561 19.3412 6.23628 21.3315 4.40128 23.9804C3.0084 21.8252 2.19997 19.2573 2.19997 16.5C2.19997 8.87847 8.37847 2.69997 15.9998 2.69997C23.6214 2.69997 29.7998 8.87847 29.7998 16.5ZM16.0002 19.7499C20.3992 19.7499 24.2567 22.0687 26.4172 25.5512C23.887 28.4609 20.1584 30.3 16 30.3C11.8416 30.3 8.11302 28.4609 5.58275 25.5514C7.74326 22.0687 11.601 19.7499 16.0002 19.7499ZM20.5 13.3999C20.5 15.8854 18.4853 17.9 16 17.9C13.5147 17.9 11.4999 15.8854 11.4999 13.4001C11.4999 10.9147 13.5145 8.89984 16 8.89984C18.4855 8.89984 20.5 10.9146 20.5 13.3999Z"
+                                                fill="#695DFD" stroke="#695DFD" stroke-width="0.3" />
+                                        </svg>
+                                        <h4 class="smc-title mb-0">Trusted Audi Buyers</h4>
+                                        <p class="mb-0 smc-desc">Trusted Audi Car Buyers – Sell Directly and Securely
+                                            Quickly! </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5 smc-more-money bg-white">
+                <div class="container py-lg-3">
+                    <div class="smc-mm">
+                        <h3 class="smc-mm-title fw-medium mb-lg-1"> Sell your BMW for more money </h3>
+                        <p class="mb-0 smc-mm-desc fw-normal mb-lg-2 pt-1">Ready to sell your car? Choose your preferred
+                            selling method in seconds! Whether it's through an online sale with access to over 17,000
+                            dealers and traders in our Carsmart Hub, a quick sale with select dealers, or setting your
+                            price with a Buy it Now Sale, we've got you covered. </p>
+                        <div class="smc-mm-square">
+                            <img src="./assets/img/smc-mm-square.svg" alt="A" class="w-100">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5">
+                <div class="container py-lg-3">
+                    <h2 class="hs-title text-center mb-5 purple-underline mx-auto">Cars sold recently</h2>
+                    <div class="recently-slider">
+                        <div class="rlcs-cont">
+                            <a href="#" class="product-list-card recently-list-card hover-green-border pb-3"
+                                data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                                <div class="plc-top">
+                                    <div class="plc-pill plc-pill-white">
+                                        <span>SmartConnect</span>
+                                    </div>
+                                    <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
+                                    <div class="grade-badge-cont">
+                                        <span class="gb-text">Grade A</span>
+                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                            class="grade-badge-img">
+                                    </div>
+                                </div>
+                                <div class="plc-bottom">
+                                    <div class="plcb-plate-cont">
+                                        <div class="plc-num-plate">
+                                            <span class="plcb-blue"></span>
+                                            <span class="plc-plate-number">KY58CSM</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
+                                    <div class="plcb-details">
+                                        <span>2023</span><span class="plcb-circle"></span>
+                                        <span>2500 miles</span><span class="plcb-circle"></span>
+                                        <span>Electric</span><span class="plcb-circle"></span>
+                                        <span>Auto</span>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center gap-2">
+                                        <div class="plcb-price-cont me-1">
+                                            <div class="text-white">
+                                                <span class="plc-price-amount ms-0">£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="plcb-line-grey"></div>
+                                        <div class="plcb-location ms-1">
+                                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                            <span>Panama City</span>
+                                        </div>
+                                    </div>
+                                    <div class="line-eeeeee"></div>
+                                    <div class="text-start">
+                                        <button type="button" class="btn btn-sold">Sold</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rlcs-cont">
+                            <a href="#" class="product-list-card recently-list-card hover-green-border pb-3"
+                                data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                                <div class="plc-top">
+                                    <div class="plc-pill plc-pill-white">
+                                        <span>SmartConnect</span>
+                                    </div>
+                                    <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
+                                    <div class="grade-badge-cont">
+                                        <span class="gb-text">Grade A</span>
+                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                            class="grade-badge-img">
+                                    </div>
+                                </div>
+                                <div class="plc-bottom">
+                                    <div class="plcb-plate-cont">
+                                        <div class="plc-num-plate">
+                                            <span class="plcb-blue"></span>
+                                            <span class="plc-plate-number">KY58CSM</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
+                                    <div class="plcb-details">
+                                        <span>2023</span><span class="plcb-circle"></span>
+                                        <span>2500 miles</span><span class="plcb-circle"></span>
+                                        <span>Electric</span><span class="plcb-circle"></span>
+                                        <span>Auto</span>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center gap-2">
+                                        <div class="plcb-price-cont me-1">
+                                            <div class="text-white">
+                                                <span class="plc-price-amount ms-0">£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="plcb-line-grey"></div>
+                                        <div class="plcb-location ms-1">
+                                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                            <span>Panama City</span>
+                                        </div>
+                                    </div>
+                                    <div class="line-eeeeee"></div>
+                                    <div class="text-start">
+                                        <button type="button" class="btn btn-sold">Sold</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rlcs-cont">
+                            <a href="#" class="product-list-card recently-list-card hover-green-border pb-3"
+                                data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                                <div class="plc-top">
+                                    <div class="plc-pill plc-pill-white">
+                                        <span>SmartConnect</span>
+                                    </div>
+                                    <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
+                                    <div class="grade-badge-cont">
+                                        <span class="gb-text">Grade A</span>
+                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                            class="grade-badge-img">
+                                    </div>
+                                </div>
+                                <div class="plc-bottom">
+                                    <div class="plcb-plate-cont">
+                                        <div class="plc-num-plate">
+                                            <span class="plcb-blue"></span>
+                                            <span class="plc-plate-number">KY58CSM</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
+                                    <div class="plcb-details">
+                                        <span>2023</span><span class="plcb-circle"></span>
+                                        <span>2500 miles</span><span class="plcb-circle"></span>
+                                        <span>Electric</span><span class="plcb-circle"></span>
+                                        <span>Auto</span>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center gap-2">
+                                        <div class="plcb-price-cont me-1">
+                                            <div class="text-white">
+                                                <span class="plc-price-amount ms-0">£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="plcb-line-grey"></div>
+                                        <div class="plcb-location ms-1">
+                                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                            <span>Panama City</span>
+                                        </div>
+                                    </div>
+                                    <div class="line-eeeeee"></div>
+                                    <div class="text-start">
+                                        <button type="button" class="btn btn-sold">Sold</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rlcs-cont">
+                            <a href="#" class="product-list-card recently-list-card hover-green-border pb-3"
+                                data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                                <div class="plc-top">
+                                    <div class="plc-pill plc-pill-white">
+                                        <span>SmartConnect</span>
+                                    </div>
+                                    <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
+                                    <div class="grade-badge-cont">
+                                        <span class="gb-text">Grade A</span>
+                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                            class="grade-badge-img">
+                                    </div>
+                                </div>
+                                <div class="plc-bottom">
+                                    <div class="plcb-plate-cont">
+                                        <div class="plc-num-plate">
+                                            <span class="plcb-blue"></span>
+                                            <span class="plc-plate-number">KY58CSM</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
+                                    <div class="plcb-details">
+                                        <span>2023</span><span class="plcb-circle"></span>
+                                        <span>2500 miles</span><span class="plcb-circle"></span>
+                                        <span>Electric</span><span class="plcb-circle"></span>
+                                        <span>Auto</span>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center gap-2">
+                                        <div class="plcb-price-cont me-1">
+                                            <div class="text-white">
+                                                <span class="plc-price-amount ms-0">£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="plcb-line-grey"></div>
+                                        <div class="plcb-location ms-1">
+                                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                            <span>Panama City</span>
+                                        </div>
+                                    </div>
+                                    <div class="line-eeeeee"></div>
+                                    <div class="text-start">
+                                        <button type="button" class="btn btn-sold">Sold</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="rlcs-cont">
+                            <a href="#" class="product-list-card recently-list-card hover-green-border pb-3"
+                                data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
+                                <div class="plc-top">
+                                    <div class="plc-pill plc-pill-white">
+                                        <span>SmartConnect</span>
+                                    </div>
+                                    <img src="./assets/img/product-img-5.png" alt="Product" class="plc-img">
+                                    <div class="grade-badge-cont">
+                                        <span class="gb-text">Grade A</span>
+                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                            class="grade-badge-img">
+                                    </div>
+                                </div>
+                                <div class="plc-bottom">
+                                    <div class="plcb-plate-cont">
+                                        <div class="plc-num-plate">
+                                            <span class="plcb-blue"></span>
+                                            <span class="plc-plate-number">KY58CSM</span>
+                                        </div>
+                                    </div>
+                                    <h5 class="mb-0 plcb-name">Mercedes-Benz C-Class-2023</h5>
+                                    <div class="plcb-details">
+                                        <span>2023</span><span class="plcb-circle"></span>
+                                        <span>2500 miles</span><span class="plcb-circle"></span>
+                                        <span>Electric</span><span class="plcb-circle"></span>
+                                        <span>Auto</span>
+                                    </div>
+                                    <div class="d-flex flex-row align-items-center gap-2">
+                                        <div class="plcb-price-cont me-1">
+                                            <div class="text-white">
+                                                <span class="plc-price-amount ms-0">£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="plcb-line-grey"></div>
+                                        <div class="plcb-location ms-1">
+                                            <svg width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M8.4837 7.51242C8.10814 8.26353 7.5737 9.08687 6.88036 9.98242C6.33148 10.7046 5.73925 11.398 5.1037 12.0624C4.46814 11.398 3.87592 10.7046 3.32703 9.98242C2.6337 9.08687 2.09925 8.26353 1.7237 7.51242C1.26148 6.58798 1.03036 5.77187 1.03036 5.06409C1.03036 4.35631 1.21092 3.69187 1.57203 3.07076C1.93314 2.44964 2.43148 1.95853 3.06703 1.59742C3.70259 1.23631 4.38148 1.05576 5.1037 1.05576C5.82592 1.05576 6.50481 1.23631 7.14036 1.59742C7.77592 1.95853 8.27425 2.44964 8.63536 3.07076C8.99648 3.69187 9.17703 4.35631 9.17703 5.06409C9.17703 5.77187 8.94592 6.58798 8.4837 7.51242ZM5.1037 13.2324C5.3637 12.9724 5.6237 12.7124 5.8837 12.4524C6.49036 11.8169 7.03925 11.1669 7.53036 10.5024C8.25259 9.54909 8.81592 8.66798 9.22036 7.85909C9.74036 6.81909 10.0004 5.89464 10.0004 5.08576C10.0004 4.21909 9.77648 3.4102 9.3287 2.65909C8.88092 1.90798 8.2887 1.31575 7.55203 0.882422C6.81536 0.449089 5.99925 0.232422 5.1037 0.232422C4.20814 0.232422 3.39203 0.449089 2.65536 0.882422C1.9187 1.31575 1.32648 1.90798 0.878698 2.65909C0.43092 3.4102 0.207031 4.21909 0.207031 5.08576C0.207031 5.89464 0.467031 6.81909 0.987031 7.85909C1.39148 8.66798 1.95481 9.54909 2.67703 10.5024C3.16814 11.1669 3.71703 11.8169 4.3237 12.4524L5.1037 13.2324ZM5.1037 6.73242C4.64148 6.73242 4.2587 6.57353 3.95536 6.25576C3.65203 5.93798 3.50036 5.5552 3.50036 5.10742C3.50036 4.65964 3.65203 4.27687 3.95536 3.95909C4.2587 3.64131 4.64148 3.48242 5.1037 3.48242C5.56592 3.48242 5.95592 3.64131 6.2737 3.95909C6.59148 4.27687 6.75036 4.65964 6.75036 5.10742C6.75036 5.5552 6.59148 5.93798 6.2737 6.25576C5.95592 6.57353 5.56592 6.73242 5.1037 6.73242ZM5.1037 7.55576C5.76814 7.55576 6.3387 7.31742 6.81536 6.84076C7.29203 6.36409 7.53036 5.78631 7.53036 5.10742C7.53036 4.42853 7.29203 3.85076 6.81536 3.37409C6.3387 2.89742 5.76814 2.65909 5.1037 2.65909C4.43925 2.65909 3.8687 2.89742 3.39203 3.37409C2.91536 3.85076 2.67703 4.42853 2.67703 5.10742C2.67703 5.78631 2.91536 6.36409 3.39203 6.84076C3.8687 7.31742 4.43925 7.55576 5.1037 7.55576Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                            <span>Panama City</span>
+                                        </div>
+                                    </div>
+                                    <div class="line-eeeeee"></div>
+                                    <div class="text-start">
+                                        <button type="button" class="btn btn-sold">Sold</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rlc-slider-arrows d-flex align-items-center gap-3 justify-content-center"></div>
+            </section>
+            <section class="py-5 how-we-do">
+                <div class="container py-lg-3">
+                    <h2 class="hs-title text-center mb-5 purple-underline mx-auto">How we do it</h2>
+                    <div class="d-flex hwd-flex">
+                        <div class="hwd-card hover-purple-border hwdc-1">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.482422" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M23.4033 16.4824H34.6433V44.4824H29.2833V18.6024L31.6433 20.9624H23.4033V16.4824Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-1.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                        <div class="hwd-card hover-purple-border hwdc-2">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.482422" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M31.2831 29.8424C32.2698 28.8291 33.0698 27.8158 33.6831 26.8024C34.3231 25.7624 34.6431 24.8558 34.6431 24.0824C34.6431 22.9891 34.2431 22.1491 33.4431 21.5624C32.6431 20.9758 31.5365 20.6824 30.1231 20.6824C28.8965 20.6824 27.5898 20.9891 26.2031 21.6024C24.8165 22.2158 23.5098 23.0558 22.2831 24.1224L20.1631 20.2824C21.7898 19.0291 23.5098 18.0424 25.3231 17.3224C27.1365 16.6024 28.9898 16.2424 30.8831 16.2424C32.7498 16.2424 34.3765 16.5358 35.7631 17.1224C37.1498 17.7091 38.2431 18.5358 39.0431 19.6024C39.8431 20.6691 40.2431 21.9091 40.2431 23.3224C40.2431 24.7358 39.7365 26.2291 38.7231 27.8024C37.7365 29.3491 36.4698 30.9224 34.9231 32.5224L26.0831 41.6824L25.3631 40.0424H41.4431V44.4824H20.7231V40.8024L31.2831 29.8424Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-2.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                        <div class="hwd-card hover-purple-border hwdc-3">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.482422" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M32.5845 28.2024C35.1179 28.4158 37.1579 29.1891 38.7045 30.5224C40.2779 31.8291 41.0645 33.5758 41.0645 35.7624C41.0645 37.5224 40.6112 39.0824 39.7045 40.4424C38.7979 41.7758 37.5179 42.8291 35.8645 43.6024C34.2112 44.3491 32.2379 44.7224 29.9445 44.7224C28.0245 44.7224 26.1312 44.4424 24.2645 43.8824C22.4245 43.2958 20.8645 42.5358 19.5845 41.6024L21.7045 37.6424C22.8245 38.5491 24.0645 39.2558 25.4245 39.7624C26.7845 40.2691 28.1712 40.5224 29.5845 40.5224C30.8912 40.5224 32.0112 40.3358 32.9445 39.9624C33.8779 39.5624 34.5845 39.0158 35.0645 38.3224C35.5712 37.6024 35.8245 36.7891 35.8245 35.8824C35.8245 34.4158 35.2645 33.3091 34.1445 32.5624C33.0245 31.8158 31.4779 31.4424 29.5045 31.4424H25.2645V28.3624L34.7045 19.0824L35.4245 20.8424H20.9845L20.9445 16.4824H39.6645V19.6024L29.3045 29.6824L28.6645 27.8024L32.5845 28.2024Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-3.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                        <div class="hwd-card hover-purple-border hwdc-4">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.502441" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M19.3278 37.7824V34.0224L28.4478 16.5024H33.6078L23.9278 35.3824L22.6478 33.3824H41.7278V37.7824H19.3278ZM32.7278 26.7824H37.6878V44.5024H32.7278V26.7824Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-4.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                        <div class="hwd-card hover-purple-border hwdc-5">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.502441" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M27.5177 29.1424L25.9577 26.8224C26.3843 26.7958 26.931 26.7824 27.5977 26.7824C28.2643 26.7558 28.931 26.7424 29.5977 26.7424C30.2643 26.7424 30.811 26.7424 31.2377 26.7424C33.3977 26.7424 35.2643 27.1158 36.8377 27.8624C38.411 28.6091 39.6243 29.6224 40.4777 30.9024C41.3577 32.1558 41.7977 33.6091 41.7977 35.2624C41.7977 37.1558 41.3443 38.8224 40.4377 40.2624C39.531 41.6758 38.251 42.7824 36.5977 43.5824C34.971 44.3558 33.051 44.7424 30.8377 44.7424C29.0777 44.7424 27.2377 44.4491 25.3177 43.8624C23.4243 43.2491 21.7443 42.4491 20.2777 41.4624L22.3977 37.4624C23.571 38.3691 24.8377 39.0891 26.1977 39.6224C27.5577 40.1291 28.931 40.3824 30.3177 40.3824C32.0777 40.3824 33.4643 39.9558 34.4777 39.1024C35.5177 38.2491 36.0377 37.0891 36.0377 35.6224C36.0377 34.2358 35.531 33.1424 34.5177 32.3424C33.531 31.5424 32.0243 31.1424 29.9977 31.1424C29.6777 31.1424 29.1977 31.1558 28.5577 31.1824C27.9443 31.1824 27.2643 31.1958 26.5177 31.2224C25.771 31.2491 25.0377 31.2891 24.3177 31.3424C23.6243 31.3958 23.0377 31.4491 22.5577 31.5024V16.5024H40.5577V20.9424H25.1177L27.5177 18.5824V29.1424Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-5.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                        <div class="hwd-card hover-purple-border hwdc-6">
+                            <svg width="62" height="63" viewBox="0 0 62 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect y="0.502441" width="62" height="62" rx="31" fill="#99F22B" />
+                                <path
+                                    d="M38.9438 22.1824C38.0904 21.6224 37.1304 21.1958 36.0638 20.9024C34.9971 20.5824 33.9171 20.4224 32.8238 20.4224C31.1171 20.4224 29.7038 20.8358 28.5838 21.6624C27.4638 22.4624 26.6371 23.5958 26.1038 25.0624C25.5704 26.5024 25.3304 28.2091 25.3838 30.1824C26.1038 28.9291 27.0904 27.9824 28.3438 27.3424C29.5971 26.6758 31.0638 26.3424 32.7438 26.3424C34.6104 26.3424 36.2104 26.7158 37.5438 27.4624C38.9038 28.1824 39.9438 29.2224 40.6638 30.5824C41.4104 31.9158 41.7838 33.4891 41.7838 35.3024C41.7838 37.2224 41.3704 38.8891 40.5438 40.3024C39.7171 41.7158 38.5571 42.8091 37.0638 43.5824C35.5704 44.3558 33.8104 44.7424 31.7838 44.7424C29.4104 44.7424 27.3571 44.1958 25.6238 43.1024C23.8904 42.0091 22.5571 40.4491 21.6238 38.4224C20.7171 36.3691 20.2638 33.9158 20.2638 31.0624C20.2638 28.0758 20.7571 25.4758 21.7438 23.2624C22.7571 21.0491 24.1838 19.3291 26.0238 18.1024C27.8638 16.8758 30.0238 16.2624 32.5038 16.2624C33.9171 16.2624 35.3971 16.4624 36.9438 16.8624C38.4904 17.2624 39.8371 17.7824 40.9838 18.4224L38.9438 22.1824ZM31.7038 30.2624C30.5304 30.2624 29.5304 30.5024 28.7038 30.9824C27.8771 31.4624 27.2371 32.0891 26.7838 32.8624C26.3571 33.6358 26.1438 34.4891 26.1438 35.4224C26.1438 36.0091 26.2371 36.6091 26.4238 37.2224C26.6371 37.8091 26.9704 38.3424 27.4238 38.8224C27.8771 39.3024 28.4371 39.6891 29.1038 39.9824C29.7704 40.2758 30.5838 40.4224 31.5438 40.4224C32.6104 40.4224 33.5304 40.2224 34.3038 39.8224C35.1038 39.4224 35.7171 38.8358 36.1438 38.0624C36.5971 37.2624 36.8238 36.3291 36.8238 35.2624C36.8238 33.7158 36.3704 32.5024 35.4638 31.6224C34.5571 30.7158 33.3038 30.2624 31.7038 30.2624Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="hwdc-content">
+                                <h4 class="mb-0 fw-medium hwdc-title">Get your Carsmart Valuation!</h4>
+                                <p class="mb-0 hwdc-desc">Enter your car’s registration to receive an instant, precise
+                                    value based on live market data and current selling prices.</p>
+                            </div>
+                            <img src="./assets/img/hwdc-6.png" alt="How we do" class="w-100 hwdc-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-5 testimonials-sec smc-testimonials">
+                <div class="py-lg-3">
+                    <div class="ts-flex-1">
+                        <div class="container">
+                            <h3 class="sec-title text-center mb-0">See what our <span
+                                    class="purple-underline">customers</span> are saying</h3>
+                        </div>
+                        <div class="ts-slider-cont">
+                            <div class="ts-slide-cont">
+                                <div class="ts-box hover-green-border">
+                                    <div class="ts-stars">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                    </div>
+                                    <p class="ts-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse varius enim in eros elementum tristique. Duis cursus, </p>
+                                    <div class="ts-user-cont">
+                                        <img src="./assets/img/user-img.png" alt="User" class="ts-user-img">
+                                        <div class="ts-user-details">
+                                            <h5 class="ts-user-name">John Doe</h5>
+                                            <span class="ts-user-location">Location</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ts-slide-cont">
+                                <div class="ts-box hover-green-border">
+                                    <div class="ts-stars">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                    </div>
+                                    <p class="ts-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse varius enim in eros elementum tristique. Duis cursus, </p>
+                                    <div class="ts-user-cont">
+                                        <img src="./assets/img/user-img.png" alt="User" class="ts-user-img">
+                                        <div class="ts-user-details">
+                                            <h5 class="ts-user-name">John Doe</h5>
+                                            <span class="ts-user-location">Location</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ts-slide-cont">
+                                <div class="ts-box hover-green-border">
+                                    <div class="ts-stars">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                        <img src="./assets/img/star-green.svg" alt="Star" class="ts-star">
+                                    </div>
+                                    <p class="ts-text"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse varius enim in eros elementum tristique. Duis cursus, </p>
+                                    <div class="ts-user-cont">
+                                        <img src="./assets/img/user-img.png" alt="User" class="ts-user-img">
+                                        <div class="ts-user-details">
+                                            <h5 class="ts-user-name">John Doe</h5>
+                                            <span class="ts-user-location">Location</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ts-slider-arrows"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5 selling-my-audi">
+                <div class="container py-lg-3">
+                    <div class="mb-5">
+                        <div class="box-crf">
+                            <h3 class="mb-0 text-white text-center sma-title"> ...the smart way to sell your car....
+                            </h3>
+                            <div class="d-flex align-items-center justify-content-center gap-sm-3 gap-2">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays" class="b-crf-rays">
+                                <div class="smac-crf">
+                                    <form action="" class="car-reg-form" method="post">
+                                        <input type="text" class="crf-inp" placeholder="Enter REG">
+                                        <button type="button"
+                                            class="btn btn-main crf-btn d-flex align-items-center justify-content-center"><span>Get
+                                                my car valuation</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                                <img src="./assets/img/Rays-green.svg" alt="Rays"
+                                    class="b-crf-rays opacity-0 d-sm-block d-none">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sma-row row">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="sma-flex">
+                                <div class="sma-card hover-purple-border">
+                                    <h3 class="mb-0 hs-title"> Selling My Audi With <span
+                                            class="parrot-underline">Carsmart</span>
+                                    </h3>
+                                    <div class="sma-content">
+                                        <p class="mb-0">Got an Audi you want to sell? That's what we want to hear!
+                                            Carsmart is a quick, simple, and completely free method to go about selling
+                                            your Audi. When you sell your car with Carsmart, in as little as 24 hours,
+                                            you can find yourself a buyer since we work with a nationwide network of
+                                            more than 5,000 certified dealers! It doesn't matter if your car is
+                                            almost-new or has a long mileage, Carsmart is here to turn your car into
+                                            cash for you. It's all part of being carsmart!</p>
+                                    </div>
+                                </div>
+                                <div class="sma-card hover-purple-border">
+                                    <h3 class="mb-0 sma-title"> What do you know about Audi? </h3>
+                                    <div class="sma-content">
+                                        <p class="mb-0"> When VW bought Auto Union from Daimler-Benz in the 1960s, the
+                                            current Audi era officially began. Following the 1965 release of the Audi
+                                            F103 series, which revitalized the Audi brand, Volkswagen combined Auto
+                                            Union with NSU Motorenwerke in 1969 to become the firm that exists today.
+                                        </p>
+                                        <p class="mb-0"> The Latin equivalent of the founder August Horch's surname
+                                            served as the basis for the firm name. In Latin, horch (which means
+                                            "listen") becomes audi. The four rings in the Audi emblem stand for the four
+                                            automakers that joined forces to form Auto Union, the firm that preceded
+                                            Audi.</p>
+                                        <p class="mb-0"> Not just any German automaker, but one of the top brands in the
+                                            world of high-end vehicles is Audi. The vast range of fashionable Audi
+                                            vehicles, from sporty sports cars to family-friendly saloons, contributes to
+                                            the brand's appeal. But what really sets Audi apart are the clever minds
+                                            that go into every piece of bodywork. The company has created advances in
+                                            fields like ultralight design that are leading the market.</p>
+                                        <p class="mb-0"> Audi demonstrates under the hood that they live up to their
+                                            catchphrase, "Vorsprung Durch Technik" (Progress Through Technology). These
+                                            days, the greatest electric cars available are Audi models, which are
+                                            examples of this. Thanks to its cutting-edge technology, Audi can now really
+                                            compete with other luxury companies like Mercedes and BMW.</p>
+                                    </div>
+                                </div>
+                                <div class="sma-card hover-purple-border">
+                                    <h3 class="mb-0 sma-title"> How can I sell my Audi with Carsmart?</h3>
+                                    <div class="sma-content">
+                                        <p class="mb-0"> Selling your Audi online is 100% possible with Carsmart, and
+                                            the process is quick, straightforward, and uncomplicated! Simply follow the
+                                            procedures listed below; </p>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Obtain a quick valuation for Audi</span>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Right from your phone, create a car profile.</span>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Relax and wait for your greatest deal.</span>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Approve a deal in as little as a day.</span>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Have your vehicle picked up at your house.</span>
+                                        </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <div>
+                                                <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18 5C18 2.24303 15.8089 0 13.1159 0H4.88406C2.19102 0 0 2.24308 0 5C0 7.75692 2.19107 10 4.88406 10H13.1159C15.809 10 18 7.75692 18 5Z"
+                                                        fill="#99F22B" />
+                                                </svg>
+                                            </div>
+                                            <span class="ms-1">Enjoy prompt payment, frequently on the same day as
+                                                pickup.</span>
+                                        </div>
+                                        <p class="mb-0"> Oh, and everything is totally free of charge. Yes, using
+                                            Carsmart to sell your automobile doesn't cost you a dime!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="sma-flex">
+                                <div class="sma-card hover-purple-border">
+                                    <h3 class="mb-0 sma-title"> How can I value my Audi?</h3>
+                                    <div class="sma-content">
+                                        <p class="mb-0"> Car prices can be tricky to predict, especially without a bit
+                                            of insider knowledge. Luckily, Carsmart has an online tool that helps with
+                                            that. Get your car instantly valued by using our online car valuation tool
+                                            based on current market trends and our live marketplace, frequented by
+                                            thousands of professional dealers. It's always 100% accurate and up-to-date.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="sma-card hover-purple-border">
+                                    <h3 class="mb-0 sma-title"> Can I sell any type of Audi on Carsmart?</h3>
+                                    <div class="sma-content">
+                                        <p class="mb-0"> Our network of more than 5,000 dealers around the country is
+                                            eager to acquire any kind of vehicle, so we can help you find a buyer for
+                                            these models of Aston Martin; </p>
+                                    </div>
+                                    <div class="sma-cars-flex">
+                                        <p class="fw-medium mb-0">Audi saloon cars:</p>
+                                        <p class="mb-0">Audi Audi A3, Audi A5, Audi A6, Audi A7, Audi A8 A3</p>
+                                        <div class="border-ececec"></div>
+                                        <p class="fw-medium mb-0">Audi SUV cars::</p>
+                                        <p class="mb-0">Audi Q2, Audi Q3, Audi e-tron, Audi Q5, Audi Q7, Audi Q8</p>
+                                        <div class="border-ececec"></div>
+                                        <p class="fw-medium mb-0">Audi cabriolet cars::</p>
+                                        <p class="mb-0">Audi S3, Audi R8, Audi TT, Audi TT RS, Audi TTS</p>
+                                        <div class="border-ececec"></div>
+                                        <p class="fw-medium mb-0">Audi coupe cars:</p>
+                                        <p class="mb-0">Audi A5, Audi R8, Audi RS, Audi S5, Audi TT</p>
+                                    </div>
+                                </div>
+                                <div class="sma-card hover-purple-border smac-purple">
+                                    <h3 class="mb-0 text-white text-center sma-title"> Value your car </h3>
+                                    <div class="smac-crf">
+                                        <form action="" class="car-reg-form" method="post">
+                                            <input type="text" class="crf-inp" placeholder="Enter REG">
+                                            <button type="button"
+                                                class="btn btn-main crf-btn d-flex align-items-center justify-content-center"><span>Get
+                                                    my car valuation</span><svg width="11" height="26"
+                                                    viewBox="0 0 11 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                        fill="#101044" />
+                                                    <path
+                                                        d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                        fill="#101044" />
+                                                    <path
+                                                        d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                        fill="#101044" />
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5 sma-faqs bg-white">
+                <div class="container py-lg-3">
+                    <h2 class="hs-title text-center mb-5 purple-underline mx-auto">FAQs</h2>
+                    <div class="sma-accordion">
+                        <div class="accordion" id="accordionExample">
+                            <!-- Accordion Item 1 -->
+                            <div class="accordion-item sma-ai">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Can I sell any other car on Carsmart even if it's not an Audi? </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"> Yes, without a doubt! Any brand of car is welcome at
+                                        Carsmart. To find out how much your car is worth, you may also use our online
+                                        tool. </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Item 2 -->
+                            <div class="accordion-item sma-ai">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Do I need to get my Audi ready for sale? </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"> This is the second item's accordion body. Feel free to
+                                        modify this content to suit your needs. </div>
+                                </div>
+                            </div>
+                            <!-- Accordion Item 3 -->
+                            <div class="accordion-item sma-ai">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree"> How long does it take to sell my Audi with
+                                        Carsmart? </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"> This is the third item's accordion body. You can modify
+                                        the content as needed. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-5 refer-sec bg-white">
+                <div class="container py-lg-3">
+                    <div class="refer-flex">
+                        <h2 class="sma-title text-center mb-0 parrot-underline mx-auto">Refer Friends</h2>
+                        <p class="mb-0 refer-desc">Invite a friend to sell their car with us and both receive a £100
+                            cashback bonus. <span class="text-purple">Share the reward and boost your earnings
+                                together!</span></p>
+                        <img src="./assets/img/refer-car.png" alt="Refer" class="refer-img">
+                    </div>
+                    <div class="my-5">
+                        <div class="box-crf">
+                            <h3 class="mb-0 text-white text-center sma-title"> ...the smart way to sell your car....
+                            </h3>
+                            <div class="d-flex align-items-center justify-content-center gap-sm-3 gap-2">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays" class="b-crf-rays">
+                                <div class="smac-crf">
+                                    <form action="" class="car-reg-form" method="post">
+                                        <input type="text" class="crf-inp" placeholder="Enter REG">
+                                        <button type="button"
+                                            class="btn btn-main crf-btn d-flex align-items-center justify-content-center"><span>Get
+                                                my car valuation</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </div>
+                                <img src="./assets/img/Rays-green.svg" alt="Rays"
+                                    class="b-crf-rays opacity-0 d-sm-block d-none">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Main End -->
+        <!-- Footer -->
+        <footer>
+            <div class="pre-footer">
+                <div class="container pf-cont">
+                    <div class="footer-cont">
+                        <div class="pf-content d-flex flex-column gap-lg-4 gap-3">
+                            <h3 class="pf-title mb-0 d-flex gap-2 fw-medium">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays">
+                                <span>The smarter way to trade.</span>
+                            </h3>
+                            <p class="mb-0 pf-subtitle"><span class="text-parrot">85%</span> of traders earn more with
+                                SmartConnect.</p>
+                        </div>
+                        <img src="./assets/img/pre-footer-img.png" alt="Car"
+                            class="w-100 img-fluid d-lg-none d-block mt-5">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex ft-flex-1">
+                            <div class="ft-left">
+                                <a href="./index.html" class="ft-logo-link d-block mb-4 pb-1">
+                                    <img src="./assets/img/footer-logo-white.svg" alt="Footer Logo">
+                                </a>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Stalk our socials</h4>
+                                    <div class="ft-social-links d-flex align-items-center gap-lg-4 gap-3 pb-1">
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.842282" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M23.4774 32.3906V23.1782H26.5833L27.0308 19.5721H23.4774V17.2822C23.4774 16.7558 23.587 16.3302 23.8064 16.0056C24.0257 15.681 24.5039 15.5187 25.2409 15.5187H27.136V12.3075C26.7324 12.2724 26.3025 12.2417 25.8463 12.2153C25.3901 12.189 24.9338 12.1759 24.4776 12.1759C24.46 12.1759 24.4425 12.1759 24.4249 12.1759C24.4074 12.1759 24.3898 12.1759 24.3723 12.1759C23.0036 12.1759 21.8893 12.5838 21.0295 13.3998C20.1697 14.2158 19.7397 15.3958 19.7397 16.94V19.5721H16.6602V23.1782H19.7397V32.3906H23.4774Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.908688" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M30.5465 17.7813C30.5465 17.8866 30.5465 17.9875 30.5465 18.084C30.5465 18.1805 30.5465 18.2814 30.5465 18.3867C30.5465 19.8782 30.2657 21.3873 29.7042 22.914C29.1427 24.4406 28.318 25.8225 27.23 27.0596C26.1421 28.2967 24.7997 29.3013 23.2029 30.0734C21.606 30.863 19.7635 31.2578 17.6754 31.2578C16.3944 31.2578 15.1661 31.078 13.9904 30.7182C12.8147 30.3585 11.7268 29.854 10.7266 29.2048C10.9196 29.2398 11.1038 29.2574 11.2793 29.2574C11.4548 29.2574 11.639 29.2574 11.8321 29.2574C11.8321 29.2574 11.8408 29.2574 11.8584 29.2574C12.9112 29.2574 13.9158 29.0863 14.8722 28.7441C15.8285 28.402 16.6927 27.9238 17.4648 27.3096L17.4385 27.3359C16.4558 27.3184 15.5828 27.0201 14.8195 26.441C14.0562 25.8619 13.5254 25.1249 13.2271 24.23V24.2037C13.3499 24.2212 13.4859 24.2388 13.6351 24.2563C13.7842 24.2739 13.929 24.2827 14.0694 24.2827C14.2799 24.2827 14.4817 24.2651 14.6748 24.23C14.8678 24.1949 15.0608 24.1598 15.2538 24.1247C14.2185 23.8966 13.3543 23.3702 12.6612 22.5455C11.9681 21.7207 11.6215 20.7644 11.6215 19.6764V19.6238C11.9373 19.7817 12.2664 19.9133 12.6085 20.0186C12.9507 20.1239 13.3061 20.1853 13.6745 20.2029C13.0604 19.7817 12.5691 19.2421 12.2006 18.5841C11.8321 17.9261 11.6478 17.211 11.6478 16.4389C11.6478 16.0178 11.7048 15.6142 11.8189 15.2281C11.933 14.8421 12.0865 14.4824 12.2795 14.149C12.841 14.8333 13.464 15.4563 14.1483 16.0178C14.8327 16.5793 15.5697 17.0619 16.3593 17.4654C17.149 17.869 17.9825 18.1937 18.8598 18.4393C19.7372 18.685 20.6409 18.8342 21.5709 18.8868H21.5973C21.5622 18.7113 21.5358 18.5358 21.5183 18.3604C21.5008 18.1849 21.492 18.0094 21.492 17.8339C21.492 16.5881 21.9351 15.5221 22.8212 14.6359C23.7074 13.7498 24.7734 13.3067 26.0192 13.3067C26.6685 13.3067 27.2783 13.4383 27.8486 13.7015C28.4189 13.9647 28.9058 14.3157 29.3094 14.7544C29.8534 14.6491 30.3666 14.4999 30.8492 14.3069C31.3318 14.1139 31.7924 13.8857 32.2311 13.6225L32.1784 13.6489C32.003 14.1928 31.7485 14.6754 31.4151 15.0965C31.0817 15.5177 30.6869 15.8686 30.2307 16.1494H30.2043C30.6781 16.0967 31.1387 16.009 31.5862 15.8862C32.0337 15.7633 32.4592 15.6054 32.8628 15.4124L32.8101 15.4387C32.4943 15.8949 32.1477 16.3161 31.7704 16.7021C31.3932 17.0882 30.994 17.4391 30.5728 17.755L30.5465 17.7813Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.975094" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M16.6096 14.4395C16.6096 15.1063 16.3683 15.681 15.8857 16.1635C15.4032 16.6461 14.8285 16.8874 14.1617 16.8874C13.4773 16.8874 12.8939 16.6461 12.4113 16.1635C11.9288 15.681 11.6875 15.1063 11.6875 14.4395C11.6875 13.7551 11.9288 13.1717 12.4113 12.6891C12.8939 12.2066 13.4773 11.9653 14.1617 11.9653C14.8285 11.9653 15.4032 12.2066 15.8857 12.6891C16.3683 13.1717 16.6096 13.7551 16.6096 14.4395ZM18.9259 18.7562V32.3906H23.1636V25.6524C23.1636 24.7574 23.3127 23.9503 23.6111 23.2308C23.9094 22.5114 24.6025 22.1516 25.6904 22.1516C26.7784 22.1516 27.4189 22.5552 27.6119 23.3624C27.8049 24.1696 27.9014 24.968 27.9014 25.7577V32.3906H32.1392V24.9154C32.1392 23.0729 31.8277 21.5287 31.2048 20.2828C30.5818 19.0369 29.1999 18.414 27.0591 18.414C26.0238 18.414 25.1684 18.6465 24.4928 19.1115C23.8172 19.5765 23.3391 20.081 23.0583 20.625H22.9793V18.7562H18.9259ZM12.0297 18.7562H16.2674V32.3906H12.0297V18.7562Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1.04541" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M32.1582 18.1235C32.1407 17.6849 32.0924 17.2506 32.0134 16.8206C31.9345 16.3907 31.816 15.9827 31.6581 15.5967L31.6844 15.6493C31.4212 14.965 31.0352 14.3684 30.5263 13.8595C30.0174 13.3506 29.4296 12.9646 28.7628 12.7014L28.7364 12.675C28.3679 12.5347 27.9775 12.425 27.5651 12.346C27.1528 12.2671 26.7273 12.2276 26.2886 12.2276H26.2622C25.7183 12.1925 25.2313 12.1705 24.8014 12.1618C24.3715 12.153 23.4722 12.1486 22.1035 12.1486C20.7348 12.1486 19.8311 12.153 19.3924 12.1618C18.9537 12.1705 18.4711 12.1925 17.9447 12.2276C17.4885 12.2276 17.0542 12.2714 16.6418 12.3592C16.2294 12.4469 15.8302 12.561 15.4442 12.7014L15.4705 12.675C14.8037 12.9558 14.2159 13.3506 13.707 13.8595C13.1981 14.3684 12.8121 14.9474 12.5488 15.5967L12.5225 15.6493C12.3821 16.0178 12.2725 16.4083 12.1935 16.8206C12.1145 17.233 12.0663 17.6585 12.0487 18.0972C12.0312 18.6412 12.018 19.1281 12.0093 19.5581C12.0005 19.988 11.9961 20.8873 11.9961 22.256C11.9961 23.6247 11.9961 24.5284 11.9961 24.9671C11.9961 25.4058 12.0136 25.8971 12.0487 26.4411C12.0663 26.8622 12.1145 27.2746 12.1935 27.6782C12.2725 28.0818 12.3821 28.4854 12.5225 28.889C12.7857 29.5733 13.1718 30.1699 13.6807 30.6788C14.1895 31.1877 14.7774 31.5737 15.4442 31.8369H15.4968C15.8478 31.9949 16.2294 32.1177 16.6418 32.2054C17.0542 32.2932 17.4797 32.3371 17.9184 32.3371H17.9447C18.4887 32.3721 18.9756 32.3941 19.4055 32.4029C19.8355 32.4116 20.7348 32.416 22.1035 32.416C23.4722 32.416 24.3759 32.4116 24.8146 32.4029C25.2533 32.3941 25.7358 32.3721 26.2622 32.3371C26.7185 32.3371 27.1528 32.2932 27.5651 32.2054C27.9775 32.1177 28.3855 32.0036 28.7891 31.8633L28.7364 31.8896C29.4033 31.6088 29.9911 31.214 30.5 30.7051C31.0089 30.1963 31.3949 29.6172 31.6581 28.9679L31.6844 28.9153C31.8248 28.5292 31.9345 28.13 32.0134 27.7177C32.0924 27.3053 32.1407 26.8885 32.1582 26.4674C32.1758 25.9234 32.1889 25.4365 32.1977 25.0066C32.2065 24.5767 32.2109 23.6773 32.2109 22.3086C32.2109 20.9224 32.2109 20.0143 32.2109 19.5844C32.2109 19.1545 32.1933 18.6675 32.1582 18.1235ZM22.1035 27.4413C21.384 27.4413 20.7084 27.3097 20.0767 27.0465C19.445 26.7657 18.8923 26.3928 18.4185 25.9278C17.9447 25.4628 17.5762 24.9144 17.313 24.2827C17.0322 23.651 16.8919 22.9754 16.8919 22.256C16.8919 21.5365 17.0322 20.861 17.313 20.2292C17.5762 19.5975 17.9447 19.0492 18.4185 18.5842C18.8923 18.1192 19.445 17.7463 20.0767 17.4655C20.7084 17.2023 21.384 17.0707 22.1035 17.0707C22.8229 17.0707 23.4985 17.2023 24.1302 17.4655C24.7444 17.7463 25.2884 18.1192 25.7621 18.5842C26.2359 19.0492 26.6044 19.5975 26.8676 20.2292C27.1484 20.861 27.2888 21.5365 27.2888 22.256C27.2888 22.9754 27.1484 23.651 26.8676 24.2827C26.6044 24.9144 26.2359 25.4628 25.7621 25.9278C25.2884 26.3928 24.7444 26.7657 24.1302 27.0465C23.4985 27.3097 22.8229 27.4413 22.1035 27.4413ZM27.4993 18.0972C27.1659 18.0972 26.8808 17.9788 26.6439 17.7419C26.407 17.505 26.2886 17.2198 26.2886 16.8864C26.2886 16.553 26.407 16.2679 26.6439 16.031C26.8808 15.7941 27.1659 15.6757 27.4993 15.6757C27.8327 15.6757 28.1179 15.7941 28.3548 16.031C28.5917 16.2679 28.7101 16.553 28.7101 16.8864C28.7101 17.2198 28.5917 17.505 28.3548 17.7419C28.1179 17.9788 27.8327 18.0972 27.4993 18.0972ZM25.4726 22.256C25.4726 23.186 25.1436 23.98 24.4856 24.6381C23.8275 25.2961 23.0335 25.6251 22.1035 25.6251C21.1735 25.6251 20.3794 25.2961 19.7214 24.6381C19.0634 23.98 18.7343 23.186 18.7343 22.256C18.7343 21.326 19.0634 20.5319 19.7214 19.8739C20.3794 19.2159 21.1735 18.8869 22.1035 18.8869C23.0335 18.8869 23.8275 19.2159 24.4856 19.8739C25.1436 20.5319 25.4726 21.326 25.4726 22.256Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-middle d-flex">
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Services</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">SmartHub</a></li>
+                                        <li><a href="#" class="ft-link">SmartDrop</a></li>
+                                        <li><a href="#" class="ft-link">SmartConnect</a></li>
+                                        <li><a href="#" class="ft-link">SmartMatch</a></li>
+                                        <li><a href="#" class="ft-link">SmartWallet</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Resources</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">Guides</a></li>
+                                        <li><a href="#" class="ft-link">Advertise with us</a></li>
+                                        <li><a href="#" class="ft-link">How we do it</a></li>
+                                        <li><a href="#" class="ft-link">SmartData</a></li>
+                                        <li><a href="#" class="ft-link">Become a trader</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Download App</h4>
+                                    <div class="ft-download-links d-flex flex-column">
+                                        <a href="#">
+                                            <img src="./assets/img/apple-app.svg.svg" alt="Apple Btn">
+                                        </a>
+                                        <a href="#">
+                                            <img src="./assets/img/google-app.svg.svg" alt="Google Btn">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-right d-flex flex-column gap-3">
+                                <h3 class="ftr-title">Want to sell your car? Head over to:</h3>
+                                <div class="mt-1">
+                                    <a href="#" class="btn btn-main d-flex align-items-center"><span>CARSMART</span><svg
+                                            width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#101044" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex justify-content-between align-items-center flex-lg-row flex-column gap-2">
+                            <p class="mb-0">&copy; Carsmart Limited 2001 - 2024</p>
+                            <div class="d-flex align-items-center gap-lg-5 gap-3 flex-wrap justify-content-center">
+                                <a href="#" class="fb-link">Privacy policy</a>
+                                <a href="#" class="fb-link">Cookies</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="./assets/js/aos.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+        <script src="./assets/js/custom.js?v=10"></script>
+    </body>
+
+</html>
