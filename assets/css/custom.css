@@ -139,6 +139,14 @@ footer {
     border-radius: 40px 40px 0 0;
 }
 
+.customer-page footer{
+    background-color: #101044;
+}
+
+.customer-page .footer-top,.customer-page .footer-bottom{
+    background-color: #695DFD;
+}
+
 
 .footer-top {
     background-color: #101044;
@@ -2225,7 +2233,7 @@ footer {
     padding: 0 0 24px !important;
     font-size: 18px;
 }
-.sma-ai .accordion-button::after,.accordion-button:not(.collapsed)::after{
+.sma-ai .accordion-button::after,.sma-ai .accordion-button:not(.collapsed)::after{
     height: 32px;
     width: 32px;
     background-image: url(../img/sma-ai-chev-down.svg);
@@ -2253,7 +2261,7 @@ footer {
     padding: 0 0 10px;
     color: rgba(255, 255, 255, 0.8) !important;
 }
-.kyc-acc .accordion-button::after,.accordion-button:not(.collapsed)::after{
+.kyc-acc .accordion-button::after,.kyc-acc .accordion-button:not(.collapsed)::after{
     height: 18px;
     width: 18px;
     background-image: url(../img/chevron-white-down.svg);
