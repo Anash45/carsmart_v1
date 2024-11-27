@@ -15,6 +15,16 @@
 :root {
     --midnight: #0C0D45;
     --parrot: #99F22B;
+    --sfs-left: 0;
+    --sfs-right: 0;
+    --sfs-bg: linear-gradient('to right, #D3D4FD 100%');
+    --sfs-line-1: 00px;
+    --sfs-line-2: 00px;
+    --sfs-line-3: 00px;
+    --sfs-line-4: 00px;
+    --sfs-line-5: 00px;
+    --sfs-line-6: 00px;
+    --sfs-line-7: 00px;
 }
 
 .text-parrot {
@@ -1290,6 +1300,7 @@ footer {
 .sfs-nav-text {
     font-size: 13px;
     font-weight: 500;
+    white-space: nowrap;
     color: #fff;
 }
 
@@ -1305,8 +1316,9 @@ footer {
     display: none;
 }
 
-.sfs-nav .nav-item.active-tab~.nav-item .nav-link {
+.sfs-nav .nav-item.active-tab~.nav-item .nav-link .sfs-number  {
     border: 2px solid rgba(211, 212, 253, 0.2);
+    line-height: 32px;
 }
 
 .sfs-nav .nav-link .sfs-check {
@@ -1314,48 +1326,90 @@ footer {
     width: 32px;
 }
 
+.sfs-number{
+    height: 36px;
+    width: 36px;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
 .sfs-nav .nav-link {
     padding: 0 !important;
     font-weight: 500;
     font-size: 13px !important;
     line-height: 100%;
-    color: #ffffff;
     font-family: "Inter", sans-serif;
-    height: 32px !important;
-    width: 32px !important;
+    height: 35px !important;
+    width: 35px !important;
     border: 0;
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 13px;
+    background-color: #1F204F;
 }
 
 .sfs-nav .nav-link {
     position: relative;
 }
 
-.sfs-nav .nav-item:nth-child(2) .nav-link::before {
+.sfs-nav{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+/* .sfs-nav::before{
     content: "";
     position: absolute;
-    top: 14px;
-    left: 0;
+    top: 23px;
+    left: var(--sfs-left);
+    right: var(--sfs-right);
     height: 2px;
-    background-color: #99F22B;
-    width: 160px;
-    transform: translateX(calc(-100% - 7px));
+    background-image: var(--sfs-bg);
+    width: auto;
+    transform: translateX(0);
+    z-index: 0;
+} */
+
+.sfs-nav .nav-item{
+    position: relative;
+    z-index: 1;
 }
 
-.sfs-nav .nav-item:nth-child(2) .nav-link::after {
+.sfs-nav .nav-item .nav-link::after {
     content: "";
     position: absolute;
-    top: 14px;
-    right: 0;
+    top:16px;
+    right: -4px;
     height: 2px;
     background-color: #99F22B;
-    width: 154px;
-    transform: translateX(calc(100% + 6px));
+    transform: translateX(calc(100% - 0.5px));
 }
 
-.sfs-nav .nav-item.active-tab+.nav-item .nav-link::after {
-    background-color: transparent;
+.sfs-nav .nav-item:nth-child(1).sfs-done .nav-link::after{
+    width: var(--sfs-line-1);
+}
+
+.sfs-nav .nav-item:nth-child(2).sfs-done .nav-link::after{
+    width: var(--sfs-line-2);
+}
+
+.sfs-nav .nav-item:nth-child(3).sfs-done .nav-link::after{
+    width: var(--sfs-line-3);
+}
+
+.sfs-nav .nav-item:nth-child(4).sfs-done .nav-link::after{
+    width: var(--sfs-line-4);
+}
+
+.sfs-nav .nav-item:nth-child(5).sfs-done .nav-link::after{
+    width: var(--sfs-line-5);
+}
+
+.sfs-nav .nav-item:nth-child(6).sfs-done .nav-link::after{
+    width: var(--sfs-line-6);
 }
 
 .signup-form-content {
@@ -2934,7 +2988,7 @@ footer {
 }
 
 .dcm-table tbody td {
-    height: 70px;
+    min-height: 74px;
     font-weight: 600;
     font-size: 16px;
     color: rgba(255, 255, 255, 1);
@@ -2955,7 +3009,8 @@ footer {
 }
 
 .dcmt-check {
-    border-radius: 3.3px;
+    border-radius: 3.3px !important;
+    margin-top: 0 !important;
     border: 1.5px solid #7F56D9 !important;
     box-shadow: none !important;
     cursor: pointer;
@@ -3825,6 +3880,15 @@ ol.policy-desc {
     background-color: rgba(175, 128, 14, 1);
 }
 
+.cd-rc-top-sold{
+    background-color: #DF2323;
+}
+
+.cd-rc-top-sold .sb-notice{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
 .cd-rc-top-smartexchange {
     padding: 13px 30px;
     background-color: #000000;
@@ -4343,6 +4407,61 @@ ol.policy-desc {
     cursor: pointer;
     z-index: 1;
 }
+
+/* Payment Fee Page */
+.payment-fee-card{
+    background-color: #1F204F;
+    border-radius: 10px;
+}
+.pfcr-add{
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    color: #695DFD;
+}
+.pfrc-box{
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 15px;
+}
+.pfrcb-line{
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+}
+.pfrcb-flex{
+    display: flex;
+    flex-direction: column;
+}
+.pfrcb-label{
+    font-size: 14px;
+}
+.pfrcr-total{
+    font-size: 17px;
+}
+.pfrc-label-value{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.pfrc-row{
+    gap: 6px;
+}
+
+.pfrc-value{
+    font-weight: 600;
+}
+/* Payment Fee Page Ends */
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -4470,6 +4589,28 @@ ol.policy-desc {
 }
 
 @media (max-width: 992px) {
+
+    .sfs-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .sfs-nav .nav-item {
+        flex-direction: row;
+    }
+
+    .sfs-nav .nav-item.sfs-done .nav-link::after {
+        width: 2px !important;
+        height: 25px;
+        left: 50%;
+        bottom: 0;
+        transform: translate(0, 82%);
+    }
+    .sfs-nav .nav-item:last-child .nav-link::after{
+        content: unset !important;
+    }
     .smcs-d2 {
         padding-top: 24px;
     }
@@ -4725,33 +4866,6 @@ ol.policy-desc {
 
     .signup-cta-title {
         font-size: 36px;
-    }
-
-    .sfs-nav {
-        align-items: flex-start;
-        flex-direction: column;
-        width: fit-content;
-        margin: 0 auto;
-    }
-
-    .sfs-nav .nav-item {
-        flex-direction: row;
-    }
-
-    .sfs-nav .nav-item:nth-child(2) .nav-link::before {
-        width: 2px;
-        height: 25px;
-        left: 50%;
-        top: 0;
-        transform: translate(-50%, -108%);
-    }
-
-    .sfs-nav .nav-item:nth-child(2) .nav-link::after {
-        width: 2px;
-        height: 25px;
-        left: 50%;
-        bottom: 0%;
-        transform: translate(-50%, 82%);
     }
 
     .signup-form-content {

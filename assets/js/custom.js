@@ -56,25 +56,124 @@ $(document).ready(function () {
 $(document).ready(function () {
     // Function to add a class to the active tab's parent .nav-item
     function updateActiveSignupTab() {
-        // Remove the custom class from all nav-items
-        $('.sfs-nav .nav-item').removeClass('active-tab');
+        // Remove existing custom classes
+        $('.sfs-nav .nav-item').removeClass('active-tab sfs-done');
 
-        // Find the active tab
+        // Find the active nav-link
         const activeTab = $('.sfs-nav .nav-link.active');
 
         if (activeTab.length) {
             // Add the class to the parent .nav-item of the active tab
             activeTab.closest('.nav-item').addClass('active-tab');
+
+            // Add the .sfs-done class to all nav-items before and including the active one
+            $('.sfs-nav .nav-item').each(function () {
+                if ($(this).index() <= activeTab.closest('.nav-item').index()) {
+                    $(this).addClass('sfs-done');
+                }
+            });
         }
     }
 
-    // Call the function on page load
-    updateActiveSignupTab();
+    function updateCSSVariables() {
+        // Select the first and last child elements
+        const firstChildWidth = $('.sfs-nav .nav-item:first-child').outerWidth() || 0;
+        const lastChildWidth = $('.sfs-nav .nav-item:last-child').outerWidth() || 0;
 
-    // Call the function on tab change
-    $('.sfs-nav .nav-link').on('shown.bs.tab', function () {
-        updateActiveSignupTab();
-    });
+        // Calculate half the widths
+        const halfFirstWidth = firstChildWidth / 2;
+        const halfLastWidth = lastChildWidth / 2;
+
+        console.log(halfFirstWidth, halfLastWidth);
+        // Apply the values to CSS variables
+        $('.sfs-nav').css({
+            '--sfs-left': `${halfFirstWidth}px`,
+            '--sfs-right': `${halfLastWidth}px`
+        });
+    }
+
+    // function updateBackground() {
+    //     const $tabs = $('.sfs-nav .nav-item');
+    //     const totalTabs = $tabs.length;
+    //     const activeIndex = $('.sfs-nav .nav-link.active').parent().index() + 1; // 1-based index
+
+    //     // $('.sfs-nav .nav-item').css({
+    //     //     "width": `calc((100% / ${totalTabs}) - ((30px * (${totalTabs} - 1)) / ${totalTabs}))`
+    //     // });
+
+    //     // console.log(`calc((100%/${totalTabs}) - ((30px*${totalTabs} - 1)/${totalTabs}))`);
+
+    //     console.log(activeIndex, totalTabs);
+    //     let gradientPercentage;
+
+    //     // Calculate the percentage based on the active tab
+    //     if ((activeIndex === totalTabs) || (activeIndex === totalTabs - 1)) {
+    //         gradientPercentage = 100;
+    //     } else {
+    //         gradientPercentage = (activeIndex / totalTabs) * 100;
+    //     }
+
+    //     // Create the linear gradient CSS
+    //     const gradient = `linear-gradient(to right, #99F22B ${gradientPercentage}%, #D3D4FD ${100 - gradientPercentage}%)`;
+
+    //     // Apply the background to the .sfs-nav::before using CSS variables
+    //     $('.sfs-nav').css('--sfs-bg', gradient);
+    // }
+
+    function calculateNavWidths() {
+        // Get all .nav-item elements, both with and without .sfs-done
+        const $navItems = $('.sfs-nav .nav-item');
+
+        // Iterate over all .nav-item elements
+        $navItems.each(function (index) {
+            // Check if the current .nav-item has the .sfs-done class
+            if ($(this).hasClass('sfs-done')) {
+                // If it's the last item in the list, skip it
+                if (index === $navItems.length - 1) return;
+
+                // Calculate the width of the current nav-item
+                const activeNavItemWidth = $(this).outerWidth();
+
+                // Find the next sibling nav-item and calculate its width
+                const $nextNavItem = $(this).next('.nav-item');
+                const nextNavItemWidth = $nextNavItem.length ? $nextNavItem.outerWidth() : 0;
+
+                // Log the calculated widths (optional)
+                console.log(`Nav Item ${index + 1} Width: ${activeNavItemWidth}px`);
+                console.log(`Next Nav Item Width: ${nextNavItemWidth}px`);
+
+                // Apply calculated widths to the respective CSS variables dynamically
+                const lineIndex = index + 1; // To make it 1-based for --sfs-line-1, --sfs-line-2, etc.
+                $('.sfs-nav').css(`--sfs-line-${lineIndex}`, `${(activeNavItemWidth / 2) + (nextNavItemWidth / 2) - 14}px`);
+            } else {
+                // If the .nav-item does not have the .sfs-done class, set the CSS variable to 0px
+                const lineIndex = index + 1; // To make it 1-based for --sfs-line-1, --sfs-line-2, etc.
+                $('.sfs-nav').css(`--sfs-line-${lineIndex}`, '0px');
+            }
+        });
+    }
+
+
+
+    if ($('.sfs-nav').length > 0) {
+
+        // Call the function on tab change
+        $('.sfs-nav .nav-link').on('shown.bs.tab', function () {
+            updateActiveSignupTab();
+            calculateNavWidths();
+        });
+        // Initial update
+        updateCSSVariables();
+
+        $(window).on('resize', function () {
+            calculateNavWidths();
+        })
+        setTimeout(function () {
+            // Call the function on page load
+            updateActiveSignupTab();
+            calculateNavWidths();
+        }, 500)
+    }
 
     if ($('.ts-slider-cont').length > 0) {
         $('.ts-slider-cont').slick({
