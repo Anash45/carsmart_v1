@@ -113,6 +113,13 @@ header .dropdown-menu {
     background-color: #040536;
 }
 
+.light-page header .dropdown-menu{
+    background-color: #ffffff;
+}
+.light-page header .dropdown-menu .dropdown-item{
+    color: #040536;
+}
+
 header .dropdown-menu .dropdown-item {
     font-weight: 300;
     font-size: 15px;
@@ -1802,11 +1809,27 @@ footer {
     margin: 0 auto;
     position: relative;
 }
-
+.sma-brand-icon{
+    height: 84px;
+    width: 84px;
+    border-radius: 100px;
+}
+.hs-3-mobile .hs-4-frame {
+    position: relative;
+    z-index: 0;
+    height: auto;
+    width: 300px;
+    max-width: 100%;
+}
 .hs-4-frame {
     position: relative;
     height: 100%;
     z-index: 0;
+}
+
+.hs-3-mobile .hs-4-iframe{
+    height: 100% !important;
+    border-radius: 50px 50px 0 0;
 }
 
 .hs-4-iframe {
@@ -3243,28 +3266,42 @@ ol.policy-desc {
     aspect-ratio: 16/8 !important;
 }
 
-.gallery-arrows .slick-arrow {
+/* .gallery-arrows .slick-arrow {
     height: auto;
     width: auto;
     transform: unset;
     position: unset !important;
+} */
+ 
+.modal .dsf-img-cont{
+    margin-bottom: 90px !important;
+    position: relative;
 }
 
-.gallery-arrows {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: center;
-    color: #ffffff;
+.modal .dsf-content{
+    bottom: 0;
+    transform: translateY(calc(100% + 20px));
+    left: 0;
+    width: 100%;
+    position: absolute;
 }
-
-.ga-current {
-    font-size: 19px;
-    color: #fff;
+.modal .tab-pane .slick-arrow{
+    top: 50%;
+    transform: translateY(calc(-50% - 45px));
 }
-
-.ga-total {
-    font-size: 12px;
+.modal .gallery-arrows{
+    padding: 10px 20px;
+    border-radius: 100px;
+    background-color: rgba(16, 16, 68, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 16px !important;
+    color: #fff !important;
+    width: fit-content;
+    font-weight: 600;
+    line-height: 115%;
+    position: absolute;
+    top: 78px;
+    right: 10px;
 }
 
 .dsf-title {
@@ -3282,9 +3319,34 @@ ol.policy-desc {
 }
 
 .gallery-modal {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.gm-nav-tabs{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    background-color: #0C0D45;
+    border-radius: 40px;
+    border: 0 !important;
+    width: fit-content;
+    margin: 0 auto 20px;
 }
 
+.gm-nav-tabs .nav-link{
+    color: #fff !important;
+    background-color: transparent !important;
+    font-size: 18px;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-weight: 400;
+}
+.gm-nav-tabs .nav-link.active{
+    border-bottom: 2px solid #695DFD !important;
+}
 .gallery-modal .modal-dialog {
     max-width: 1100px;
 }
@@ -3454,8 +3516,8 @@ ol.policy-desc {
 .cd-rc-flex {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 30px 0;
+    gap: 20px;
+    padding: 20px 0;
 }
 
 .cd-rf-div {
@@ -3484,7 +3546,7 @@ ol.policy-desc {
 
 .cd-rc-top-banner .sb-notice {
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 100%;
     color: rgba(238, 240, 255, 1);
 }
@@ -3520,8 +3582,8 @@ ol.policy-desc {
 }
 
 .crdi-make {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     border-radius: 100px;
     object-fit: cover;
     object-position: center;
@@ -3546,7 +3608,7 @@ ol.policy-desc {
 
 .cdri-title {
     margin-bottom: 0;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 110%;
 }
@@ -3561,20 +3623,21 @@ ol.policy-desc {
 }
 
 .cdri-price {
-    padding: 20px;
+    padding: 12px 20px 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     text-align: center;
 }
 
 .cdri-price-desc {
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
+    line-height: 110%;
 }
 
 .cdri-price-title {
@@ -3583,6 +3646,7 @@ ol.policy-desc {
     font-weight: 500;
     position: relative;
     color: rgba(255, 255, 255, 1);
+    line-height: 110%;
 }
 
 .cdri-price-title::after {
@@ -3608,7 +3672,8 @@ ol.policy-desc {
 }
 
 .cdrc-label {
-    font-weight: 400;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .cdrc-value {
@@ -3632,7 +3697,7 @@ ol.policy-desc {
 }
 
 .cdr-accordion .accordion-button {
-    padding: 20px 0 20px !important;
+    padding: 15px 0 15px !important;
     font-size: 18px;
     font-weight: 400;
     position: relative;
@@ -4344,6 +4409,10 @@ ol.policy-desc {
         border-radius: 0 0 20px 20px;
     }
 
+    .light-page .navbar-collapse{
+        background-color: #ffffff;
+    }
+
     .ft-flex-1 {
         flex-wrap: wrap;
     }
@@ -4565,6 +4634,10 @@ ol.policy-desc {
     }
     .box-crf .smac-crf .car-reg-form{
         flex-direction: column !important;
+    }
+    .sma-brand-icon{
+        height: 40px;
+        width: 40px;
     }
 }
 
