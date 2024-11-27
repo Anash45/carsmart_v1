@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=11">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=12">
     </head>
 
     <body class="car-details">
@@ -496,8 +496,8 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-5 pt-lg-0 pt-4">
-                        <div class="cd-right">
-                            <div class="cd-right-card">
+                        <div class="cd-right cd-right-top">
+                            <div class="cd-right-card cd-right-card-top">
                                 <div class="cd-rc-top-banner">
                                     <p class="mb-0 sb-notice text-white">Live sales ends in: <span class="sb-time"><span
                                                 class="sb-min">54m</span><span>:</span><span
@@ -511,7 +511,8 @@
                                                     <span class="plcb-blue"></span>
                                                     <span class="plc-plate-number">KY58CSM</span>
                                                 </div>
-                                                <div class="grade-badge-cont" onclick="openModal('exteriorGradingModal')">
+                                                <div class="grade-badge-cont"
+                                                    onclick="openModal('exteriorGradingModal')">
                                                     <span class="gb-text">Grade A</span>
                                                     <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
                                                         class="grade-badge-img">
@@ -534,99 +535,107 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="cd-rf-div">
-                                        <div class="cdri-price">
-                                            <div class="cdri-price-desc">
-                                                <span>Reserve Price</span>
-                                            </div>
-                                            <h4 class="cdri-price-title">£ 11,750</h4>
-                                        </div>
-                                    </div>
-                                    <div class="cd-rf-div">
-                                        <div class="d-flex flex-column gap-1">
-                                            <div class="cdrc-label-value">
-                                                <span class="cdrc-label">Number of bids</span>
-                                                <span class="cdrc-value">11</span>
-                                            </div>
-                                            <div class="cdrc-label-value">
-                                                <span class="cdrc-label">Your bid</span>
-                                                <span class="cdrc-value">£ 10,000</span>
+                                </div>
+                            </div>
+                            <div class="cd-right cd-right-bottom">
+                                <div class="cd-right-card cd-right-card-bottom">
+                                    <div class="cd-rc-flex">
+                                        <div class="cd-rf-div">
+                                            <div class="cdri-price">
+                                                <div class="cdri-price-desc">
+                                                    <span>Reserve Price</span>
+                                                </div>
+                                                <h4 class="cdri-price-title">£ 11,750</h4>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="cd-rf-div">
-                                        <div class="accordion cdr-accordion" id="cdr-accordion">
-                                            <div class="accordion-item active">
-                                                <h2 class="accordion-header" id="heading-1">
-                                                    <button class="accordion-button" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapse-1"
-                                                        aria-expanded="true" aria-controls="collapse-1"> Valuations
-                                                    </button>
-                                                </h2>
-                                                <div id="collapse-1" class="accordion-collapse collapse show"
-                                                    aria-labelledby="heading-1" data-bs-parent="#dc-sidebar-accordion">
-                                                    <div class="accordion-body">
-                                                        <div class="cdrc-label-value">
-                                                            <span class="cdrc-label">Carsmart</span>
-                                                            <span class="cdrc-value">£ 582</span>
-                                                        </div>
-                                                        <div class="cdrc-label-value">
-                                                            <span class="cdrc-label">Retail</span>
-                                                            <span class="cdrc-value">£ 582</span>
-                                                        </div>
-                                                        <div class="cdrc-label-value">
-                                                            <span class="cdrc-label">Clean</span>
-                                                            <span class="cdrc-value">£ 582</span>
-                                                        </div>
-                                                        <div class="cdrc-label-value">
-                                                            <span class="cdrc-label">Average</span>
-                                                            <span class="cdrc-value">£ 582</span>
+                                        <div class="cd-rf-div">
+                                            <div class="d-flex flex-column gap-1">
+                                                <div class="cdrc-label-value">
+                                                    <span class="cdrc-label">Number of bids</span>
+                                                    <span class="cdrc-value">11</span>
+                                                </div>
+                                                <div class="cdrc-label-value">
+                                                    <span class="cdrc-label">Your bid</span>
+                                                    <span class="cdrc-value">£ 10,000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cd-rf-div">
+                                            <div class="accordion cdr-accordion" id="cdr-accordion">
+                                                <div class="accordion-item active">
+                                                    <h2 class="accordion-header" id="heading-1">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse" data-bs-target="#collapse-1"
+                                                            aria-expanded="true" aria-controls="collapse-1"> Valuations
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapse-1" class="accordion-collapse collapse"
+                                                        aria-labelledby="heading-1"
+                                                        data-bs-parent="#dc-sidebar-accordion">
+                                                        <div class="accordion-body">
+                                                            <div class="cdrc-label-value">
+                                                                <span class="cdrc-label">Carsmart</span>
+                                                                <span class="cdrc-value">£ 582</span>
+                                                            </div>
+                                                            <div class="cdrc-label-value">
+                                                                <span class="cdrc-label">Retail</span>
+                                                                <span class="cdrc-value">£ 582</span>
+                                                            </div>
+                                                            <div class="cdrc-label-value">
+                                                                <span class="cdrc-label">Clean</span>
+                                                                <span class="cdrc-value">£ 582</span>
+                                                            </div>
+                                                            <div class="cdrc-label-value">
+                                                                <span class="cdrc-label">Average</span>
+                                                                <span class="cdrc-value">£ 582</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="cd-rf-div cd-rf-input-cont">
-                                        <div class="form-group">
-                                            <label
-                                                class="form-label text-white fw-semibold d-flex align-items-center gap-2 justify-content-between"><span>Enter
-                                                    maximum bid</span><svg width="31" data-bs-toggle="tooltip" data-bs-placement="left" class="cdc-info"
-                                                    title="Take the stress out of bidding! Just set your max bid, and smart proxy bidding will handle the rest. We'll raise your bid in £50 steps to keep you in the race. If no one else bids, you'll win at the reserve price or less—whichever works in your favour. Smart, simple, and stress-free!"
-                                                    height="31" viewBox="0 0 31 31" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="15.5" cy="15.4824" r="15" fill="#695DFD" />
-                                                    <path
-                                                        d="M20.1875 7.35575C21.6127 8.17858 22.7962 9.36206 23.619 10.7872C24.4418 12.2124 24.875 13.8291 24.875 15.4747C24.875 17.1204 24.4418 18.7371 23.6189 20.1622C22.7961 21.5874 21.6126 22.7709 20.1874 23.5937C18.7622 24.4165 17.1455 24.8496 15.4999 24.8496C13.8542 24.8496 12.2375 24.4164 10.8123 23.5935C9.38717 22.7707 8.20371 21.5872 7.38091 20.162C6.55811 18.7368 6.12496 17.1201 6.125 15.4744L6.12969 15.1707C6.18219 13.5516 6.65333 11.9738 7.49716 10.591C8.341 9.20826 9.52874 8.06773 10.9446 7.28064C12.3604 6.49355 13.9561 6.08676 15.5759 6.09992C17.1958 6.11308 18.7846 6.54575 20.1875 7.35575ZM15.5 18.2869C15.2514 18.2869 15.0129 18.3857 14.8371 18.5615C14.6613 18.7373 14.5625 18.9758 14.5625 19.2244V19.2338C14.5625 19.4824 14.6613 19.7209 14.8371 19.8967C15.0129 20.0725 15.2514 20.1713 15.5 20.1713C15.7486 20.1713 15.9871 20.0725 16.1629 19.8967C16.3387 19.7209 16.4375 19.4824 16.4375 19.2338V19.2244C16.4375 18.9758 16.3387 18.7373 16.1629 18.5615C15.9871 18.3857 15.7486 18.2869 15.5 18.2869ZM15.5 11.7245C15.2514 11.7245 15.0129 11.8232 14.8371 11.9991C14.6613 12.1749 14.5625 12.4133 14.5625 12.662V16.4119C14.5625 16.6606 14.6613 16.899 14.8371 17.0748C15.0129 17.2507 15.2514 17.3494 15.5 17.3494C15.7486 17.3494 15.9871 17.2507 16.1629 17.0748C16.3387 16.899 16.4375 16.6606 16.4375 16.4119V12.662C16.4375 12.4133 16.3387 12.1749 16.1629 11.9991C15.9871 11.8232 15.7486 11.7245 15.5 11.7245Z"
-                                                        fill="white" />
-                                                </svg></label>
-                                            <div class="fpf-inp-cont">
-                                                <input type="text" name="bid" class="form-control fpf-inp" value="0"
-                                                    placeholder="eg: 10">
+                                        <div class="cd-rf-div cd-rf-input-cont">
+                                            <div class="form-group">
+                                                <label
+                                                    class="form-label text-white fw-semibold d-flex align-items-center gap-2 justify-content-between"><span>Enter
+                                                        maximum bid</span><svg width="31" data-bs-toggle="tooltip"
+                                                        data-bs-placement="left" class="cdc-info"
+                                                        title="Take the stress out of bidding! Just set your max bid, and smart proxy bidding will handle the rest. We'll raise your bid in £50 steps to keep you in the race. If no one else bids, you'll win at the reserve price or less—whichever works in your favour. Smart, simple, and stress-free!"
+                                                        height="31" viewBox="0 0 31 31" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="15.5" cy="15.4824" r="15" fill="#695DFD" />
+                                                        <path
+                                                            d="M20.1875 7.35575C21.6127 8.17858 22.7962 9.36206 23.619 10.7872C24.4418 12.2124 24.875 13.8291 24.875 15.4747C24.875 17.1204 24.4418 18.7371 23.6189 20.1622C22.7961 21.5874 21.6126 22.7709 20.1874 23.5937C18.7622 24.4165 17.1455 24.8496 15.4999 24.8496C13.8542 24.8496 12.2375 24.4164 10.8123 23.5935C9.38717 22.7707 8.20371 21.5872 7.38091 20.162C6.55811 18.7368 6.12496 17.1201 6.125 15.4744L6.12969 15.1707C6.18219 13.5516 6.65333 11.9738 7.49716 10.591C8.341 9.20826 9.52874 8.06773 10.9446 7.28064C12.3604 6.49355 13.9561 6.08676 15.5759 6.09992C17.1958 6.11308 18.7846 6.54575 20.1875 7.35575ZM15.5 18.2869C15.2514 18.2869 15.0129 18.3857 14.8371 18.5615C14.6613 18.7373 14.5625 18.9758 14.5625 19.2244V19.2338C14.5625 19.4824 14.6613 19.7209 14.8371 19.8967C15.0129 20.0725 15.2514 20.1713 15.5 20.1713C15.7486 20.1713 15.9871 20.0725 16.1629 19.8967C16.3387 19.7209 16.4375 19.4824 16.4375 19.2338V19.2244C16.4375 18.9758 16.3387 18.7373 16.1629 18.5615C15.9871 18.3857 15.7486 18.2869 15.5 18.2869ZM15.5 11.7245C15.2514 11.7245 15.0129 11.8232 14.8371 11.9991C14.6613 12.1749 14.5625 12.4133 14.5625 12.662V16.4119C14.5625 16.6606 14.6613 16.899 14.8371 17.0748C15.0129 17.2507 15.2514 17.3494 15.5 17.3494C15.7486 17.3494 15.9871 17.2507 16.1629 17.0748C16.3387 16.899 16.4375 16.6606 16.4375 16.4119V12.662C16.4375 12.4133 16.3387 12.1749 16.1629 11.9991C15.9871 11.8232 15.7486 11.7245 15.5 11.7245Z"
+                                                            fill="white" />
+                                                    </svg></label>
+                                                <div class="fpf-inp-cont">
+                                                    <input type="text" name="bid" class="form-control fpf-inp" value="0"
+                                                        placeholder="eg: 10">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="cd-rf-div">
-                                        <div class="form-group d-flex flex-column gap-2">
-                                            <button onclick="openModal('placeBidModal')"
-                                                class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Place
-                                                    Bid</span><svg width="11" height="26" viewBox="0 0 11 26"
-                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
-                                                        fill="#101044" />
-                                                    <path
-                                                        d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
-                                                        fill="#101044" />
-                                                    <path
-                                                        d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
-                                                        fill="#101044" />
-                                                </svg>
-                                            </button>
-                                            <button
-                                                class="btn btn-main text-white bg-transparent border-0 w-100 justify-content-center d-flex align-items-center"><span>Cancel
-                                                    Bid</span>
-                                            </button>
+                                        <div class="cd-rf-div">
+                                            <div class="form-group d-flex flex-column gap-2">
+                                                <button onclick="openModal('placeBidModal')"
+                                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Place
+                                                        Bid</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                            fill="#101044" />
+                                                        <path
+                                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                            fill="#101044" />
+                                                    </svg>
+                                                </button>
+                                                <button
+                                                    class="btn btn-main text-white bg-transparent border-0 w-100 justify-content-center d-flex align-items-center"><span>Cancel
+                                                        Bid</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -647,7 +656,8 @@
                                 <img src="./assets/img/Rays-green.svg" alt="Rays">
                                 <span>The smarter way to trade.</span>
                             </h3>
-                            <p class="mb-0 pf-subtitle"><span class="text-parrot">87%</span> of sellers earn more, sell your car tthe smart way!</p>
+                            <p class="mb-0 pf-subtitle"><span class="text-parrot">87%</span> of sellers earn more, sell
+                                your car tthe smart way!</p>
                         </div>
                         <img src="./assets/img/pre-footer-img.png" alt="Car"
                             class="w-100 img-fluid d-lg-none d-block mt-5">
@@ -1198,6 +1208,8 @@
             aria-labelledby="gallerySliderModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
+                    <img src="./assets/img/close-circle-blue.svg" alt="Close" height="30" class="gm-close"
+                        data-bs-dismiss="modal" aria-label="Close">
                     <div class="modal-body p-xl-0 p-3">
                         <div class="cd-sliders">
                             <!-- Filter Buttons -->
@@ -1527,7 +1539,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=11"></script>
+        <script src="./assets/js/custom.js?v=12"></script>
     </body>
 
 </html>
