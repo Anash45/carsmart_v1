@@ -585,3 +585,10 @@ function startKYC() {
     $('.kyc-info-box').hide();
     $('.kyc-form-box').show();
 }
+
+function increasePrice(price) {
+    let currentPrice = Number($('.swbb-inp').val());
+    let newPrice = currentPrice + price;
+    // console.log(newPrice,currentPrice);
+    $('.swbb-inp').val(newPrice);
+}
