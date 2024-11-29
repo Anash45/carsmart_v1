@@ -527,7 +527,45 @@ function openModal(modalId) {
     var modal = new bootstrap.Modal(document.getElementById(modalId));
     modal.show(); // This will activate the tab
 }
+function calculateChatBoxHeight() {
+    // Get the height of the main element
+    var mainHeight = $('.live-chat-page main').outerHeight();
+
+    // Initialize a variable to hold the total height of the sections
+    var sectionsHeight = 0;
+
+    // Count the number of sections and calculate their combined height
+    let secNum = 0;
+    $('.live-chat-page main section:not(.chat-sec)').each(function () {
+        sectionsHeight += $(this).outerHeight();
+        secNum++;
+    });
+
+    let sectionsGap = secNum * 20 + 40;
+
+    // Calculate the remaining height
+    var remainingHeight = mainHeight - sectionsHeight - sectionsGap;
+
+    // Log the results to the console
+    console.log('Main Height: ' + mainHeight);
+    console.log('Total Sections Height: ' + sectionsHeight);
+    console.log('Sections Gap: ' + sectionsGap);
+    console.log('Remaining Height: ' + remainingHeight);
+
+    // Set the remaining height to the --live-chat-box custom property
+    $('.live-chat-page').css('--live-chat-box', remainingHeight + 'px');
+}
+function scrollToBottomChat() {
+    var $lcbMiddle = $('.lcb-middle');
+    $lcbMiddle.scrollTop($lcbMiddle.prop('scrollHeight'));
+}
 $(document).ready(function () {
+    if ($('.lcb-middle').length > 0) {
+        scrollToBottomChat();
+    }
+    $(window).on('resize', function () {
+        calculateChatBoxHeight();
+    })
     // Disable the default hover behavior
     $('[data-bs-toggle="tooltip"]').tooltip({ trigger: 'manual' });
 
@@ -574,6 +612,7 @@ $(document).ready(function () {
             checkDeliverySelection();
         });
     });
+    calculateChatBoxHeight();
 });
 
 function likeVehicle(event) {
