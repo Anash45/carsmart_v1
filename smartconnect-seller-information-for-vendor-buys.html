@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carsmart</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
+        <link href="./assets/css/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=13">
+    </head>
+
+    <body class="car-details">
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+                <div class="container gap-3 position-relative">
+                    <!-- Left: Logo -->
+                    <a class="navbar-brand me-0" href="./index.html">
+                        <img src="./assets/img/carsmart-logo-full-color-rgb 1.svg" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> SmartHub </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item active" href="./live-sale.html">Live sale</a></li>
+                                    <li><a class="dropdown-item" href="./buy-it-now.html">Buy it now</a></li>
+                                    <li><a class="dropdown-item" href="./smart-connect.html">Smart Connect</a></li>
+                                    <li><a class="dropdown-item" href="./favourites.html">Favourites</a></li>
+                                    <li><a class="dropdown-item" href="./editions.html">Editions</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Next Sale</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Favorites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Bids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Smart Data</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Right: Chat and Profile Icon with Dropdown -->
+                    <div class="d-flex align-items-center nav-right ms-xl-0 ms-auto">
+                        <a href="#" class="nav-link nr-chat-link">
+                            <svg width="48" height="49" viewBox="0 0 48 49" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.56" cx="24" cy="24.2402" r="23.3" stroke="white"
+                                    stroke-width="1.4" />
+                                <g clip-path="url(#clip0_38_477)">
+                                    <path d="M20 21.2402H28" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20 25.2402H26" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M30 16.2402C30.7956 16.2402 31.5587 16.5563 32.1213 17.1189C32.6839 17.6815 33 18.4446 33 19.2402V27.2402C33 28.0359 32.6839 28.7989 32.1213 29.3616C31.5587 29.9242 30.7956 30.2402 30 30.2402H25L20 33.2402V30.2402H18C17.2044 30.2402 16.4413 29.9242 15.8787 29.3616C15.3161 28.7989 15 28.0359 15 27.2402V19.2402C15 18.4446 15.3161 17.6815 15.8787 17.1189C16.4413 16.5563 17.2044 16.2402 18 16.2402H30Z"
+                                        stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_38_477">
+                                        <rect width="24" height="24" fill="white" transform="translate(12 12.2402)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link nr-profile-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./assets/img/nav-profile.png" alt="Profile" class="rounded-circle" width="30"
+                                    height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">My Bids</a></li>
+                                <li><a class="dropdown-item" href="#">My Vehicles</a></li>
+                                <li><a class="dropdown-item" href="#">Add Vehicle</a></li>
+                                <li><a class="dropdown-item" href="#">Help</a></li>
+                                <li><a class="dropdown-item" href="#">SmartHub Fees</a></li>
+                                <li><a class="dropdown-item" href="#">Billing & Invoices</a></li>
+                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Centered Menu with Dropdown -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+        <!-- Main -->
+        <main class="mb-5 pb-4 pt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="details-box-2">
+                            <div class="db2-flex-1">
+                                <div class="cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-title">Smart Connect Seller Information </h4>
+                                    <div class="cd-rows">
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Name </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">Marvin Pravin</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Collection </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">Instant</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Address </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">stibulum auctor ornare leo, non suscip magna
+                                                    interdum eu. Curabitur pellente nibh nibh, at maximus ante.stibulum
+                                                    auctor ornare leo</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-title">Detail and Documents </h4>
+                                    <div class="cd-rows">
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Offer accepted on </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">23 july 2023, 5:30PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Owner of vehicle </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">John Cena</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-title">Seller's Payment preferences </h4>
+                                    <h4 class="cd-subtitle justify-content-between d-flex align-items-center"><span>Bank account details</span>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9.48218L12.3731 15.4803L18.7461 9.48218" stroke="#675DF4"
+                                                stroke-width="2.24931" stroke-linecap="round" />
+                                        </svg>
+                                    </h4>
+                                    <div class="cd-rows">
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Full name </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">Marvin Pravin</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Account number </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">989898 989898</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Sort code </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">9898 9898</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-subtitle justify-content-between d-flex align-items-center"><span>Crypto wallet details</span>
+                                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9.48218L12.3731 15.4803L18.7461 9.48218" stroke="#675DF4"
+                                                stroke-width="2.24931" stroke-linecap="round" />
+                                        </svg>
+                                    </h4>
+                                    <div class="cd-rows">
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Payment  Currency </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">Bitcoin</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-row">
+                                            <div class="cd-col">
+                                                <span class="cdr-label"> Crypto wallet address </span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="cdr-value">fsr45415er45812ewr4512wer</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-border"></div>
+                                        <div class="cd-row my-2">
+                                            <div class="cd-col">
+                                                <span class="cdr-label">Download document</span>
+                                            </div>
+                                            <div class="cd-col">
+                                                <span class="fw-medium text-parrot text-decoration-underline cursor-pointer">Click here</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="db2-box cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-subtitle justify-content-between d-flex align-items-center"><span>VSC</span>
+                                    </h4>
+                                    <div class="db2-ib-flex">
+                                        <div class="db2-ib-image">
+                                            <img src="./assets/img/product-img-5.png" alt="QR Code" class="img-fluid">
+                                        </div>
+                                        <div class="db2-ib-image">
+                                            <img src="./assets/img/product-img-5.png" alt="QR Code" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="db2-box cd-flex-3 db2-flex-2">
+                                    <h4 class="cd-subtitle justify-content-between d-flex align-items-center"><span>Driving License</span>
+                                    </h4>
+                                    <div class="db2-ib-flex">
+                                        <div class="db2-ib-image">
+                                            <img src="./assets/img/product-img-5.png" alt="QR Code" class="img-fluid">
+                                        </div>
+                                        <div class="db2-ib-image">
+                                            <img src="./assets/img/product-img-5.png" alt="QR Code" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="db2-box db2-live-chat-box">
+                                    <h4 class="db2-ib-title mb-0"><img src="./assets/img/info-icon.svg" alt="Info" class="cdc-info"><span>Important message</span>
+                                    </h4>
+                                    <p class="mb-0 db2-ib-text text-white">
+                                        The seller's contact detail will now be added to your live chat account, where you can directly arrange vehicle collection oif you are not using our Smart Drop service for delivery. Please keep all communication within the chat to avoid any issues, ensuring you receive full Carsmart support, including dispute resolution and post-sale assistance. Direct contact outside the platform may limit our ability to assist you effectively
+                                    </p>
+                                    <div>
+                                        <a href="#"
+                                        class="btn btn-main text-white bg-transparent border-white  px-5 justify-content-center d-flex align-items-center"><span>Go to live chat</span>
+                                        <svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#ffffff" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#ffffff" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 pt-lg-0 pt-4">
+                        <div class="cd-right cd-right-top">
+                            <div class="cd-right-card cd-right-card-top">
+                                <div class="cd-rc-flex">
+                                    <div class="cd-rf-div">
+                                        <div class="cd-rf-image-banner position-relative">
+                                            <div class="cd-rc-top-banner cd-rc-top-sold">
+                                                <p class="mb-0 sb-notice text-white">Sold</p>
+                                            </div>
+                                            <img src="./assets/img/product-img-5.png" alt="Product" class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cd-right cd-right-bottom">
+                                <div class="cd-right-card cd-right-card-bottom">
+                                    <div class="cd-rc-flex">
+                                        <div class="cd-rf-div position-relative">
+                                            <div class="cdr-info">
+                                                <div class="cdr-info-top">
+                                                    <div class="plc-num-plate">
+                                                        <span class="plcb-blue"></span>
+                                                        <span class="plc-plate-number">KY58CSM</span>
+                                                    </div>
+                                                    <div class="grade-badge-cont"
+                                                        onclick="openModal('exteriorGradingModal')">
+                                                        <span class="gb-text">Grade A</span>
+                                                        <img src="./assets/img/grade-badge.svg" alt="Grade Badge"
+                                                            class="grade-badge-img">
+                                                    </div>
+                                                </div>
+                                                <div class="cdr-info-bottom">
+                                                    <img src="./assets/img/car-make-logo.svg" alt="Make"
+                                                        class="crdi-make">
+                                                    <div class="cdri-content">
+                                                        <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                                        <div class="cdr-mini-info">
+                                                            <span class="cdr-mini-text">2009</span>
+                                                            <span class="cdr-mini-border"></span>
+                                                            <span class="cdr-mini-text">Blue</span>
+                                                            <span class="cdr-mini-border"></span>
+                                                            <span class="cdr-mini-text">Hatchback</span>
+                                                            <span class="cdr-mini-border"></span>
+                                                            <span class="cdr-mini-text">Petrol</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cd-rf-div">
+                                            <div class="sold-for-pill text-white fw-light">
+                                                <span>Sold for</span>
+                                                <span>£ 7,656.00</span>
+                                            </div>
+                                        </div>
+                                        <div class="cd-rf-div">
+                                            <div class="form-group d-flex flex-column gap-2">
+                                                <a href="#"
+                                                    class="btn btn-main text-white bg-transparent border-white w-100 justify-content-center d-flex align-items-center"><span>Back
+                                                        to dashboard</span>
+                                                    <svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                            fill="#ffffff" />
+                                                        <path
+                                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                            fill="#ffffff" />
+                                                        <path
+                                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                            fill="#ffffff" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Main End -->
+        <!-- Footer -->
+        <footer>
+            <div class="pre-footer">
+                <div class="container pf-cont">
+                    <div class="footer-cont">
+                        <div class="pf-content d-flex flex-column gap-lg-4 gap-3">
+                            <h3 class="pf-title mb-0 d-flex gap-2 fw-medium">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays">
+                                <span>The smarter way to trade.</span>
+                            </h3>
+                            <p class="mb-0 pf-subtitle"><span class="text-parrot">87%</span> of sellers earn more, sell
+                                your car tthe smart way!</p>
+                        </div>
+                        <img src="./assets/img/pre-footer-img.png" alt="Car"
+                            class="w-100 img-fluid d-lg-none d-block mt-5">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex ft-flex-1">
+                            <div class="ft-left">
+                                <a href="./index.html" class="ft-logo-link d-block mb-4 pb-1">
+                                    <img src="./assets/img/footer-logo-white.svg" alt="Footer Logo">
+                                </a>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Stalk our socials</h4>
+                                    <div class="ft-social-links d-flex align-items-center gap-lg-4 gap-3 pb-1">
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.842282" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M23.4774 32.3906V23.1782H26.5833L27.0308 19.5721H23.4774V17.2822C23.4774 16.7558 23.587 16.3302 23.8064 16.0056C24.0257 15.681 24.5039 15.5187 25.2409 15.5187H27.136V12.3075C26.7324 12.2724 26.3025 12.2417 25.8463 12.2153C25.3901 12.189 24.9338 12.1759 24.4776 12.1759C24.46 12.1759 24.4425 12.1759 24.4249 12.1759C24.4074 12.1759 24.3898 12.1759 24.3723 12.1759C23.0036 12.1759 21.8893 12.5838 21.0295 13.3998C20.1697 14.2158 19.7397 15.3958 19.7397 16.94V19.5721H16.6602V23.1782H19.7397V32.3906H23.4774Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.908688" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M30.5465 17.7813C30.5465 17.8866 30.5465 17.9875 30.5465 18.084C30.5465 18.1805 30.5465 18.2814 30.5465 18.3867C30.5465 19.8782 30.2657 21.3873 29.7042 22.914C29.1427 24.4406 28.318 25.8225 27.23 27.0596C26.1421 28.2967 24.7997 29.3013 23.2029 30.0734C21.606 30.863 19.7635 31.2578 17.6754 31.2578C16.3944 31.2578 15.1661 31.078 13.9904 30.7182C12.8147 30.3585 11.7268 29.854 10.7266 29.2048C10.9196 29.2398 11.1038 29.2574 11.2793 29.2574C11.4548 29.2574 11.639 29.2574 11.8321 29.2574C11.8321 29.2574 11.8408 29.2574 11.8584 29.2574C12.9112 29.2574 13.9158 29.0863 14.8722 28.7441C15.8285 28.402 16.6927 27.9238 17.4648 27.3096L17.4385 27.3359C16.4558 27.3184 15.5828 27.0201 14.8195 26.441C14.0562 25.8619 13.5254 25.1249 13.2271 24.23V24.2037C13.3499 24.2212 13.4859 24.2388 13.6351 24.2563C13.7842 24.2739 13.929 24.2827 14.0694 24.2827C14.2799 24.2827 14.4817 24.2651 14.6748 24.23C14.8678 24.1949 15.0608 24.1598 15.2538 24.1247C14.2185 23.8966 13.3543 23.3702 12.6612 22.5455C11.9681 21.7207 11.6215 20.7644 11.6215 19.6764V19.6238C11.9373 19.7817 12.2664 19.9133 12.6085 20.0186C12.9507 20.1239 13.3061 20.1853 13.6745 20.2029C13.0604 19.7817 12.5691 19.2421 12.2006 18.5841C11.8321 17.9261 11.6478 17.211 11.6478 16.4389C11.6478 16.0178 11.7048 15.6142 11.8189 15.2281C11.933 14.8421 12.0865 14.4824 12.2795 14.149C12.841 14.8333 13.464 15.4563 14.1483 16.0178C14.8327 16.5793 15.5697 17.0619 16.3593 17.4654C17.149 17.869 17.9825 18.1937 18.8598 18.4393C19.7372 18.685 20.6409 18.8342 21.5709 18.8868H21.5973C21.5622 18.7113 21.5358 18.5358 21.5183 18.3604C21.5008 18.1849 21.492 18.0094 21.492 17.8339C21.492 16.5881 21.9351 15.5221 22.8212 14.6359C23.7074 13.7498 24.7734 13.3067 26.0192 13.3067C26.6685 13.3067 27.2783 13.4383 27.8486 13.7015C28.4189 13.9647 28.9058 14.3157 29.3094 14.7544C29.8534 14.6491 30.3666 14.4999 30.8492 14.3069C31.3318 14.1139 31.7924 13.8857 32.2311 13.6225L32.1784 13.6489C32.003 14.1928 31.7485 14.6754 31.4151 15.0965C31.0817 15.5177 30.6869 15.8686 30.2307 16.1494H30.2043C30.6781 16.0967 31.1387 16.009 31.5862 15.8862C32.0337 15.7633 32.4592 15.6054 32.8628 15.4124L32.8101 15.4387C32.4943 15.8949 32.1477 16.3161 31.7704 16.7021C31.3932 17.0882 30.994 17.4391 30.5728 17.755L30.5465 17.7813Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.975094" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M16.6096 14.4395C16.6096 15.1063 16.3683 15.681 15.8857 16.1635C15.4032 16.6461 14.8285 16.8874 14.1617 16.8874C13.4773 16.8874 12.8939 16.6461 12.4113 16.1635C11.9288 15.681 11.6875 15.1063 11.6875 14.4395C11.6875 13.7551 11.9288 13.1717 12.4113 12.6891C12.8939 12.2066 13.4773 11.9653 14.1617 11.9653C14.8285 11.9653 15.4032 12.2066 15.8857 12.6891C16.3683 13.1717 16.6096 13.7551 16.6096 14.4395ZM18.9259 18.7562V32.3906H23.1636V25.6524C23.1636 24.7574 23.3127 23.9503 23.6111 23.2308C23.9094 22.5114 24.6025 22.1516 25.6904 22.1516C26.7784 22.1516 27.4189 22.5552 27.6119 23.3624C27.8049 24.1696 27.9014 24.968 27.9014 25.7577V32.3906H32.1392V24.9154C32.1392 23.0729 31.8277 21.5287 31.2048 20.2828C30.5818 19.0369 29.1999 18.414 27.0591 18.414C26.0238 18.414 25.1684 18.6465 24.4928 19.1115C23.8172 19.5765 23.3391 20.081 23.0583 20.625H22.9793V18.7562H18.9259ZM12.0297 18.7562H16.2674V32.3906H12.0297V18.7562Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1.04541" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M32.1582 18.1235C32.1407 17.6849 32.0924 17.2506 32.0134 16.8206C31.9345 16.3907 31.816 15.9827 31.6581 15.5967L31.6844 15.6493C31.4212 14.965 31.0352 14.3684 30.5263 13.8595C30.0174 13.3506 29.4296 12.9646 28.7628 12.7014L28.7364 12.675C28.3679 12.5347 27.9775 12.425 27.5651 12.346C27.1528 12.2671 26.7273 12.2276 26.2886 12.2276H26.2622C25.7183 12.1925 25.2313 12.1705 24.8014 12.1618C24.3715 12.153 23.4722 12.1486 22.1035 12.1486C20.7348 12.1486 19.8311 12.153 19.3924 12.1618C18.9537 12.1705 18.4711 12.1925 17.9447 12.2276C17.4885 12.2276 17.0542 12.2714 16.6418 12.3592C16.2294 12.4469 15.8302 12.561 15.4442 12.7014L15.4705 12.675C14.8037 12.9558 14.2159 13.3506 13.707 13.8595C13.1981 14.3684 12.8121 14.9474 12.5488 15.5967L12.5225 15.6493C12.3821 16.0178 12.2725 16.4083 12.1935 16.8206C12.1145 17.233 12.0663 17.6585 12.0487 18.0972C12.0312 18.6412 12.018 19.1281 12.0093 19.5581C12.0005 19.988 11.9961 20.8873 11.9961 22.256C11.9961 23.6247 11.9961 24.5284 11.9961 24.9671C11.9961 25.4058 12.0136 25.8971 12.0487 26.4411C12.0663 26.8622 12.1145 27.2746 12.1935 27.6782C12.2725 28.0818 12.3821 28.4854 12.5225 28.889C12.7857 29.5733 13.1718 30.1699 13.6807 30.6788C14.1895 31.1877 14.7774 31.5737 15.4442 31.8369H15.4968C15.8478 31.9949 16.2294 32.1177 16.6418 32.2054C17.0542 32.2932 17.4797 32.3371 17.9184 32.3371H17.9447C18.4887 32.3721 18.9756 32.3941 19.4055 32.4029C19.8355 32.4116 20.7348 32.416 22.1035 32.416C23.4722 32.416 24.3759 32.4116 24.8146 32.4029C25.2533 32.3941 25.7358 32.3721 26.2622 32.3371C26.7185 32.3371 27.1528 32.2932 27.5651 32.2054C27.9775 32.1177 28.3855 32.0036 28.7891 31.8633L28.7364 31.8896C29.4033 31.6088 29.9911 31.214 30.5 30.7051C31.0089 30.1963 31.3949 29.6172 31.6581 28.9679L31.6844 28.9153C31.8248 28.5292 31.9345 28.13 32.0134 27.7177C32.0924 27.3053 32.1407 26.8885 32.1582 26.4674C32.1758 25.9234 32.1889 25.4365 32.1977 25.0066C32.2065 24.5767 32.2109 23.6773 32.2109 22.3086C32.2109 20.9224 32.2109 20.0143 32.2109 19.5844C32.2109 19.1545 32.1933 18.6675 32.1582 18.1235ZM22.1035 27.4413C21.384 27.4413 20.7084 27.3097 20.0767 27.0465C19.445 26.7657 18.8923 26.3928 18.4185 25.9278C17.9447 25.4628 17.5762 24.9144 17.313 24.2827C17.0322 23.651 16.8919 22.9754 16.8919 22.256C16.8919 21.5365 17.0322 20.861 17.313 20.2292C17.5762 19.5975 17.9447 19.0492 18.4185 18.5842C18.8923 18.1192 19.445 17.7463 20.0767 17.4655C20.7084 17.2023 21.384 17.0707 22.1035 17.0707C22.8229 17.0707 23.4985 17.2023 24.1302 17.4655C24.7444 17.7463 25.2884 18.1192 25.7621 18.5842C26.2359 19.0492 26.6044 19.5975 26.8676 20.2292C27.1484 20.861 27.2888 21.5365 27.2888 22.256C27.2888 22.9754 27.1484 23.651 26.8676 24.2827C26.6044 24.9144 26.2359 25.4628 25.7621 25.9278C25.2884 26.3928 24.7444 26.7657 24.1302 27.0465C23.4985 27.3097 22.8229 27.4413 22.1035 27.4413ZM27.4993 18.0972C27.1659 18.0972 26.8808 17.9788 26.6439 17.7419C26.407 17.505 26.2886 17.2198 26.2886 16.8864C26.2886 16.553 26.407 16.2679 26.6439 16.031C26.8808 15.7941 27.1659 15.6757 27.4993 15.6757C27.8327 15.6757 28.1179 15.7941 28.3548 16.031C28.5917 16.2679 28.7101 16.553 28.7101 16.8864C28.7101 17.2198 28.5917 17.505 28.3548 17.7419C28.1179 17.9788 27.8327 18.0972 27.4993 18.0972ZM25.4726 22.256C25.4726 23.186 25.1436 23.98 24.4856 24.6381C23.8275 25.2961 23.0335 25.6251 22.1035 25.6251C21.1735 25.6251 20.3794 25.2961 19.7214 24.6381C19.0634 23.98 18.7343 23.186 18.7343 22.256C18.7343 21.326 19.0634 20.5319 19.7214 19.8739C20.3794 19.2159 21.1735 18.8869 22.1035 18.8869C23.0335 18.8869 23.8275 19.2159 24.4856 19.8739C25.1436 20.5319 25.4726 21.326 25.4726 22.256Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-middle d-flex">
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Services</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">SmartHub</a></li>
+                                        <li><a href="#" class="ft-link">SmartDrop</a></li>
+                                        <li><a href="#" class="ft-link">SmartConnect</a></li>
+                                        <li><a href="#" class="ft-link">SmartMatch</a></li>
+                                        <li><a href="#" class="ft-link">SmartWallet</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Resources</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">Guides</a></li>
+                                        <li><a href="#" class="ft-link">Advertise with us</a></li>
+                                        <li><a href="#" class="ft-link">How we do it</a></li>
+                                        <li><a href="#" class="ft-link">SmartData</a></li>
+                                        <li><a href="#" class="ft-link">Become a trader</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Download App</h4>
+                                    <div class="ft-download-links d-flex flex-column">
+                                        <a href="#">
+                                            <img src="./assets/img/apple-app.svg.svg" alt="Apple Btn">
+                                        </a>
+                                        <a href="#">
+                                            <img src="./assets/img/google-app.svg.svg" alt="Google Btn">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-right d-flex flex-column gap-3">
+                                <h3 class="ftr-title">Want to sell your car? Head over to:</h3>
+                                <div class="mt-1">
+                                    <a href="#" class="btn btn-main d-flex align-items-center"><span>CARSMART</span><svg
+                                            width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#101044" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex justify-content-between align-items-center flex-lg-row flex-column gap-2">
+                            <p class="mb-0">&copy; Carsmart Limited 2001 - 2024</p>
+                            <div class="d-flex align-items-center gap-lg-5 gap-3 flex-wrap justify-content-center">
+                                <a href="#" class="fb-link">Help</a>
+                                <a href="#" class="fb-link">SmartGuidelines</a>
+                                <a href="#" class="fb-link">Terms</a>
+                                <a href="#" class="fb-link">Privacy policy</a>
+                                <a href="#" class="fb-link">Cookies</a>
+                                <a href="#" class="fb-link">Sitemap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        <!-- Vehicle Details Modals -->
+        <!-- Vehicle Details Modals End -->
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="./assets/js/aos.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+        <script src="./assets/js/custom.js?v=13"></script>
+    </body>
+
+</html>

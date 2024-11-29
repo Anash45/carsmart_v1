@@ -45,3 +45,57 @@
     src: url(../fonts/alexandria/Alexandria-Black.ttf);
     font-weight: 900;
 }
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaThin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaExtraLight.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaLight.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaRegular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaMedium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaSemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaBold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaExtraBold.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src: url(../fonts/lufga/LufgaBlack.ttf);
+    font-weight: 900;
+}

@@ -568,6 +568,12 @@ $(document).ready(function () {
     //     },
     // });
 
+
+    $('.delivery-selection-cont').each(function () {
+        $(this).on('change', function () {
+            checkDeliverySelection();
+        });
+    });
 });
 
 function likeVehicle(event) {
@@ -591,4 +597,15 @@ function increasePrice(price) {
     let newPrice = currentPrice + price;
     // console.log(newPrice,currentPrice);
     $('.swbb-inp').val(newPrice);
+}
+
+function checkDeliverySelection() {
+    $('.delivery-selection-cont').each(function () {
+        let deliveryRadio = $(this).find('.delivery-radio-inp');
+        if (deliveryRadio.is(':checked')) {
+            $(this).find('.hidden-table').show();
+        } else {
+            $(this).find('.hidden-table').hide();
+        }
+    });
 }
