@@ -5034,7 +5034,7 @@ ol.policy-desc {
 
 
 .live-chat-page main {
-    height: calc(100vh - 81px);
+    /* height: calc(100vh - 81px); */
 }
 
 .live-chat-box {
@@ -5044,9 +5044,47 @@ ol.policy-desc {
     flex-direction: column;
     overflow: hidden;
     height: 100%;
-    max-height: var(--live-chat-box);
+    /* max-height: var(--live-chat-box); */
+    max-height: calc(100vh - 48px);
+}
+.lcbl-owners{
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+}
+.lcbl-info .cdr-info-top{
+    gap: 10px;
+    align-items: center;
+    display: flex;
 }
 
+.lcbl-info .cdri-title{
+    font-size: 14.5px;
+}
+
+.lcbl-info .cdr-mini-info{
+    font-size: 11.25px;
+    color: #ffffff;
+    font-weight: 500;
+    gap: 8px;
+}
+.lcbl-info .cdri-content{
+    gap: 6px;
+}
+.lcbl-info .crdi-make{
+    height: 55px;
+    width: 55px;
+}
+
+.lcbl-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lcbl-info .cdr-info-bottom{
+    gap: 8px;
+}
 .lcb-top {
     padding: 24px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -5194,9 +5232,13 @@ ol.policy-desc {
     color: #fff;
     font-weight: 400;
 }
-
+.lbb-btns{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 .btn-main-white {
-    background-color: #040536;
+    background-color: transparent;
     border-color: #ffffff !important;
     color: #ffffff;
 }
@@ -5226,9 +5268,15 @@ ol.policy-desc {
     max-width: 90%;
 }
 
-.lcbmo-btns .btn-main {
+.lcbmo-btns .btn-main{
     padding: 5px 18px !important;
     font-size: 16px !important;
+}
+
+
+.lbb-btns .btn-main {
+    padding: 5px 18px !important;
+    font-size: 14px !important;
 }
 .lcbl-box{
     border-radius: 10px;
@@ -5367,6 +5415,32 @@ ol.policy-desc {
     max-height: 350px !important;
     overflow-y: auto;
     scrollbar-width: thin;
+}
+.lbb-ad-label{
+    font-size: 13px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.lbb-dates .pcfp-inp-box{
+    padding: 8.5px 13px;
+    border-radius: 5.5px;
+    gap: 7px;
+}
+
+.lbb-dates .pfcp-desc{
+    font-size: 10px;
+    font-weight: 600 !important;
+}
+
+.lbb-dates .pmm-swap-checkbox{
+    height: 10px;
+    width: 10px;
+}
+.lbb-text{
+    font-size: 12.5px;
+}
+.lbb-2{
+    display: none;
 }
 /* Live Chat Ends */
 @media (max-width:2000px) {

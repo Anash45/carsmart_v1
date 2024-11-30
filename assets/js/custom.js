@@ -648,3 +648,15 @@ function checkDeliverySelection() {
         }
     });
 }
+
+function showLbb2() {
+    $('.lcbl-box-bottom').hide();
+    $('.lbb-2').show().css({'display':'flex'});
+}
+
+function showLbb1() {
+    $('.lcbl-box-bottom').hide();
+    let selectedDate = $('.lbb-dates input[type="radio"]:checked').val();
+    $('#lbb-date-cont').html(`<span class="text-purple text-decoration-underline">${selectedDate}</span>`);
+    $('.lbb-1').show().css({'display':'flex'});
+}

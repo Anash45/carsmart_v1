@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=14">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=15">
     </head>
 
     <body class="live-chat-page">
@@ -465,9 +465,134 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="lcbl-box-bottom">
-
-                                </div> -->
+                                <div class="lcbl-box-bottom lbb-1">
+                                    <div class="lcbl-info">
+                                        <div class="cdr-info-top">
+                                            <div class="plc-num-plate">
+                                                <span class="plcb-blue"></span>
+                                                <span class="plc-plate-number">KY58CSM</span>
+                                            </div>
+                                            <span class="lcbl-owners">2 owners</span>
+                                        </div>
+                                        <div class="cdr-info-bottom">
+                                            <div>
+                                                <img src="./assets/img/car-make-logo.svg" alt="Make" class="crdi-make">
+                                            </div>
+                                            <div class="cdri-content">
+                                                <h4 class="cdri-title">Volkswagen Golf S</h4>
+                                                <div class="cdr-mini-info">
+                                                    <span class="cdr-mini-text">2009</span>
+                                                    <span class="cdr-mini-border"></span>
+                                                    <span class="cdr-mini-text">Blue</span>
+                                                    <span class="cdr-mini-border"></span>
+                                                    <span class="cdr-mini-text">Hatchback</span>
+                                                    <span class="cdr-mini-border"></span>
+                                                    <span class="cdr-mini-text">Petrol</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lbb-text d-flex align-items-center justify-content-between">
+                                        <span class="text-white fw-normal">Available Date</span>
+                                        <span class="text-white fw-normal cursor-pointer" onclick="showLbb2()"
+                                            id="lbb-date-cont">
+                                            <span class="text-purple text-decoration-underline">Select date</span>
+                                        </span>
+                                    </div>
+                                    <div class="lbb-btns">
+                                        <button
+                                            class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Accept</span><svg
+                                                width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="btn btn-main btn-main-white w-100 justify-content-center d-flex align-items-center"><span>Decline</span><svg
+                                                width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="lcbl-box-bottom lbb-2">
+                                    <span class="lbb-ad-label">Available Dates</span>
+                                    <div class="lbb-dates d-flex flex-column gap-1">
+                                        <label class="pcfp-inp-box">
+                                            <input type="radio" name="available-date" value="29 May 2024" class="form-check-input pmm-swap-checkbox mt-0">
+                                            <div class="d-flex flex-column pfcp-desc text-white pfcp-sm-flex">
+                                                <span class="fw-medium">29 May 2024</span>
+                                            </div>
+                                        </label>
+                                        <label class="pcfp-inp-box">
+                                            <input type="radio" name="available-date" value="30 May 2024" class="form-check-input pmm-swap-checkbox mt-0">
+                                            <div class="d-flex flex-column pfcp-desc text-white pfcp-sm-flex">
+                                                <span class="fw-medium">30 May 2024</span>
+                                            </div>
+                                        </label>
+                                        <label class="pcfp-inp-box">
+                                            <input type="radio" name="available-date" value="31 May 2024" class="form-check-input pmm-swap-checkbox mt-0">
+                                            <div class="d-flex flex-column pfcp-desc text-white pfcp-sm-flex">
+                                                <span class="fw-medium">31 May 2024</span>
+                                            </div>
+                                        </label>
+                                        <label class="pcfp-inp-box">
+                                            <input type="radio" name="available-date" value="05 Jun 2024" class="form-check-input pmm-swap-checkbox mt-0">
+                                            <div class="d-flex flex-column pfcp-desc text-white pfcp-sm-flex">
+                                                <span class="fw-medium">05 Jun 2024</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="lbb-btns">
+                                        <button onclick="showLbb1()"
+                                            class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Select Date</span><svg
+                                                width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#101044" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#101044" />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="btn btn-main text-white border-white bg-transparent w-100 justify-content-center d-flex align-items-center"><span>Back</span><svg
+                                                width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                    fill="#ffffff" />
+                                                <path
+                                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                    fill="#ffffff" />
+                                                <path
+                                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                    fill="#ffffff" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xxl-9 col-lg-8 h-100 pt-lg-0 pt-4">
@@ -675,7 +800,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=14"></script>
+        <script src="./assets/js/custom.js?v=15"></script>
     </body>
 
 </html>
