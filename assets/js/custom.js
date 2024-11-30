@@ -660,3 +660,21 @@ function showLbb1() {
     $('#lbb-date-cont').html(`<span class="text-purple text-decoration-underline">${selectedDate}</span>`);
     $('.lbb-1').show().css({'display':'flex'});
 }
+
+function ac3f_radios_check() {
+    $('.ac3f-inp-box .ac3f-ib-label .ac3f-ib-radio').each(function () {
+        if ($(this).is(':checked')) {
+            $(this).closest('.ac3f-inp-box').addClass('active');
+        } else {
+            $(this).closest('.ac3f-inp-box').removeClass('active');
+        }
+    });
+    
+    $('.ac3f-inp-box .ac3f-ib-day .ac3f-ib-radio').each(function () {
+        if ($(this).is(':checked')) {
+            $(this).closest('.ac3f-ib-day').addClass('active');
+        } else {
+            $(this).closest('.ac3f-ib-day').removeClass('active');
+        }
+    });
+}

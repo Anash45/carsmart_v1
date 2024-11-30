@@ -1488,10 +1488,14 @@ footer {
     float: unset;
     margin: 0 !important;
     height: 18px;
-    border-radius: 4px !important;
+    border-radius: 2px !important;
     width: 18px;
     background-color: transparent;
     border: 2px solid #675DF4;
+}
+
+.acfb-subtitle{
+    font-size: 18px;
 }
 
 .check-type-1 .form-check-input:checked {
@@ -1979,6 +1983,10 @@ footer {
     font-size: 44px;
 }
 
+.sec-desc {
+    font-size: 20px;
+}
+
 .recently-added .container {
     padding: 0 20px;
 }
@@ -2019,6 +2027,10 @@ footer {
 
 .recently-list-card .plcb-circle {
     background-color: #101044;
+}
+
+.ac2h-rays {
+    height: 100%;
 }
 
 .line-eeeeee {
@@ -5047,44 +5059,49 @@ ol.policy-desc {
     /* max-height: var(--live-chat-box); */
     max-height: calc(100vh - 48px);
 }
-.lcbl-owners{
+
+.lcbl-owners {
     font-size: 12px;
     color: #ffffff;
     font-weight: 500;
 }
-.lcbl-info .cdr-info-top{
+
+.lcbl-info .cdr-info-top {
     gap: 10px;
     align-items: center;
     display: flex;
 }
 
-.lcbl-info .cdri-title{
+.lcbl-info .cdri-title {
     font-size: 14.5px;
 }
 
-.lcbl-info .cdr-mini-info{
+.lcbl-info .cdr-mini-info {
     font-size: 11.25px;
     color: #ffffff;
     font-weight: 500;
     gap: 8px;
 }
-.lcbl-info .cdri-content{
+
+.lcbl-info .cdri-content {
     gap: 6px;
 }
-.lcbl-info .crdi-make{
+
+.lcbl-info .crdi-make {
     height: 55px;
     width: 55px;
 }
 
-.lcbl-info{
+.lcbl-info {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.lcbl-info .cdr-info-bottom{
+.lcbl-info .cdr-info-bottom {
     gap: 8px;
 }
+
 .lcb-top {
     padding: 24px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -5232,11 +5249,13 @@ ol.policy-desc {
     color: #fff;
     font-weight: 400;
 }
-.lbb-btns{
+
+.lbb-btns {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
+
 .btn-main-white {
     background-color: transparent;
     border-color: #ffffff !important;
@@ -5268,7 +5287,7 @@ ol.policy-desc {
     max-width: 90%;
 }
 
-.lcbmo-btns .btn-main{
+.lcbmo-btns .btn-main {
     padding: 5px 18px !important;
     font-size: 16px !important;
 }
@@ -5278,28 +5297,30 @@ ol.policy-desc {
     padding: 5px 18px !important;
     font-size: 14px !important;
 }
-.lcbl-box{
+
+.lcbl-box {
     border-radius: 10px;
     background-color: #161637;
     display: flex;
     flex-direction: column;
 }
-.lcbl-nav{
+
+.lcbl-nav {
     padding: 10px;
 }
 
-.lcbl-nav .nav-pills{
+.lcbl-nav .nav-pills {
     gap: 10px;
     padding: 6px;
     background-color: #1F204F;
     border-radius: 100px;
 }
 
-.lcbl-nav .nav-item{
+.lcbl-nav .nav-item {
     width: calc(50% - 5px);
 }
 
-.lcbl-nav .nav-link{
+.lcbl-nav .nav-link {
     padding: 10px 20px;
     font-size: 14.5px;
     color: #ffffff !important;
@@ -5307,24 +5328,29 @@ ol.policy-desc {
     font-weight: 400;
     border-radius: 100px;
 }
-.lcbtr-video-call:hover svg>rect{
+
+.lcbtr-video-call:hover svg>rect {
     fill: #2CCCF0;
     fill-opacity: 1;
 }
-.lcbtr-call:hover svg>rect{
+
+.lcbtr-call:hover svg>rect {
     fill: #695DFD;
     fill-opacity: 1;
 }
-.lcbtr-video-call svg>rect,.lcbtr-call svg>rect{
+
+.lcbtr-video-call svg>rect,
+.lcbtr-call svg>rect {
     transition: 0.3s ease-in-out;
 }
 
-.lcbl-nav .nav-link.active{
+.lcbl-nav .nav-link.active {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff !important;
     font-weight: 600 !important;
 }
-.lcbl-chat-user{
+
+.lcbl-chat-user {
     text-decoration: none;
     padding: 10px;
     display: flex;
@@ -5334,76 +5360,86 @@ ol.policy-desc {
 }
 
 .lcbl-chat-user.active,
-.lcbl-chat-user:hover{
+.lcbl-chat-user:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.lcbl-cu-img{
+.lcbl-cu-img {
     height: 50px;
     width: 50px;
     border-radius: 12px;
     object-fit: cover;
     object-position: center;
 }
-.lcbl-cu-msg{
+
+.lcbl-cu-msg {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     font-weight: 400;
 }
 
-.lcbl-cu-time{
+.lcbl-cu-time {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 400;
 }
-.lcbl-cu-name,.lcbl-noti-title{
+
+.lcbl-cu-name,
+.lcbl-noti-title {
     font-size: 14.5px;
     color: #ffffff;
     font-weight: 600;
 }
-.lcbl-content{
+
+.lcbl-content {
     display: flex;
     gap: 2px;
     flex-direction: column;
     padding: 0 10px 15px;
 }
-.lcbl-noti{
+
+.lcbl-noti {
     display: flex;
     align-items: center;
     gap: 10px;
     justify-content: space-between;
 }
 
-.lcbl-noti-links svg>rect{
+.lcbl-noti-links svg>rect {
     transition: 0.3s ease-in-out;
 }
-.lcbl-nl-delete:hover svg>rect{
+
+.lcbl-nl-delete:hover svg>rect {
     fill: #F22B2B;
     fill-opacity: 1;
 }
-.lcbl-nl-arrow:hover svg>rect{
+
+.lcbl-nl-arrow:hover svg>rect {
     fill: #695DFD;
     fill-opacity: 1;
 }
-.lcbl-noti-datetime{
+
+.lcbl-noti-datetime {
     font-size: 10px;
     color: rgba(255, 255, 255, 0.5);
 }
-.lcbl-noti{
+
+.lcbl-noti {
     padding: 10px;
     border-radius: 6px;
 }
-.lcbl-noti-title{
+
+.lcbl-noti-title {
     font-weight: 400;
 }
 
-.lcb-left{
+.lcb-left {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.lcbl-box-bottom{
+.lcbl-box-bottom {
     padding: 28px;
     border-radius: 28px;
     background-color: #161637;
@@ -5411,38 +5447,247 @@ ol.policy-desc {
     flex-direction: column;
     gap: 14px;
 }
-.lcbl-content{
+
+.lcbl-content {
     max-height: 350px !important;
     overflow-y: auto;
     scrollbar-width: thin;
 }
-.lbb-ad-label{
+
+.lbb-ad-label {
     font-size: 13px;
     font-weight: 400;
     color: #ffffff;
 }
-.lbb-dates .pcfp-inp-box{
+
+.lbb-dates .pcfp-inp-box {
     padding: 8.5px 13px;
     border-radius: 5.5px;
     gap: 7px;
 }
 
-.lbb-dates .pfcp-desc{
+.lbb-dates .pfcp-desc {
     font-size: 10px;
     font-weight: 600 !important;
 }
 
-.lbb-dates .pmm-swap-checkbox{
+.lbb-dates .pmm-swap-checkbox {
     height: 10px;
     width: 10px;
 }
-.lbb-text{
+
+.lbb-text {
     font-size: 12.5px;
 }
-.lbb-2{
+
+.lbb-2 {
     display: none;
 }
+
 /* Live Chat Ends */
+
+/* Landing Pages */
+.add-car-landing .smc-hero-content {
+    max-width: 780px;
+}
+
+.add-car-landing .car-reg-form .crf-inp {
+    font-size: 16px;
+    background-color: rgba(238, 241, 255, 0.4) !important;
+    color: #FFFFFF;
+}
+
+.add-car-landing .car-reg-form .crf-inp::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.add-car-landing .crf-btn,
+.add-car-landing .crf-inp {
+    width: calc(100%/3 - (14px * 2/3));
+}
+
+.add-car-landing .smch-crf {
+    padding: 13px !important;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.add-car-landing header {
+    height: 640px;
+}
+
+.ac2h-cont {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 900px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.ac2hv-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    right: 0;
+    z-index: 0;
+}
+
+.ac2h-img {
+    height: auto;
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+}
+
+.landing-page {
+    background-color: #0C0D45;
+}
+
+.landing-page .navbar {
+    background-color: transparent !important;
+}
+
+.landing-page header {
+    background-color: #101044;
+    background-image: url(../img/signup-pattern.svg);
+    background-position: center;
+    background-size: cover;
+}
+
+.ac2-refer-cont {
+    max-width: 865px;
+    margin: 0 auto;
+}
+
+.ac2r-img {
+    width: 1090px;
+}
+
+.add-car-landing .recently-added {
+    background-color: #101044;
+}
+
+.acfb-title {
+    font-size: 24px;
+}
+
+.acfb-flex-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.acfb-flex-2,
+.acfb-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acfb-flex-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.acfb-text {
+    font-size: 14px;
+}
+
+.ac3f-inp-box {
+    color: #ffffff;
+    border: 1px solid rgba(103, 93, 244, 1);
+    border-radius: 6px 0 6px 6px;
+    padding: 8px;
+}
+
+.ac3f-ib-label {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ac3f-inp-box .form-check-input {
+    box-shadow: none !important;
+    border: 2px solid #675DF4;
+    height: 18px;
+    background-color: transparent;
+    width: 18px;
+}
+
+.ac3f-inp-box .form-check-input:checked {
+    border-color: #ffffff;
+}
+
+.ac3f-inp-box.active {
+    background-color: #675DF4;
+}
+
+.ac3f-ib-day.active {
+    background-color: #99F22B;
+    color: #0C0D45;
+}
+
+.ac3f-ib-day {
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: 100px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+}
+
+.ac3f-ib-day .form-check-input {
+    box-shadow: none !important;
+    border: 2px solid #ffffff;
+    height: 18px;
+    background-color: transparent;
+    width: 18px;
+}
+
+.ac3f-ib-day .form-check-input:checked {
+    border: 2px solid #0C0D45 !important;
+    background-image: url(../img/form-checked-circle-blue.svg);
+}
+
+.ac3f-ib-hidden {
+    display: none;
+}
+
+.ac3f-inp-box.active .ac3f-ib-hidden {
+    display: block;
+}
+
+.ac3f-inp-box .check-type-1 .form-check-input:checked{
+    border-color: #695DFD !important;
+}
+.acf .cd-rf-div{
+    padding: 0 30px;
+}
+
+.acf .cd-rf-div{
+    padding: 0;
+}
+.acf .cd-rc-flex{
+    padding: 30px;
+    gap: 30px;
+}
+.acf .cd-right-card{
+    font-size: 20px;
+}
+.car-pagination svg{
+    height: 48px;
+    width: 48px;
+}
+/* Landing Pages Done */
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -5458,6 +5703,11 @@ ol.policy-desc {
 }
 
 @media (min-width: 1400px) {
+    .landing-page header {
+        display: flex;
+        flex-direction: column;
+    }
+
     .page-content .container {
         max-width: 1200px;
     }
@@ -5567,19 +5817,25 @@ ol.policy-desc {
         flex-basis: 240px;
         flex-shrink: 1;
     }
+
+    .ac2h-rays {
+        height: 50px;
+    }
 }
 
 @media (max-width: 992px) {
-    .live-chat-box{
+    .live-chat-box {
         max-height: 600px !important;
     }
-    .live-chat-page main{
+
+    .live-chat-page main {
         height: unset !important;
     }
 
-    .live-chat-page main .h-100{
+    .live-chat-page main .h-100 {
         height: unset !important;
     }
+
     .sfs-nav {
         align-items: flex-start;
         flex-direction: column;
@@ -5623,6 +5879,11 @@ ol.policy-desc {
     .sec-title {
         font-size: 32px;
     }
+
+    .sec-desc {
+        font-size: 16px;
+    }
+
 
     .ft-middle {
         flex-grow: 1;
@@ -5812,7 +6073,9 @@ ol.policy-desc {
         max-width: 100%;
     }
 
-    .lcb-top,.lcb-middle,.lcb-bottom{
+    .lcb-top,
+    .lcb-middle,
+    .lcb-bottom {
         padding: 16px;
     }
 
@@ -6185,6 +6448,23 @@ ol.policy-desc {
 
     .sma-content {
         gap: 16px;
+    }
+
+    .add-car-landing .car-reg-form {
+        flex-direction: column;
+    }
+
+    .add-car-landing .crf-inp,
+    .add-car-landing .crf-btn {
+        width: 100%;
+    }
+
+    .add-car-landing header {
+        height: 800px;
+    }
+
+    .smc-text {
+        font-size: 18px;
     }
 }
 
