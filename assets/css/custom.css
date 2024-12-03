@@ -6057,6 +6057,10 @@ ol.policy-desc {
 .edit-pencil img{
     height: 18px;
 }
+
+.btn-main.text-white:hover svg path{
+    fill: #FFFFFF !important;
+}
 /* Add Car Pages End */
 @media (max-width:2000px) {
     .homepage section {
