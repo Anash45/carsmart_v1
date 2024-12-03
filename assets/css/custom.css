@@ -1494,7 +1494,7 @@ footer {
     border: 2px solid #675DF4;
 }
 
-.acfb-subtitle{
+.acfb-subtitle {
     font-size: 18px;
 }
 
@@ -1602,7 +1602,9 @@ footer {
     font-size: 24px;
     font-weight: 400;
 }
-
+.primary-modal{
+    background-color: rgba(0, 0, 0, 0.8);
+}
 .primary-modal .modal-dialog {
     max-width: 773px !important;
 }
@@ -1610,6 +1612,7 @@ footer {
 .primary-modal .modal-content {
     background-color: #1F204F;
     border-radius: 40px;
+    border-color: #1F204F;
     padding: 40px;
 }
 
@@ -4647,7 +4650,7 @@ ol.policy-desc {
 }
 
 .modal-backdrop.show {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .pfpm-subtitle {
@@ -5666,28 +5669,395 @@ ol.policy-desc {
     display: block;
 }
 
-.ac3f-inp-box .check-type-1 .form-check-input:checked{
+.ac3f-inp-box .check-type-1 .form-check-input:checked {
     border-color: #695DFD !important;
 }
-.acf .cd-rf-div{
+
+.acf .cd-rf-div {
     padding: 0 30px;
 }
 
-.acf .cd-rf-div{
+.acf .cd-rf-div {
     padding: 0;
 }
-.acf .cd-rc-flex{
+
+.acf .cd-rc-flex {
     padding: 30px;
     gap: 30px;
 }
-.acf .cd-right-card{
+
+.acf .cd-right-card {
     font-size: 20px;
 }
-.car-pagination svg{
+
+.car-pagination svg {
     height: 48px;
     width: 48px;
 }
+
 /* Landing Pages Done */
+
+/* Add Car Pages */
+.acp-3a header {
+    height: unset !important;
+    background-color: #090A34;
+}
+
+.acp-3a header {
+    background-image: url(../img/wholesale-pattern.svg);
+}
+
+.acp-3a .smch-header {
+    padding-bottom: unset !important;
+}
+
+.acp-3a .smch-crf {
+    width: 705px;
+    max-width: 100%;
+}
+
+.acp-3a .smc-hero-content {
+    max-width: 100%;
+}
+
+.acw-notice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: rgba(31, 32, 79, 1);
+    padding: 10px 10px 10px 30px;
+    border-radius: 10px;
+}
+
+.acw-title {
+    font-size: 18px;
+}
+
+.acw-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-notice {
+    padding: 14px 20px;
+    border-color: #ffffff;
+    line-height: 120%;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.add-wholesale-cars .cd-rc-flex {
+    padding: 30px 24px !important;
+}
+
+.car-condition-cont {
+    padding: 20px;
+    background-color: #060434;
+}
+
+.ccc-min-max {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.ccc-custom-slider~.rangeslider--horizontal {
+    height: 8px;
+}
+
+.ccc-custom-slider~.rangeslider .rangeslider__handle {
+    height: 18px !important;
+    width: 18px !important;
+    top: -5px !important;
+    background-color: transparent !important;
+    background-image: url(../img/condition-range-handle.svg);
+    background-color: #0C0D45 !important;
+    border-color: transparent !important;
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: none !important;
+}
+
+.ccc-custom-slider~.rangeslider .rangeslider__handle:after {
+    content: unset !important;
+}
+
+.ac-info-tab {
+    background-color: #1F204F;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.acfb-flex-4 {
+    gap: 35px;
+}
+.info-steps{
+    gap: 20px;
+}
+.is-title{
+    font-size: 14px;
+}
+
+.is-desc{
+    font-size: 13px;
+}
+
+.is-flex{
+    position: relative;
+    z-index: 1;
+}
+
+.is-flex img{
+    position: relative;
+    z-index: 1;
+}
+.is-flex::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 24px);
+    transform: translate(-50%, 12px);
+    left: 12px;
+    background-color: #99F22B;
+    z-index: 0;
+}
+.is-flex:last-child::before{
+    display: none;
+}
+
+.isb-flex{
+    gap: 10px;
+}
+
+.text-14{
+    font-size: 14px;
+}
+
+.text-18{
+    font-size: 18px;
+}
+
+.valuations-box{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+.acf .cdri-price{
+    border: 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.recap-progress-flex{
+    gap: 15px;
+}
+.rpfa .accordion-item{
+    border: 0 !important;
+    background-color: transparent !important;
+}
+
+.rpfa .accordion-button::after{
+    background-image: url(../img/chevron-down-purple.svg);
+    background-position: center;
+    background-size: 16px !important;
+}
+
+.rpfa-recap-status{
+    font-size: 12px;
+}
+
+.rpfa-recap-status>span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 10px;
+}
+.rpfa-status-locked{
+    color: rgba(255, 255, 255, 0.6);
+}
+.rpfa-status-completed{
+    color: #99F22B;
+}
+.rpfa-pill:not(.accordion-buttton){
+    gap: 20px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(211, 212, 253, 0.2);
+}
+
+.rpfa-pill{
+    background-image: url(../img/rpfa-pill-bg.svg);
+    background-size: 8px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) 10px;
+}
+.rpfa-progress{
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    border: 1px dashed white;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.rpfa-pill .sfc-checks,.rpfa-pill .rpfa-status-locked,.rpfa-pill .rpfa-status-completed{
+    display: none !important;
+}
+.rpfa-locked .rpfa-status-locked{
+    display: flex !important;
+}
+.rpfa-inprogress .sfc-checks{
+    display: flex !important;
+}
+.rpfa-completed .rpfa-status-completed{
+    display: flex !important;
+}
+
+.rpfa .accordion-button{
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+.rpfa-flex{
+    border-top: 1px solid rgba(211, 212, 253, 1);
+    padding: 10px 0 0;
+    gap: 30px;
+}
+
+.rpfa .accordion-body{
+    padding: 0 20px 20px !important;
+}
+
+.rpfa .accordion-body, .rpfa .accordion-button{
+    
+    transition: 0.3s ease-in-out;
+}
+
+.rpfa .accordion-button:not(.collapsed){
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.rpfa .accordion-item{
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.rpfa .accordion-item.rpfa-active{
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.rpfa .accordion-item .accordion-button:not(.collapsed){
+    padding: 20px 20px 10px !important;
+}
+.rpfa .accordion-item .accordion-collapse.show .accordion-body{
+    padding: 0 20px 20px !important;
+}
+.acfb-flex-5{
+    gap: 15px;
+}
+
+.check-pill{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+.car-notice{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+.cn-title{
+    font-size: 20px;
+}
+.sna .accordion-item,
+.sna .accordion-button,
+.sna .accordion-body{
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #fff;
+    border-radius: 0;
+}
+
+.sna .accordion-button::after{
+    background-image: url(../img/chevron-down-purple.svg) !important;
+    background-position: center;
+    background-size: 16px;
+
+}
+
+.sna .accordion-item{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.sna .accordion-button{
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.sna .accordion-body{
+    padding: 0 0 20px !important;
+}
+.nh-line{
+    height: 25px;
+    width: 1px;
+    background-color: #D3D4FD;
+}
+
+.add-car-page .cd-right-card .plc-pill{
+    position: unset !important;
+    margin-left: auto;
+}
+
+.rpfa-completed .rpfa-progress{
+    background-color: #695DFD;
+    border: 2px solid #fff ;
+    color: #0C0D45;
+}
+
+.rpfa-pills{
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rpfa-pills:hover{
+    background-color: rgba(236, 241, 253, 0.3);
+}
+.edit-pencil{
+    display: none;
+}
+.rpfa-pills:hover .edit-pencil{
+    display: block;
+}
+
+.edit-pencil img{
+    height: 18px;
+}
+/* Add Car Pages End */
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -6269,6 +6639,10 @@ ol.policy-desc {
     .details-box-2 {
         padding: 20px;
         border-radius: 20px;
+    }
+
+    .acfb-flex-4 {
+        gap: 24px;
     }
 }
 

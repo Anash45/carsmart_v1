@@ -651,14 +651,14 @@ function checkDeliverySelection() {
 
 function showLbb2() {
     $('.lcbl-box-bottom').hide();
-    $('.lbb-2').show().css({'display':'flex'});
+    $('.lbb-2').show().css({ 'display': 'flex' });
 }
 
 function showLbb1() {
     $('.lcbl-box-bottom').hide();
     let selectedDate = $('.lbb-dates input[type="radio"]:checked').val();
     $('#lbb-date-cont').html(`<span class="text-purple text-decoration-underline">${selectedDate}</span>`);
-    $('.lbb-1').show().css({'display':'flex'});
+    $('.lbb-1').show().css({ 'display': 'flex' });
 }
 
 function ac3f_radios_check() {
@@ -669,7 +669,7 @@ function ac3f_radios_check() {
             $(this).closest('.ac3f-inp-box').removeClass('active');
         }
     });
-    
+
     $('.ac3f-inp-box .ac3f-ib-day .ac3f-ib-radio').each(function () {
         if ($(this).is(':checked')) {
             $(this).closest('.ac3f-ib-day').addClass('active');
@@ -678,3 +678,28 @@ function ac3f_radios_check() {
         }
     });
 }
+
+$(document).ready(function () {
+    // Add 'rpfa-active' to initially shown accordion item
+    $('.rpfa .accordion-collapse.show').closest('.accordion-item').addClass('rpfa-active');
+
+    // Add event listener for accordion show event
+    $('.rpfa .accordion-collapse').on('shown.bs.collapse', function () {
+        // Remove 'rpfa-active' from all items
+        $('.rpfa .accordion-item').removeClass('rpfa-active');
+
+        // Add 'rpfa-active' to the shown accordion item
+        $(this).closest('.accordion-item').addClass('rpfa-active');
+    });
+
+    // Add event listener for accordion hide event
+    $('.rpfa .accordion-collapse').on('hidden.bs.collapse', function () {
+        // Remove 'rpfa-active' from the hidden accordion item
+        $(this).closest('.accordion-item').removeClass('rpfa-active');
+    });
+
+
+    $('.rpfa-pill .sfc-checks').on('click', function (e) {
+        e.stopPropagation();
+    });
+});
