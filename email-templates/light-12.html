@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email Template</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-family: "Alexandria", sans-serif;
+            }
+
+            body {
+                background-color: #ECF1FD;
+                color: #13141A;
+            }
+
+            main {
+                width: 600px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                padding: 50px 0;
+            }
+
+            .top-logo {
+                height: 58px;
+            }
+
+            .card {
+                border-radius: 10px;
+                background-color: #FFFFFF;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .flex-main {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .text-purple {
+                color: #695DFD;
+            }
+
+            .text-dark {
+                color: #13141A;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            .flex-col {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fw-light {
+                font-weight: 300;
+            }
+
+            .fw-normal {
+                font-weight: 400;
+            }
+
+            .fw-medium {
+                font-weight: 500;
+            }
+
+            .fw-semibold {
+                font-weight: 600;
+            }
+
+            .fw-bold {
+                font-weight: 700;
+            }
+
+            .btn-main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+                border-radius: 6px;
+                background-color: #99F22B;
+                color: #101044;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 10px;
+                width: 240px;
+            }
+
+            .btn-main img {
+                height: 20px;
+            }
+
+            .border {
+                border-top: 1px solid #D3D4FD;
+            }
+
+            .help-box {
+                background-color: rgba(236, 241, 253, 0.7);
+                border: 1px dashed rgba(105, 93, 253, 1);
+                padding: 20px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .items-center {
+                align-items: center;
+            }
+
+            .content-center {
+                justify-content: center;
+            }
+
+            .hb-link {
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .hb-link img {
+                height: 20px;
+            }
+
+            .hb-line {
+                height: 20px;
+                width: 1px;
+                background-color: #D3D4FD;
+            }
+
+            .tc-title {
+                font-size: 24px;
+            }
+
+            .card-hero {
+                background-color: #E8EAF1;
+                background-image: url(./assets/top-bg.png);
+                background-size: contain;
+                background-repeat: repeat;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .tc-text {
+                max-width: 300px;
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .tc-car {
+                height: 190px;
+            }
+
+            .card-shadow {
+                box-shadow: 0px -6px 24px rgba(103, 93, 244, 0.05);
+            }
+
+            .car-plate {
+                border-radius: 1.5px;
+                border: 2px solid #101044;
+                display: flex;
+                align-items: center;
+                background-color: #EEF0FF;
+                justify-content: center;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .cp-number {
+                display: inline-block;
+                padding: 2px 6px;
+                font-weight: 600;
+            }
+
+            .cp-blue {
+                height: 23px;
+                width: 15px;
+                background-color: #3748EA;
+            }
+
+            .text-primary {
+                color: #101044;
+            }
+
+            .cd-make {
+                font-size: 24px;
+            }
+
+            .cd-info {
+                font-size: 14px;
+            }
+
+            .cd-logo {
+                height: 52px;
+            }
+
+            .cd-line {
+                height: 24px;
+                width: 1px;
+                background-color: #C4C5FC;
+            }
+
+            .cd-price {
+                font-size: 50px;
+            }
+
+            .gap-4 {
+                gap: 4px;
+            }
+
+            .gap-6 {
+                gap: 6px;
+            }
+
+            .gap-8 {
+                gap: 8px;
+            }
+
+            .gap-10 {
+                gap: 10px;
+            }
+
+            .gap-12 {
+                gap: 12px;
+            }
+
+            .gap-14 {
+                gap: 14px;
+            }
+
+            .gap-16 {
+                gap: 16px;
+            }
+
+            .gap-18 {
+                gap: 18px;
+            }
+
+            .gap-20 {
+                gap: 20px;
+            }
+
+            .gap-22 {
+                gap: 22px;
+            }
+
+            .gap-24 {
+                gap: 24px;
+            }
+
+            .feat-img {
+                height: 50px;
+                width: 50px;
+                border-radius: 10px;
+            }
+
+            .lc-num {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 24.5px;
+                width: 24.5px;
+                border-radius: 100px;
+                background-color: #99F22B;
+            }
+
+            .love-card {
+                padding: 11px;
+                border-radius: 4.45px;
+                background-color: #EEF1FF;
+            }
+
+            .text-left {
+                text-align: left;
+            }
+
+            .lc-cont {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 33%;
+            }
+
+            .lc-img {
+                height: 106px;
+                width: 100%;
+                aspect-ratio: contain;
+            }
+
+            .lcc-2 {
+                padding-top: 50px;
+            }
+
+            .lcc-3 {
+                padding-top: 100px;
+            }
+
+            .text-light-dark {
+                color: rgba(19, 20, 26, 0.8);
+            }
+
+            .next-counter {
+                height: 37px;
+                width: 37px;
+                border-radius: 100px;
+            }
+
+            .pill {
+                width: fit-content;
+                border-radius: 100px;
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+
+            .pill-green {
+                background-color: #064E3B;
+                color: #FFFFFF;
+            }
+
+            .price-underline {
+                height: 4.5px;
+                width: 100%;
+            }
+
+            .help-box .cd-price {
+                font-size: 40px;
+            }
+
+            .auction-car {
+                height: 202px;
+                aspect-ratio: 37/20;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 6px;
+            }
+
+            .tc-8 {
+                height: 154px;
+            }
+
+            .ch-8 .tc-text {
+                max-width: 345px;
+            }
+
+            .ch-11 .tc-text {
+                max-width: 366px;
+            }
+
+            .tc-checklist {
+                height: 180px;
+            }
+
+            .ch-11 .tc-car {
+                height: 154px;
+            }
+
+            .ch-11 .tc-text {
+                padding-left: 20px;
+            }
+
+            .ch-11 .rays-purple {
+                height: 29.5px;
+            }
+
+            .ch-11 .tc-title {
+                white-space: nowrap;
+                font-size: 29px;
+            }
+
+            .purple-underline {
+                height: 7px;
+                width: 100%;
+            }
+
+            .ch-12 {
+                background-color: #E8EAF1;
+                background-image: url(./assets/congrats.png), url(./assets/top-bg.png);
+                background-size: 100% auto, contain;
+                background-repeat: no-repeat, repeat;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <a href="#"><img src="./assets/Logo.png" alt="Logo" class="top-logo"></a>
+            <div class="card text-center card-shadow">
+                <div class="flex-main" style="padding-bottom: 30px;">
+                    <div class="card-hero ch-12">
+                        <div class="tc-text">
+                            <h3 class="tc-title text-primary fw-medium text-left">CONGRATULATIONS! Your sale has been
+                                <span class="text-purple">confirmed</span></h3>
+                        </div>
+                        <div style="padding-top: 20px;">
+                            <img src="./assets/Car-1.png" alt="Car" class="tc-car">
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="flex-col gap-20">
+                            <div class="flex-col card-details" style="gap: 12px; padding: 0 20px;">
+                                <div class="car-plate">
+                                    <div class="cp-blue"></div>
+                                    <span class="text-dark cp-number">KY58CSM</span>
+                                </div>
+                                <div class="flex items-center content-center" style="gap: 20px;">
+                                    <span>
+                                        <img src="./assets/vw-logo.png" alt="Logo" class="cd-logo">
+                                    </span>
+                                    <div class="flex-col text-left" style="gap: 10px;">
+                                        <span class="cd-make fw-medium text-primary">Volkswagen Golf S</span>
+                                        <div class="flex items-center" style="gap: 10px;">
+                                            <span class="cd-info text-primary fw-medium">2009</span><span
+                                                class="cd-line"></span><span
+                                                class="cd-info text-primary fw-medium">Blue</span><span
+                                                class="cd-line"></span><span
+                                                class="cd-info text-primary fw-medium">Hatchback</span><span
+                                                class="cd-line"></span><span
+                                                class="cd-info text-primary fw-medium">Petrol</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex-col items-center" style="width: fit-content; margin: 0 auto;">
+                                    <span class="fw-medium cd-price text-primary text-center"> £ 11,750 </span>
+                                    <img src="./assets/parrot-underline.png" alt="Underline" class="price-underline">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-col text-center" style="gap: 10px; padding: 0 40px;">
+                        <h5 style="font-size: 18px; font-weight: 500;" class="text-dark text-center">What happens next?
+                        </h5>
+                        <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">To ensure a seamless
+                            completion of your car sale, we require some important documents from you. After we have
+                            reviewed them, we'll forward everything to your purchasing dealer, who will contact you
+                            within two working days. </p>
+                        <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">Please make sure all
+                            necessary items are ready when you hand your car over to the dealer.</p>
+                    </div>
+                    <div class="flex-col items-center">
+                        <a href="#" class="btn btn-main">
+                            <span>Complete Sale</span>
+                            <img src="./assets/Rays-small.png" alt="Rays">
+                        </a>
+                    </div>
+                    <div class="flex-col text-left" style="gap: 10px; padding: 0 40px;">
+                        <h5 style="font-size: 18px; font-weight: 500;" class="text-dark text-left">Make sure you have
+                            the following:</h5>
+                        <div class="flex-col gap-10">
+                            <div class="flex items-center gap-10">
+                                <span>
+                                    <img src="./assets/purple-check.png" alt="Check" style="height: 24px;">
+                                </span>
+                                <span class="text-dark fw-light">V5C Log Book</span>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <span>
+                                    <img src="./assets/purple-check.png" alt="Check" style="height: 24px;">
+                                </span>
+                                <span class="text-dark fw-light">Drivers license/Photo ID</span>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <span>
+                                    <img src="./assets/purple-check.png" alt="Check" style="height: 24px;">
+                                </span>
+                                <span class="text-dark fw-light">Proof of service history, manual and book pack </span>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <span>
+                                    <img src="./assets/purple-check.png" alt="Check" style="height: 24px;">
+                                </span>
+                                <span class="text-dark fw-light">Tools & Any accessories belonging to the car </span>
+                            </div>
+                            <div class="flex items-center gap-10">
+                                <span>
+                                    <img src="./assets/purple-check.png" alt="Check" style="height: 24px;">
+                                </span>
+                                <span class="text-dark fw-light">All Keys, and spare tyres. </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features flex items-center content-center gap-20"
+                        style="margin: 0 auto; padding-top: 10px;">
+                        <div class="feature flex-col gap-10 items-center">
+                            <img src="./assets/feat-1.png" alt="Feature" class="feat-img">
+                            <div class="flex-col items-center text-center">
+                                <span class="text-primary fw-medium" style="font-size: 13px;">100% </span>
+                                <span class="text-primary fw-light" style="font-size: 12px;">Free Always</span>
+                            </div>
+                        </div>
+                        <div class="feature flex-col gap-10 items-center">
+                            <img src="./assets/feat-2.png" alt="Feature" class="feat-img">
+                            <div class="flex-col items-center text-center">
+                                <span class="text-primary fw-medium" style="font-size: 13px;">Home </span>
+                                <span class="text-primary fw-light" style="font-size: 12px;">Collection</span>
+                            </div>
+                        </div>
+                        <div class="feature flex-col gap-10 items-center">
+                            <img src="./assets/feat-3.png" alt="Feature" class="feat-img">
+                            <div class="flex-col items-center text-center">
+                                <span class="text-primary fw-medium" style="font-size: 13px;">Fast</span>
+                                <span class="text-primary fw-light" style="font-size: 12px;">Payment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-center" style="padding: 24px;">
+                <div class="help-box">
+                    <img src="./assets/Help-Avatar.png" alt="Avatar" class="help-avatar" style="height: 56px;">
+                    <div class="flex-col" style="gap: 6px; align-items: center;">
+                        <h5 class="fw-medium text-dark" style="font-size: 16px;">Need help? Contact our team</h5>
+                        <div class="flex items-center content-center" style="gap: 10px;">
+                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                <img src="./assets/phone.png" alt="Phone">
+                                <span>020 8050 4743</span>
+                            </a>
+                            <div class="hb-line"></div>
+                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                <img src="./assets/phone.png" alt="Phone">
+                                <span>SmartHub@smarthub.trycarsmart.com</span>
+                            </a>
+                        </div>
+                        <p class="text-dark text-center fw-medium" style="font-size: 12px;">Our team is here to help
+                            from 9:00 AM to 8:30 PM, Monday through Saturday.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>

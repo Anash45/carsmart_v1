@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email Template</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-family: "Alexandria", sans-serif;
+            }
+
+            body {
+                background-color: #ECF1FD;
+                color: #13141A;
+            }
+
+            main {
+                width: 600px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                padding: 50px 0;
+            }
+
+            .top-logo {
+                height: 58px;
+            }
+
+            .card {
+                border-radius: 10px;
+                background-color: #FFFFFF;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .flex-main {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .text-purple {
+                color: #695DFD;
+            }
+
+            .text-dark {
+                color: #13141A;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            .flex-col {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .fw-light {
+                font-weight: 300;
+            }
+
+            .fw-normal {
+                font-weight: 400;
+            }
+
+            .fw-medium {
+                font-weight: 500;
+            }
+
+            .fw-semibold {
+                font-weight: 600;
+            }
+
+            .fw-bold {
+                font-weight: 700;
+            }
+
+            .btn-main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+                border-radius: 6px;
+                background-color: #99F22B;
+                color: #101044;
+                font-weight: 600;
+                text-decoration: none;
+                padding: 10px;
+                width: 240px;
+            }
+
+            .btn-main img {
+                height: 20px;
+            }
+
+            .border {
+                border-top: 1px solid #D3D4FD;
+            }
+
+            .help-box {
+                background-color: rgba(236, 241, 253, 0.7);
+                border: 1px dashed rgba(105, 93, 253, 1);
+                padding: 20px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .items-center {
+                align-items: center;
+            }
+
+            .content-center {
+                justify-content: center;
+            }
+
+            .hb-link {
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .hb-link img {
+                height: 20px;
+            }
+
+            .hb-line {
+                height: 20px;
+                width: 1px;
+                background-color: #D3D4FD;
+            }
+
+            .tc-title {
+                font-size: 24px;
+            }
+
+            .card-hero {
+                background-color: #E8EAF1;
+                background-image: url(./assets/top-bg.png);
+                background-size: contain;
+                background-repeat: repeat;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .tc-text {
+                max-width: 300px;
+                padding-left: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .tc-car {
+                height: 190px;
+            }
+
+            .card-shadow {
+                box-shadow: 0px -6px 24px rgba(103, 93, 244, 0.05);
+            }
+
+            .car-plate {
+                border-radius: 1.5px;
+                border: 2px solid #101044;
+                display: flex;
+                align-items: center;
+                background-color: #EEF0FF;
+                justify-content: center;
+                width: fit-content;
+                margin: 0 auto;
+            }
+
+            .cp-number {
+                display: inline-block;
+                padding: 2px 6px;
+                font-weight: 600;
+            }
+
+            .cp-blue {
+                height: 23px;
+                width: 15px;
+                background-color: #3748EA;
+            }
+
+            .text-primary {
+                color: #101044;
+            }
+
+            .cd-make {
+                font-size: 24px;
+            }
+
+            .cd-info {
+                font-size: 14px;
+            }
+
+            .cd-logo {
+                height: 52px;
+            }
+
+            .cd-line {
+                height: 24px;
+                width: 1px;
+                background-color: #C4C5FC;
+            }
+
+            .cd-price {
+                font-size: 50px;
+            }
+
+            .gap-4 {
+                gap: 4px;
+            }
+
+            .gap-6 {
+                gap: 6px;
+            }
+
+            .gap-8 {
+                gap: 8px;
+            }
+
+            .gap-10 {
+                gap: 10px;
+            }
+
+            .gap-12 {
+                gap: 12px;
+            }
+
+            .gap-14 {
+                gap: 14px;
+            }
+
+            .gap-16 {
+                gap: 16px;
+            }
+
+            .gap-18 {
+                gap: 18px;
+            }
+
+            .gap-20 {
+                gap: 20px;
+            }
+
+            .gap-22 {
+                gap: 22px;
+            }
+
+            .gap-24 {
+                gap: 24px;
+            }
+
+            .feat-img {
+                height: 50px;
+                width: 50px;
+                border-radius: 10px;
+            }
+
+            .lc-num {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 24.5px;
+                width: 24.5px;
+                border-radius: 100px;
+                background-color: #99F22B;
+            }
+
+            .love-card {
+                padding: 11px;
+                border-radius: 4.45px;
+                background-color: #EEF1FF;
+            }
+
+            .text-left {
+                text-align: left;
+            }
+
+            .lc-cont {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                width: 33%;
+            }
+
+            .lc-img {
+                height: 106px;
+                width: 100%;
+                aspect-ratio: contain;
+            }
+
+            .lcc-2 {
+                padding-top: 50px;
+            }
+
+            .lcc-3 {
+                padding-top: 100px;
+            }
+
+            .text-light-dark {
+                color: rgba(19, 20, 26, 0.8);
+            }
+
+            .next-counter {
+                height: 37px;
+                width: 37px;
+                border-radius: 100px;
+            }
+
+            .tc-checklist{
+                height: 180px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <a href="#"><img src="./assets/Logo.png" alt="Logo" class="top-logo"></a>
+            <div class="card text-center card-shadow">
+                <div class="flex-main" style="padding-bottom: 30px;">
+                    <div class="card-hero">
+                        <div class="tc-text">
+                            <h3 class="tc-title text-dark fw-medium text-left">Your documents are under 
+                                <span class="text-purple">review</span></h3>
+                        </div>
+                        <div style="padding: 20px 20px 10px 0;">
+                            <img src="./assets/checklist.png" alt="Car" class="tc-checklist">
+                        </div>
+                    </div>
+                    <div class="flex-col">
+                        <div class="flex-col text-left" style="gap: 10px; padding: 0 40px;">
+                            <h5 style="font-size: 18px; font-weight: 500;" class="text-dark text-left">Hey <span class="text-purple">Avanttransport</span></h5>
+                            <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">Thanks for providing all the details about your vehicle! Our quality assurance team is now reviewing your profile. </p>
+                            <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">You can sit back and relax—your top offer from our network of verified dealers and SmartHub users will be on its way soon.</p>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="flex-col gap-20" style="padding: 0 27px;">
+                        <span class="fw-medium text-dark text-left" style="font-size: 20px;">What's next?</span>
+                        <div class="flex-col gap-20">
+                            <div class="flex gap-10">
+                                <span>
+                                    <img src="./assets/next-1.png" alt="Next" class="next-counter">
+                                </span>
+                                <div class="flex-col gap-6 text-left">
+                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">Once your profile review is complete, you'll receive a notification that your car is ready for sale.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-10">
+                                <span>
+                                    <img src="./assets/next-2.png" alt="Next" class="next-counter">
+                                </span>
+                                <div class="flex-col gap-6 text-left">
+                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">At the cloase of sale, usually 5pm same day, you'll get an email and text with the highest offer we've received for your vehicle. Follow the instructions in the message to confirm your sale.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-10">
+                                <span>
+                                    <img src="./assets/next-3.png" alt="Next" class="next-counter">
+                                </span>
+                                <div class="flex-col gap-6 text-left">
+                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">After confirming, you'll need to enter your bank details (so we can send your payment) and upload any required documents to verify ownership.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-10">
+                                <span>
+                                    <img src="./assets/next-4.png" alt="Next" class="next-counter">
+                                </span>
+                                <div class="flex-col gap-6 text-left">
+                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">Once we've received your bank info and documents, the dealer who purchased your car will be in touch to arrange collection within a week.</span>
+                                </div>
+                            </div>
+                            <div class="flex gap-10">
+                                <span>
+                                    <img src="./assets/next-5.png" alt="Next" class="next-counter">
+                                </span>
+                                <div class="flex-col gap-6 text-left">
+                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">On collection day, the driver will perform a quick inspection and test drive to confirm that your car matches the profile. Payment will be made to your bank account, and they'll take your car from there!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border"></div>
+                    <div class="flex-col text-center" style="gap: 10px; align-items: center; padding: 0 40px;">
+                        <h5 style="font-size: 14px; font-weight: 500;" class="text-dark text-center">We're excited to help you sell your vehicle soon!</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-center" style="padding: 24px;">
+                <div class="help-box">
+                    <img src="./assets/Help-Avatar.png" alt="Avatar" class="help-avatar" style="height: 56px;">
+                    <div class="flex-col" style="gap: 6px; align-items: center;">
+                        <h5 class="fw-medium text-dark" style="font-size: 16px;">Need help? Contact our team</h5>
+                        <div class="flex items-center content-center" style="gap: 10px;">
+                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                <img src="./assets/phone.png" alt="Phone">
+                                <span>020 8050 4743</span>
+                            </a>
+                            <div class="hb-line"></div>
+                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                <img src="./assets/phone.png" alt="Phone">
+                                <span>SmartHub@smarthub.trycarsmart.com</span>
+                            </a>
+                        </div>
+                        <p class="text-dark text-center fw-medium" style="font-size: 12px;">Our team is here to help
+                            from 9:00 AM to 8:30 PM, Monday through Saturday.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
