@@ -17,8 +17,13 @@
             }
 
             body {
-                background-color: #ECF1FD;
+                background-color: #04042A;
+                background-image: url(./assets/dark-bg.png), url(./assets/Stars.png);
+                background-position: top center, top center;
+                background-size: 800px 100%, auto 640px;
+                background-repeat: no-repeat, repeat-x;
                 color: #13141A;
+                min-height: 100vh;
             }
 
             main {
@@ -26,26 +31,40 @@
                 margin: 0 auto;
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
                 align-items: center;
-                padding: 50px 0;
+                padding: 50px 0 120px;
             }
 
             .top-logo {
                 height: 58px;
             }
 
+            .card-outer {
+                padding: 1px;
+                overflow: hidden;
+                border-radius: 22px;
+                background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 50%);
+            }
+
+            .co-bg {
+                background-color: rgba(23, 23, 58, 1);
+                overflow: hidden;
+                border-radius: 22px;
+            }
+
             .card {
-                border-radius: 10px;
-                background-color: #FFFFFF;
+                border-radius: 22px;
+                background-color: transparent;
                 width: 100%;
                 overflow: hidden;
+                border-image: linear-gradient(165deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 50%);
             }
 
             .flex-main {
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 40px;
             }
 
             .text-purple {
@@ -54,6 +73,10 @@
 
             .text-dark {
                 color: #13141A;
+            }
+
+            .text-white {
+                color: #FFFFFF;
             }
 
             .text-center {
@@ -104,12 +127,13 @@
             }
 
             .border {
-                border-top: 1px solid #D3D4FD;
+                width: 100%;
+                border-top: 1px solid rgba(211, 212, 253, 0.2);
             }
 
             .help-box {
-                background-color: rgba(236, 241, 253, 0.7);
-                border: 1px dashed rgba(105, 93, 253, 1);
+                background-color: rgba(236, 241, 253, 0.1);
+                border: 1px dashed rgba(255, 255, 255, 0.3);
                 padding: 20px;
                 border-radius: 10px;
                 display: flex;
@@ -142,7 +166,7 @@
             .hb-line {
                 height: 20px;
                 width: 1px;
-                background-color: #D3D4FD;
+                background-color: rgba(211, 212, 253, 1);
             }
 
             .tc-title {
@@ -268,6 +292,18 @@
                 gap: 24px;
             }
 
+            .gap-26 {
+                gap: 26px;
+            }
+
+            .gap-28 {
+                gap: 28px;
+            }
+
+            .gap-30 {
+                gap: 30px;
+            }
+
             .feat-img {
                 height: 50px;
                 width: 50px;
@@ -320,6 +356,14 @@
                 color: rgba(19, 20, 26, 0.8);
             }
 
+            .text-light {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            .text-parrot {
+                color: #99F22B;
+            }
+
             .next-counter {
                 height: 37px;
                 width: 37px;
@@ -346,83 +390,182 @@
             .help-box .cd-price {
                 font-size: 40px;
             }
-            .auction-car{
+
+            .auction-car {
                 height: 202px;
                 aspect-ratio: 37/20;
                 object-fit: cover;
                 object-position: center;
                 border-radius: 6px;
             }
-            .tc-8{
+
+            .tc-8 {
                 height: 154px;
             }
-            .ch-8 .tc-text{
+
+            .ch-8 .tc-text {
                 max-width: 345px;
+            }
+
+            .ch-11 .tc-text {
+                max-width: 366px;
+            }
+
+            .tc-checklist {
+                height: 180px;
+            }
+
+            .ch-11 .tc-car {
+                height: 154px;
+            }
+
+            .ch-11 .tc-text {
+                padding-left: 20px;
+            }
+
+            .ch-11 .rays-purple {
+                height: 29.5px;
+            }
+
+            .ch-11 .tc-title {
+                white-space: nowrap;
+                font-size: 29px;
+            }
+
+            .purple-underline {
+                position: relative;
+            }
+
+            .purple-underline::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                height: 5px;
+                width: 100%;
+                background-image: url(./assets/purple-underline.png);
+                background-size: 100% 100%;
+            }
+
+            .ch-16 .tc-car {
+                height: 190px;
+            }
+
+            .ch-16 .tc-text {
+                max-width: 230px;
+            }
+
+            .track-steps {
+                display: flex;
+                flex-direction: column;
+                gap: 11px;
+                align-items: center;
+            }
+
+            .ts-cont {
+                padding: 9px 0 0;
+                background-color: #695DFD;
+                border-radius: 20px;
+                max-width: 275px;
+            }
+
+            .ts-box {
+                padding: 19px 24px;
+                background-color: #ECF1FD;
+                border-radius: 20px
+            }
+
+            .ts-down {
+                height: 28px;
+                width: 28px;
+            }
+
+            .ch-17 {
+                background-color: #E8EAF1;
+                background-image: url(./assets/wavy-bg.png), url(./assets/top-bg.png);
+                background-size: auto 100%, contain;
+                background-repeat: no-repeat, repeat;
+                background-position: bottom right, center;
+            }
+
+            .ch-17 .tc-car {
+                height: 146px;
+            }
+
+            .sign-line {
+                width: 1px;
+                background-color: rgba(19, 20, 26, 0.2);
+            }
+
+            .sig-avatar {
+                height: 80px;
+                width: 80px;
+                border-radius: 100px;
+                border: 2px solid #695DFD;
+            }
+
+            .sign-icon {
+                height: 18px;
+                width: 18px;
+            }
+
+            .sr-icon {
+                height: 16px;
+                width: 16px;
+            }
+
+            .sign-left {
+                padding-right: 30px;
             }
         </style>
     </head>
 
     <body>
         <main>
-            <a href="#"><img src="./assets/Logo.png" alt="Logo" class="top-logo"></a>
-            <div class="card text-center card-shadow">
-                <div class="flex-main" style="padding-bottom: 20px;">
-                    <div class="card-hero ch-8">
-                        <div class="tc-text">
-                            <h3 class="tc-title text-dark fw-medium text-left">Ensure a Smooth Sale – Upload Your 
-                                <span class="text-purple">Documents Early!</span></h3>
-                        </div>
-                        <span style="padding: 20px 20px 20px 0;"><img src="./assets/3-Illustration.png" alt="Car" class="tc-8"></span>
-                    </div>
-                    <div class="flex-col">
-                        <div class="flex-col gap-10 items-center text-center" style="padding: 0px 40px;">
-                            <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">To make your sale as seamless as possible and avoid any delays in receiving your payment, please upload your documents early while your sale is ongoing. This ensures everything is ready when your highest offer is confirmed. </p>
-                        </div>
-                    </div>
-                    <div class="flex-col gap-20" style="padding: 0 27px;">
-                        <span class="fw-medium text-dark text-left" style="font-size: 20px;">Quick Tips for a Successful Sale:</span>
-                        <div class="flex-col gap-20">
-                            <div class="flex gap-10">
-                                <span>
-                                    <img src="./assets/next-1.png" alt="Next" class="next-counter">
-                                </span>
-                                <div class="flex-col gap-6 text-left">
-                                    <span class="fw-semibold text-dark" style="font-size: 14px;">Double-check document clarity</span>
-                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">Make sure all uploads are clear and legible to prevent any processing delays.</span>
+            <a href="#"><img src="./assets/carsmart-hub-logo.png" alt="Logo" class="top-logo"></a>
+            <div class="card-outer">
+                <div class="co-bg">
+                    <div class="card text-center" style="padding: 40px;">
+                        <div class="flex-main">
+                            <div class="flex-col items-center">
+                                <div class="flex-col" style="gap: 24px; align-items: center; padding: 0 40px;">
+                                    <div class="flex-col" style="gap: 14px; align-items: center;">
+                                        <div class="flex-col">
+                                            <h5 style="font-size: 22px; font-weight: 500;" class="text-white text-center">
+                                                Hey <span class="text-purple">Avanttransport</span>
+                                            </h5>
+                                        </div>
+                                        <p class="fw-light text-white">
+                                            Your Carsmart password can be reset by clicking the button below. If you did not request a new password, please ignore this email.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="btn btn-main">
+                                        <span>Reset now</span>
+                                        <img src="./assets/Rays-small.png" alt="Rays">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="flex gap-10">
-                                <span>
-                                    <img src="./assets/next-2.png" alt="Next" class="next-counter">
-                                </span>
-                                <div class="flex-col gap-6 text-left">
-                                    <span class="fw-semibold text-dark" style="font-size: 14px;">Verify your contact information</span>
-                                    <span class="fw-normal text-light-dark" style="font-size: 14px;">Ensure your profile details are accurate so the buyer can easily reach you for collection arrangements.</span>
+                            <div class="border"></div>
+                            <div class="help-box">
+                                <img src="./assets/Help-Avatar.png" alt="Avatar" class="help-avatar" style="height: 56px;">
+                                <div class="flex-col" style="gap: 6px; align-items: center;">
+                                    <h5 class="fw-medium text-white" style="font-size: 16px;">Need help? Contact our team</h5>
+                                    <div class="flex items-center text-white content-center" style="gap: 10px;">
+                                        <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                            <img src="./assets/phone-white.png" alt="Phone">
+                                            <span>020 8050 4743</span>
+                                        </a>
+                                        <div class="hb-line"></div>
+                                        <a class="flex items-center content-center hb-link" style="gap: 6px;">
+                                            <img src="./assets/envelope-white.png" alt="Phone">
+                                            <span>SmartHub@smarthub.trycarsmart.com</span>
+                                        </a>
+                                    </div>
+                                    <p class="text-white text-center fw-medium" style="font-size: 12px;">Our team is here to help
+                                        from 9:00 AM to 8:30 PM, Monday through Saturday.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <span class="fw-normal text-center text-light-dark" style="font-size: 14px; padding: 0 30px;">Act now to keep your sale on track and get paid promptly!</span>
-                </div>
-            </div>
-            <div class="card text-center" style="padding: 24px;">
-                <div class="help-box">
-                    <img src="./assets/Help-Avatar.png" alt="Avatar" class="help-avatar" style="height: 56px;">
-                    <div class="flex-col" style="gap: 6px; align-items: center;">
-                        <h5 class="fw-medium text-dark" style="font-size: 16px;">Need help? Contact our team</h5>
-                        <div class="flex items-center content-center" style="gap: 10px;">
-                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
-                                <img src="./assets/phone.png" alt="Phone">
-                                <span>020 8050 4743</span>
-                            </a>
-                            <div class="hb-line"></div>
-                            <a class="flex items-center content-center hb-link" style="gap: 6px;">
-                                <img src="./assets/envelope.png" alt="Phone">
-                                <span>SmartHub@smarthub.trycarsmart.com</span>
-                            </a>
-                        </div>
-                        <p class="text-dark text-center fw-medium" style="font-size: 12px;">Our team is here to help
-                            from 9:00 AM to 8:30 PM, Monday through Saturday.</p>
                     </div>
                 </div>
             </div>
