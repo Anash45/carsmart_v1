@@ -245,7 +245,7 @@ $(document).ready(function () {
             infinite: true, // Infinite looping
             responsive: [
                 {
-                    breakpoint: 1200,
+                    breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
                     }
