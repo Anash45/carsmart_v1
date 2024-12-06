@@ -245,13 +245,13 @@ $(document).ready(function () {
             infinite: true, // Infinite looping
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 1200,
                     settings: {
                         slidesToShow: 2,
                     }
                 },
                 {
-                    breakpoint: 450,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
                         centerMode: false,
