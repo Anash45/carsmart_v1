@@ -514,6 +514,17 @@ $(document).ready(function () {
             quantityInput.val(currentValue - 1);
         }
     });
+
+    $('.sib-add-btn').click(function () {
+        $('.sib-inps').append(`<div class="d-flex wsc-flex-2">
+                                                    <input type="text"
+                                                        class="form-control fpf-inp sib-pn sfc-inp fw-light"
+                                                        placeholder="Platform Name">
+                                                    <input type="text"
+                                                        class="form-control fpf-inp sib-pl sfc-inp fw-light"
+                                                        placeholder="Link">
+                                                </div>`);
+    });
 });
 
 function switchTab(tabId) {
@@ -558,6 +569,14 @@ function calculateChatBoxHeight() {
 function scrollToBottomChat() {
     var $lcbMiddle = $('.lcb-middle');
     $lcbMiddle.scrollTop($lcbMiddle.prop('scrollHeight'));
+}
+
+function changeSocialCheck() {
+    if ($('.sdsb-check-box .form-check-input[name="social-operator"]:checked').val() == 'Yes') {
+        $('.socials-inp-box').show().css('display', 'flex');
+    } else {
+        $('.socials-inp-box').hide().css('display', 'none');
+    }
 }
 $(document).ready(function () {
     if ($('.lcb-middle').length > 0) {
@@ -613,6 +632,20 @@ $(document).ready(function () {
         });
     });
     calculateChatBoxHeight();
+
+
+    if ($('.editions-slider').length > 0) {
+        $('.editions-slider').slick({
+            dots: true,           // Show dots
+            arrows: false,        // Hide navigation arrows
+            fade: true,           // Enable fade effect
+            autoplay: true,       // Optional: Add autoplay
+            autoplaySpeed: 3000,  // Optional: Set autoplay speed
+            infinite: true,       // Enable infinite looping
+            speed: 500            // Set fade speed
+        });
+    }
+
 });
 
 function likeVehicle(event) {
