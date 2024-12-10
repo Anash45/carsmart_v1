@@ -646,6 +646,20 @@ $(document).ready(function () {
         });
     }
 
+    $('.ecf-btn').each(function () {
+        $(this).on('click', function () {
+            let target = $(this).attr('data-car-target');
+            console.log(target);
+            let filterCards = $(this).closest('section').find('.ec-filter-cards');
+            if (target == 'all') {
+                filterCards.find('.elp-card').parent('div').show();
+            } else {
+                filterCards.find('.elp-card').parent('div').hide();
+                filterCards.find('.elp-card[data-car="' + target + '"]').parent('div').show();
+            }
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
 });
 
 function likeVehicle(event) {
