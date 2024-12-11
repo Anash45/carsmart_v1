@@ -358,52 +358,54 @@ $(document).ready(function () {
     var currentSlideNumber = '';
 
 
-    $('.details-slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        fade: true,
-        asNavFor: '.details-slider-nav',
-        prevArrow: `<span class="slick-arrow slick-next"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_4_16170)">
-<path d="M25 43.748C22.5377 43.748 20.0995 43.2631 17.8247 42.3208C15.5498 41.3785 13.4828 39.9974 11.7417 38.2563C10.0007 36.5152 8.61953 34.4482 7.67726 32.1734C6.73498 29.8985 6.25 27.4603 6.25 24.998C6.25 22.5358 6.73498 20.0976 7.67726 17.8227C8.61953 15.5479 10.0007 13.4809 11.7417 11.7398C13.4828 9.9987 15.5498 8.61758 17.8247 7.67531C20.0995 6.73303 22.5377 6.24805 25 6.24805C29.9728 6.24805 34.7419 8.22349 38.2583 11.7398C41.7746 15.2561 43.75 20.0252 43.75 24.998C43.75 29.9709 41.7746 34.74 38.2583 38.2563C34.7419 41.7726 29.9728 43.748 25 43.748Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M33.3438 24.998L25.0104 33.3314" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M33.3438 24.998H16.6771" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.0104 16.6484L33.3438 24.9818" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_4_16170">
-<rect width="50" height="50" fill="white" transform="matrix(-1 0 0 1 50 -0.00195312)"/>
-</clipPath>
-</defs>
-</svg></span>
-`,
-        nextArrow: `<span class="slick-arrow slick-prev"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_4_16176)">
-<path d="M25 43.748C27.4623 43.748 29.9005 43.2631 32.1753 42.3208C34.4502 41.3785 36.5172 39.9974 38.2583 38.2563C39.9993 36.5152 41.3805 34.4482 42.3227 32.1734C43.265 29.8985 43.75 27.4603 43.75 24.998C43.75 22.5358 43.265 20.0976 42.3227 17.8227C41.3805 15.5479 39.9993 13.4809 38.2583 11.7398C36.5172 9.9987 34.4502 8.61758 32.1753 7.67531C29.9005 6.73303 27.4623 6.24805 25 6.24805C20.0272 6.24805 15.2581 8.22349 11.7417 11.7398C8.22544 15.2561 6.25 20.0252 6.25 24.998C6.25 29.9709 8.22544 34.74 11.7417 38.2563C15.2581 41.7726 20.0272 43.748 25 43.748Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.6562 24.998L24.9896 33.3314" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.6562 24.998H33.3229" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.9896 16.6484L16.6562 24.9818" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_4_16176">
-<rect width="50" height="50" fill="white" transform="translate(0 -0.00195312)"/>
-</clipPath>
-</defs>
-</svg></span>
-`
-    });
+    if ($('.details-slider-for').length > 0) {
+        $('.details-slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.details-slider-nav',
+            prevArrow: `<span class="slick-arrow slick-next"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_4_16170)">
+    <path d="M25 43.748C22.5377 43.748 20.0995 43.2631 17.8247 42.3208C15.5498 41.3785 13.4828 39.9974 11.7417 38.2563C10.0007 36.5152 8.61953 34.4482 7.67726 32.1734C6.73498 29.8985 6.25 27.4603 6.25 24.998C6.25 22.5358 6.73498 20.0976 7.67726 17.8227C8.61953 15.5479 10.0007 13.4809 11.7417 11.7398C13.4828 9.9987 15.5498 8.61758 17.8247 7.67531C20.0995 6.73303 22.5377 6.24805 25 6.24805C29.9728 6.24805 34.7419 8.22349 38.2583 11.7398C41.7746 15.2561 43.75 20.0252 43.75 24.998C43.75 29.9709 41.7746 34.74 38.2583 38.2563C34.7419 41.7726 29.9728 43.748 25 43.748Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M33.3438 24.998L25.0104 33.3314" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M33.3438 24.998H16.6771" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M25.0104 16.6484L33.3438 24.9818" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_4_16170">
+    <rect width="50" height="50" fill="white" transform="matrix(-1 0 0 1 50 -0.00195312)"/>
+    </clipPath>
+    </defs>
+    </svg></span>
+    `,
+            nextArrow: `<span class="slick-arrow slick-prev"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_4_16176)">
+    <path d="M25 43.748C27.4623 43.748 29.9005 43.2631 32.1753 42.3208C34.4502 41.3785 36.5172 39.9974 38.2583 38.2563C39.9993 36.5152 41.3805 34.4482 42.3227 32.1734C43.265 29.8985 43.75 27.4603 43.75 24.998C43.75 22.5358 43.265 20.0976 42.3227 17.8227C41.3805 15.5479 39.9993 13.4809 38.2583 11.7398C36.5172 9.9987 34.4502 8.61758 32.1753 7.67531C29.9005 6.73303 27.4623 6.24805 25 6.24805C20.0272 6.24805 15.2581 8.22349 11.7417 11.7398C8.22544 15.2561 6.25 20.0252 6.25 24.998C6.25 29.9709 8.22544 34.74 11.7417 38.2563C15.2581 41.7726 20.0272 43.748 25 43.748Z" fill="white" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16.6562 24.998L24.9896 33.3314" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16.6562 24.998H33.3229" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.9896 16.6484L16.6562 24.9818" stroke="#101044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_4_16176">
+    <rect width="50" height="50" fill="white" transform="translate(0 -0.00195312)"/>
+    </clipPath>
+    </defs>
+    </svg></span>
+    `
+        });
 
 
-    $('.details-slider-nav').slick({
-        slidesToScroll: 1,
-        asNavFor: '.details-slider-for',
-        dots: false,
-        arrows: false,
-        centerMode: false,
-        focusOnSelect: true,
-        variableWidth: true
-    });
+        $('.details-slider-nav').slick({
+            slidesToScroll: 1,
+            asNavFor: '.details-slider-for',
+            dots: false,
+            arrows: false,
+            centerMode: false,
+            focusOnSelect: true,
+            variableWidth: true
+        });
+    }
 
     // Function to update current slide index
     function updateCurrentSlide(currentSlide) {
@@ -423,6 +425,11 @@ $(document).ready(function () {
     updateCurrentSlide(0);
 
     $('.details-slider-for video,.details-slider-for img').on("click", function () {
+        console.log('clicked');
+        openModal('gallerySliderModal');
+    });
+
+    $('.edg-main-cont, .ed-img-cont').on("click", function () {
         console.log('clicked');
         openModal('gallerySliderModal');
     });
@@ -646,6 +653,45 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.editions-slider-2').length > 0) {
+        $('.editions-slider-2').slick({
+            dots: true,
+            arrows: false,
+            fade: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            speed: 500,
+            variableWidth: false,
+            centerMode: true,
+            slidesToShow: 2,
+            centerPadding: '100px',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        centerPadding: '60px',
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '80px',
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        centerPadding: '30px',
+                    }
+                }
+            ]
+        });
+    }
+
     $('.ecf-btn').each(function () {
         $(this).on('click', function () {
             let target = $(this).attr('data-car-target');
@@ -749,4 +795,24 @@ $(document).ready(function () {
     $('.rpfa-pill .sfc-checks').on('click', function (e) {
         e.stopPropagation();
     });
+
+    $('.elp-card').each(function () {
+        let elpCard = $(this);
+        let elpBanners = elpCard.find('.ec-banner');
+        let totalHeight = 0;
+
+        elpBanners.each(function () {
+            totalHeight += $(this).outerHeight(true); // Include margin in height calculation
+        });
+
+        console.log(totalHeight);
+        elpCard.find('.ec-badges').css('top', totalHeight + 6 + 'px');
+    });
 });
+
+function openReplyForm(e){
+    let targetElm = e.currentTarget;
+    console.log(targetElm, $(targetElm));
+    $(targetElm).hide();
+    $(targetElm).closest('.eacf-comment').find('.eac-reply').show().css('display', 'flex');
+}
