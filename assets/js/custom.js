@@ -808,9 +808,19 @@ $(document).ready(function () {
         console.log(totalHeight);
         elpCard.find('.ec-badges').css('top', totalHeight + 6 + 'px');
     });
+
+    $('.swb-inp-select-dark').select2({
+        dropdownCssClass: 'swbc-dropdown', // Custom class for dropdown
+        containerCssClass: 'swbc-container' // Custom class for container
+    });
+
+    $('.swb-inp-select-light').select2({
+        dropdownCssClass: 'swbc-dropdown swbc-dropdown-dark', // Custom class for dropdown
+        containerCssClass: 'swbc-container swbc-container-dark' // Custom class for container
+    });
 });
 
-function openReplyForm(e){
+function openReplyForm(e) {
     let targetElm = e.currentTarget;
     console.log(targetElm, $(targetElm));
     $(targetElm).hide();

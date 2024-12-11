@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=19">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=20">
     </head>
 
     <body class="car-details">
@@ -129,7 +129,143 @@
                     <span>Add/Edit credit or debit card</span>
                 </a>
                 <div class="row py-4">
+                    <div class="col-xl-6 pb-xl-0 pb-4">
+                        <div class="swb-box p-3">
+                            <div class="swbb-flex-1 p-1 d-flex flex-column">
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Card Number </label>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Enter number">
+                                    </div>
+                                </div>
+                                <div class="d-flex swbb-flex-1">
+                                    <div class="swbb-form-group w-50 d-flex flex-column gap-2">
+                                        <label class="swb-label fw-medium text-white"> Expiry Date </label>
+                                        <div class="d-flex gap-2">
+                                            <div class="position-relative">
+                                                <input type="text" class="swb-inp form-control" placeholder="Month">
+                                            </div>
+                                            <div class="position-relative">
+                                                <input type="text" class="swb-inp form-control" placeholder="Year">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swbb-form-group w-50 d-flex flex-column gap-2">
+                                        <label class="swb-label fw-medium text-white"> CVC </label>
+                                        <div class="position-relative">
+                                            <input type="text" class="swb-inp form-control" placeholder="Enter code">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Card holder name </label>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Enter number">
+                                    </div>
+                                </div>
+                                
+                                <button
+                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Save</span><svg
+                                        width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                            fill="#101044" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     
+                    <div class="col-xl-6">
+                        <div class="swb-box p-3">
+                            <div class="swbb-flex-1 p-1 d-flex flex-column">
+                                <p class="mb-0 text-white fw-medium page-desc">Billing address information</p>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Full name </label>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Company name </label>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Enter name">
+                                    </div>
+                                </div>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Country </label>
+                                    <div class="position-relative">
+                                        <select name="" id="" class="form-select swb-inp swb-inp-country swb-inp-select-dark">
+                                            <option value="">Select </option>
+                                            <option value="Opt 1">Opt 1</option>
+                                            <option value="Opt 2">Opt 2</option>
+                                            <option value="Opt 3">Opt 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> State/Region </label>
+                                    <div class="position-relative">
+                                        <select name="" id="" class="form-select swb-inp">
+                                            <option value="">Select </option>
+                                            <option value="Opt 1">Opt 1</option>
+                                            <option value="Opt 2">Opt 2</option>
+                                            <option value="Opt 3">Opt 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="swbb-form-group d-flex flex-column gap-2">
+                                    <label class="swb-label fw-medium text-white"> Address </label>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Type here">
+                                    </div>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Type here">
+                                    </div>
+                                    <div class="position-relative">
+                                        <input type="text" class="swb-inp form-control" placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="d-flex swbb-flex-1">
+                                    <div class="swbb-form-group w-50 d-flex flex-column gap-2">
+                                        <label class="swb-label fw-medium text-white"> City </label>
+                                        <div class="position-relative">
+                                            <input type="text" class="swb-inp form-control" placeholder="Enter city">
+                                        </div>
+                                    </div>
+                                    <div class="swbb-form-group w-50 d-flex flex-column gap-2">
+                                        <label class="swb-label fw-medium text-white"> Postal code </label>
+                                        <div class="position-relative">
+                                            <input type="text" class="swb-inp form-control" placeholder="Enter code">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <button
+                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Save</span><svg
+                                        width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                            fill="#101044" />
+                                        <path
+                                            d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                            fill="#101044" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -685,15 +821,13 @@
                 </div>
             </div>
         </div>
-        
         <div class="modal fade primary-modal payment-modal" id="paymentAcceptedPopup" tabindex="-1"
             aria-labelledby="dashboardNotificationLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header p-0 border-0 pb-4">
                         <h5 class="modal-title d-flex align-items-center gap-2" id="dashboardNotificationLabel">
-                            <img src="./assets/img/info-icon.svg"
-                                alt="Info Icon" class="cdc-info">
+                            <img src="./assets/img/info-icon.svg" alt="Info Icon" class="cdc-info">
                             <span>Payment accepted</span>
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -725,9 +859,9 @@
                             </div>
                             <div class="mb-1">
                                 <a href="./smartconnect-seller-information-for-vendor.html"
-                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span> Continue to information</span><svg
-                                        width="11" height="26" viewBox="0 0 11 26" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>
+                                        Continue to information</span><svg width="11" height="26" viewBox="0 0 11 26"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
                                             fill="#101044" />
@@ -742,26 +876,26 @@
                             </div>
                             <div class="mb-1">
                                 <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center btn-book-drop"><span>Book Smart Drop</span>
+                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center btn-book-drop"><span>Book
+                                        Smart Drop</span>
                                 </button>
                             </div>
                             <div class="text-center">
-                                <span class="fw-medium cursor-pointer text-decoration-underline text-purple" data-bs-dismiss="modal" aria-label="Close">Need to go back</span>
+                                <span class="fw-medium cursor-pointer text-decoration-underline text-purple"
+                                    data-bs-dismiss="modal" aria-label="Close">Need to go back</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
         <div class="modal fade primary-modal payment-modal" id="paymentDeclinedPopup" tabindex="-1"
             aria-labelledby="dashboardNotificationLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header p-0 border-0 pb-4">
                         <h5 class="modal-title d-flex align-items-center gap-2" id="dashboardNotificationLabel">
-                            <img src="./assets/img/info-icon.svg"
-                                alt="Info Icon" class="cdc-info">
+                            <img src="./assets/img/info-icon.svg" alt="Info Icon" class="cdc-info">
                             <span>Payment declined</span>
                         </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -787,8 +921,8 @@
                         <div class="d-flex flex-column gap-3">
                             <div class="mb-1">
                                 <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Type again</span><svg
-                                        width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                    class="btn btn-main w-100 justify-content-center d-flex align-items-center"><span>Type
+                                        again</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
@@ -803,7 +937,8 @@
                                 </button>
                             </div>
                             <div class="text-center">
-                                <span class="fw-medium cursor-pointer text-decoration-underline text-purple" data-bs-dismiss="modal" aria-label="Close">Need to go back</span>
+                                <span class="fw-medium cursor-pointer text-decoration-underline text-purple"
+                                    data-bs-dismiss="modal" aria-label="Close">Need to go back</span>
                             </div>
                         </div>
                     </div>
@@ -817,16 +952,16 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=19"></script>
+        <script src="./assets/js/custom.js?v=20"></script>
         <script>
             let popupNum = 0;
-            function loopPaymentStatus(){
-                const popups = ["paymentAcceptedPopup","paymentDeclinedPopup"];
-                if(popupNum < popups.length){
+            function loopPaymentStatus() {
+                const popups = ["paymentAcceptedPopup", "paymentDeclinedPopup"];
+                if (popupNum < popups.length) {
                     $(`#${popups[popupNum]}`).modal('show');
                     popupNum++;
                 }
-                if(popupNum == 2){
+                if (popupNum == 2) {
                     popupNum = 0;
                 }
             }

@@ -8017,10 +8017,160 @@ ol.policy-desc {
     color: #13141A !important;
 }
 
+.swb-inp{
+    font-size: 14px;
+    color: #ffffff !important;
+    font-weight: 400;
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-shadow: none !important;
+    background-color: rgba(76, 77, 114, 1) !important;
+    border: 1px solid rgba(238, 238, 238, 0.3) !important;
+}
+
+.swb-inp::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
 .cswb .swbb-inp-cont{
     background-color: rgba(238, 241, 255, 1) !important;
     border-color: rgba(238, 238, 238, 0.2) !important;
 }
+.swb-inp:focus{
+    border-color: rgba(172, 239, 86, 1) !important;
+}
+.swbb-flex-1{
+    gap: 20px;
+}
+
+.form-select.swb-inp{
+    background-image: url(../img/chevron-down-purple.svg);
+}
+.swb-inp~.select2 .select2-selection__rendered{
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 120%;
+}
+.swb-inp ~ .select2-container .select2-selection--single{
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(238, 238, 238, 0.3) !important;
+    border-radius: 6px;
+}
+.swb-inp ~ .select2-container--open .select2-selection--single{
+    border-color: rgba(172, 239, 86, 1) !important;
+}
+
+.swb-inp ~ .select2-container .select2-selection__arrow{
+    height: 18px;
+    width: 18px;
+    background-image: url(../img/swb-inp-loader.svg);
+    top: 50%;
+    right: 12px;
+    transform: translate(0, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.swb-inp ~ .select2-container .select2-selection__arrow b{
+    display: none;
+}
+.swbc-dropdown .select2-search{
+    padding: 0;
+}
+
+.swbc-dropdown .select2-search__field{
+    border: 0 !important;
+    outline: 0 !important;
+    background-color: rgba(76, 77, 114, 1);
+    background-image: url(../img/search-icon-white.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 12px center;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 12px;
+    padding-left: 48px;
+}
+
+.swbc-dropdown{
+    background-color: #616182;
+    border-radius: 6px !important;
+    border-color: #99F22B;
+    overflow-y: hidden;
+}
+
+.swbc-dropdown .select2-results__option{
+    padding: 10px 12px;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    background-color: transparent !important;
+}
+
+.swbc-dropdown .select2-results__option:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.cswb .swb-inp{
+    background-color: rgba(238, 241, 255, 1) !important;
+    border-color: rgba(238, 238, 238, 1) !important;
+    color: #13141A !important;
+}
+
+.cswb .swb-inp::placeholder{
+    color: #787879 !important;
+}
+
+.cswb .swb-inp ~ .select2-container .select2-selection--single{
+    color: #13141A !important;
+    background-color: rgba(238, 241, 255, 1) !important;
+    border: 1px solid rgba(238, 238, 238, 0.3) !important;
+}
+
+.cswb .swb-inp~.select2 .select2-selection__rendered{
+    color: #13141A !important;
+}
+
+.swbc-dropdown-dark .select2-search__field{
+    color: #13141A !important;
+    background-color: #ffffff !important;
+    background-image: url(../img/search-icon-dark.svg) !important;
+}
+.swbc-dropdown-dark{
+    background-color: #ffffff;
+}
+
+.swbc-dropdown-dark .select2-results__option{
+    color: #13141A !important;
+    background-color: transparent !important;
+}
+
+.swbc-dropdown-dark .select2-results__option:hover{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.cswb .form-check-input[type="radio"]{
+    border-radius: 100px !important;
+}
+
+
+.cswb .form-check-input[type="radio"]:checked{
+    border: 0 !important;
+    background-image: url(../img/radio-circle-purple.svg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.cswb .swb-inp ~ .select2-container--open .select2-selection--single{
+    border-color: rgba(172, 239, 86, 1) !important;
+}
+
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
