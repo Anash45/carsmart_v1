@@ -8516,7 +8516,36 @@ ol.policy-desc {
     display: block;
     text-align: center;
 }
+.pc-content .table-responsive {
+    border-radius: 9px;
+    overflow-y: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.pc-table{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+    border: 0 !important;
+    margin-bottom: 0;
+}
 
+.pc-table th, .pc-table td{
+    color: #fff !important;
+    padding: 22px !important;
+    border-color:  rgba(255, 255, 255, 0.1) !important;
+    vertical-align: text-top;
+}
+
+.pc-table th{
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: 18px;
+    font-weight: 600;
+}
+.pc-table td{
+    width: 33.33%;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.002);
+}
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -9279,6 +9308,10 @@ ol.policy-desc {
 
 @media (max-width: 576px) {
 
+    .pc-table th, .pc-table td{
+        padding: 10px 8px !important;
+        font-size: 14px !important;
+    }
     .page-title {
         font-size: 40px;
     }

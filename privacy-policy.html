@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carsmart</title>
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/select2.min.css">
+        <link rel="stylesheet" href="./assets/css/slick.min.css">
+        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
+        <link href="./assets/css/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=21">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+                <div class="container gap-3 position-relative">
+                    <!-- Left: Logo -->
+                    <a class="navbar-brand me-0" href="./index.html">
+                        <img src="./assets/img/carsmart-logo-full-color-rgb 1.svg" alt="Logo">
+                    </a>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"> SmartHub </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="./live-sale.html">Live sale</a></li>
+                                    <li><a class="dropdown-item" href="./buy-it-now.html">Buy it now</a></li>
+                                    <li><a class="dropdown-item active" href="./smart-connect.html">Smart Connect</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./favourites.html">Favourites</a></li>
+                                    <li><a class="dropdown-item" href="./editions.html">Editions</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Next Sale</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Favorites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Bids</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Smart Data</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Right: Chat and Profile Icon with Dropdown -->
+                    <div class="d-flex align-items-center nav-right ms-xl-0 ms-auto">
+                        <a href="#" class="nav-link nr-chat-link">
+                            <svg width="48" height="49" viewBox="0 0 48 49" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.56" cx="24" cy="24.2402" r="23.3" stroke="white"
+                                    stroke-width="1.4" />
+                                <g clip-path="url(#clip0_38_477)">
+                                    <path d="M20 21.2402H28" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M20 25.2402H26" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M30 16.2402C30.7956 16.2402 31.5587 16.5563 32.1213 17.1189C32.6839 17.6815 33 18.4446 33 19.2402V27.2402C33 28.0359 32.6839 28.7989 32.1213 29.3616C31.5587 29.9242 30.7956 30.2402 30 30.2402H25L20 33.2402V30.2402H18C17.2044 30.2402 16.4413 29.9242 15.8787 29.3616C15.3161 28.7989 15 28.0359 15 27.2402V19.2402C15 18.4446 15.3161 17.6815 15.8787 17.1189C16.4413 16.5563 17.2044 16.2402 18 16.2402H30Z"
+                                        stroke="white" stroke-width="1.4" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_38_477">
+                                        <rect width="24" height="24" fill="white" transform="translate(12 12.2402)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link nr-profile-link dropdown-toggle d-flex align-items-center" href="#"
+                                id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="./assets/img/nav-profile.png" alt="Profile" class="rounded-circle" width="30"
+                                    height="30">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">My Bids</a></li>
+                                <li><a class="dropdown-item" href="#">My Vehicles</a></li>
+                                <li><a class="dropdown-item" href="#">Add Vehicle</a></li>
+                                <li><a class="dropdown-item" href="#">Help</a></li>
+                                <li><a class="dropdown-item" href="#">SmartHub Fees</a></li>
+                                <li><a class="dropdown-item" href="#">Billing & Invoices</a></li>
+                                <li><a class="dropdown-item" href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Centered Menu with Dropdown -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <!-- Header End -->
+        <!-- Main -->
+        <main class="mb-5 pb-5">
+            <section class="pt-5 mt-lg-3">
+                <div class="container container-small">
+                    <div class="d-flex flex-column gap-4 align-items-center text-center text-white">
+                        <div class="d-flex align-items-center gap-2 justify-content-center">
+                            <img src="./assets/img/Rays-purple-left.svg" alt="Rays" style="width: 37px;"
+                                class="page-rays">
+                            <span class="page-title ms-1">Privacy Policy </span>
+                        </div>
+                        <p class="mt-lg-2 page-subtitle mb-0">Welcome to CarSmart's Privacy Policy. Your privacy is
+                            important to us, and this document outlines how we collect, use, and protect your personal
+                            information when you interact with our website and services. By using our platform, you
+                            agree to the practices described herein, ensuring a secure and transparent experience for
+                            all users.</p>
+                    </div>
+                </div>
+                <div class="page-border"></div>
+            </section>
+            <section class="page-content">
+                <div class="container pb-4">
+                    <div class="d-flex gap-4 flex-lg-row flex-column-reverse">
+                        <div class="d-flex pc-content flex-column flex-grow-1 gap-3">
+                            <div class="text-white fw-normal page-desc page-desc d-flex flex-column gap-4">
+                                <p class="mb-0 lh-sm">
+                                    <span class="sl-title fw-bold">PRIVACY POLICY</span>
+                                    <br><br>
+                                    <span class="sl-title fw-bold">1. INTRODUCTION</span>
+                                    <br><br> You are reading the Carsmart Limited (“Carsmart” or “we” or “us”) privacy
+                                    policy (“Policy”). Carsmart respects your privacy and is committed to protecting
+                                    your Personal Data. This Policy will inform you as to how we look after your
+                                    Personal Data when you contact us, when you do business with us, or when you
+                                    otherwise engage with us, or we engage with you, including visiting the Website, or
+                                    making enquiries of us or when we market our goods and services to you and tell you
+                                    about your privacy rights and how the law protects you. <br><br> Please ensure that
+                                    you read this Policy in conjunction with the Website’s Terms of Use, as located at
+                                    trycarsmart.com/Privacypolicy. <br><br>
+                                    <span class="sl-title fw-bold">2. DEFINITIONS AND INTERPRETATION</span>
+                                    <br><br> In this Policy, the following definitions are used: <br><br>
+                                    <span class="sl-title">Data:</span>
+                                    <br><br> means, collectively, all information that you submit to Carsmart by means
+                                    of the Website, or any other means. This definition incorporates, where applicable,
+                                    the definitions provided in the Data Protection Laws; <br><br> Data Protection Laws:
+                                    <br><br> means any applicable law relating to the processing of Personal Data,
+                                    including but not limited to the Directive 96/46/EC (Data Protection Directive) or
+                                    the GDPR, and any national or international implementing laws, regulations and
+                                    secondary legislation; <br><br>
+                                    <span class="sl-title">GDPR:</span>
+                                    <br><br> means the General Data Protection Regulation (EU) 2016/679; <br><br>
+                                    <span class="sl-title">Personal Data:</span>
+                                    <br><br> has the meaning assigned to it in clause 4 of this Policy; <br><br>
+                                    <span class="sl-title">Website</span>
+                                    <br><br> means the website that you are currently using, www.trycarsmart.com, and
+                                    any sub-domains of this site unless expressly excluded by their own terms and
+                                    conditions; and <br><br>
+                                    <span class="sl-title">you/your:</span>
+                                    <br><br> means any third party that accesses the Website and is not either (i)
+                                    employed by Carsmart and acting in the course of their employment or (ii) engaged as
+                                    a consultant or otherwise providing services to Carsmart and accessing the Website
+                                    in connection with the provision of such services. <br><br>
+                                    <span class="sl-title fw-bold">3. IMPORTANT INFORMATION AND WHO WE ARE</span>
+                                    <br><br>
+                                    <span class="sl-title">Purpose of this Policy</span>
+                                    <br><br> This Policy aims to give you information on how Carsmart collects and
+                                    processes your Personal Data when you interact with us, or when we interact with
+                                    you. <br><br> It is important that you read this Policy together with any other
+                                    policy or notice we may provide on specific occasions when we are collecting or
+                                    processing Personal Data about you so that you are fully aware of how and why we are
+                                    using your Data. <br><br> This Policy was issued on 12/12/2024. <br><br>
+                                    <span class="sl-title">Children and Minors</span>
+                                    <br><br> Carsmart does not knowingly collect or solicit Personal Data from children
+                                    and minors. Anyone under the age of eighteen (18) will not be knowingly allowed to
+                                    register for any service on the Website or to purchase any products or service on
+                                    the Website. <br><br> If you are under eighteen (18), please do not attempt to
+                                    register on the Website or send any Personal Data to us. This is information about
+                                    yourself, including your name, e-mail or home address, house telephone number,
+                                    mobile number or other contact details. No one under the age of eighteen (18) may
+                                    provide any personal information to the Website or receive any services on
+                                    Carsmart’s Website. <br><br> In the event that we become aware or informed that we
+                                    have collected Personal Data from a child under the age of eighteen (18) without
+                                    verification of parental consent, we will delete that information as quickly as
+                                    possible. <br><br>
+                                    <span class="sl-title">Data Controller</span>
+                                    <br><br> For purposes of the applicable Data Protection Laws, Carsmart is the "Data
+                                    Controller". This means that Carsmart determines the purposes for which, and the
+                                    manner in which, your Data is processed, and undertakes to abide by and act in
+                                    accordance with all relevant Data Protection Laws in such capacity. If you have any
+                                    questions about this Policy, including any requests to exercise your legal rights,
+                                    please contact Carsmart using the details set out below. <br><br>
+                                    <span class="sl-title">Contact Details</span>
+                                    <br><br> Our full details are: <br><br> Full name of legal entity: Carsmart Limited
+                                    Name of responsible internal team: Data Protection and Privacy Team Email address:
+                                    customerservices@trycarsmart.com Postal address: 128 City Road, London, EC1V 2NX
+                                    <br><br>
+                                    <span class="sl-title">Third-Party Links</span>
+                                    <br><br> Our Website may include links to third-party websites, plug-ins and
+                                    applications. Clicking on those links or enabling those connections may allow third
+                                    parties to collect or share Data about you. We do not control these third-party
+                                    websites and are not responsible for their privacy statements. When you leave the
+                                    Website, we encourage you to read the Policy of every website you visit. <br><br>
+                                    <span class="sl-title fw-bold">4. THE DATA WE COLLECT ABOUT YOU</span>
+                                    <br><br>
+                                    <span class="sl-title">“Personal Data”</span>, or personal information, means any
+                                    information about an individual from which that person can be identified. It does
+                                    not include Data where the identity has been removed (anonymous Data). <br><br> We
+                                    may collect, use, store and transfer different kinds of Personal Data about you
+                                    which we have grouped together as follows: <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Identity Data</span> includes
+                                    first name, last name, customer code or identifier, title, date of birth and gender.
+                                    <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Contact Data</span> includes
+                                    billing address, delivery address, email address and telephone numbers. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Financial Data</span> includes
+                                    bank account and payment card details. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Transaction Data</span> includes
+                                    details about payments to and from you and other details of products and services
+                                    you have purchased from us. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Profile Data</span> includes
+                                    purchases or orders made by you, the nature of your business, your business
+                                    interests, preferences, feedback and survey responses. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Usage Data</span> includes
+                                    information about how you use the Website, products and services. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">KYC Data</span> includes
+                                    information about the source of funds you may use to purchase products or services
+                                    from us, credit scores, reputation in the market, and other Data we require in order
+                                    to verify your suitability as a client or supplier for us, and in deciding whether
+                                    we may need some additional safeguards when doing business with you. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Marketing and Communications
+                                        Data</span> includes your preferences in receiving marketing from us and our
+                                    third parties and your communication preferences. <br><br> We also collect, use and
+                                    share <span class="sl-title">Aggregated Data</span> such as statistical or
+                                    demographic Data for any purpose. Aggregated Data may be derived from your Personal
+                                    Data but is not considered Personal Data in law as this Data does not directly or
+                                    indirectly reveal your identity. For example, we may aggregate your Usage Data to
+                                    calculate the percentage of users accessing a specific website feature or perhaps
+                                    buying a certain type of product. However, if we combine or connect Aggregated Data
+                                    with your Personal Data so that it can directly or indirectly identify you, we treat
+                                    the combined Data as Personal Data which will be used in accordance with this
+                                    Policy. <br><br> We do not collect any <span class="sl-title">Special Categories of
+                                        Personal Data</span> about you (this includes details about your race or
+                                    ethnicity, religious or philosophical beliefs, sex life, sexual orientation,
+                                    political opinions, trade union membership, information about your health and
+                                    genetic and biometric Data). Nor do we collect any information about criminal
+                                    convictions and offences. <br><br>
+                                    <span class="sl-title fw-bold">5. HOW IS YOUR PERSONAL DATA COLLECTED?</span>
+                                    <br><br> We use different methods to collect Data from and about you including
+                                    through: <br><br> Direct interactions. You may give us your Identity, Contact and
+                                    Financial Data by filling in forms or by corresponding with us by post, phone, email
+                                    or otherwise. This includes Personal Data you provide when you: <br><br>
+                                    <span class="me-4">·</span> apply for our products or services; <br><br>
+                                    <span class="me-4">·</span> meet with us either at our offices, your premises, or in
+                                    other locations, and express an interest in our products or services; <br><br>
+                                    <span class="me-4">·</span> create an account with us; <br><br>
+                                    <span class="me-4">·</span> subscribe to any of our services or publications;
+                                    <br><br>
+                                    <span class="me-4">·</span> request marketing to be sent to you; <br><br>
+                                    <span class="me-4">·</span> complete a survey; or <br><br>
+                                    <span class="me-4">·</span> give us some feedback. <br><br>
+                                    <span class="sl-title">Third parties or publicly available sources.</span> We may
+                                    receive Personal Data about you from various third parties and public sources as set
+                                    out below: <br><br>
+                                    <span class="me-4">·</span> Contact, Financial and Transaction Data from providers
+                                    of technical, payment and delivery services. <br><br>
+                                    <span class="me-4">·</span> Identity and Contact Data from Data brokers or
+                                    aggregators including business directories. <br><br>
+                                    <span class="me-4">·</span> Identity and Contact Data from publicly availably
+                                    sources such as Companies House and the Electoral Register based inside the EU.
+                                    <br><br>
+                                    <span class="sl-title fw-bold">6. HOW WE USE YOUR PERSONAL DATA</span>
+                                    <br><br> We will only use your Personal Data when the law allows us to. Most
+                                    commonly, we will use your Personal Data in the following circumstances: <br><br>
+                                    <span class="me-4">·</span> Where we need to perform or manage the contract we are
+                                    about to enter into or have entered into with you, which includes sharing your
+                                    information with sellers of vehicles if you have placed a bid. <br><br>
+                                    <span class="me-4">·</span> Where it is necessary for our legitimate interests (or
+                                    those of a third party) and your interests and fundamental rights do not override
+                                    those interests. <br><br>
+                                    <span class="me-4">·</span> Where we need to comply with a legal or regulatory
+                                    obligation. <br><br> Generally we do not rely on consent as a legal basis for
+                                    processing your Personal Data other than in relation to sending third party direct
+                                    marketing communications to you via email or text message or where you are an
+                                    individual customer and we wish to send you marketing materials. You have the right
+                                    to withdraw consent to marketing at any time by contacting us. <br><br>
+                                    <span class="sl-title fw-bold">7. YOUR CONSENT</span>
+                                    <br><br> By submitting your information on the Website you consent to the use of
+                                    that information as set out in this Policy. If we change our Policy, we will post
+                                    the changes on this page or on the Website, and may place notices on other pages of
+                                    the Website, so that you may be aware of the Personal Data we collect and how we use
+                                    it at all times. <br><br> You agree that you do not object to us contacting you for
+                                    any of the purposes of processing our services or your orders, statistical or survey
+                                    purposes to improve this Website and its services to you, provision of Website
+                                    content and advertisements to you, administration of this Website and where you
+                                    consent, to notify you of services, products or special offers that may be of
+                                    interest to you. You consent to such contact whether by telephone, e-mail or in
+                                    writing and you confirm that you do not and will not consider any of the above as
+                                    being a breach of any of your rights under any applicable Data Protection Laws.
+                                    <br><br>
+                                    <span class="sl-title fw-bold">8. PURPOSES FOR WHICH WE WILL USE YOUR PERSONAL
+                                        DATA</span>
+                                    <br><br> We have set out below, in a table format, a description of all the ways we
+                                    plan to use your Personal Data, and which of the legal bases we rely on to do so. We
+                                    have also identified what our legitimate interests are where appropriate. <br><br>
+                                    Note that we may process your Personal Data for more than one lawful ground
+                                    depending on the specific purpose for which we are using your Data. Please contact
+                                    us if you need details about the specific legal ground we are relying on to process
+                                    your Personal Data where more than one ground has been set out in the table below.
+                                    <br><br>
+                                </p>
+                                <ul class="ps-4 light-text mb-0">
+                                    <li> cookies that make the Website work properly for you and enable you to browse
+                                        the Website securely; </li>
+                                    <li> cookies that collect data about your use of the Website which is used to help
+                                        Carsmart to improve online products and/or services; </li>
+                                    <li> cookies that remember your preferences and make the Website easier for you to
+                                        use; and </li>
+                                    <li> cookies that are placed by third party services we make use of to enhance the
+                                        information we presents online. Carsmart has no control over these third party
+                                        cookies.</li>
+                                </ul>
+                                <p class="mb-0 lh-sm"> These cookies are placed on your device either by us or by the third
+                                    parties whose services we use as part of the Website. <br><br> Some cookies are
+                                    retained in your browser for only as long as you visit the Website, while others
+                                    persist for a longer specified or unspecified period. <br><br>
+                                    <span class="sl-title fw-bold">5. HOW LONG WILL COOKIES STAY ON MY DEVICE?</span>
+                                    <br><br> The length of time a cookie will stay on your computer or mobile device
+                                    depends on whether it is a “persistent” or “session” cookie. Session cookies will
+                                    only stay on your device until you stop browsing. Persistent cookies stay on your
+                                    computer or mobile device until they expire or are deleted. <br><br> <span
+                                        class="sl-title fw-bold">6. WHAT TYPES OF COOKIES ARE USED BY US?</span>
+                                    <br><br> We use several types of cookies. Some are essential, while others you can
+                                    disable or block. Disabling or blocking some cookies may affect the functionality of
+                                    the online products and/or services, and of the Website. <br><br> The below
+                                    explanations should help you to make informed choices about the information you
+                                    provide to us and any third parties when you visit the Website. <br><br> <span
+                                        class="text-decoration-underline fw-semibold light-text">Strictly necessary
+                                        cookies</span> <br><br> These are cookies that are required for the operation of
+                                    our Website. They include, for example, cookies that help ensure the content of the
+                                    pages you request load quickly. We want you to understand these essential cookies,
+                                    and why we use them, but your consent is not required for us to use them on our
+                                    Website as we use these cookies only to provide you with services that you have
+                                    requested. <br><br> We use the following strictly necessary cookies:
+                                </p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table pc-table table-bordered inter">
+                                    <thead>
+                                        <tr>
+                                            <th>Purpose/Activity</th>
+                                            <th>Type of Data</th>
+                                            <th>Lawful basis for processing including basis of legitimate interest</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>To register you as a new customer or supplier</td>
+                                            <td>a) Identity <br />b) Contact<br />c) KYC</td>
+                                            <td> a) and b) Performance of a contract with you and to facilitate and
+                                                collect bids with respect to vehicle purchases.<br /> c) Our legitimate
+                                                interests, to ensure our business is properly protected when
+                                                transacting. In some cases this is also to fulfil a legal requirement.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To identify and register you as a potential customer or supplier</td>
+                                            <td>a) Identity <br />b) Contact<br />c) Profile</td>
+                                            <td> Where you have made an enquiry, in anticipation of entering into a
+                                                contract with you. Where you have not, our legitimate interests in
+                                                growing our customer base or in seeking new suppliers. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To facilitate the sale and purchasing of vehicles</td>
+                                            <td>a) Identity <br />b) Contact<br />c) Profile<br />d) Financial</td>
+                                            <td> When you sign up to use our services, and again whenever you purchase a
+                                                vehicle, we (or our third-party payments provider) will collect bank
+                                                account details from you to enable us to both send and receive payments
+                                                to or from you for our services. We will also keep a record of any
+                                                purchases you make through the Carsmart platform.<br /> We will further
+                                                utilise your Contact and address details to ensure delivery of any
+                                                relevant vehicle as required. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To manage our relationship with you which will include:<br />a)
+                                                Notifying you about changes to our terms or Policy<br />b) Asking you to
+                                                leave a review or take a survey</td>
+                                            <td>a) Identity <br />b) Contact <br />c) Profile <br />d) Marketing and
+                                                Communications</td>
+                                            <td> a) Performance of a contract with you <br />b) Necessary to comply with
+                                                a legal obligation<br />c) Necessary for our legitimate interests (to
+                                                keep our records updated and to study how customers use our
+                                                products/services) </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To enable you to complete a survey</td>
+                                            <td> a) Identity <br />b) Contact <br />c) Profile <br />d) Usage <br />e)
+                                                Marketing and Communications </td>
+                                            <td> a) Performance of a contract with you <br />b) Necessary for our
+                                                legitimate interests (to study how customers use our products/services,
+                                                to develop them and grow our business) </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To administer and protect our business</td>
+                                            <td>a) Identity<br />b) Contact<br />c) KYC</td>
+                                            <td> a) and b) Necessary for our legitimate interests <br />c) Either for
+                                                our legitimate interests, or necessary to comply with a legal obligation
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To deliver relevant marketing materials to you, invite you to events,
+                                                and measure or understand the effectiveness of the advertising we serve
+                                                to you</td>
+                                            <td>a) Identity <br />b) Contact <br />c) Profile <br />d) Usage <br />e)
+                                                Marketing and Communications</td>
+                                            <td> Necessary for our legitimate interests (to study how customers use our
+                                                products/services, to develop them, to grow our business and to inform
+                                                our marketing strategy) </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To make suggestions and recommendations to you about goods or services
+                                                that may be of interest to you</td>
+                                            <td>a) Identity <br />b) Contact <br />c) Usage <br />d) Profile</td>
+                                            <td> Necessary for our legitimate interests (to develop our
+                                                products/services and grow our business) </td>
+                                        </tr>
+                                        <tr>
+                                            <td>To archive and back up our IT systems, and in order to protect our
+                                                business assets</td>
+                                            <td>All Data</td>
+                                            <td> a) Necessary to comply with our legal obligations<br />b) Necessary for
+                                                our legitimate interests in protecting our business assets </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-white fw-normal page-desc page-desc d-flex flex-column gap-4">
+                                <p class="lh-sm mb-0">
+                                    <span class="sl-title fw-bold">9. MARKETING </span>
+                                    <br><br> We strive to provide you with choices regarding certain Personal Data uses,
+                                    particularly around marketing and advertising. <br><br>
+                                    <span class="sl-title">Promotional offers from us </span>
+                                    <br><br> We may use your Identity, Contact, Technical, Usage and Profile Data to
+                                    form a view on what we think you may want or need, or what may be of interest to
+                                    you. This is how we decide which products, services and offers may be relevant for
+                                    you (we call this marketing). <br><br> You will receive marketing communications
+                                    from us if you have requested information from us or purchased goods or services
+                                    from us and, in each case, you have not opted out of receiving that marketing. we
+                                    may also contact you if you are a business and you have not asked us not to contact
+                                    you, and we believe you may be interested in our goods and services. <br><br>
+                                    <span class="sl-title">Third-party marketing </span>
+                                    <br><br> We will get your express opt-in consent before we share your Personal Data
+                                    with any company outside our group of companies for marketing purposes. <br><br>
+                                    <span class="sl-title">Opting out</span>
+                                    <br><br> You can ask us or third parties to stop sending you marketing messages by
+                                    contacting us at any time. <br><br> Where you opt out of receiving these marketing
+                                    messages, this will not apply to Personal Data provided to us as a result of a
+                                    product/service purchase, warranty registration, product/service experience or other
+                                    transactions. <br><br>
+                                    <span class="sl-title fw-bold">10. CHANGE OF PURPOSE </span>
+                                    <br><br> We will only use your Personal Data for the purposes for which we collected
+                                    it, unless we reasonably consider that we need to use it for another reason and that
+                                    reason is compatible with the original purpose. If you wish to get an explanation as
+                                    to how the processing for the new purpose is compatible with the original purpose,
+                                    please contact us. <br><br> If we need to use your Personal Data for an unrelated
+                                    purpose, we will notify you and we will explain the legal basis which allows us to
+                                    do so. <br><br> Please note that we may process your Personal Data without your
+                                    knowledge or consent, in compliance with the above rules, where this is required or
+                                    permitted by law. <br><br>
+                                    <span class="sl-title fw-bold">11. COOKIES</span>
+                                    <br><br> The Website may place and access certain ‘cookies’ on your computer,
+                                    information about which can be found at our cookie policy available here
+                                    trycarsmart.com/cookiepolicy. <br><br>
+                                    <span class="sl-title fw-bold">12. DISCLOSURES OF YOUR PERSONAL DATA</span>
+                                    <br><br> We may have to share your Personal Data with third parties for the purposes
+                                    set out in the table in clause 8 above. These include: <br><br>
+                                    <span class="me-4">·</span> third party providers of Data and other services to us,
+                                    such as credit agencies, and third party archival, cloud and backup providers.
+                                    <br><br>
+                                    <span class="me-4">·</span> third party providers of professional services, such as
+                                    accountants, bankers, insurers and lawyers. <br><br>
+                                    <span class="me-4">·</span> HM Revenue and Customs, and other regulatory
+                                    authorities. <br><br>
+                                    <span class="me-4">·</span> third parties to whom we may choose to sell, transfer,
+                                    or merge parts of our business or our assets. Alternatively, we may seek to acquire
+                                    other businesses or merge with them. If a change happens to our business, then the
+                                    new owners may use your Personal Data in the same way as set out in this Policy.
+                                    <br><br>
+                                    <span class="me-4">·</span> a seller of a vehicle if you have placed a bid for that
+                                    vehicle. If you proceed with the purchase of a vehicle, we will receive certain
+                                    information about your transaction from the relevant seller of the vehicle, such as
+                                    the date of collection and the final purchase price you paid, for billing and
+                                    reporting purposes.; <br><br>
+                                    <span class="me-4">·</span> service providers, such as our transport partners and
+                                    their drivers, payments processing providers, data analytics and technical support
+                                    providers, data storage providers, content and data providers and customer
+                                    management and support providers (including our outsourced customer service centre)
+                                    (please see heading below for more details); <br><br>
+                                    <span class="me-4">·</span> law enforcement agencies or authorities where we believe
+                                    this is necessary for the prevention, detection or enforcement of a crime; and
+                                    <br><br>
+                                    <span class="me-4">·</span> our professional advisers and investors. <br><br> We
+                                    require all third parties to respect the security of your Personal Data and to treat
+                                    it in accordance with the law. We do not allow our third-party service providers to
+                                    use your Personal Data for their own purposes and only permit them to process your
+                                    Personal Data for specified purposes and in accordance with our instructions.
+                                    <br><br> Specifics on Service Providers: <br><br> We use carefully selected service
+                                    providers which process personal information about you on our behalf as described
+                                    below: <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Transport partners:</span> We use
+                                    a network of trusted transport companies to provide you with Collection Services.
+                                    They will receive the seller vehicle data, along with details of the seller, your
+                                    delivery address, contact details, and preferred drop-off time. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Payments:</span> Where you are
+                                    set up to make payments through the Carsmart platform, you will be required to
+                                    provide certain personal information to our third-party payments processing
+                                    provider, “Payment Provider”). The Payment Provider will be required to process your
+                                    personal information in order for them to provide a payment account and provide
+                                    services under the Smart Wallet & Provider Payment Terms[CG2] . The Payment Provider
+                                    is a Data Controller and shall only use your personal data for this purpose. The
+                                    Payment Provider’s privacy policy is available in your Smart Wallet account.
+                                    <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Data analytics and technical
+                                        support providers:</span> Such providers assist us in better understanding your
+                                    use of our Website, the Carsmart platform, and our services. <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Data storage providers:</span>
+                                    Such providers help operate the functionality of the Website and enable us to
+                                    provide user accounts. They also provide backup, debugging and logging services.
+                                    <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Content and data
+                                        providers:</span> Such providers assist us to, for example, verify your email
+                                    address and telephone number, use your town/city to calculate routes between you and
+                                    the seller of a vehicle, and use your postcode to geocode your approximate location.
+                                    <br><br>
+                                    <span class="me-4">·</span> <span class="sl-title">Customer management and support
+                                        providers (including our outsourced customer service centre):</span> Such
+                                    providers deliver personalised email or SMS reminders to you in relation to your
+                                    cars available for sale, and collect reviews of our services. <br><br>
+                                    <span class="sl-title fw-bold">13. INTERNATIONAL TRANSFERS</span>
+                                    <br><br> We ensure your Personal Data is protected by requiring all our group
+                                    companies to follow the same rules when processing your Personal Data. <br><br>
+                                    Whenever we transfer your Personal Data out of the EEA, we ensure a similar degree
+                                    of protection is afforded to it by ensuring at least one of the following safeguards
+                                    is implemented: <br><br>
+                                    <span class="me-4">·</span> We will only transfer your Personal Data to countries
+                                    that have been deemed to provide an adequate level of protection for Personal Data
+                                    by the European Commission. For further details, see European Commission: Adequacy
+                                    of the protection of Personal Data in non-EU countries. <br><br>
+                                    <span class="me-4">·</span> Where we use certain service providers, we may use
+                                    specific contracts approved by the European Commission which give Personal Data the
+                                    same protection it has in Europe. For further details, see European Commission:
+                                    Model contracts for the transfer of Personal Data to third countries. <br><br>
+                                    <span class="me-4">·</span> Where we use providers based in the US, we may transfer
+                                    Data to them if they enter into the ICOs model/standard clause contract – details of
+                                    which can be found here. Please contact us if you want further information on the
+                                    specific mechanism used by us when transferring your Personal Data out of the EEA.
+                                    <br><br>
+                                    <span class="sl-title fw-bold">14. DATA SECURITY</span>
+                                    <br><br> We have put in place appropriate security measures to prevent your Personal
+                                    Data from being accidentally lost, used or accessed in an unauthorised way, altered
+                                    or disclosed. In addition, we limit access to your Personal Data to those employees,
+                                    agents, contractors and other third parties who have a business need to know. They
+                                    will only process your Personal Data on our instructions and they are subject to a
+                                    duty of confidentiality. <br><br> We have put in place procedures to deal with any
+                                    suspected Personal Data breach and will notify you and any applicable regulator of a
+                                    breach where we are legally required to do so. <br><br>
+                                    <span class="sl-title fw-bold">15. DATA RETENTION</span>
+                                    <br><br>
+                                    <span class="sl-title">How long will we use your Personal Data for?</span>
+                                    <br><br> We will only retain your Personal Data for as long as necessary to fulfil
+                                    the purposes we collected it for, including for the purposes of satisfying any
+                                    legal, accounting, or reporting requirements. <br><br> To determine the appropriate
+                                    retention period for Personal Data, we consider the amount, nature, and sensitivity
+                                    of the Personal Data, the potential risk of harm from unauthorised use or disclosure
+                                    of your Personal Data, the purposes for which we process your Personal Data and
+                                    whether we can achieve those purposes through other means, and the applicable legal
+                                    requirements. <br><br> By law we have to keep basic information about our customers
+                                    (including Contact, Identity, KYC, Financial and Transaction Data) for six (6) years
+                                    after they cease being customers for tax and accounting purposes. <br><br> In some
+                                    circumstances you can ask us to delete your Data: see clause 17 below for further
+                                    information. <br><br> In some circumstances we may anonymise your Personal Data (so
+                                    that it can no longer be associated with you) for research or statistical purposes
+                                    in which case we may use this information indefinitely without further notice to
+                                    you. <br><br>
+                                    <span class="sl-title fw-bold">16. REQUESTS</span>
+                                    <br><br>
+                                    <span class="sl-title">What we may need from you</span>
+                                    <br><br> Following any request made by you we may need to request specific
+                                    information from you to help us confirm your identity and ensure your right to
+                                    access your Personal Data (or to exercise any of your other rights). This is a
+                                    security measure to ensure that Personal Data is not disclosed to any person who has
+                                    no right to receive it. We may also contact you to ask you for further information
+                                    in relation to your request to speed up our response. <br><br>
+                                    <span class="sl-title">Time limit to respond</span>
+                                    <br><br> We try to respond to all legitimate requests within one (1) month.
+                                    Occasionally it may take us longer than a month if your request is particularly
+                                    complex or you have made a number of requests. In this case, we will notify you and
+                                    keep you updated. <br><br>
+                                    <span class="sl-title fw-bold">17. YOUR LEGAL RIGHTS</span>
+                                    <br><br> You have the right to: <br><br>
+                                    <span class="sl-title">Be informed</span> of how your Personal Data is being
+                                    utilised by us, as set out in this Policy. <br><br>
+                                    <span class="sl-title">Request access</span> to your Personal Data (commonly known
+                                    as a "Data subject access request"). This enables you to receive a copy of the
+                                    Personal Data we hold about you and to check that we are lawfully processing it.
+                                    <br><br>
+                                    <span class="sl-title">Request correction</span> of the Personal Data that we hold
+                                    about you. This enables you to have any incomplete or inaccurate Data we hold about
+                                    you corrected, though we may need to verify the accuracy of the new Data you provide
+                                    to us. <br><br>
+                                    <span class="sl-title">Request erasure</span> of your Personal Data. This enables
+                                    you to ask us to delete or remove Personal Data where there is no good reason for us
+                                    continuing to process it. You also have the right to ask us to delete or remove your
+                                    Personal Data where you have successfully exercised your right to object to
+                                    processing (see below), where we may have processed your information unlawfully or
+                                    where we are required to erase your Personal Data to comply with local law. Note,
+                                    however, that we may not always be able to comply with your request of erasure for
+                                    specific legal reasons which will be notified to you, if applicable, at the time of
+                                    your request. <br><br>
+                                    <span class="sl-title">Object to processing</span> of your Personal Data where we
+                                    are relying on a legitimate interest (or those of a third party) and there is
+                                    something about your particular situation which makes you want to object to
+                                    processing on this ground as you feel it impacts on your fundamental rights and
+                                    freedoms. You also have the right to object where we are processing your Personal
+                                    Data for direct marketing purposes. In some cases, we may demonstrate that we have
+                                    compelling legitimate grounds to process your information which override your rights
+                                    and freedoms. <br><br>
+                                    <span class="sl-title">Request restriction of processing</span> of your Personal
+                                    Data. This enables you to ask us to suspend the processing of your Personal Data in
+                                    the following scenarios: (a) if you want us to establish the Data's accuracy; (b)
+                                    where our use of the Data is unlawful but you do not want us to erase it; (c) where
+                                    you need us to hold the Data even if we no longer require it as you need it to
+                                    establish, exercise or defend legal claims; or (d) you have objected to our use of
+                                    your Data but we need to verify whether we have overriding legitimate grounds to use
+                                    it. <br><br>
+                                    <span class="sl-title">Request the transfer</span> of your Personal Data to you or
+                                    to a third party. We will provide to you, or a third party you have chosen, your
+                                    Personal Data in a structured, commonly used, machine-readable format. Note that
+                                    this right only applies to automated information which you initially provided
+                                    consent for us to use or where we used the information to perform a contract with
+                                    you. <br><br>
+                                    <span class="sl-title">Withdraw consent at any time</span> where we are relying on
+                                    consent to process your Personal Data. However, this will not affect the lawfulness
+                                    of any processing carried out before you withdraw your consent. If you withdraw your
+                                    consent, we may not be able to provide certain products or services to you. we will
+                                    advise you if this is the case at the time you withdraw your consent. <br><br>
+                                    <span class="sl-title">No fee usually required</span>
+                                    <br><br> You will not have to pay a fee to access your Personal Data (or to exercise
+                                    any of the other rights). <br><br> It is important that the Data we hold about you
+                                    is accurate and current. Please keep us informed if your Data changes during the
+                                    period for which we hold it. <br><br>
+                                    <span class="sl-title fw-bold">18. GENERAL</span>
+                                    <br><br> You may not transfer any of your rights under this Policy to any other
+                                    person. We may transfer our rights under this Policy where we reasonably believe
+                                    your rights will not be affected. <br><br> If any court or competent authority finds
+                                    that any provision of this Policy (or part of any provision) is invalid, illegal or
+                                    unenforceable, that provision or part-provision will, to the extent required, be
+                                    deemed to be deleted, and the validity and enforceability of the other provisions of
+                                    this Policy will not be affected. <br><br> Unless otherwise agreed, no delay, act or
+                                    omission by a party in exercising any right or remedy will be deemed a waiver of
+                                    that, or any other, right or remedy. <br><br> This Policy will be governed by and
+                                    interpreted according to the law of England and Wales. All disputes arising under
+                                    this Policy will be subject to the exclusive jurisdiction of the English and Welsh
+                                    courts. <br><br>
+                                    <span class="sl-title fw-bold">19. CHANGES TO THIS POLICY</span>
+                                    <br><br> Carsmart reserves the right to change this Policy as we may deem necessary
+                                    from time to time or as may be required by law. Any changes will be immediately
+                                    posted on the Website and you are deemed to have accepted the terms of the Policy on
+                                    your first use of the Website following the alterations. <br><br> You may contact
+                                    Carsmart by email at help@trycarsmart.com.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ps-xl-3">
+                            <div class="pc-box p-4 d-flex flex-column gap-4">
+                                <div class="d-flex flex-column gap-10px">
+                                    <span class="lh-1 text-white fw-medium pcb-title">Sign up for selling car</span>
+                                    <span class="lh-sm text-white fw-normal">In order to enhance your experience on our
+                                        website, we use cookies to collect certain information about you. This cookie
+                                        policy details the types of cookies we use, the information we collect, and how
+                                        we process it to provide our services.</span>
+                                </div>
+                                <div>
+                                    <a href="#" class="btn btn-main d-flex align-items-center"><span>Join Now</span><svg
+                                            width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#101044" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-border"></div>
+            </section>
+            <section class="pt-5 pb-4 mt-5 home-cta">
+                <div class="container pt-4">
+                    <div class="home-cta-box">
+                        <div class="hcb-title">
+                            <img src="./assets/img/Rays-purple-left.svg" alt="Rays">
+                            <span>Trade smarter with live car auctions on SmartHub.</span>
+                        </div>
+                        <a href="./signup.html#signup-sec"
+                            class="btn btn-main d-flex align-items-center justify-content-center hcb-btn"><span>Sign up
+                                now</span><svg width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                    fill="#101044"></path>
+                                <path
+                                    d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                    fill="#101044"></path>
+                                <path
+                                    d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                    fill="#101044"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Main End -->
+        <!-- Footer -->
+        <footer>
+            <div class="pre-footer">
+                <div class="container pf-cont">
+                    <div class="footer-cont">
+                        <div class="pf-content d-flex flex-column gap-lg-4 gap-3">
+                            <h3 class="pf-title mb-0 d-flex gap-2 fw-medium">
+                                <img src="./assets/img/Rays-green.svg" alt="Rays">
+                                <span>The smarter way to trade.</span>
+                            </h3>
+                            <p class="mb-0 pf-subtitle"><span class="text-parrot">87%</span> of sellers earn more, sell
+                                your car tthe smart way!</p>
+                        </div>
+                        <img src="./assets/img/pre-footer-img.png" alt="Car"
+                            class="w-100 img-fluid d-lg-none d-block mt-5">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex ft-flex-1">
+                            <div class="ft-left">
+                                <a href="./index.html" class="ft-logo-link d-block mb-4 pb-1">
+                                    <img src="./assets/img/footer-logo-white.svg" alt="Footer Logo">
+                                </a>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Stalk our socials</h4>
+                                    <div class="ft-social-links d-flex align-items-center gap-lg-4 gap-3 pb-1">
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.842282" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M23.4774 32.3906V23.1782H26.5833L27.0308 19.5721H23.4774V17.2822C23.4774 16.7558 23.587 16.3302 23.8064 16.0056C24.0257 15.681 24.5039 15.5187 25.2409 15.5187H27.136V12.3075C26.7324 12.2724 26.3025 12.2417 25.8463 12.2153C25.3901 12.189 24.9338 12.1759 24.4776 12.1759C24.46 12.1759 24.4425 12.1759 24.4249 12.1759C24.4074 12.1759 24.3898 12.1759 24.3723 12.1759C23.0036 12.1759 21.8893 12.5838 21.0295 13.3998C20.1697 14.2158 19.7397 15.3958 19.7397 16.94V19.5721H16.6602V23.1782H19.7397V32.3906H23.4774Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.908688" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M30.5465 17.7813C30.5465 17.8866 30.5465 17.9875 30.5465 18.084C30.5465 18.1805 30.5465 18.2814 30.5465 18.3867C30.5465 19.8782 30.2657 21.3873 29.7042 22.914C29.1427 24.4406 28.318 25.8225 27.23 27.0596C26.1421 28.2967 24.7997 29.3013 23.2029 30.0734C21.606 30.863 19.7635 31.2578 17.6754 31.2578C16.3944 31.2578 15.1661 31.078 13.9904 30.7182C12.8147 30.3585 11.7268 29.854 10.7266 29.2048C10.9196 29.2398 11.1038 29.2574 11.2793 29.2574C11.4548 29.2574 11.639 29.2574 11.8321 29.2574C11.8321 29.2574 11.8408 29.2574 11.8584 29.2574C12.9112 29.2574 13.9158 29.0863 14.8722 28.7441C15.8285 28.402 16.6927 27.9238 17.4648 27.3096L17.4385 27.3359C16.4558 27.3184 15.5828 27.0201 14.8195 26.441C14.0562 25.8619 13.5254 25.1249 13.2271 24.23V24.2037C13.3499 24.2212 13.4859 24.2388 13.6351 24.2563C13.7842 24.2739 13.929 24.2827 14.0694 24.2827C14.2799 24.2827 14.4817 24.2651 14.6748 24.23C14.8678 24.1949 15.0608 24.1598 15.2538 24.1247C14.2185 23.8966 13.3543 23.3702 12.6612 22.5455C11.9681 21.7207 11.6215 20.7644 11.6215 19.6764V19.6238C11.9373 19.7817 12.2664 19.9133 12.6085 20.0186C12.9507 20.1239 13.3061 20.1853 13.6745 20.2029C13.0604 19.7817 12.5691 19.2421 12.2006 18.5841C11.8321 17.9261 11.6478 17.211 11.6478 16.4389C11.6478 16.0178 11.7048 15.6142 11.8189 15.2281C11.933 14.8421 12.0865 14.4824 12.2795 14.149C12.841 14.8333 13.464 15.4563 14.1483 16.0178C14.8327 16.5793 15.5697 17.0619 16.3593 17.4654C17.149 17.869 17.9825 18.1937 18.8598 18.4393C19.7372 18.685 20.6409 18.8342 21.5709 18.8868H21.5973C21.5622 18.7113 21.5358 18.5358 21.5183 18.3604C21.5008 18.1849 21.492 18.0094 21.492 17.8339C21.492 16.5881 21.9351 15.5221 22.8212 14.6359C23.7074 13.7498 24.7734 13.3067 26.0192 13.3067C26.6685 13.3067 27.2783 13.4383 27.8486 13.7015C28.4189 13.9647 28.9058 14.3157 29.3094 14.7544C29.8534 14.6491 30.3666 14.4999 30.8492 14.3069C31.3318 14.1139 31.7924 13.8857 32.2311 13.6225L32.1784 13.6489C32.003 14.1928 31.7485 14.6754 31.4151 15.0965C31.0817 15.5177 30.6869 15.8686 30.2307 16.1494H30.2043C30.6781 16.0967 31.1387 16.009 31.5862 15.8862C32.0337 15.7633 32.4592 15.6054 32.8628 15.4124L32.8101 15.4387C32.4943 15.8949 32.1477 16.3161 31.7704 16.7021C31.3932 17.0882 30.994 17.4391 30.5728 17.755L30.5465 17.7813Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="0.975094" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M16.6096 14.4395C16.6096 15.1063 16.3683 15.681 15.8857 16.1635C15.4032 16.6461 14.8285 16.8874 14.1617 16.8874C13.4773 16.8874 12.8939 16.6461 12.4113 16.1635C11.9288 15.681 11.6875 15.1063 11.6875 14.4395C11.6875 13.7551 11.9288 13.1717 12.4113 12.6891C12.8939 12.2066 13.4773 11.9653 14.1617 11.9653C14.8285 11.9653 15.4032 12.2066 15.8857 12.6891C16.3683 13.1717 16.6096 13.7551 16.6096 14.4395ZM18.9259 18.7562V32.3906H23.1636V25.6524C23.1636 24.7574 23.3127 23.9503 23.6111 23.2308C23.9094 22.5114 24.6025 22.1516 25.6904 22.1516C26.7784 22.1516 27.4189 22.5552 27.6119 23.3624C27.8049 24.1696 27.9014 24.968 27.9014 25.7577V32.3906H32.1392V24.9154C32.1392 23.0729 31.8277 21.5287 31.2048 20.2828C30.5818 19.0369 29.1999 18.414 27.0591 18.414C26.0238 18.414 25.1684 18.6465 24.4928 19.1115C23.8172 19.5765 23.3391 20.081 23.0583 20.625H22.9793V18.7562H18.9259ZM12.0297 18.7562H16.2674V32.3906H12.0297V18.7562Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                        <a href="#">
+                                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1.04541" y="1.22509" width="42.1141" height="42.1141"
+                                                    rx="21.057" stroke="white" stroke-opacity="0.2"
+                                                    stroke-width="1.68456" />
+                                                <path
+                                                    d="M32.1582 18.1235C32.1407 17.6849 32.0924 17.2506 32.0134 16.8206C31.9345 16.3907 31.816 15.9827 31.6581 15.5967L31.6844 15.6493C31.4212 14.965 31.0352 14.3684 30.5263 13.8595C30.0174 13.3506 29.4296 12.9646 28.7628 12.7014L28.7364 12.675C28.3679 12.5347 27.9775 12.425 27.5651 12.346C27.1528 12.2671 26.7273 12.2276 26.2886 12.2276H26.2622C25.7183 12.1925 25.2313 12.1705 24.8014 12.1618C24.3715 12.153 23.4722 12.1486 22.1035 12.1486C20.7348 12.1486 19.8311 12.153 19.3924 12.1618C18.9537 12.1705 18.4711 12.1925 17.9447 12.2276C17.4885 12.2276 17.0542 12.2714 16.6418 12.3592C16.2294 12.4469 15.8302 12.561 15.4442 12.7014L15.4705 12.675C14.8037 12.9558 14.2159 13.3506 13.707 13.8595C13.1981 14.3684 12.8121 14.9474 12.5488 15.5967L12.5225 15.6493C12.3821 16.0178 12.2725 16.4083 12.1935 16.8206C12.1145 17.233 12.0663 17.6585 12.0487 18.0972C12.0312 18.6412 12.018 19.1281 12.0093 19.5581C12.0005 19.988 11.9961 20.8873 11.9961 22.256C11.9961 23.6247 11.9961 24.5284 11.9961 24.9671C11.9961 25.4058 12.0136 25.8971 12.0487 26.4411C12.0663 26.8622 12.1145 27.2746 12.1935 27.6782C12.2725 28.0818 12.3821 28.4854 12.5225 28.889C12.7857 29.5733 13.1718 30.1699 13.6807 30.6788C14.1895 31.1877 14.7774 31.5737 15.4442 31.8369H15.4968C15.8478 31.9949 16.2294 32.1177 16.6418 32.2054C17.0542 32.2932 17.4797 32.3371 17.9184 32.3371H17.9447C18.4887 32.3721 18.9756 32.3941 19.4055 32.4029C19.8355 32.4116 20.7348 32.416 22.1035 32.416C23.4722 32.416 24.3759 32.4116 24.8146 32.4029C25.2533 32.3941 25.7358 32.3721 26.2622 32.3371C26.7185 32.3371 27.1528 32.2932 27.5651 32.2054C27.9775 32.1177 28.3855 32.0036 28.7891 31.8633L28.7364 31.8896C29.4033 31.6088 29.9911 31.214 30.5 30.7051C31.0089 30.1963 31.3949 29.6172 31.6581 28.9679L31.6844 28.9153C31.8248 28.5292 31.9345 28.13 32.0134 27.7177C32.0924 27.3053 32.1407 26.8885 32.1582 26.4674C32.1758 25.9234 32.1889 25.4365 32.1977 25.0066C32.2065 24.5767 32.2109 23.6773 32.2109 22.3086C32.2109 20.9224 32.2109 20.0143 32.2109 19.5844C32.2109 19.1545 32.1933 18.6675 32.1582 18.1235ZM22.1035 27.4413C21.384 27.4413 20.7084 27.3097 20.0767 27.0465C19.445 26.7657 18.8923 26.3928 18.4185 25.9278C17.9447 25.4628 17.5762 24.9144 17.313 24.2827C17.0322 23.651 16.8919 22.9754 16.8919 22.256C16.8919 21.5365 17.0322 20.861 17.313 20.2292C17.5762 19.5975 17.9447 19.0492 18.4185 18.5842C18.8923 18.1192 19.445 17.7463 20.0767 17.4655C20.7084 17.2023 21.384 17.0707 22.1035 17.0707C22.8229 17.0707 23.4985 17.2023 24.1302 17.4655C24.7444 17.7463 25.2884 18.1192 25.7621 18.5842C26.2359 19.0492 26.6044 19.5975 26.8676 20.2292C27.1484 20.861 27.2888 21.5365 27.2888 22.256C27.2888 22.9754 27.1484 23.651 26.8676 24.2827C26.6044 24.9144 26.2359 25.4628 25.7621 25.9278C25.2884 26.3928 24.7444 26.7657 24.1302 27.0465C23.4985 27.3097 22.8229 27.4413 22.1035 27.4413ZM27.4993 18.0972C27.1659 18.0972 26.8808 17.9788 26.6439 17.7419C26.407 17.505 26.2886 17.2198 26.2886 16.8864C26.2886 16.553 26.407 16.2679 26.6439 16.031C26.8808 15.7941 27.1659 15.6757 27.4993 15.6757C27.8327 15.6757 28.1179 15.7941 28.3548 16.031C28.5917 16.2679 28.7101 16.553 28.7101 16.8864C28.7101 17.2198 28.5917 17.505 28.3548 17.7419C28.1179 17.9788 27.8327 18.0972 27.4993 18.0972ZM25.4726 22.256C25.4726 23.186 25.1436 23.98 24.4856 24.6381C23.8275 25.2961 23.0335 25.6251 22.1035 25.6251C21.1735 25.6251 20.3794 25.2961 19.7214 24.6381C19.0634 23.98 18.7343 23.186 18.7343 22.256C18.7343 21.326 19.0634 20.5319 19.7214 19.8739C20.3794 19.2159 21.1735 18.8869 22.1035 18.8869C23.0335 18.8869 23.8275 19.2159 24.4856 19.8739C25.1436 20.5319 25.4726 21.326 25.4726 22.256Z"
+                                                    fill="#ACEF56" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-middle d-flex">
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Services</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">SmartHub</a></li>
+                                        <li><a href="#" class="ft-link">SmartDrop</a></li>
+                                        <li><a href="#" class="ft-link">SmartConnect</a></li>
+                                        <li><a href="#" class="ft-link">SmartMatch</a></li>
+                                        <li><a href="#" class="ft-link">SmartWallet</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ftm-links">
+                                    <h4 class="ft-title mb-0">Resources</h4>
+                                    <ul class="list-unstyled ps-0">
+                                        <li><a href="#" class="ft-link">Guides</a></li>
+                                        <li><a href="#" class="ft-link">Advertise with us</a></li>
+                                        <li><a href="#" class="ft-link">How we do it</a></li>
+                                        <li><a href="#" class="ft-link">SmartData</a></li>
+                                        <li><a href="#" class="ft-link">Become a trader</a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <h4 class="ft-title mb-0">Download App</h4>
+                                    <div class="ft-download-links d-flex flex-column">
+                                        <a href="#">
+                                            <img src="./assets/img/apple-app.svg.svg" alt="Apple Btn">
+                                        </a>
+                                        <a href="#">
+                                            <img src="./assets/img/google-app.svg.svg" alt="Google Btn">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ft-right d-flex flex-column gap-3">
+                                <h3 class="ftr-title">Want to sell your car? Head over to:</h3>
+                                <div class="mt-1">
+                                    <a href="#" class="btn btn-main d-flex align-items-center"><span>CARSMART</span><svg
+                                            width="11" height="26" viewBox="0 0 11 26" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.52377 12.9643C3.52377 13.992 4.35489 14.8281 5.3764 14.8281L8.49893 14.8281C9.52046 14.8281 10.3516 13.992 10.3516 12.9643C10.3516 11.9365 9.52044 11.1004 8.49893 11.1004L5.3764 11.1004C4.35487 11.1004 3.52377 11.9365 3.52377 12.9643Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M5.93474 21.9347L3.54276 19.9152C3.20943 19.6341 2.78676 19.4795 2.35258 19.4795C1.80318 19.4795 1.2857 19.7221 0.932665 20.1452C0.614557 20.5266 0.463165 21.0099 0.506377 21.5057C0.54939 22.0017 0.781952 22.451 1.16111 22.7711L3.55309 24.7906C3.88632 25.0717 4.30909 25.2266 4.74327 25.2266C5.29277 25.2266 5.81025 24.9838 6.16318 24.5606C6.81968 23.7733 6.71727 22.5952 5.93474 21.9347Z"
+                                                fill="#101044" />
+                                            <path
+                                                d="M2.35266 6.48437C2.78704 6.48437 3.20971 6.32951 3.54274 6.04824L5.93472 4.0289C6.71725 3.36842 6.81968 2.19033 6.16318 1.40305C5.81025 0.979864 5.29277 0.737066 4.74337 0.737066C4.30889 0.737066 3.88612 0.891929 3.55309 1.1734L1.16111 3.19254C0.781952 3.51248 0.549389 3.96195 0.506377 4.45816C0.463165 4.95397 0.614557 5.43701 0.932665 5.81839C1.28559 6.24158 1.80306 6.48437 2.35266 6.48437Z"
+                                                fill="#101044" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-cont">
+                        <div class="d-flex justify-content-between align-items-center flex-lg-row flex-column gap-2">
+                            <p class="mb-0">&copy; Carsmart Limited 2001 - 2024</p>
+                            <div class="d-flex align-items-center gap-lg-5 gap-3 flex-wrap justify-content-center">
+                                <a href="#" class="fb-link">Help</a>
+                                <a href="#" class="fb-link">SmartGuidelines</a>
+                                <a href="#" class="fb-link">Terms</a>
+                                <a href="#" class="fb-link">Privacy policy</a>
+                                <a href="#" class="fb-link">Cookies</a>
+                                <a href="#" class="fb-link">Sitemap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+        <script src="./assets/js/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/select2.min.js"></script>
+        <script src="./assets/js/aos.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
+        <script src="./assets/js/custom.js?v=21"></script>
+    </body>
+
+</html>
