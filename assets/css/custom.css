@@ -6983,17 +6983,19 @@ ol.policy-desc {
     position: relative;
 }
 
-.elp-hero-cont .crf-inp {
+.elp-smch-crf .crf-inp {
     padding: 16px 10px;
     font-size: 16px;
     flex-grow: 1;
 }
-
-.elp-hero-cont .smch-crf {
+.elp-smch-crf .crf-inp ::placeholder{
+    text-transform: uppercase !important;
+}
+.elp-smch-crf {
     width: 590px;
 }
 
-.elp-hero-cont .crf-btn {
+.elp-smch-crf .crf-btn {
     width: fit-content;
 }
 
@@ -8545,6 +8547,136 @@ ol.policy-desc {
     font-size: 16px;
     font-weight: 400;
     background-color: rgba(255, 255, 255, 0.002);
+}
+.esp-label{
+    font-size: 16px;
+    font-weight: 500;
+    color: #919191;
+}
+.esp-select{
+    padding: 12px;
+    border: 1px solid #101044 !important;
+    border-radius: 5.5px;
+    color: #101044;
+    background-color: #EEF1FF;
+    line-height: 100%;
+}
+
+.esp-select.form-select{
+    
+    background-image: url(../img/chevron-down-purple.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 12px) center;
+}
+
+.espp-btn{
+    padding: 0 !important;
+    height: 30px;
+    min-width: 30px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #101044;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.espp-btn:hover{
+    background-color: rgba(103, 93, 244, 0.2);
+}
+
+.espp-btn.active{
+    color: #675DF4;
+    background-color: #ffffff;
+    border-color: #675DF4;
+}
+
+.ecsp-middle{
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    left: 15px;
+    right: 15px;
+    transform: translate(0, 50%);
+}
+
+.ecm-bottom{
+    position: static;
+    transform: unset;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0 !important;
+}
+
+.ecvm-danger{
+    color: #FD0E0E;
+}
+
+.ecsm-price{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #695DFD;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 100%;
+}
+
+.ecsb-sm .ecb-bottom{
+    padding: 24px 15px 15px;
+}
+.ecsm-duration{
+    line-height: 200%;
+    text-align: center;
+    width: 100%;
+    padding: 1px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    background-color: rgba(236, 241, 253, 1);
+}
+
+.sfb-light{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.sfbl .sfb-label{
+    color: #101044;
+}
+
+.sfbl .sfb-select{
+    background-image: url(../img/chevron-down-dark.svg);
+    color: #111827 !important;
+    background-color: rgba(236, 241, 253, 1) !important;
+}
+
+.sfbl .sfb-field .rangeslider{
+    background-color: rgba(236, 241, 253, 1) !important;
+    border: 0 !important;
+    box-shadow: none;
+}
+
+.rangeslider__handle:after{
+    content: unset ;
+}
+
+.sfbl .sfb-field .rangeslider__handle{
+    background-color: #101044;
+}
+
+.navbar-brand 
+.editions-logo{
+    margin: 15px 0;
+    height: 42px !important;
+}
+
+.sfbl .sfb-select option{
+    color: #111827 !important;
+    background-color: rgba(236, 241, 253, 1) !important;
 }
 @media (max-width:2000px) {
     .homepage section {
