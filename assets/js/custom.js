@@ -826,3 +826,6 @@ function openReplyForm(e) {
     $(targetElm).hide();
     $(targetElm).closest('.eacf-comment').find('.eac-reply').show().css('display', 'flex');
 }
+function toggleEditionFilters(){
+    $('.editions-container').toggleClass('filters-shown');
+}

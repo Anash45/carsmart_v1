@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=21">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=22">
     </head>
 
     <body class="light-page customer-page esp">
@@ -155,14 +155,14 @@
                                 <option value="ASC">Alphabetically</option>
                                 <option value="ASC">Price</option>
                             </select>
-                            <button class="btn esp-select">
+                            <button class="btn esp-select" onclick="toggleEditionFilters()">
                                 <span class="px-4"> Filter </span>
                             </button>
                         </div>
                     </div>
-                    <div class="pt-3 mt-1 pb-4 mb-2">
+                    <div class="pt-3 mt-1 pb-4 mb-2 editions-container">
                         <div class="row">
-                            <div class="col-xxl-3 col-lg-4 pb-lg-0 pb-4">
+                            <div class="col-xxl-3 col-lg-4 pb-lg-0 pb-4" id="editionFilters" style="display: none;">
                                 <div class="search-filters-box sfb-light sfbl">
                                     <form action="" method="post">
                                         <div class="sfb-flex-1">
@@ -325,7 +325,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="col-xxl-9 col-lg-8">
+                            <div class="col-xxl-9 col-lg-8 flex-grow-1 editions-side">
                                 <div class="row">
                                     <div class="col-xl-4 col-lg-6 pb-4">
                                         <div class="elp-card elp-card-small ecsb-sm ecs" data-car="new">
@@ -1918,7 +1918,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=21"></script>
+        <script src="./assets/js/custom.js?v=22"></script>
     </body>
 
 </html>

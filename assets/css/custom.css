@@ -8678,6 +8678,10 @@ ol.policy-desc {
     color: #111827 !important;
     background-color: rgba(236, 241, 253, 1) !important;
 }
+
+.filters-shown #editionFilters{
+    display: block !important;
+}
 @media (max-width:2000px) {
     .homepage section {
         position: relative;
@@ -8718,6 +8722,10 @@ ol.policy-desc {
 
     .hs-5-img {
         width: 40%;
+    }
+
+    .editions-container:not(.filters-shown) .editions-side .col-xl-4{
+        width: 25%;
     }
 
     /* .container-relative {
