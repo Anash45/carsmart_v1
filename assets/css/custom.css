@@ -1621,7 +1621,7 @@ footer {
 }
 
 .primary-modal {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.0);
 }
 
 .primary-modal .modal-dialog {
@@ -8681,6 +8681,77 @@ ol.policy-desc {
 
 .filters-shown #editionFilters{
     display: block !important;
+}
+
+.elp-profile-img{
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(103, 93, 244, 1);
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.csdb .pfcp-max-div{
+    width: 100% !important;
+    max-width: 100%;
+}
+
+.csdd .payment-fee-card{
+    padding: 40px !important;
+    border-radius: 40px !important;
+    background-color: #ffffff !important;
+}
+
+.csdd .payment-fee-card .text-white,
+.csdd .payment-fee-card .light-text{
+    color: #101044 !important;
+}
+
+.csdd .payment-fee-card .text-parrot{
+    color: #695DFD !important; 
+}
+
+.csdd .payment-fee-card .pfrcb-value{
+    color: #695DFD !important;
+}
+.csdd .pfrcb-line{
+    background-color: rgba(211, 212, 253, 1) !important;
+}
+
+.csdd .pfrc-box{
+    background-color: rgba(236, 241, 253, 1) !important;
+    border-color: rgba(211, 212, 253, 1) !important;
+}
+
+.csdd .ech{
+    border: 1px solid rgba(224, 229, 235, 1) !important;
+}
+.ech-bill .ech-middle{
+    width: 100% !important;
+    box-shadow: none !important;
+    background-color: rgba(246, 248, 254, 1) !important;
+    border-color: rgba(16, 16, 68, 0.1) !important;
+}
+.echb-excerpt{
+    font-size: 14px;
+    line-height: 135%;
+}
+
+.light-modal.primary-modal .modal-content{
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.light-modal.primary-modal .modal-content .text-white,
+.light-modal.primary-modal .modal-content .modal-title{
+    color: #101044 !important;
+}
+
+.light-gallery .gm-nav-tabs{
+    background-color: rgba(238, 240, 255, 1) !important;
+}
+.light-gallery .cd-sliders .gm-nav-tabs .nav-link{
+    color: #675DF4 !important;
 }
 @media (max-width:2000px) {
     .homepage section {
