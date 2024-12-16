@@ -807,6 +807,7 @@ $(document).ready(function () {
 
         console.log(totalHeight);
         elpCard.find('.ec-badges').css('top', totalHeight + 6 + 'px');
+        elpCard.find('.ect-logo').css('top', totalHeight + 6 + 'px');
     });
 
     $('.swb-inp-select-dark').select2({

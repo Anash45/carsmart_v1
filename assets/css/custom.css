@@ -8618,7 +8618,7 @@ ol.policy-desc {
 
 .ecsm-price{
     width: fit-content;
-    padding: 10px;
+    padding: 9px 10px;
     border-radius: 4px;
     background-color: #695DFD;
     font-size: 18px;
@@ -8752,6 +8752,34 @@ ol.policy-desc {
 }
 .light-gallery .cd-sliders .gm-nav-tabs .nav-link{
     color: #675DF4 !important;
+}
+.ect-logo{
+    position: static;
+    right: 6px;
+    height: 13px;
+    z-index: 1;
+}
+
+.ecbt-top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.ecbtt-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.ecsb-sm .ec-banners,
+.ecsb-sm .ec-badges{
+    position: static;
+}
+.elp-card-small{
+    border: 1px solid rgba(224, 229, 235, 1);
 }
 @media (max-width:2000px) {
     .homepage section {
