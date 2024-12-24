@@ -261,7 +261,9 @@ $(document).ready(function () {
         });
     }
 
-    AOS.init();
+    AOS.init({
+        offset: 20,
+      });
     // On page load, check for any expanded accordion item and mark it as active
     $('#dc-sidebar-accordion .accordion-collapse.show').each(function () {
         const $currentItem = $(this).closest('.accordion-item');
