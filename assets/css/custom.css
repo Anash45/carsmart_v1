@@ -86,6 +86,10 @@ header .nav-link {
     padding: 0 !important;
 }
 
+.nav-link:focus-visible{
+    box-shadow: none !important;
+}
+
 header .nav-link.dropdown-toggle {
     display: flex;
     align-items: center;
@@ -6395,8 +6399,8 @@ ol.policy-desc {
     width: 775px;
 }
 
-.sdl .smlh-cont {
-    width: 800px;
+.sdl1 .smlh-cont {
+    width: 780px !important;
 }
 
 .sdl .smlh-img {
@@ -8678,9 +8682,14 @@ ol.policy-desc {
     color: #111827 !important;
     background-color: rgba(236, 241, 253, 1) !important;
 }
-
+#editionFilters{
+    overflow: hidden;
+    max-width: 0 !important;
+    transition: 0.5s ease-in-out;
+}
 .filters-shown #editionFilters{
-    display: block !important;
+    max-width: 1000px !important;
+    transition: 0.5s ease-in-out;
 }
 
 .elp-profile-img{
@@ -8799,6 +8808,9 @@ ol.policy-desc {
     .ecs-title {
         font-size: 90px;
     }
+    .es-slide-img{
+        max-height: 100vh !important;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -8876,10 +8888,27 @@ ol.policy-desc {
     .sdr header {
         height: 800px;
     }
+    .cd-right-card .btn-main{
+        padding: 10px 8px !important;
+    }
+    .sdl1 .smc-hero-content{
+        max-width: 500px;
+    }
+    .smart-match-landing.sml header{
+        height: 800px;
+    }
 }
 
 @media (max-width: 1200px) {
-
+    .smart-match-landing.sml header{
+        height: 900px;
+    }
+    .sdl1 .smc-hero-content{
+        max-width: 100%;
+    }
+    .sdl1 header{
+        height: 900px !important;
+    }
     .bas-flex-3 {
         width: 100%;
     }
@@ -8995,6 +9024,9 @@ ol.policy-desc {
 }
 
 @media (max-width: 992px) {
+    .sdl1 header{
+        height: 1000px !important;
+    }
     .page-title {
         font-size: 60px;
     }
@@ -9292,6 +9324,12 @@ ol.policy-desc {
 }
 
 @media (max-width: 768px) {
+    .smart-match-landing.sml header{
+        height: 750px;
+    }
+    .sdl1 header{
+        height: 1000px !important;
+    }
 
     .ecs-title {
         font-size: 45px;
@@ -9546,6 +9584,12 @@ ol.policy-desc {
 
 
 @media (max-width: 576px) {
+    .smart-match-landing.sml header{
+        height: 650px;
+    }
+    .sdl1 header{
+        height: 800px !important;
+    }
 
     .pc-table th, .pc-table td{
         padding: 10px 8px !important;
@@ -9817,9 +9861,14 @@ ol.policy-desc {
 }
 
 @media (max-width: 440px) {
-
+    .sdl1 header{
+        height: 750px !important;
+    }
 
     .hht-6 {
         transform: translate(40%, -50%);
+    }
+    .smart-match-landing.sml header{
+        height: 600px;
     }
 }
