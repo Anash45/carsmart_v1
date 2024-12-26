@@ -312,6 +312,16 @@ $(document).ready(function () {
             } else {
                 $theadCheck.addClass('partial-checked').prop('checked', false);
             }
+
+            let allRows = $table.find('tbody tr');
+            allRows.each(function () {
+                let rowCheckbox = $(this).find('.dcmt-check');
+                if(rowCheckbox.is(':checked')){
+                    $(this).addClass('selected-dcmt-row');
+                }else{
+                    $(this).removeClass('selected-dcmt-row');
+                }
+            });
         }
 
         // Event listener for thead checkbox

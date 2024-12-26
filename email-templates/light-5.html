@@ -325,6 +325,11 @@
                 width: 37px;
                 border-radius: 100px;
             }
+
+            .price-underline {
+                height: 4.5px;
+                width: 190px;
+            }
         </style>
     </head>
 
@@ -335,8 +340,8 @@
                 <div class="flex-main" style="padding-bottom: 30px;">
                     <div class="card-hero">
                         <div class="tc-text">
-                            <h3 class="tc-title text-dark fw-medium text-left">Your Profile is 
-                                <span class="text-purple">Complete</span></h3>
+                            <h3 class="tc-title text-dark fw-medium text-left">Your Profile is <span
+                                    class="text-purple">Complete</span></h3>
                         </div>
                         <img src="./assets/Car-1.png" alt="Car" class="tc-car">
                     </div>
@@ -363,7 +368,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <span class="fw-medium cd-price text-primary text-center"> £ 11,750 </span>
+                            <div class="text-center flex-col items-center">
+                                <span class="fw-medium cd-price text-primary text-center"> £ 11,750 </span>
+                                <img src="./assets/parrot-underline.png" alt="Underline" class="price-underline">
+                            </div>
                         </div>
                         <div class="flex-col text-center" style="gap: 10px; align-items: center; padding: 20px 70px;">
                             <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">Please give us a
@@ -443,8 +451,10 @@
                     </div>
                     <div class="border"></div>
                     <div class="flex-col text-center" style="gap: 10px; align-items: center; padding: 0 40px;">
-                        <h5 style="font-size: 14px; font-weight: 500;" class="text-dark text-center">Want to Review Your Information?</h5>
-                        <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">To see all the details you've provided, including your photos, you can view your profile here. </p>
+                        <h5 style="font-size: 14px; font-weight: 500;" class="text-dark text-center">Want to Review Your
+                            Information?</h5>
+                        <p class="fw-light" style="color: rgba(19, 20, 26, 0.8); font-size: 14px;">To see all the
+                            details you've provided, including your photos, you can view your profile here. </p>
                     </div>
                     <div class="flex-col items-center">
                         <a href="#" class="btn btn-main">

@@ -330,6 +330,7 @@ footer {
 
 
 .btn-main svg {
+    transform: translateY(-2px);
     height: 24px;
     transition: 0.3s ease-in-out;
 }
@@ -1588,11 +1589,14 @@ footer {
     gap: 30px;
 }
 
-.signup-confirm-cont {
-    background-image: url(../img/poppers.svg);
-    background-position: top center;
-    background-size: auto 250px;
-    background-repeat: no-repeat;
+.confetti-img{
+    position: absolute;
+    top: 0%;
+    height: 250px;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 1;
 }
 
 .scb-flex {
@@ -3081,7 +3085,9 @@ footer {
     vertical-align: middle;
     background-color: rgba(53, 54, 96, 1);
 }
-
+.dcm-table .selected-dcmt-row td{
+    background-color: rgba(255, 255, 255, 0.1);
+}
 .dcm-table thead {
     position: sticky;
     z-index: 3;
@@ -4023,6 +4029,7 @@ ol.policy-desc {
 }
 
 .cd-right-card .btn-main {
+    letter-spacing: 0.3px;
     padding: 10px 20px !important;
 }
 
@@ -9630,7 +9637,7 @@ ol.policy-desc {
 
     .signup-header {
         background-size: 70%, cover;
-        height: 300px;
+        height: 400px;
     }
 
     .shc-title h2 {
