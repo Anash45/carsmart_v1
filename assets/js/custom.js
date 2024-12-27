@@ -316,9 +316,9 @@ $(document).ready(function () {
             let allRows = $table.find('tbody tr');
             allRows.each(function () {
                 let rowCheckbox = $(this).find('.dcmt-check');
-                if(rowCheckbox.is(':checked')){
+                if (rowCheckbox.is(':checked')) {
                     $(this).addClass('selected-dcmt-row');
-                }else{
+                } else {
                     $(this).removeClass('selected-dcmt-row');
                 }
             });
@@ -418,21 +418,31 @@ $(document).ready(function () {
     }
 
     // Function to update current slide index
-    function updateCurrentSlide(currentSlide) {
-        console.log(currentSlide);
-        // Assuming you have an element with the ID 'current-slide' to display the current slide number
-        var totalSlides = $('.details-slider-for .slick-slide').not('.slick-cloned').length; // Total non-cloned slides
-        currentSlideNumber = currentSlide; // Slick is zero-based, so add 1 to make it human-readable
-        $('.ga-current').text(currentSlide + 1);
-        $('.ga-total').text(" / " + totalSlides);
-        console.log(currentSlideNumber);
+    function updateCurrentSlide(currentSlide, slick = null) {
+        if (slick) {
+            console.log(currentSlide, slick);
+
+            // Get the total number of non-cloned slides from the slick instance
+            var totalSlides = slick.$slides.not('.slick-cloned').length; // Total non-cloned slides
+
+            // Get the parent slider container of the current instance
+            var parentSlider = slick.$slider;
+
+            // Update the .ga-current and .ga-total inside the current slider container
+            parentSlider.siblings('.gallery-arrows').find('.ga-current').text(currentSlide + 1);
+            parentSlider.siblings('.gallery-arrows').find('.ga-total').text(" / " + totalSlides);
+
+            console.log("Total Slides", totalSlides);
+        } else {
+            console.log('Slick instance not available');
+        }
     }
 
     // Add event listener for 'afterChange' event
-    $('.details-slider-for,.details-slider-for-2').on('afterChange', function (event, slick, currentSlide) {
-        updateCurrentSlide(currentSlide);
+    $('.details-slider-for, .details-slider-for-2').on('afterChange', function (event, slick, currentSlide) {
+        updateCurrentSlide(currentSlide, slick);
     });
-    updateCurrentSlide(0);
+
 
     $('.details-slider-for video,.details-slider-for img').on("click", function () {
         console.log('clicked');
@@ -499,6 +509,8 @@ $(document).ready(function () {
                 focusOnSelect: true,
                 variableWidth: true,
             });
+
+            updateCurrentSlide(0, mainSlider.slick('getSlick'));
         }
     }
 
@@ -829,6 +841,30 @@ $(document).ready(function () {
         dropdownCssClass: 'swbc-dropdown swbc-dropdown-dark', // Custom class for dropdown
         containerCssClass: 'swbc-container swbc-container-dark' // Custom class for container
     });
+
+    $('.dcm-table tbody tr').each(function () {
+        var lastTap = 0; // To track the time of the last tap
+    
+        // Function to handle double-tap
+        $(this).on('touchstart', function (e) {
+            var currentTime = new Date().getTime();
+            var timeDifference = currentTime - lastTap;
+    
+            if (timeDifference < 300 && timeDifference > 0) {
+                // Double-tap detected, trigger action
+                let url = $(this).data('details-url');
+                window.location = url;
+            }
+            lastTap = currentTime;
+        });
+    
+        // Handle desktop double-click event
+        $(this).on('dblclick', function () {
+            let url = $(this).data('details-url');
+            window.location = url;
+        });
+    });
+    
 });
 
 function openReplyForm(e) {
@@ -837,6 +873,6 @@ function openReplyForm(e) {
     $(targetElm).hide();
     $(targetElm).closest('.eacf-comment').find('.eac-reply').show().css('display', 'flex');
 }
-function toggleEditionFilters(){
+function toggleEditionFilters() {
     $('.editions-container').toggleClass('filters-shown');
 }

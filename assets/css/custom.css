@@ -3085,8 +3085,12 @@ footer {
     vertical-align: middle;
     background-color: rgba(53, 54, 96, 1);
 }
-.dcm-table .selected-dcmt-row td{
+.dcm-table .selected-dcmt-row td,
+.dcm-table tr:hover td{
     background-color: rgba(255, 255, 255, 0.1);
+}
+.dcm-table tr:hover{
+    cursor: pointer;
 }
 .dcm-table thead {
     position: sticky;
@@ -3500,10 +3504,10 @@ ol.policy-desc {
 }
 
 .gm-nav-tabs {
-    padding: 10px 20px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     justify-content: center;
     background-color: #0C0D45;
     border-radius: 40px;
@@ -3515,7 +3519,8 @@ ol.policy-desc {
 .cd-sliders .gm-nav-tabs .nav-link {
     color: #fff !important;
     background-color: transparent !important;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 110%;
     padding: 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
