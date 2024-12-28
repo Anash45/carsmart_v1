@@ -876,3 +876,24 @@ function openReplyForm(e) {
 function toggleEditionFilters() {
     $('.editions-container').toggleClass('filters-shown');
 }
+
+$(document).ready(function() {
+
+    // Search functionality for all dropdowns
+    $('.dropdown-search').on('keyup', function() {
+      var searchTerm = $(this).val().toLowerCase();
+      var $dropdownItems = $(this).closest('.dropdown-menu').find('li');
+
+      $dropdownItems.each(function() {
+        var itemText = $(this).text().toLowerCase();
+        if (itemText.indexOf(searchTerm) === -1) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+    });
+    $('.sfb-select-dropdown .dropdown-menu').on('click', function(e) {
+        e.stopPropagation();
+    });
+});

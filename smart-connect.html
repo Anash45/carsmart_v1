@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
         <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=27">
+        <link rel="stylesheet" href="./assets/css/custom.css?v=28">
     </head>
 
     <body>
@@ -33,7 +33,7 @@
                                     <li><a class="dropdown-item" href="./buy-it-now.html">Buy it now</a></li>
                                     <li><a class="dropdown-item active" href="./smart-connect.html">Smart Connect</a></li>
                                     <li><a class="dropdown-item" href="./favourites.html">Favourites</a></li>
-                                    <li><a class="dropdown-item" href="./editions.html">Editions</a></li>
+                                    <li><a class="dropdown-item" href="./editions-search-filters.html">Editions</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -240,12 +240,92 @@
                                         <div class="sfb-bottom">
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Seller Type</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Auction length</label>
@@ -258,30 +338,270 @@
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Vehicle Type</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Make</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="All Makes">All Makes</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Model</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="All Models">All Models</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Price</label>
@@ -330,66 +650,626 @@
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Service records</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Recods</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Exterior status</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Fuel</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Transmission</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Collection</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Finance vehicles</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="sfb-field">
                                                 <label class="sfb-label">Smoking</label>
-                                                <select class="form-select sfb-select">
-                                                    <option value="">Select Type</option>
-                                                    <option value="Option 1">Option 1</option>
-                                                    <option value="Option 2">Option 2</option>
-                                                    <option value="Option 3">Option 3</option>
-                                                </select>
+                                                <div class="dropdown sfb-select-dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="" data-bs-toggle="dropdown" aria-expanded="false"> Select
+                                                        Options </button>
+                                                    <div class="dropdown-menu" aria-labelledby=""
+                                                        style="max-height: 300px; overflow-y: auto;">
+                                                        <!-- Search input -->
+                                                        <input type="text" class="form-control dropdown-search"
+                                                            placeholder="Search...">
+                                                        <!-- Dropdown options -->
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 1</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 2</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 3</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 4</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 5</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="d-block">
+                                                                    <div
+                                                                        class="d-flex align-items-center gap-3 justify-content-between">
+                                                                        <div class="d-flex align-items-center gap-1">
+                                                                            <span class="ssd-label">Option 6</span>
+                                                                            <span class="ssd-small">(1)</span>
+                                                                        </div>
+                                                                        <input type="checkbox" name="option[]" value="Option 1" class="form-check-input ssd-check">
+                                                                    </div>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -977,7 +1857,7 @@
         <script src="./assets/js/aos.js"></script>
         <script src="./assets/js/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=27"></script>
+        <script src="./assets/js/custom.js?v=28"></script>
     </body>
 
 </html>
