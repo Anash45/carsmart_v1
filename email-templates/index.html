@@ -1,73 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carsmart: Email Templates Gallery</title>
+<style>
+  :root {
+    --bg: #0d0f0c;
+    --card-bg: #16190f;
+    --border: #2a2f22;
+    --text: #f4f6ef;
+    --muted: #9aa294;
+    --accent: #99f22b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 40px 24px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  section.group {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .group-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0 20px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+  .badge.light {
+    background: #f4f6ef;
+    color: #16190f;
+  }
+  .badge.dark {
+    background: #1c2013;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .group-count {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+  .thumb-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #05070a;
+    overflow: hidden;
+  }
+  .thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .thumb-wrap .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .meta {
+    padding: 12px 14px 14px;
+  }
+  .meta .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .meta .filename {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    word-break: break-all;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 20px 24px 60px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Carsmart: Email Templates Gallery</h1>
+    <p>Light and dark versions of every email template</p>
+  </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carsmart</title>
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/css/select2.min.css">
-        <link rel="stylesheet" href="../assets/css/slick.min.css">
-        <link rel="stylesheet" href="../assets/css/slick-theme.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
-        <link href="../assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="../assets/css/custom.css?v=28">
-    </head>
+  <section class="group" id="light-section">
+    <h2 class="group-title"><span class="badge light">Light</span> Email Templates <span class="group-count" id="light-count"></span></h2>
+    <div class="grid" id="light-grid"></div>
+  </section>
 
-    <body>
-        
-        <div class="d-flex text-center align-items-center py-5 flex-column" style="min-height: 100vh; font-size: 20px;">
-            <h2 class="text-center text-white mb-4">Carsmart: Email Templates (LIGHT)</h2>
-            <ol class="fw-semibold text-white text-start text-capitalize mb-5">
-                <li><a href="./light-1.html" class="text-parrot">Template 1</a></li>
-                <li><a href="./light-2.html" class="text-parrot">Template 2</a></li>
-                <li><a href="./light-3.html" class="text-parrot">Template 3</a></li>
-                <li><a href="./light-4.html" class="text-parrot">Template 4</a></li>
-                <li><a href="./light-5.html" class="text-parrot">Template 5</a></li>
-                <li><a href="./light-6.html" class="text-parrot">Template 6</a></li>
-                <li><a href="./light-7.html" class="text-parrot">Template 7</a></li>
-                <li><a href="./light-8.html" class="text-parrot">Template 8</a></li>
-                <li><a href="./light-8-1.html" class="text-parrot">Template 8.1</a></li>
-                <li><a href="./light-9.html" class="text-parrot">Template 9</a></li>
-                <li><a href="./light-10.html" class="text-parrot">Template 10</a></li>
-                <li><a href="./light-11.html" class="text-parrot">Template 11</a></li>
-                <li><a href="./light-12.html" class="text-parrot">Template 12</a></li>
-                <li><a href="./light-13.html" class="text-parrot">Template 13</a></li>
-                <li><a href="./light-14.html" class="text-parrot">Template 14</a></li>
-                <li><a href="./light-15.html" class="text-parrot">Template 15</a></li>
-                <li><a href="./light-16.html" class="text-parrot">Template 16</a></li>
-                <li><a href="./light-17.html" class="text-parrot">Template 17</a></li>
-                <li><a href="./light-template-with-signature.html" class="text-parrot">Template with signature</a></li>
-            </ol>
-            <h2 class="text-center text-white mb-4">Carsmart: Email Templates (DARK)</h2>
-            <ol class="fw-semibold text-white text-start text-capitalize mb-5">
-                <li><a href="./dark-1.html" class="text-parrot">Template 1</a></li>
-                <li><a href="./dark-2.html" class="text-parrot">Template 2</a></li>
-                <li><a href="./dark-3.html" class="text-parrot">Template 3</a></li>
-                <li><a href="./dark-4.html" class="text-parrot">Template 4</a></li>
-                <li><a href="./dark-5.html" class="text-parrot">Template 5</a></li>
-                <li><a href="./dark-6.html" class="text-parrot">Template 6</a></li>
-                <li><a href="./dark-7.html" class="text-parrot">Template 7</a></li>
-                <li><a href="./dark-8.html" class="text-parrot">Template 8</a></li>
-                <li><a href="./dark-9.html" class="text-parrot">Template 9</a></li>
-                <li><a href="./dark-10.html" class="text-parrot">Template 10</a></li>
-                <li><a href="./dark-11.html" class="text-parrot">Template 11</a></li>
-                <li><a href="./dark-12.html" class="text-parrot">Template 12</a></li>
-                <li><a href="./dark-13.html" class="text-parrot">Template 13</a></li>
-                <li><a href="./dark-14.html" class="text-parrot">Template 14</a></li>
-                <li><a href="./dark-15.html" class="text-parrot">Template 15</a></li>
-                <li><a href="./dark-16.html" class="text-parrot">Template 16</a></li>
-                <li><a href="./dark-17.html" class="text-parrot">Template 17</a></li>
-                <li><a href="./dark-template-with-signature.html" class="text-parrot">Template with signature</a></li>
-            </ol>
-        </div>
-        <script src="../assets/js/jquery-3.7.1.min.js"></script>
-        <script src="../assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/js/select2.min.js"></script>
-        <script src="../assets/js/aos.js"></script>
-        <script src="../assets/js/slick.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="../assets/js/custom.js?v=28"></script>
-    </body>
+  <section class="group" id="dark-section">
+    <h2 class="group-title"><span class="badge dark">Dark</span> Email Templates <span class="group-count" id="dark-count"></span></h2>
+    <div class="grid" id="dark-grid"></div>
+  </section>
 
+  <footer>Carsmart email template library</footer>
+
+  <script>
+    const data = {"light": [{"file": "light-1.html", "title": "Template 1", "thumb": "thumbnails/light-1.png"}, {"file": "light-2.html", "title": "Template 2", "thumb": "thumbnails/light-2.png"}, {"file": "light-3.html", "title": "Template 3", "thumb": "thumbnails/light-3.png"}, {"file": "light-4.html", "title": "Template 4", "thumb": "thumbnails/light-4.png"}, {"file": "light-5.html", "title": "Template 5", "thumb": "thumbnails/light-5.png"}, {"file": "light-6.html", "title": "Template 6", "thumb": "thumbnails/light-6.png"}, {"file": "light-7.html", "title": "Template 7", "thumb": "thumbnails/light-7.png"}, {"file": "light-8-1.html", "title": "Template 8 1", "thumb": "thumbnails/light-8-1.png"}, {"file": "light-8.html", "title": "Template 8", "thumb": "thumbnails/light-8.png"}, {"file": "light-9.html", "title": "Template 9", "thumb": "thumbnails/light-9.png"}, {"file": "light-10.html", "title": "Template 10", "thumb": "thumbnails/light-10.png"}, {"file": "light-11.html", "title": "Template 11", "thumb": "thumbnails/light-11.png"}, {"file": "light-12.html", "title": "Template 12", "thumb": "thumbnails/light-12.png"}, {"file": "light-13.html", "title": "Template 13", "thumb": "thumbnails/light-13.png"}, {"file": "light-14.html", "title": "Template 14", "thumb": "thumbnails/light-14.png"}, {"file": "light-15.html", "title": "Template 15", "thumb": "thumbnails/light-15.png"}, {"file": "light-16.html", "title": "Template 16", "thumb": "thumbnails/light-16.png"}, {"file": "light-17.html", "title": "Template 17", "thumb": "thumbnails/light-17.png"}, {"file": "light-template-with-signature.html", "title": "Template With Signature", "thumb": "thumbnails/light-template-with-signature.png"}], "dark": [{"file": "dark-1.html", "title": "Template 1", "thumb": "thumbnails/dark-1.png"}, {"file": "dark-2.html", "title": "Template 2", "thumb": "thumbnails/dark-2.png"}, {"file": "dark-3.html", "title": "Template 3", "thumb": "thumbnails/dark-3.png"}, {"file": "dark-4.html", "title": "Template 4", "thumb": "thumbnails/dark-4.png"}, {"file": "dark-5.html", "title": "Template 5", "thumb": "thumbnails/dark-5.png"}, {"file": "dark-6.html", "title": "Template 6", "thumb": "thumbnails/dark-6.png"}, {"file": "dark-7.html", "title": "Template 7", "thumb": "thumbnails/dark-7.png"}, {"file": "dark-8.html", "title": "Template 8", "thumb": "thumbnails/dark-8.png"}, {"file": "dark-9.html", "title": "Template 9", "thumb": "thumbnails/dark-9.png"}, {"file": "dark-10.html", "title": "Template 10", "thumb": "thumbnails/dark-10.png"}, {"file": "dark-11.html", "title": "Template 11", "thumb": "thumbnails/dark-11.png"}, {"file": "dark-12.html", "title": "Template 12", "thumb": "thumbnails/dark-12.png"}, {"file": "dark-13.html", "title": "Template 13", "thumb": "thumbnails/dark-13.png"}, {"file": "dark-14.html", "title": "Template 14", "thumb": "thumbnails/dark-14.png"}, {"file": "dark-15.html", "title": "Template 15", "thumb": "thumbnails/dark-15.png"}, {"file": "dark-16.html", "title": "Template 16", "thumb": "thumbnails/dark-16.png"}, {"file": "dark-17.html", "title": "Template 17", "thumb": "thumbnails/dark-17.png"}, {"file": "dark-template-with-signature.html", "title": "Template With Signature", "thumb": "thumbnails/dark-template-with-signature.png"}]}
+;
+
+    function render(list, gridId, countId) {
+      const grid = document.getElementById(gridId);
+      document.getElementById(countId).textContent = '(' + list.length + ')';
+      list.forEach(item => {
+        const a = document.createElement('a');
+        a.className = 'card';
+        a.href = './' + item.file;
+        a.target = '_blank';
+        a.rel = 'noopener';
+
+        const thumbWrap = document.createElement('div');
+        thumbWrap.className = 'thumb-wrap';
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.src = './' + item.thumb;
+        img.alt = item.title;
+        img.onerror = () => {
+          thumbWrap.innerHTML = '<div class="placeholder">No preview</div>';
+        };
+        thumbWrap.appendChild(img);
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.innerHTML = '<p class="title"></p><p class="filename"></p>';
+        meta.querySelector('.title').textContent = item.title;
+        meta.querySelector('.filename').textContent = item.file;
+
+        a.appendChild(thumbWrap);
+        a.appendChild(meta);
+        grid.appendChild(a);
+      });
+    }
+
+    render(data.light, 'light-grid', 'light-count');
+    render(data.dark, 'dark-grid', 'dark-count');
+  </script>
+</body>
 </html>

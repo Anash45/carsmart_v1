@@ -1,190 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carsmart: Pages Gallery</title>
+<style>
+  :root {
+    --bg: #0d0f0c;
+    --card-bg: #16190f;
+    --border: #2a2f22;
+    --text: #f4f6ef;
+    --muted: #9aa294;
+    --accent: #99f22b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 40px 24px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: 0.02em;
+  }
+  header p {
+    margin: 0 0 16px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .search {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 14px;
+  }
+  .search:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .count {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 16px 0 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 28px 24px 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+  .thumb-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #05070a;
+    overflow: hidden;
+  }
+  .thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+  .thumb-wrap .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .meta {
+    padding: 12px 14px 14px;
+  }
+  .meta .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .meta .filename {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    word-break: break-all;
+  }
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 20px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Carsmart: Pages Gallery</h1>
+    <p>All HTML pages in this repository</p>
+    <input class="search" type="search" id="search" placeholder="Filter pages by title or filename&hellip;">
+    <p class="count" id="count"></p>
+  </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carsmart</title>
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/select2.min.css">
-        <link rel="stylesheet" href="./assets/css/slick.min.css">
-        <link rel="stylesheet" href="./assets/css/slick-theme.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
-        <link href="./assets/css/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/custom.css?v=28">
-    </head>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty">No pages match your search.</p>
 
-    <body>
-        
-        <div class="d-flex text-center align-items-center py-5 flex-column" style="min-height: 100vh; font-size: 20px;">
-            <h2 class="text-center text-white mb-4">Carsmart: Pages List</h2>
-            <ol class="fw-semibold text-white text-start text-capitalize mb-5">
-                <li><a href="./live-sale.html" class="text-parrot">Auction: Live Sale</a></li>
-                <li><a href="./signin-1.html" class="text-parrot">Sign In 1</a></li>
-                <li><a href="./signin-2.html" class="text-parrot">Sign In 2</a></li>
-                <li><a href="./signin-3.html" class="text-parrot">Sign In 3</a></li>
-                <li><a href="./form-validations.html" class="text-parrot">Sign In form with validations</a></li>
-                <li><a href="./forgot-password.html" class="text-parrot">Forgot Password</a></li>
-                <li><a href="./reset-password.html" class="text-parrot">Reset Password</a></li>
-                <li><a href="./change-password.html" class="text-parrot">Change Password</a></li>
-                <li><a href="./password-confirmation.html" class="text-parrot">Password Confirmation</a></li>
-                <li><a href="./signup.html" class="text-parrot">Sign Up (3 Sub Pages)</a></li>
-                <li><a href="./signup-confirmation.html" class="text-parrot">Sign Up Confirmation</a></li>
-                <li><a href="./index.html" class="text-parrot">Homepage</a></li>
-                <li><a href="./buy-it-now.html" class="text-parrot">Buy it now</a></li>
-                <li><a href="./smart-connect.html" class="text-parrot">SmartConnect</a></li>
-                <li><a href="./favourites.html" class="text-parrot">Favourites</a></li>
-                <li><a href="./profile.html" class="text-parrot">Profile <small>(See the popups by clicking on the edit icons in front of payment methods)</small></a></li>
-                <li><a href="./dashboard-invoices.html" class="text-parrot">Dashboard Invoices</a></li>
-                <li><a href="./dashboard-credits.html" class="text-parrot">Dashboard Credits</a></li>
-                <li><a href="./dashboard-smart-wallet.html" class="text-parrot">Dashboard Smart Wallet</a></li>
-                <li><a href="./dashboard-live-bids.html" class="text-parrot">Dashboard Live Bids</a></li>
-                <li><a href="./dashboard-offers-pending.html" class="text-parrot">Dashboard Offers Pending</a></li>
-                <li><a href="./our-policy.html" class="text-parrot">Dashboard Outbid</a></li>
-                <li><a href="./prices-vioded-form-confirmation.html" class="text-parrot">Prices and Voided form confirmation</a></li>
-                <li><a href="./our-policy.html" class="text-parrot">Our Policy</a></li>
-                <li><a href="./car-details-private-buy-it-now.html" class="text-parrot">Vehicle details private buy it now</a> <small>(These are treated as separate pages because of the length of the page and number of popups on each page)</small></li>
-                <li><a href="./car-details-buy-it-now.html" class="text-parrot">Vehicle details buy it now</a></li>
-                <li><a href="./car-details-private-live-sale.html" class="text-parrot">Vehicle details private live sale</a></li>
-                <li><a href="./car-details-live-sale.html" class="text-parrot">Vehicle details live sale</a></li>
-                <li><a href="./car-details-private-quick-sale.html" class="text-parrot">Vehicle details private quick sale</a></li>
-                <li><a href="./car-details-quick-sale.html" class="text-parrot">Vehicle details quick sale</a></li>
-                <li><a href="./car-details-smartconnect-sale.html" class="text-parrot">Vehicle details smartconnect sale</a></li>
-                <li><a href="./car-details-wholesale.html" class="text-parrot">Vehicle details wholesale</a></li>
-                <li><a href="./car-details-smartexchange.html" class="text-parrot">Vehicle details smartexchange</a></li>
-                <li><a href="./dashboard-offered.html" class="text-parrot">Dashboard SmartExchange offered</a></li>
-                <li><a href="./dashboard-received.html" class="text-parrot">Dashboard SmartExchange received</a></li>
-                <li><a href="./dashboard-listings.html" class="text-parrot">Dashboard vehicle listings</a></li>
-                <li><a href="./dashboard-closed-purchases.html" class="text-parrot">Dashboard vehicles closed purchases</a></li>
-                <li><a href="./dashboard-voided-sales.html" class="text-parrot">Dashboard vehicles voided sales</a></li>
-                <li><a href="./dashboard-quotes.html" class="text-parrot">Dashboard Smart drop quotes</a></li>
-                <li><a href="./dashboard-accepted.html" class="text-parrot">Dashboard Smart drop accepted</a></li>
-                <li><a href="./live-sale-notice.html" class="text-parrot">Live Sale Notice</a></li>
-                <li><a href="./smarthub-fees.html" class="text-parrot">SmartHub Fees</a></li>
-                <li><a href="./changes-and-voided-sales.html" class="text-parrot">Changes and voided sales form</a></li>
-                <li><a href="./sell-my-car-brand.html" class="text-parrot">Sell My Car Landing Page</a></li>
-                <li><a href="./kyc-verification.html" class="text-parrot">KYC verification</a></li>
-                <li><a href="./account-reporting.html" class="text-parrot">Account Reporting</a></li>
-                <li><a href="./car-details-sold.html" class="text-parrot">Vehicle Details Sold</a></li>
-                <li><a href="./car-details-sold-seller.html" class="text-parrot">Vehicle Details Sold - Seller Information</a></li>
-                <li><a href="./car-details-sold-buyer.html" class="text-parrot">Vehicle Details Sold - Buyers Information</a></li>
-                <li><a href="./fee-payment.html" class="text-parrot">Fee Payment</a></li>
-                <li><a href="./smart-wallet-add-fund.html" class="text-parrot">Smart Wallet Add Fund</a></li>
-                <li><a href="./smart-wallet-balance.html" class="text-parrot">Smart Wallet Balance</a></li>
-                <li><a href="./smartconnect-seller-information-for-private-vendor.html" class="text-parrot">Vendor Purchase - Private Seller information</a></li>
-                <li><a href="./smartconnect-seller-information-for-vendor-buys.html" class="text-parrot">Smart Connect Seller information (When Vendor Buys)</a></li>
-                <li><a href="./smartconnect-buyer-information-for-vendor-sells.html" class="text-parrot">Smart Connect Buyer  information (When Vendor Sells) </a></li>
-                <li><a href="./smart-drop-get-offers.html" class="text-parrot">Book Smart Drop </a></li>
-                <li><a href="./smart-drop-received-quotes.html" class="text-parrot">Book Smart Drop Received Quotes from Dashboard (7+) links.</a></li>
-                <li><a href="./payment-from-chat.html" class="text-parrot">Payment form chat</a></li>
-                <li><a href="./live-chat.html" class="text-parrot">Live Chat Page</a></li>
-                <li><a href="./add-car-2.html" class="text-parrot">Add Car 2</a></li>
-                <li><a href="./add-car-3.html" class="text-parrot">Add Car 3</a></li>
-                <li><a href="./add-car-3a-wholesale.html" class="text-parrot">Add Car 3a (Wholesale Lot)</a></li>
-                <li><a href="./add-car-4.html" class="text-parrot">Add Car 4</a></li>
-                <li><a href="./add-car-5.html" class="text-parrot">Add Car 5</a></li>
-                <li><a href="./add-car-6-recap-1.html" class="text-parrot">Add Car 6 (Recap 1)</a></li>
-                <li><a href="./add-car-7.html" class="text-parrot">Add Car 7</a></li>
-                <li><a href="./add-car-8.html" class="text-parrot">Add Car 8</a></li>
-                <li><a href="./add-car-9-recap-2.html" class="text-parrot">Add Car 9 (Recap 2)</a></li>
-                <li><a href="./add-car-10.html" class="text-parrot">Add Car 10</a></li>
-                <li><a href="./add-car-11.html" class="text-parrot">Add Car 11</a></li>
-                <li><a href="./smart-match-landing.html" class="text-info">Smart Match Landing Page</a></li>
-                <li><a href="./smart-wallet-landing.html" class="text-info">Smart wallet Landing Page</a></li>
-                <li><a href="./smart-connect-landing.html" class="text-info">Smart connect Landing Page</a></li>
-                <li><a href="./smart-data-landing.html" class="text-info">Smart data Landing Page</a></li>
-                <li><a href="./refer-friend-landing.html" class="text-info">Refer friend Landing Page</a></li>
-                <li><a href="./smart-data-signin-1.html" class="text-info">Smart Data Sign In 1</a></li>
-                <li><a href="./smart-data-signin-2.html" class="text-info">Smart Data Sign In 2</a></li>
-                <li><a href="./smart-drop-1.html" class="text-info">Smart Drop 1</a></li>
-                <li><a href="./smart-drop-2.html" class="text-info">Smart Drop 2</a></li>
-                <li><a href="./editions-landing.html" class="text-info">CarSmart Editions Landing</a></li>
-                <li><a href="./edition-details-not-loggedin.html" class="text-info">CarSmart Edition Details Not Logged In</a></li>
-                <li><a href="./edition-details-loggedin.html" class="text-info">CarSmart Edition Details Logged In</a></li>
-                <li><a href="./editions-signin.html" class="text-info">CarSmart Signin</a></li>
-                <li><a href="./editions-signin-confirmation.html" class="text-info">CarSmart Signin Confirmation</a></li>
-                <li><a href="./carsmart-dashboard.html" class="text-info">CarSmart Dashboard</a></li>
-                <li><a href="./carsmart-smartwallet.html" class="text-info">CarSmart SmartWallet</a></li>
-                <li><a href="./smart-wallet-add-card.html" class="text-info">Smart Wallet Add Card</a></li>
-                <li><a href="./carsmart-add-card.html" class="text-info">Carsmart Add Card</a></li>
-                <li><a href="./carsmart-add-bank.html" class="text-info">Carsmart Add Bank</a></li>
-                <li><a href="./terms-logged-in.html" class="text-info">Terms Logged In</a></li>
-                <li><a href="./terms-not-logged-in.html" class="text-info">Terms NOT Logged In</a></li>
-                <li><a href="./help-1.html" class="text-info">Help Page</a></li>
-                <li><a href="./help-2.html" class="text-info">Help Questions</a></li>
-                <li><a href="./help-3.html" class="text-info">Help Details</a></li>
-                <li><a href="./smart-guidelines.html" class="text-info">Smart Guidelines</a></li>
-                <li><a href="./sitemap.html" class="text-info">Sitemap</a></li>
-                <li><a href="./cookies.html" class="text-info">Cookies</a></li>
-                <li><a href="./cookies-not-logged-in.html" class="text-info">Cookies NOT Logged In</a></li>
-                <li><a href="./privacy-policy.html" class="text-info">Privacy Policy</a></li>
-                <li><a href="./privacy-policy-not-logged-in.html" class="text-info">Privacy Policy NOT Logged In</a></li>
-                <li><a href="./editions-search.html" class="text-info">Editions Search</a></li>
-                <li><a href="./editions-search-filters.html" class="text-info">Editions Search Filters</a></li>
-            </ol>
-            <h2 class="text-center text-white mb-4">Carsmart: Email Templates (LIGHT)</h2>
-            <ol class="fw-semibold text-white text-start text-capitalize mb-5">
-                <li><a href="./email-templates/light-1.html" class="text-parrot">Template 1</a></li>
-                <li><a href="./email-templates/light-2.html" class="text-parrot">Template 2</a></li>
-                <li><a href="./email-templates/light-3.html" class="text-parrot">Template 3</a></li>
-                <li><a href="./email-templates/light-4.html" class="text-parrot">Template 4</a></li>
-                <li><a href="./email-templates/light-5.html" class="text-parrot">Template 5</a></li>
-                <li><a href="./email-templates/light-6.html" class="text-parrot">Template 6</a></li>
-                <li><a href="./email-templates/light-7.html" class="text-parrot">Template 7</a></li>
-                <li><a href="./email-templates/light-8.html" class="text-parrot">Template 8</a></li>
-                <li><a href="./email-templates/light-8-1.html" class="text-parrot">Template 8.1</a></li>
-                <li><a href="./email-templates/light-9.html" class="text-parrot">Template 9</a></li>
-                <li><a href="./email-templates/light-10.html" class="text-parrot">Template 10</a></li>
-                <li><a href="./email-templates/light-11.html" class="text-parrot">Template 11</a></li>
-                <li><a href="./email-templates/light-12.html" class="text-parrot">Template 12</a></li>
-                <li><a href="./email-templates/light-13.html" class="text-parrot">Template 13</a></li>
-                <li><a href="./email-templates/light-14.html" class="text-parrot">Template 14</a></li>
-                <li><a href="./email-templates/light-15.html" class="text-parrot">Template 15</a></li>
-                <li><a href="./email-templates/light-16.html" class="text-parrot">Template 16</a></li>
-                <li><a href="./email-templates/light-17.html" class="text-parrot">Template 17</a></li>
-                <li><a href="./email-templates/light-template-with-signature.html" class="text-parrot">Template with signature</a></li>
-            </ol>
-            <h2 class="text-center text-white mb-4">Carsmart: Email Templates (DARK)</h2>
-            <ol class="fw-semibold text-white text-start text-capitalize mb-5">
-                <li><a href="./email-templates/dark-1.html" class="text-parrot">Template 1</a></li>
-                <li><a href="./email-templates/dark-2.html" class="text-parrot">Template 2</a></li>
-                <li><a href="./email-templates/dark-3.html" class="text-parrot">Template 3</a></li>
-                <li><a href="./email-templates/dark-4.html" class="text-parrot">Template 4</a></li>
-                <li><a href="./email-templates/dark-5.html" class="text-parrot">Template 5</a></li>
-                <li><a href="./email-templates/dark-6.html" class="text-parrot">Template 6</a></li>
-                <li><a href="./email-templates/dark-7.html" class="text-parrot">Template 7</a></li>
-                <li><a href="./email-templates/dark-8.html" class="text-parrot">Template 8</a></li>
-                <li><a href="./email-templates/dark-9.html" class="text-parrot">Template 9</a></li>
-                <li><a href="./email-templates/dark-10.html" class="text-parrot">Template 10</a></li>
-                <li><a href="./email-templates/dark-11.html" class="text-parrot">Template 11</a></li>
-                <li><a href="./email-templates/dark-12.html" class="text-parrot">Template 12</a></li>
-                <li><a href="./email-templates/dark-13.html" class="text-parrot">Template 13</a></li>
-                <li><a href="./email-templates/dark-14.html" class="text-parrot">Template 14</a></li>
-                <li><a href="./email-templates/dark-15.html" class="text-parrot">Template 15</a></li>
-                <li><a href="./email-templates/dark-16.html" class="text-parrot">Template 16</a></li>
-                <li><a href="./email-templates/dark-17.html" class="text-parrot">Template 17</a></li>
-                <li><a href="./email-templates/dark-template-with-signature.html" class="text-parrot">Template with signature</a></li>
-            </ol>
-            
-        </div>
-        <script src="./assets/js/jquery-3.7.1.min.js"></script>
-        <script src="./assets/js/bootstrap.bundle.min.js"></script>
-        <script src="./assets/js/select2.min.js"></script>
-        <script src="./assets/js/aos.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js"></script>
-        <script src="./assets/js/custom.js?v=28"></script>
-        <script>
-            $(document).ready(function() {
-                var total = 0;
-                $('.price').each(function() {
-                    total += parseInt($(this).text());
-                });
-                $('#total').text(total);
-                let paid = parseInt($('#paid').text());
-                $('#due').text(total - paid);
-            });
-        </script>
-    </body>
+  <script>
+    const items = [{"file": "account-reporting.html", "title": "Account Reporting", "thumb": "thumbnails/account-reporting.png"}, {"file": "add-car-10.html", "title": "Add Car 10", "thumb": "thumbnails/add-car-10.png"}, {"file": "add-car-11.html", "title": "Add Car 11", "thumb": "thumbnails/add-car-11.png"}, {"file": "add-car-2.html", "title": "Add Car 2", "thumb": "thumbnails/add-car-2.png"}, {"file": "add-car-3.html", "title": "Add Car 3", "thumb": "thumbnails/add-car-3.png"}, {"file": "add-car-3a-wholesale.html", "title": "Add Car 3a Wholesale", "thumb": "thumbnails/add-car-3a-wholesale.png"}, {"file": "add-car-4.html", "title": "Add Car 4", "thumb": "thumbnails/add-car-4.png"}, {"file": "add-car-5.html", "title": "Add Car 5", "thumb": "thumbnails/add-car-5.png"}, {"file": "add-car-6-recap-1.html", "title": "Add Car 6 Recap 1", "thumb": "thumbnails/add-car-6-recap-1.png"}, {"file": "add-car-7.html", "title": "Add Car 7", "thumb": "thumbnails/add-car-7.png"}, {"file": "add-car-8.html", "title": "Add Car 8", "thumb": "thumbnails/add-car-8.png"}, {"file": "add-car-9-recap-2.html", "title": "Add Car 9 Recap 2", "thumb": "thumbnails/add-car-9-recap-2.png"}, {"file": "buy-it-now.html", "title": "Buy It Now", "thumb": "thumbnails/buy-it-now.png"}, {"file": "car-details-buy-it-now.html", "title": "Car Details Buy It Now", "thumb": "thumbnails/car-details-buy-it-now.png"}, {"file": "car-details-live-sale.html", "title": "Car Details Live Sale", "thumb": "thumbnails/car-details-live-sale.png"}, {"file": "car-details-private-buy-it-now.html", "title": "Car Details Private Buy It Now", "thumb": "thumbnails/car-details-private-buy-it-now.png"}, {"file": "car-details-private-live-sale.html", "title": "Car Details Private Live Sale", "thumb": "thumbnails/car-details-private-live-sale.png"}, {"file": "car-details-private-quick-sale.html", "title": "Car Details Private Quick Sale", "thumb": "thumbnails/car-details-private-quick-sale.png"}, {"file": "car-details-quick-sale.html", "title": "Car Details Quick Sale", "thumb": "thumbnails/car-details-quick-sale.png"}, {"file": "car-details-smartconnect-sale.html", "title": "Car Details Smartconnect Sale", "thumb": "thumbnails/car-details-smartconnect-sale.png"}, {"file": "car-details-smartexchange.html", "title": "Car Details Smartexchange", "thumb": "thumbnails/car-details-smartexchange.png"}, {"file": "car-details-sold-buyer.html", "title": "Car Details Sold Buyer", "thumb": "thumbnails/car-details-sold-buyer.png"}, {"file": "car-details-sold-seller.html", "title": "Car Details Sold Seller", "thumb": "thumbnails/car-details-sold-seller.png"}, {"file": "car-details-sold.html", "title": "Car Details Sold", "thumb": "thumbnails/car-details-sold.png"}, {"file": "car-details-wholesale.html", "title": "Car Details Wholesale", "thumb": "thumbnails/car-details-wholesale.png"}, {"file": "carsmart-add-bank.html", "title": "Carsmart Add Bank", "thumb": "thumbnails/carsmart-add-bank.png"}, {"file": "carsmart-add-card.html", "title": "Carsmart Add Card", "thumb": "thumbnails/carsmart-add-card.png"}, {"file": "carsmart-dashboard.html", "title": "Carsmart Dashboard", "thumb": "thumbnails/carsmart-dashboard.png"}, {"file": "carsmart-purchase.html", "title": "Carsmart Purchase", "thumb": "thumbnails/carsmart-purchase.png"}, {"file": "carsmart-smartwallet.html", "title": "Carsmart Smartwallet", "thumb": "thumbnails/carsmart-smartwallet.png"}, {"file": "change-password.html", "title": "Change Password", "thumb": "thumbnails/change-password.png"}, {"file": "changes-and-voided-sales.html", "title": "Changes and Voided Sales", "thumb": "thumbnails/changes-and-voided-sales.png"}, {"file": "cookies-not-logged-in.html", "title": "Cookies Not Logged In", "thumb": "thumbnails/cookies-not-logged-in.png"}, {"file": "cookies.html", "title": "Cookies", "thumb": "thumbnails/cookies.png"}, {"file": "dashboard-accepted.html", "title": "Dashboard Accepted", "thumb": "thumbnails/dashboard-accepted.png"}, {"file": "dashboard-closed-purchases.html", "title": "Dashboard Closed Purchases", "thumb": "thumbnails/dashboard-closed-purchases.png"}, {"file": "dashboard-credits.html", "title": "Dashboard Credits", "thumb": "thumbnails/dashboard-credits.png"}, {"file": "dashboard-invoices.html", "title": "Dashboard Invoices", "thumb": "thumbnails/dashboard-invoices.png"}, {"file": "dashboard-listings.html", "title": "Dashboard Listings", "thumb": "thumbnails/dashboard-listings.png"}, {"file": "dashboard-live-bids.html", "title": "Dashboard Live Bids", "thumb": "thumbnails/dashboard-live-bids.png"}, {"file": "dashboard-offered.html", "title": "Dashboard Offered", "thumb": "thumbnails/dashboard-offered.png"}, {"file": "dashboard-offers-pending.html", "title": "Dashboard Offers Pending", "thumb": "thumbnails/dashboard-offers-pending.png"}, {"file": "dashboard-outbid.html", "title": "Dashboard Outbid", "thumb": "thumbnails/dashboard-outbid.png"}, {"file": "dashboard-quotes.html", "title": "Dashboard Quotes", "thumb": "thumbnails/dashboard-quotes.png"}, {"file": "dashboard-received.html", "title": "Dashboard Received", "thumb": "thumbnails/dashboard-received.png"}, {"file": "dashboard-smart-wallet.html", "title": "Dashboard Smart Wallet", "thumb": "thumbnails/dashboard-smart-wallet.png"}, {"file": "dashboard-voided-sales.html", "title": "Dashboard Voided Sales", "thumb": "thumbnails/dashboard-voided-sales.png"}, {"file": "edition-details-loggedin.html", "title": "Edition Details Loggedin", "thumb": "thumbnails/edition-details-loggedin.png"}, {"file": "edition-details-not-loggedin.html", "title": "Edition Details Not Loggedin", "thumb": "thumbnails/edition-details-not-loggedin.png"}, {"file": "editions-landing.html", "title": "Editions Landing", "thumb": "thumbnails/editions-landing.png"}, {"file": "editions-search-filters.html", "title": "Editions Search Filters", "thumb": "thumbnails/editions-search-filters.png"}, {"file": "editions-signin-confirmation.html", "title": "Editions Signin Confirmation", "thumb": "thumbnails/editions-signin-confirmation.png"}, {"file": "editions-signin.html", "title": "Editions Signin", "thumb": "thumbnails/editions-signin.png"}, {"file": "favourites.html", "title": "Favourites", "thumb": "thumbnails/favourites.png"}, {"file": "fee-payment.html", "title": "Fee Payment", "thumb": "thumbnails/fee-payment.png"}, {"file": "forgot-password.html", "title": "Forgot Password", "thumb": "thumbnails/forgot-password.png"}, {"file": "form-validations.html", "title": "Form Validations", "thumb": "thumbnails/form-validations.png"}, {"file": "help-1.html", "title": "Help 1", "thumb": "thumbnails/help-1.png"}, {"file": "help-2.html", "title": "Help 2", "thumb": "thumbnails/help-2.png"}, {"file": "help-3.html", "title": "Help 3", "thumb": "thumbnails/help-3.png"}, {"file": "index.html", "title": "Homepage", "thumb": "thumbnails/index.png"}, {"file": "kyc-verification.html", "title": "KYC Verification", "thumb": "thumbnails/kyc-verification.png"}, {"file": "live-chat.html", "title": "Live Chat", "thumb": "thumbnails/live-chat.png"}, {"file": "live-sale-notice.html", "title": "Live Sale Notice", "thumb": "thumbnails/live-sale-notice.png"}, {"file": "live-sale.html", "title": "Live Sale", "thumb": "thumbnails/live-sale.png"}, {"file": "our-policy.html", "title": "Our Policy", "thumb": "thumbnails/our-policy.png"}, {"file": "password-confirmation.html", "title": "Password Confirmation", "thumb": "thumbnails/password-confirmation.png"}, {"file": "payment-from-chat.html", "title": "Payment From Chat", "thumb": "thumbnails/payment-from-chat.png"}, {"file": "prices-vioded-form-confirmation.html", "title": "Prices Vioded Form Confirmation", "thumb": "thumbnails/prices-vioded-form-confirmation.png"}, {"file": "privacy-policy-not-logged-in.html", "title": "Privacy Policy Not Logged In", "thumb": "thumbnails/privacy-policy-not-logged-in.png"}, {"file": "privacy-policy.html", "title": "Privacy Policy", "thumb": "thumbnails/privacy-policy.png"}, {"file": "profile.html", "title": "Profile", "thumb": "thumbnails/profile.png"}, {"file": "refer-friend-landing.html", "title": "Refer Friend Landing", "thumb": "thumbnails/refer-friend-landing.png"}, {"file": "reset-password.html", "title": "Reset Password", "thumb": "thumbnails/reset-password.png"}, {"file": "sell-my-car-brand.html", "title": "Sell My Car Brand", "thumb": "thumbnails/sell-my-car-brand.png"}, {"file": "signin-1.html", "title": "Signin 1", "thumb": "thumbnails/signin-1.png"}, {"file": "signin-2.html", "title": "Signin 2", "thumb": "thumbnails/signin-2.png"}, {"file": "signin-3.html", "title": "Signin 3", "thumb": "thumbnails/signin-3.png"}, {"file": "signup-confirmation.html", "title": "Signup Confirmation", "thumb": "thumbnails/signup-confirmation.png"}, {"file": "signup.html", "title": "Signup", "thumb": "thumbnails/signup.png"}, {"file": "sitemap.html", "title": "Sitemap", "thumb": "thumbnails/sitemap.png"}, {"file": "smart-connect-landing.html", "title": "Smart Connect Landing", "thumb": "thumbnails/smart-connect-landing.png"}, {"file": "smart-connect.html", "title": "Smart Connect", "thumb": "thumbnails/smart-connect.png"}, {"file": "smart-data-landing.html", "title": "Smart Data Landing", "thumb": "thumbnails/smart-data-landing.png"}, {"file": "smart-data-signin-1.html", "title": "Smart Data Signin 1", "thumb": "thumbnails/smart-data-signin-1.png"}, {"file": "smart-data-signin-2.html", "title": "Smart Data Signin 2", "thumb": "thumbnails/smart-data-signin-2.png"}, {"file": "smart-drop-1.html", "title": "Smart Drop 1", "thumb": "thumbnails/smart-drop-1.png"}, {"file": "smart-drop-2.html", "title": "Smart Drop 2", "thumb": "thumbnails/smart-drop-2.png"}, {"file": "smart-drop-get-offers.html", "title": "Smart Drop Get Offers", "thumb": "thumbnails/smart-drop-get-offers.png"}, {"file": "smart-drop-received-quotes.html", "title": "Smart Drop Received Quotes", "thumb": "thumbnails/smart-drop-received-quotes.png"}, {"file": "smart-guidelines.html", "title": "Smart Guidelines", "thumb": "thumbnails/smart-guidelines.png"}, {"file": "smart-match-landing.html", "title": "Smart Match Landing", "thumb": "thumbnails/smart-match-landing.png"}, {"file": "smart-wallet-add-card.html", "title": "Smart Wallet Add Card", "thumb": "thumbnails/smart-wallet-add-card.png"}, {"file": "smart-wallet-add-fund.html", "title": "Smart Wallet Add Fund", "thumb": "thumbnails/smart-wallet-add-fund.png"}, {"file": "smart-wallet-balance.html", "title": "Smart Wallet Balance", "thumb": "thumbnails/smart-wallet-balance.png"}, {"file": "smart-wallet-landing.html", "title": "Smart Wallet Landing", "thumb": "thumbnails/smart-wallet-landing.png"}, {"file": "smartconnect-buyer-information-for-vendor-sells.html", "title": "Smartconnect Buyer Information for Vendor Sells", "thumb": "thumbnails/smartconnect-buyer-information-for-vendor-sells.png"}, {"file": "smartconnect-seller-information-for-private-vendor.html", "title": "Smartconnect Seller Information for Private Vendor", "thumb": "thumbnails/smartconnect-seller-information-for-private-vendor.png"}, {"file": "smartconnect-seller-information-for-vendor-buys.html", "title": "Smartconnect Seller Information for Vendor Buys", "thumb": "thumbnails/smartconnect-seller-information-for-vendor-buys.png"}, {"file": "smarthub-fees.html", "title": "Smarthub Fees", "thumb": "thumbnails/smarthub-fees.png"}, {"file": "terms-logged-in.html", "title": "Terms Logged In", "thumb": "thumbnails/terms-logged-in.png"}, {"file": "terms-not-logged-in.html", "title": "Terms Not Logged In", "thumb": "thumbnails/terms-not-logged-in.png"}]
+;
 
+    const grid = document.getElementById('grid');
+    const empty = document.getElementById('empty');
+    const count = document.getElementById('count');
+    const search = document.getElementById('search');
+
+    function render(list) {
+      grid.innerHTML = '';
+      list.forEach(item => {
+        const a = document.createElement('a');
+        a.className = 'card';
+        a.href = './' + item.file;
+        a.target = '_blank';
+        a.rel = 'noopener';
+
+        const thumbWrap = document.createElement('div');
+        thumbWrap.className = 'thumb-wrap';
+        const img = document.createElement('img');
+        img.loading = 'lazy';
+        img.src = './' + item.thumb;
+        img.alt = item.title;
+        img.onerror = () => {
+          thumbWrap.innerHTML = '<div class="placeholder">No preview</div>';
+        };
+        thumbWrap.appendChild(img);
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.innerHTML = '<p class="title"></p><p class="filename"></p>';
+        meta.querySelector('.title').textContent = item.title;
+        meta.querySelector('.filename').textContent = item.file;
+
+        a.appendChild(thumbWrap);
+        a.appendChild(meta);
+        grid.appendChild(a);
+      });
+      empty.style.display = list.length ? 'none' : 'block';
+      count.textContent = list.length + ' page' + (list.length === 1 ? '' : 's');
+    }
+
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      const filtered = !q ? items : items.filter(i =>
+        i.title.toLowerCase().includes(q) || i.file.toLowerCase().includes(q)
+      );
+      render(filtered);
+    });
+
+    render(items);
+  </script>
+</body>
 </html>
